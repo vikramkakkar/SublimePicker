@@ -9,7 +9,7 @@ Almost all styling possibilities have been exposed through attrs. If something h
 SublimePicker provides a single point of entry to all three pickers. What I mean is that once SublimePicker is available for interaction, the user can select a date, a time & a recurrence option without leaving the picker.
 
 Date Picker
-----------
+:---------:
 ![Date Picker](https://github.com/vikramkakkar/SublimePicker/blob/master/img/date_picker.png?raw=true)
 
 License
