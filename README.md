@@ -22,7 +22,35 @@ Button at bottom-left corner can be used to switch to **TimePicker**:
 <img src="https://github.com/vikramkakkar/SublimePicker/blob/master/img/time_picker.png?raw=true" width="307" height="512" />
 </p>
 
-The overflow button at top-right open the recurrence option
+The overflow button at top-right opens the **RecurrencePicker**:
+
+<p align="center">
+<img src="https://github.com/vikramkakkar/SublimePicker/blob/master/img/recurrence_picker.png?raw=true" width="307" height="512" />
+</p>
+
+Choosing **Custom...** from this menu brings you to **RecurrenceOptionCreator**:
+
+<p align="center">
+<img src="https://github.com/vikramkakkar/SublimePicker/blob/master/img/recurrence_option_creator.png?raw=true" width="307" height="512" />
+</p>
+
+Picking **Until a date** from the bottom spinner & clicking on the date shows a stripped down version of DatePicker:
+
+<p align="center">
+<img src="https://github.com/vikramkakkar/SublimePicker/blob/master/img/recurrence_option_creator_end_date.png?raw=true" width="307" height="512" />
+</p>
+
+**Sample Application**:
+
+<p align="center">
+<img src="https://github.com/vikramkakkar/SublimePicker/blob/master/img/sampler.png?raw=true" width="307" height="512" />
+</p>
+
+Results of the selection in **sample application**:
+
+<p align="center">
+<img src="https://github.com/vikramkakkar/SublimePicker/blob/master/img/sampler_results.png?raw=true" width="307" height="512" />
+</p>
 
 License
 -------
