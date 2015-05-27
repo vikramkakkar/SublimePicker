@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8"?><!--  Copyright (C) 2007 The Android Open Source Project
+
+     Licensed under the Apache License, Version 2.0 (the "License");
+     you may not use this file except in compliance with the License.
+     You may obtain a copy of the License at
+
+          http://www.apache.org/licenses/LICENSE-2.0
+
+     Unless required by applicable law or agreed to in writing, software
+     distributed under the License is distributed on an "AS IS" BASIS,
+     WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+     See the License for the specific language governing permissions and
+     limitations under the License.
+ -->
+
+<resources>
+    <string-array name="recurrence_freq">
+        <item>"REPETIR DIARIAMENTE"</item>
+        <item>"REPETIR SEMANALMENTE"</item>
+        <item>"REPETIR MENSUALMENTE"</item>
+        <item>"REPETIR ANUALMENTE"</item>
+    </string-array>
+    <string-array name="repeat_by_nth_sun">
+        <item>"o primeiro domingo de cada mes"</item>
+        <item>"o segundo domingo de cada mes"</item>
+        <item>"o terceiro domingo de cada mes"</item>
+        <item>"o cuarto domingo de cada mes"</item>
+        <item>"o último domingo de cada mes"</item>
+    </string-array>
+    <string-array name="repeat_by_nth_mon">
+        <item>"o primeiro luns de cada mes"</item>
+        <item>"o segundo luns de cada mes"</item>
+        <item>"o terceiro luns de cada mes"</item>
+        <item>"o cuarto luns de cada mes"</item>
+        <item>"o último luns de cada mes"</item>
+    </string-array>
+    <string-array name="repeat_by_nth_tues">
+        <item>"o primeiro martes de cada mes"</item>
+        <item>"o segundo martes de cada mes"</item>
+        <item>"o terceiro martes de cada mes"</item>
+        <item>"o cuarto martes de cada mes"</item>
+        <item>"o último martes de cada mes"</item>
+    </string-array>
+    <string-array name="repeat_by_nth_wed">
+        <item>"primeiro mércores de cada mes"</item>
+        <item>"o segundo mércores de cada mes"</item>
+        <item>"terceiro mércores de cada mes"</item>
+        <item>"o cuarto mércores de cada mes"</item>
+        <item>"o último mércores de cada mes"</item>
+    </string-array>
+    <string-array name="repeat_by_nth_thurs">
+        <item>"o primeiro xoves de cada mes"</item>
+        <item>"o segundo xoves de cada mes"</item>
+        <item>"o terceiro xoves de cada mes"</item>
+        <item>"o cuarto xoves de cada mes"</item>
+        <item>"o último xoves de cada mes"</item>
+    </string-array>
+    <string-array name="repeat_by_nth_fri">
+        <item>"o primeiro venres de cada mes"</item>
+        <item>"o segundo venres de cada mes"</item>
+        <item>"o terceiro venres de cada mes"</item>
+        <item>"o cuarto venres de cada mes"</item>
+        <item>"o último venres de cada mes"</item>
+    </string-array>
+    <string-array name="repeat_by_nth_sat">
+        <item>"o primeiro sábado de cada mes"</item>
+        <item>"o segundo sábado de cada mes"</item>
+        <item>"o terceiro sábado de cada mes"</item>
+        <item>"o cuarto sábado de cada mes"</item>
+        <item>"o último sábado de cada mes"</item>
+    </string-array>
+</resources>

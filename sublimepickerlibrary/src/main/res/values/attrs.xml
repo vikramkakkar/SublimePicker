@@ -1,0 +1,255 @@
+<?xml version="1.0" encoding="utf-8"?><!-- Copyright (C) 2015 Vikram Kakkar
+
+     Licensed under the Apache License, Version 2.0 (the "License");
+     you may not use this file except in compliance with the License.
+     You may obtain a copy of the License at
+
+          http://www.apache.org/licenses/LICENSE-2.0
+
+     Unless required by applicable law or agreed to in writing, software
+     distributed under the License is distributed on an "AS IS" BASIS,
+     WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+     See the License for the specific language governing permissions and
+     limitations under the License.
+-->
+<resources>
+    <!-- SublimePicker -->
+    <attr name="sublimePickerStyle" format="reference" />
+
+    <!-- SublimeDatePicker -->
+    <attr name="spDatePickerStyle" format="reference" />
+    <attr name="spMonthViewStyle" format="reference" />
+    <attr name="spDayPickerStyle" format="reference" />
+    <attr name="spYearPickerStyle" format="reference" />
+
+    <!-- SublimeTimePicker -->
+    <attr name="spTimePickerStyle" format="reference" />
+    <attr name="spRadialTimePickerStyle" format="reference" />
+
+    <!-- SublimeRecurrencePicker -->
+    <attr name="spRecurrenceOptionCreatorStyle" format="reference" />
+    <attr name="spRecurrencePickerStyle" format="reference" />
+
+    <attr name="spButtonLayoutStyle" format="reference" />
+
+    <!-- colors used for 'OverflowDrawable' -->
+    <attr name="spOverflowIconColor" format="color" />
+    <attr name="spOverflowIconPressedBgColor" format="color" />
+
+    <attr name="headerBackground" format="reference|color" />
+    <attr name="pickerBackground" format="reference|color" />
+
+    <attr name="spCalendarDisabledTextColor" format="reference|color" />
+    <attr name="spNumbersBackgroundColor" format="reference|color" />
+
+    <declare-styleable name="SublimePicker">
+        <attr name="spDatePickerStyle" />
+        <attr name="spMonthViewStyle" />
+        <attr name="spDayPickerStyle" />
+        <attr name="spYearPickerStyle" />
+        <attr name="spTimePickerStyle" />
+        <attr name="spRadialTimePickerStyle" />
+        <attr name="spButtonLayoutStyle" />
+        <attr name="spRecurrenceOptionCreatorStyle" />
+        <attr name="spRecurrencePickerStyle" />
+        <attr name="spCalendarDisabledTextColor" />
+        <attr name="spNumbersBackgroundColor" />
+        <attr name="spOverflowIconColor" />
+        <attr name="spOverflowIconPressedBgColor" />
+    </declare-styleable>
+
+    <declare-styleable name="SublimeDatePicker">
+        <!-- The first day of week according to {@link java.util.Calendar}. -->
+        <attr name="firstDayOfWeek" format="integer" />
+        <!-- The background color for the date selector 's day of week. -->
+        <attr name="dayOfWeekBackground" format="color|reference" />
+        <!-- The text color for the date selector's day of week. -->
+        <attr name="dayOfWeekTextAppearance" format="reference" />
+        <!-- The month's text appearance in the date selector. -->
+        <attr name="headerMonthTextAppearance" format="reference" />
+        <!-- The day of month's text appearance in the date selector. -->
+        <attr name="headerDayOfMonthTextAppearance" format="reference" />
+        <!-- The year's text appearance in the date selector. -->
+        <attr name="headerYearTextAppearance" format="reference" />
+        <!-- The calendar's text appearance in the date selector. -->
+        <attr name="calendarTextAppearance" format="reference" />
+        <!-- The background for the date selector. -->
+        <attr name="headerBackground" />
+        <!-- The selected text color for the date selector. Used as a
+             backup if the text appearance does not explicitly have a color
+             set for the selected state. -->
+        <attr name="headerSelectedTextColor" format="reference" />
+        <!-- The selected text color for the date selector. Used as a
+             backup if the text appearance does not explicitly have a color
+             set for the selected state. -->
+        <attr name="headerPressedTextColor" format="reference" />
+    </declare-styleable>
+
+    <declare-styleable name="SublimeTimePicker">
+        <!-- The text appearance for the AM/PM header. -->
+        <attr name="headerAmPmTextAppearance" format="reference" />
+        <!-- The text appearance for the time header. -->
+        <attr name="headerTimeTextAppearance" format="reference" />
+        <!-- The text color for selected time header of the TimePicker.
+             This will override the value from the text appearance if it does
+             not explicitly have a color set for the selected state. -->
+        <attr name="timePickerHeaderSelectedTextColor" format="color" />
+        <attr name="timePickerHeaderPressedTextColor" format="color" />
+        <!-- The background for the header containing the currently selected time. -->
+        <attr name="headerBackground" />
+    </declare-styleable>
+
+    <declare-styleable name="SublimeRecurrencePicker">
+        <!-- Recurrence Picker heading style. -->
+        <attr name="recurrencePickerHeadingStyle" format="reference" />
+        <!-- Recurrence Picker options style. -->
+        <attr name="recurrencePickerOptionsStyle" format="reference" />
+        <!-- Background for the heading. -->
+        <attr name="headerBackground" />
+        <!-- Background for the container. -->
+        <attr name="pickerBackground" />
+        <!-- Text-color for the recurrence option that is currently selected. -->
+        <attr name="selectedOptionTextColor" format="color" />
+        <!-- Default text-color for recurrence options. -->
+        <attr name="unselectedOptionsTextColor" format="color" />
+        <!-- The state_pressed color -->
+        <attr name="pressedOptionBgColor" format="color" />
+        <!-- Drawable shown on the selected recurrence option -->
+        <attr name="selectedOptionDrawable" format="reference" />
+    </declare-styleable>
+
+    <declare-styleable name="RecurrenceOptionCreator">
+        <!-- header bg color -->
+        <!--<attr name="customRecurrencePickerHeaderBgColor" format="color" />-->
+        <attr name="headerBackground" />
+        <attr name="endDateFormat" format="enum">
+            <enum name="shortFormat" value="0" />
+            <enum name="mediumFormat" value="1" />
+        </attr>
+        <!-- 'RecurrenceOptionCreator' abbrv. 'roc' -->
+        <attr name="rocLabelTextAppearance" format="reference" />
+        <attr name="rocWeekButtonStyle" format="reference" />
+        <attr name="rocFreqSpinnerStyle" format="reference" />
+        <attr name="rocEndSpinnerStyle" format="reference" />
+        <attr name="rocFreqSpinnerItemStyle" format="reference" />
+        <attr name="rocEndDateStyle" format="reference" />
+        <attr name="rocEndSpinnerItemStyle" format="reference" />
+        <attr name="rocEndSpinnerDropDownItemStyle" format="reference" />
+        <attr name="weekButtonUnselectedTextColor" format="reference" />
+        <attr name="weekButtonSelectedTextColor" format="reference" />
+        <attr name="weekButtonSelectedCircleColor" format="reference" />
+    </declare-styleable>
+
+    <declare-styleable name="ButtonLayout">
+        <!-- Applies to OK & CANCEL buttons.
+             'button': Regular buttons with text 'OK' & 'CANCEL'.
+             'icon'  : Checkmark drawable (included, check drawable-xxxx folders)
+                       is used for 'OK' action. Cross(X) drawable is
+                       used for 'CANCEL' action.
+             For 'icon' presentation mode, 'OK' & 'CANCEL' action
+             drawables are assignable using 'okActionDrawable'
+             & 'cancelActionDrawable' (see below) -->
+        <attr name="presentation" format="enum">
+            <enum name="button" value="0" />
+            <enum name="icon" value="1" />
+        </attr>
+        <!-- Used as 'src' for 'OK' action when 'presentation' mode
+             is set to 'icon' -->
+        <attr name="okActionDrawable" format="reference" />
+        <!-- Used as 'src' for 'CANCEL' action when 'presentation' mode
+             is set to 'icon' -->
+        <attr name="cancelActionDrawable" format="reference" />
+        <!-- Used when 'presentation' is set to 'icon'.
+             Defaults to 'colorAccent'  -->
+        <attr name="iconColor" format="color" />
+        <!-- Defaults to 'colorButtonNormal' on API versions < Lollipop. -->
+        <attr name="buttonBgColor" format="color" />
+        <!-- Defaults to 'colorControlHightlight'. -->
+        <attr name="buttonPressedBgColor" format="color" />
+        <!-- Background color for ButtonLayout. Drawables are
+             currently not supported; they might be in future -->
+        <attr name="buttonBarBgColor" format="color" />
+        <!-- OK & CANCEL button style attr -->
+        <attr name="buttonModeOkCancelButtonStyle" format="reference" />
+        <!-- In landscape orientation, extend left-side background color
+             through Button-Bar. When this is set to true, the attributes
+             that follow will have to be set as well.  -->
+        <attr name="extendPartitionThroughButtonBar" format="boolean" />
+        <!-- If 'extendPartitionThroughButtonBar' is set to false,
+             buttonModeSwitcherButtonStyle should point to the same style
+             as 'buttonModeOkCancelButtonStyle'. If not,
+             buttonModeSwitcherButtonStyle points to a different style
+             that is identical to 'buttonModeOkCancelButtonStyle'
+             in portrait orientation, but differs slightly in
+             landscape orientation (see values-land/styles.xml). The
+             only difference between these styles is that in
+             landscape orientation, the text-color is set to theme's
+             '?android:attr/textColorPrimaryInverse'. So, if you decide to
+             extend/modify/replace switcher-button's style,
+             apply changes in both 'values/styles.xml' & 'values-land/styles.xml' -->
+        <attr name="buttonModeSwitcherButtonStyle" format="reference" />
+        <!-- Ideally, this should use the color assigned to 'headerBackground'.
+             For now, repetition is required. Assign this the same
+             color as assigned to SublimeDatePicker_headerBackground or
+             SublimeTimePicker_headerBackground. Note that, this restricts
+             the usage of different colors for SublimeDatePicker_headerBackground
+             & SublimeTimePicker_headerBackground. -->
+        <attr name="extendedPartitionBgColor" format="color" />
+        <!-- By default, the buttonInvertedBgColor will hold
+             the same color as 'headerBackground' -->
+        <attr name="buttonInvertedBgColor" format="color" />
+        <!-- Set buttonPressedInvertedBgColor to 'colorControlHighlight'.
+             'colorControlHighlight' points to two different theme-dependent
+             colors. Use whichever is appropriate -->
+        <attr name="buttonPressedInvertedBgColor" format="color" />
+    </declare-styleable>
+
+    <declare-styleable name="MonthView">
+        <!-- If set to 'true', only a single month will be shown
+             per position in the day-month picker view.
+             For example, if 'February' is the month being displayed,
+             and its days cannot cover the whole view, the heading
+             of 'March' will not be displayed at the bottom.
+             This will in effect add some whitespace at the
+             bottom for months whose days do not fill the
+             last visible row. -->
+        <attr name="showSingleMonthPerPosition" format="boolean" />
+        <attr name="selectedDayCircleAlpha" format="integer" />
+        <!-- The text color list of the calendar. -->
+        <attr name="calendarEnabledTextColor" format="color" />
+        <!-- The text color list of the calendar. -->
+        <attr name="calendarDisabledTextColor" format="color" />
+        <!-- The selected text color for the calendar. Used as a backup
+             if the text color does not explicitly have a color set for the
+             selected state. -->
+        <attr name="calendarEnabledSelectedTextColor" format="color" />
+        <!-- Text color for month name label. Ex: JANUARY, FEBRUARY etc. -->
+        <attr name="monthNameTextColor" format="color" />
+        <!-- Text color for month name label. Ex: M, T, W etc. -->
+        <attr name="dayNameTextColor" format="color" />
+    </declare-styleable>
+
+    <declare-styleable name="YearPickerView">
+        <!-- The list year's text appearance in the list. -->
+        <attr name="yearListItemTextAppearance" format="reference" />
+        <!-- The list year's selected circle color in the list. -->
+        <attr name="yearListSelectorColor" format="color" />
+        <!-- Bg color for YearPicker: defaults to transparent -->
+        <attr name="yearPickerBgColor" format="color" />
+    </declare-styleable>
+
+    <declare-styleable name="DayPickerView">
+        <!-- Bg color for YearPicker: defaults to transparent -->
+        <attr name="dayPickerBgColor" format="color" />
+    </declare-styleable>
+
+    <declare-styleable name="RadialTimePickerView">
+        <!-- The color for the hours/minutes numbers. -->
+        <attr name="numbersTextColor" format="color" />
+        <!-- The color for the hours/minutes selector. -->
+        <attr name="numbersSelectorColor" format="color" />
+        <!-- The background color for the hours/minutes numbers. -->
+        <attr name="numbersBackgroundColor" format="reference|color" />
+    </declare-styleable>
+
+</resources>

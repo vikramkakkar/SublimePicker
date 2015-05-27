@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8"?><!--  Copyright (C) 2006 The Android Open Source Project
+
+     Licensed under the Apache License, Version 2.0 (the "License");
+     you may not use this file except in compliance with the License.
+     You may obtain a copy of the License at
+
+          http://www.apache.org/licenses/LICENSE-2.0
+
+     Unless required by applicable law or agreed to in writing, software
+     distributed under the License is distributed on an "AS IS" BASIS,
+     WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+     See the License for the specific language governing permissions and
+     limitations under the License.
+ -->
+
+<resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
+
+    <string name="select_hours">"Atlasiet stundas."</string>
+    <string name="select_minutes">"Atlasiet minūtes."</string>
+    <string name="day_picker_description">"Režģis ar mēneša dienām"</string>
+    <string name="year_picker_description">"Gadu saraksts"</string>
+    <string name="select_day">"Atlasiet mēnesi un dienu."</string>
+    <string name="select_year">"Atlasiet gadu."</string>
+    <string name="item_is_selected">"Atlasīts: <xliff:g id="ITEM">%1$s</xliff:g>"</string>
+    <string name="deleted_key">"<xliff:g id="KEY">%1$s</xliff:g> tika dzēsts."</string>
+
+    <string name="ok">"Labi"</string>
+    <string name="cancel">"Atcelt"</string>
+
+    <string name="endByDate">"; līdz šādam datumam: <xliff:g id="DATE">%s</xliff:g>"</string>
+    <plurals name="endByCount">
+        <item quantity="one">"; vienu reizi"</item>
+        <item quantity="other">"; <xliff:g id="NUMBER">%d</xliff:g> reizes"</item>
+    </plurals>
+    <plurals name="daily">
+        <item quantity="one">"Katru dienu"</item>
+        <item quantity="other">"Ik pēc <xliff:g id="NUMBER">%d</xliff:g> dienām"</item>
+    </plurals>
+    <string name="every_weekday">"Katru darbadienu (Pr–Pk)"</string>
+    <plurals name="weekly">
+        <item quantity="one">"Reizi nedēļā, katru <xliff:g id="DAYS_OF_WEEK">%2$s</xliff:g>"</item>
+        <item quantity="other">"Reizi <xliff:g id="NUMBER">%1$d</xliff:g> nedēļās, katru <xliff:g id="DAYS_OF_WEEK">%2$s</xliff:g>"</item>
+    </plurals>
+    <string name="monthly">"Reizi mēnesī"</string>
+    <string name="yearly_plain">"Reizi gadā"</string>
+    <plurals name="recurrence_interval_daily">
+        <item quantity="one">"Ik pēc <xliff:g id="COUNT">%d</xliff:g> dienas"</item>
+        <item quantity="other">"Ik pēc <xliff:g id="COUNT">%d</xliff:g> dienas(-ām)"</item>
+    </plurals>
+    <plurals name="recurrence_interval_weekly">
+        <item quantity="one">"Ik pēc <xliff:g id="COUNT">%d</xliff:g> nedēļas"</item>
+        <item quantity="other">"Ik pēc <xliff:g id="COUNT">%d</xliff:g> nedēļas(-ām)"</item>
+    </plurals>
+    <plurals name="recurrence_interval_monthly">
+        <item quantity="one">"Ik pēc <xliff:g id="COUNT">%d</xliff:g> mēneša"</item>
+        <item quantity="other">"Ik pēc <xliff:g id="COUNT">%d</xliff:g> mēneša(-iem)"</item>
+    </plurals>
+    <plurals name="recurrence_interval_yearly">
+        <item quantity="one">"Ik pēc <xliff:g id="COUNT">%d</xliff:g> gada"</item>
+        <item quantity="other">"Ik pēc <xliff:g id="COUNT">%d</xliff:g> gada(-iem)"</item>
+    </plurals>
+    <string name="recurrence_month_pattern_by_day">"Katru mēnesi"</string>
+    <string name="recurrence_end_continously">"Bezgalīgi"</string>
+    <string name="recurrence_end_date_label">"Līdz noteiktam datumam"</string>
+    <string name="recurrence_end_date">"Līdz  šādam datumam: <xliff:g id="DATE">%s</xliff:g>"</string>
+    <string name="recurrence_end_count_label">"Noteiktu reižu skaitu"</string>
+    <plurals name="recurrence_end_count">
+        <item quantity="one">"<xliff:g id="EVENT_COUNT">%d</xliff:g> notikumā"</item>
+        <item quantity="other">"<xliff:g id="EVENT_COUNT">%d</xliff:g> notikumos"</item>
+    </plurals>
+    <string name="acessibility_recurrence_choose_end_date_description">"mainīt beigu datumu"</string>
+</resources>

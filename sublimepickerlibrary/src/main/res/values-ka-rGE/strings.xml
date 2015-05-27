@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8"?><!--  Copyright (C) 2006 The Android Open Source Project
+
+     Licensed under the Apache License, Version 2.0 (the "License");
+     you may not use this file except in compliance with the License.
+     You may obtain a copy of the License at
+
+          http://www.apache.org/licenses/LICENSE-2.0
+
+     Unless required by applicable law or agreed to in writing, software
+     distributed under the License is distributed on an "AS IS" BASIS,
+     WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+     See the License for the specific language governing permissions and
+     limitations under the License.
+ -->
+
+<resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
+
+    <string name="select_hours">"აირჩიეთ საათები"</string>
+    <string name="select_minutes">"აირჩიეთ წუთები"</string>
+    <string name="day_picker_description">"დღეების ბადე თვეზე"</string>
+    <string name="year_picker_description">"წლის სია"</string>
+    <string name="select_day">"აირჩიეთ თვე და რიცხვი"</string>
+    <string name="select_year">"აირჩიეთ წელი"</string>
+    <string name="item_is_selected">"არჩეულია <xliff:g id="ITEM">%1$s</xliff:g>"</string>
+    <string name="deleted_key">"<xliff:g id="KEY">%1$s</xliff:g> წაიშალა"</string>
+
+    <string name="ok">"OK"</string>
+    <string name="cancel">"გაუქმება"</string>
+
+    <string name="endByDate">"; <xliff:g id="DATE">%s</xliff:g>-მდე"</string>
+    <plurals name="endByCount">
+        <item quantity="one">"; ერთხელ"</item>
+        <item quantity="other">"; <xliff:g id="NUMBER">%d</xliff:g>-ჯერ"</item>
+    </plurals>
+    <plurals name="daily">
+        <item quantity="one">"ყოველდღიურად"</item>
+        <item quantity="other">"ყოველ <xliff:g id="NUMBER">%d</xliff:g> დღეს"</item>
+    </plurals>
+    <string name="every_weekday">"ყოველ სამუშაო დღეს (ორშ–პარ)"</string>
+    <plurals name="weekly">
+        <item quantity="one">"ყოველკვირეულად <xliff:g id="DAYS_OF_WEEK">%2$s</xliff:g>-ობით"</item>
+        <item quantity="other">"ყოველ <xliff:g id="NUMBER">%1$d</xliff:g> კვირაში, <xliff:g id="DAYS_OF_WEEK">%2$s</xliff:g>-ობით"</item>
+    </plurals>
+    <string name="monthly">"ყოველთვიურად"</string>
+    <string name="yearly_plain">"ყოველწლიურად"</string>
+    <plurals name="recurrence_interval_daily">
+        <item quantity="one">"ყოველ <xliff:g id="COUNT">%d</xliff:g> დღეში"</item>
+        <item quantity="other">"ყოველ <xliff:g id="COUNT">%d</xliff:g> დღეში"</item>
+    </plurals>
+    <plurals name="recurrence_interval_weekly">
+        <item quantity="one">"ყოველ <xliff:g id="COUNT">%d</xliff:g> კვირაში"</item>
+        <item quantity="other">"ყოველ <xliff:g id="COUNT">%d</xliff:g> კვირაში"</item>
+    </plurals>
+    <plurals name="recurrence_interval_monthly">
+        <item quantity="one">"ყოველ <xliff:g id="COUNT">%d</xliff:g> თვეში"</item>
+        <item quantity="other">"ყოველ <xliff:g id="COUNT">%d</xliff:g> თვეში"</item>
+    </plurals>
+    <plurals name="recurrence_interval_yearly">
+        <item quantity="one">"ყოველ <xliff:g id="COUNT">%d</xliff:g> წელიწადში"</item>
+        <item quantity="other">"ყოველ <xliff:g id="COUNT">%d</xliff:g> წელიწადში"</item>
+    </plurals>
+    <string name="recurrence_month_pattern_by_day">"თითოეული თვის ერთსა და იმავე დღეს"</string>
+    <string name="recurrence_end_continously">"სამუდამოდ"</string>
+    <string name="recurrence_end_date_label">"თარიღამდე"</string>
+    <string name="recurrence_end_date">"<xliff:g id="DATE">%s</xliff:g>-მდე"</string>
+    <string name="recurrence_end_count_label">"რამდენიმე ღონისძიებისთვის"</string>
+    <plurals name="recurrence_end_count">
+        <item quantity="one">"<xliff:g id="EVENT_COUNT">%d</xliff:g> ღონისძიებისთვის"</item>
+        <item quantity="other">"<xliff:g id="EVENT_COUNT">%d</xliff:g> ღონისძიებისთვის"</item>
+    </plurals>
+    <string name="acessibility_recurrence_choose_end_date_description">"დასრულების თარიღის შეცვლა"</string>
+</resources>

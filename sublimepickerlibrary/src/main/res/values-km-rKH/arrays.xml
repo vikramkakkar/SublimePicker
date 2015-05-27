@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8"?><!--  Copyright (C) 2007 The Android Open Source Project
+
+     Licensed under the Apache License, Version 2.0 (the "License");
+     you may not use this file except in compliance with the License.
+     You may obtain a copy of the License at
+
+          http://www.apache.org/licenses/LICENSE-2.0
+
+     Unless required by applicable law or agreed to in writing, software
+     distributed under the License is distributed on an "AS IS" BASIS,
+     WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+     See the License for the specific language governing permissions and
+     limitations under the License.
+ -->
+
+<resources>
+    <string-array name="recurrence_freq">
+        <item>"ធ្វើ​ឡើងវិញ​ប្រចាំ​ថ្ងៃ"</item>
+        <item>"ធ្វើ​ឡើងវិញ​ប្រចាំ​សប្ដាហ៍"</item>
+        <item>"ធ្វើ​ឡើងវិញ​ប្រចាំ​ខែ"</item>
+        <item>"ធ្វើ​ឡើងវិញ​ប្រចាំ​ឆ្នាំ"</item>
+    </string-array>
+    <string-array name="repeat_by_nth_sun">
+        <item>"នៅ​រាល់​ថ្ងៃ​អាទិត្យ​ទី​មួយ"</item>
+        <item>"នៅ​រាល់​ថ្ងៃ​អាទិត្យ​ទី​ពីរ"</item>
+        <item>"នៅ​រាល់​ថ្ងៃ​អាទិត្យ​ទី​បី"</item>
+        <item>"នៅ​រាល់​ថ្ងៃ​អាទិត្យ​ទី​បួន"</item>
+        <item>"នៅ​រាល់​ថ្ងៃ​អាទិត្យ​ចុងក្រោយ"</item>
+    </string-array>
+    <string-array name="repeat_by_nth_mon">
+        <item>"នៅ​រាល់​ថ្ងៃ​ចន្ទ​ទី​មួយ"</item>
+        <item>"នៅ​រាល់​ថ្ងៃ​ចន្ទ​ទី​ពីរ"</item>
+        <item>"នៅ​រាល់​ថ្ងៃ​ចន្ទ​ទី​បី"</item>
+        <item>"នៅ​រាល់​ថ្ងៃ​ចន្ទ​ទី​បួន"</item>
+        <item>"នៅ​រាល់​ថ្ងៃ​ចន្ទ​ចុងក្រោយ"</item>
+    </string-array>
+    <string-array name="repeat_by_nth_tues">
+        <item>"នៅ​រាល់​ថ្ងៃ​អង្គារ​ទី​មួយ"</item>
+        <item>"នៅ​រាល់​ថ្ងៃ​អង្គារ​ទី​ពីរ"</item>
+        <item>"នៅ​រាល់​ថ្ងៃ​អង្គារ​ទី​បី"</item>
+        <item>"នៅ​រាល់​ថ្ងៃ​អង្គារ​ទី​បួន"</item>
+        <item>"នៅ​រាល់​ថ្ងៃ​អង្គារ​ចុងក្រោយ"</item>
+    </string-array>
+    <string-array name="repeat_by_nth_wed">
+        <item>"នៅ​រាល់​ថ្ងៃ​ពុធ​ទី​មួយ"</item>
+        <item>"នៅ​រាល់​ថ្ងៃ​ពុធ​ទី​ពីរ"</item>
+        <item>"នៅ​រាល់​ថ្ងៃ​ពុធ​ទី​បី"</item>
+        <item>"នៅ​រាល់​ថ្ងៃ​ពុធ​ទី​បួន"</item>
+        <item>"នៅ​រាល់​ថ្ងៃ​ពុធ​ចុងក្រោយ"</item>
+    </string-array>
+    <string-array name="repeat_by_nth_thurs">
+        <item>"នៅ​រាល់​ថ្ងៃ​ព្រហស្បតិ៍​ទី​មួយ"</item>
+        <item>"នៅ​រាល់​ថ្ងៃ​ព្រហស្បតិ៍​ទី​ពីរ"</item>
+        <item>"នៅ​រាល់​ថ្ងៃ​ព្រហស្បតិ៍​ទី​បី"</item>
+        <item>"នៅ​រាល់​ថ្ងៃ​ព្រហស្បតិ៍​ទី​បួន"</item>
+        <item>"នៅ​រាល់​ថ្ងៃ​ព្រហស្បតិ៍​ចុងក្រោយ"</item>
+    </string-array>
+    <string-array name="repeat_by_nth_fri">
+        <item>"នៅ​រាល់​ថ្ងៃ​សុក្រ​ទី​មួយ"</item>
+        <item>"នៅ​រាល់​ថ្ងៃ​សុក្រ​ទីពីរ"</item>
+        <item>"នៅ​រាល់​ថ្ងៃ​សុក្រ​ទីបី"</item>
+        <item>"នៅ​រាល់​ថ្ងៃ​សុក្រ​ទី​បួន"</item>
+        <item>"នៅ​រាល់​ថ្ងៃ​សុក្រ​ចុងក្រោយ"</item>
+    </string-array>
+    <string-array name="repeat_by_nth_sat">
+        <item>"នៅ​រាល់​ថ្ងៃ​សៅរ៍​ទី​មួយ"</item>
+        <item>"នៅ​រាល់​ថ្ងៃ​សៅរ៍​ទី​ពីរ"</item>
+        <item>"នៅ​រាល់​ថ្ងៃ​សៅរ៍​ទី​បី"</item>
+        <item>"នៅ​រាល់​ថ្ងៃ​សៅរ៍​ទី​បួន"</item>
+        <item>"នៅ​រាល់​ថ្ងៃ​សៅរ៍​ចុងក្រោយ"</item>
+    </string-array>
+</resources>

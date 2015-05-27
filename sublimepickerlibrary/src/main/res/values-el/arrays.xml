@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8"?><!--  Copyright (C) 2007 The Android Open Source Project
+
+     Licensed under the Apache License, Version 2.0 (the "License");
+     you may not use this file except in compliance with the License.
+     You may obtain a copy of the License at
+
+          http://www.apache.org/licenses/LICENSE-2.0
+
+     Unless required by applicable law or agreed to in writing, software
+     distributed under the License is distributed on an "AS IS" BASIS,
+     WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+     See the License for the specific language governing permissions and
+     limitations under the License.
+ -->
+
+<resources>
+    <string-array name="recurrence_freq">
+        <item>"ΕΠΑΝΑΛΗΨΗ ΚΑΘΗΜΕΡΙΝΑ"</item>
+        <item>"ΕΠΑΝΑΛΗΨΗ ΕΒΔΟΜΑΔ."</item>
+        <item>"ΕΠΑΝΑΛΗΨΗ ΜΗΝΙΑΙΑ"</item>
+        <item>"ΕΠΑΝΑΛΗΨΗ ΕΤΗΣΙΩΣ"</item>
+    </string-array>
+    <string-array name="repeat_by_nth_sun">
+        <item>"κάθε πρώτη Κυριακή"</item>
+        <item>"κάθε δεύτερη Κυριακή"</item>
+        <item>"κάθε τρίτη Κυριακή"</item>
+        <item>"κάθε τέταρτη Κυριακή"</item>
+        <item>"κάθε προηγούμενη Κυριακή"</item>
+    </string-array>
+    <string-array name="repeat_by_nth_mon">
+        <item>"κάθε πρώτη Δευτέρα"</item>
+        <item>"κάθε δεύτερη Δευτέρα"</item>
+        <item>"κάθε τρίτη Δευτέρα"</item>
+        <item>"κάθε τέταρτη Δευτέρα"</item>
+        <item>"κάθε προηγούμενη Δευτέρα"</item>
+    </string-array>
+    <string-array name="repeat_by_nth_tues">
+        <item>"κάθε πρώτη Τρίτη"</item>
+        <item>"κάθε δεύτερη Τρίτη"</item>
+        <item>"κάθε τρίτη Τρίτη"</item>
+        <item>"κάθε τέταρτη Τρίτη"</item>
+        <item>"κάθε προηγούμενη Τρίτη"</item>
+    </string-array>
+    <string-array name="repeat_by_nth_wed">
+        <item>"κάθε πρώτη Τετάρτη"</item>
+        <item>"κάθε δεύτερη Τετάρτη"</item>
+        <item>"κάθε τρίτη Τετάρτη"</item>
+        <item>"κάθε τέταρτη Τετάρτη"</item>
+        <item>"κάθε προηγούμενη Τετάρτη"</item>
+    </string-array>
+    <string-array name="repeat_by_nth_thurs">
+        <item>"κάθε πρώτη Πέμπτη"</item>
+        <item>"κάθε δεύτερη Πέμπτη"</item>
+        <item>"κάθε τρίτη Πέμπτη"</item>
+        <item>"κάθε τέταρτη Πέμπτη"</item>
+        <item>"κάθε προηγούμενη Πέμπτη"</item>
+    </string-array>
+    <string-array name="repeat_by_nth_fri">
+        <item>"κάθε πρώτη Παρασκευή"</item>
+        <item>"κάθε δεύτερη Παρασκευή"</item>
+        <item>"κάθε τρίτη Παρασκευή"</item>
+        <item>"κάθε τέταρτη Παρασκευή"</item>
+        <item>"κάθε προηγούμενη Παρασκευή"</item>
+    </string-array>
+    <string-array name="repeat_by_nth_sat">
+        <item>"κάθε πρώτο Σάββατο"</item>
+        <item>"κάθε δεύτερο Σάββατο"</item>
+        <item>"κάθε τρίτο Σάββατο"</item>
+        <item>"κάθε τέταρτο Σάββατο"</item>
+        <item>"κάθε προηγούμενο Σάββατο"</item>
+    </string-array>
+</resources>

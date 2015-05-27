@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="utf-8"?><!-- Copyright (C) 2015 Vikram Kakkar
+
+     Licensed under the Apache License, Version 2.0 (the "License");
+     you may not use this file except in compliance with the License.
+     You may obtain a copy of the License at
+
+          http://www.apache.org/licenses/LICENSE-2.0
+
+     Unless required by applicable law or agreed to in writing, software
+     distributed under the License is distributed on an "AS IS" BASIS,
+     WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+     See the License for the specific language governing permissions and
+     limitations under the License.
+-->
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/llRecurrenceOptionsMenu"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:minWidth="@dimen/recurrence_picker_width">
+
+    <TextView
+        android:id="@+id/tvHeading"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/recurrence_heading"
+        style="?attr/recurrencePickerHeadingStyle" />
+
+    <ScrollView
+        android:id="@+id/svRecurrenceOptionsMenu"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="@dimen/repeat_options_menu_top_margin">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:divider="@drawable/recurrence_menu_divider"
+            android:showDividers="middle"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/tvChosenCustomOption"
+                style="?attr/recurrencePickerOptionsStyle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:visibility="gone" />
+
+            <TextView
+                android:id="@+id/tvDoesNotRepeat"
+                style="?attr/recurrencePickerOptionsStyle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/recurrence_does_not_repeat" />
+
+            <TextView
+                android:id="@+id/tvDaily"
+                style="?attr/recurrencePickerOptionsStyle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/recurrence_daily" />
+
+            <TextView
+                android:id="@+id/tvWeekly"
+                style="?attr/recurrencePickerOptionsStyle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/recurrence_weekly" />
+
+            <TextView
+                android:id="@+id/tvMonthly"
+                style="?attr/recurrencePickerOptionsStyle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/recurrence_monthly" />
+
+            <TextView
+                android:id="@+id/tvYearly"
+                style="?attr/recurrencePickerOptionsStyle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/recurrence_yearly" />
+
+            <TextView
+                android:id="@+id/tvCustom"
+                style="?attr/recurrencePickerOptionsStyle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/recurrence_custom" />
+
+        </LinearLayout>
+    </ScrollView>
+
+</LinearLayout>

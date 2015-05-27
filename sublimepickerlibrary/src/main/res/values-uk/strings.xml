@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8"?><!--  Copyright (C) 2006 The Android Open Source Project
+
+     Licensed under the Apache License, Version 2.0 (the "License");
+     you may not use this file except in compliance with the License.
+     You may obtain a copy of the License at
+
+          http://www.apache.org/licenses/LICENSE-2.0
+
+     Unless required by applicable law or agreed to in writing, software
+     distributed under the License is distributed on an "AS IS" BASIS,
+     WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+     See the License for the specific language governing permissions and
+     limitations under the License.
+ -->
+
+<resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
+
+    <string name="select_hours">"Виберіть години"</string>
+    <string name="select_minutes">"Виберіть хвилини"</string>
+    <string name="day_picker_description">"Вікно вибору дати"</string>
+    <string name="year_picker_description">"Меню вибору року"</string>
+    <string name="select_day">"Виберіть місяць і день"</string>
+    <string name="select_year">"Виберіть рік"</string>
+    <string name="item_is_selected">"Вибрано: <xliff:g id="ITEM">%1$s</xliff:g>"</string>
+    <string name="deleted_key">"<xliff:g id="KEY">%1$s</xliff:g> видалено"</string>
+
+    <string name="ok">"OK"</string>
+    <string name="cancel">"Скасувати"</string>
+
+    <string name="endByDate">"; до <xliff:g id="DATE">%s</xliff:g>"</string>
+    <plurals name="endByCount">
+        <item quantity="one">"; один раз"</item>
+        <item quantity="other">"; стільки разів: <xliff:g id="NUMBER">%d</xliff:g>"</item>
+    </plurals>
+    <plurals name="daily">
+        <item quantity="one">"Щодня"</item>
+        <item quantity="other">"Кожні <xliff:g id="NUMBER">%d</xliff:g> дн."</item>
+    </plurals>
+    <string name="every_weekday">"Будні дні (пн.-пт.)"</string>
+    <plurals name="weekly">
+        <item quantity="one">"Щотижня в <xliff:g id="DAYS_OF_WEEK">%2$s</xliff:g>"</item>
+        <item quantity="other">"Кожні <xliff:g id="NUMBER">%1$d</xliff:g> тжн. у <xliff:g id="DAYS_OF_WEEK">%2$s</xliff:g>"</item>
+    </plurals>
+    <string name="monthly">"Щомісяця"</string>
+    <string name="yearly_plain">"Щороку"</string>
+    <plurals name="recurrence_interval_daily">
+        <item quantity="one">"Кожен <xliff:g id="COUNT">%d</xliff:g> день"</item>
+        <item quantity="other">"Кожні <xliff:g id="COUNT">%d</xliff:g> дн."</item>
+    </plurals>
+    <plurals name="recurrence_interval_weekly">
+        <item quantity="one">"Кожен <xliff:g id="COUNT">%d</xliff:g> тжн."</item>
+        <item quantity="other">"Інтервал: <xliff:g id="COUNT">%d</xliff:g> тжн."</item>
+    </plurals>
+    <plurals name="recurrence_interval_monthly">
+        <item quantity="one">"Кожен <xliff:g id="COUNT">%d</xliff:g> міс."</item>
+        <item quantity="other">"Кожні <xliff:g id="COUNT">%d</xliff:g> міс."</item>
+    </plurals>
+    <plurals name="recurrence_interval_yearly">
+        <item quantity="one">"Кожен <xliff:g id="COUNT">%d</xliff:g> рік"</item>
+        <item quantity="other">"Кожні <xliff:g id="COUNT">%d</xliff:g> р."</item>
+    </plurals>
+    <string name="recurrence_month_pattern_by_day">"певного дня щомісяця"</string>
+    <string name="recurrence_end_continously">"Постійно"</string>
+    <string name="recurrence_end_date_label">"До певної дати"</string>
+    <string name="recurrence_end_date">"До <xliff:g id="DATE">%s</xliff:g>"</string>
+    <string name="recurrence_end_count_label">"Для ряду подій"</string>
+    <plurals name="recurrence_end_count">
+        <item quantity="one">"Для стількох подій: <xliff:g id="EVENT_COUNT">%d</xliff:g>"</item>
+        <item quantity="other">"Для стількох подій: <xliff:g id="EVENT_COUNT">%d</xliff:g>"</item>
+    </plurals>
+    <string name="acessibility_recurrence_choose_end_date_description">"змінити дату завершення"</string>
+</resources>

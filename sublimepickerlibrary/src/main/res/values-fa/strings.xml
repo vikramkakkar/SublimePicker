@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8"?><!--  Copyright (C) 2006 The Android Open Source Project
+
+     Licensed under the Apache License, Version 2.0 (the "License");
+     you may not use this file except in compliance with the License.
+     You may obtain a copy of the License at
+
+          http://www.apache.org/licenses/LICENSE-2.0
+
+     Unless required by applicable law or agreed to in writing, software
+     distributed under the License is distributed on an "AS IS" BASIS,
+     WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+     See the License for the specific language governing permissions and
+     limitations under the License.
+ -->
+
+<resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
+
+    <string name="select_hours">"انتخاب ساعت"</string>
+    <string name="select_minutes">"انتخاب دقیقه"</string>
+    <string name="day_picker_description">"جدول روزها براساس ماه"</string>
+    <string name="year_picker_description">"لیست سال‌ها"</string>
+    <string name="select_day">"انتخاب ماه و روز"</string>
+    <string name="select_year">"انتخاب سال"</string>
+    <string name="item_is_selected">"<xliff:g id="ITEM">%1$s</xliff:g> انتخاب شد"</string>
+    <string name="deleted_key">"<xliff:g id="KEY">%1$s</xliff:g> حذف شد"</string>
+
+    <string name="ok">"تأیید"</string>
+    <string name="cancel">"لغو"</string>
+
+    <string name="endByDate">"؛ تا <xliff:g id="DATE">%s</xliff:g>"</string>
+    <plurals name="endByCount">
+        <item quantity="one">"؛ برای یکبار"</item>
+        <item quantity="other">"؛ برای <xliff:g id="NUMBER">%d</xliff:g> بار"</item>
+    </plurals>
+    <plurals name="daily">
+        <item quantity="one">"روزانه"</item>
+        <item quantity="other">"هر <xliff:g id="NUMBER">%d</xliff:g> روز"</item>
+    </plurals>
+    <string name="every_weekday">"هر روز هفته (دوشنبه-جمعه)"</string>
+    <plurals name="weekly">
+        <item quantity="one">"هفتگی در روزهای <xliff:g id="DAYS_OF_WEEK">%2$s</xliff:g>"</item>
+        <item quantity="other">"هر <xliff:g id="NUMBER">%1$d</xliff:g> در روزهای <xliff:g id="DAYS_OF_WEEK">%2$s</xliff:g>"</item>
+    </plurals>
+    <string name="monthly">"ماهانه"</string>
+    <string name="yearly_plain">"سالانه"</string>
+    <plurals name="recurrence_interval_daily">
+        <item quantity="one">"هر <xliff:g id="COUNT">%d</xliff:g> روز"</item>
+        <item quantity="other">"هر <xliff:g id="COUNT">%d</xliff:g> روز"</item>
+    </plurals>
+    <plurals name="recurrence_interval_weekly">
+        <item quantity="one">"هر <xliff:g id="COUNT">%d</xliff:g> هفته"</item>
+        <item quantity="other">"هر <xliff:g id="COUNT">%d</xliff:g> هفته"</item>
+    </plurals>
+    <plurals name="recurrence_interval_monthly">
+        <item quantity="one">"هر <xliff:g id="COUNT">%d</xliff:g> ماه"</item>
+        <item quantity="other">"هر <xliff:g id="COUNT">%d</xliff:g> ماه"</item>
+    </plurals>
+    <plurals name="recurrence_interval_yearly">
+        <item quantity="one">"هر <xliff:g id="COUNT">%d</xliff:g> سال"</item>
+        <item quantity="other">"هر <xliff:g id="COUNT">%d</xliff:g> سال"</item>
+    </plurals>
+    <string name="recurrence_month_pattern_by_day">"در یک روز معین از هر ماه"</string>
+    <string name="recurrence_end_continously">"همیشه"</string>
+    <string name="recurrence_end_date_label">"تا یک تاریخ معین"</string>
+    <string name="recurrence_end_date">"تا <xliff:g id="DATE">%s</xliff:g>"</string>
+    <string name="recurrence_end_count_label">"برای تعدادی از رویدادها"</string>
+    <plurals name="recurrence_end_count">
+        <item quantity="one">"برای <xliff:g id="EVENT_COUNT">%d</xliff:g> رویداد"</item>
+        <item quantity="other">"برای <xliff:g id="EVENT_COUNT">%d</xliff:g> رویداد"</item>
+    </plurals>
+    <string name="acessibility_recurrence_choose_end_date_description">"تغییر تاریخ پایان"</string>
+</resources>

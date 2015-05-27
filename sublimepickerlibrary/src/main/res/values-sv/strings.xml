@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8"?><!--  Copyright (C) 2006 The Android Open Source Project
+
+     Licensed under the Apache License, Version 2.0 (the "License");
+     you may not use this file except in compliance with the License.
+     You may obtain a copy of the License at
+
+          http://www.apache.org/licenses/LICENSE-2.0
+
+     Unless required by applicable law or agreed to in writing, software
+     distributed under the License is distributed on an "AS IS" BASIS,
+     WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+     See the License for the specific language governing permissions and
+     limitations under the License.
+ -->
+
+<resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
+
+    <string name="select_hours">"Välj timmar"</string>
+    <string name="select_minutes">"Välj minuter"</string>
+    <string name="day_picker_description">"Rutnät för månad"</string>
+    <string name="year_picker_description">"Lista över år"</string>
+    <string name="select_day">"Välj månad och dag"</string>
+    <string name="select_year">"Välj år"</string>
+    <string name="item_is_selected">"<xliff:g id="ITEM">%1$s</xliff:g> har markerats"</string>
+    <string name="deleted_key">"<xliff:g id="KEY">%1$s</xliff:g> har tagits bort"</string>
+
+    <string name="ok">"OK"</string>
+    <string name="cancel">"Avbryt"</string>
+
+    <string name="endByDate">", till <xliff:g id="DATE">%s</xliff:g>"</string>
+    <plurals name="endByCount">
+        <item quantity="one">", en gång"</item>
+        <item quantity="other">", <xliff:g id="NUMBER">%d</xliff:g> gånger"</item>
+    </plurals>
+    <plurals name="daily">
+        <item quantity="one">"Varje dag"</item>
+        <item quantity="other">"<xliff:g id="NUMBER">%d</xliff:g> dagars interv."</item>
+    </plurals>
+    <string name="every_weekday">"Varje vardag (mån-fre)"</string>
+    <plurals name="weekly">
+        <item quantity="one">"Varje vecka på <xliff:g id="DAYS_OF_WEEK">%2$s</xliff:g>"</item>
+        <item quantity="other">"Med <xliff:g id="NUMBER">%1$d</xliff:g> v. intervall på <xliff:g id="DAYS_OF_WEEK">%2$s</xliff:g>"</item>
+    </plurals>
+    <string name="monthly">"Varje månad"</string>
+    <string name="yearly_plain">"Varje år"</string>
+    <plurals name="recurrence_interval_daily">
+        <item quantity="one">"Med <xliff:g id="COUNT">%d</xliff:g> dags intervall"</item>
+        <item quantity="other">"Med <xliff:g id="COUNT">%d</xliff:g> dagars intervall"</item>
+    </plurals>
+    <plurals name="recurrence_interval_weekly">
+        <item quantity="one">"Med <xliff:g id="COUNT">%d</xliff:g> veckas intervall"</item>
+        <item quantity="other">"Med <xliff:g id="COUNT">%d</xliff:g> veckors intervall"</item>
+    </plurals>
+    <plurals name="recurrence_interval_monthly">
+        <item quantity="one">"Med <xliff:g id="COUNT">%d</xliff:g> månads intervall"</item>
+        <item quantity="other">"Med <xliff:g id="COUNT">%d</xliff:g> månaders intervall"</item>
+    </plurals>
+    <plurals name="recurrence_interval_yearly">
+        <item quantity="one">"Med <xliff:g id="COUNT">%d</xliff:g> års intervall"</item>
+        <item quantity="other">"Med <xliff:g id="COUNT">%d</xliff:g> års intervall"</item>
+    </plurals>
+    <string name="recurrence_month_pattern_by_day">"samma dag varje månad"</string>
+    <string name="recurrence_end_continously">"För alltid"</string>
+    <string name="recurrence_end_date_label">"Till ett visst datum"</string>
+    <string name="recurrence_end_date">"Till den <xliff:g id="DATE">%s</xliff:g>"</string>
+    <string name="recurrence_end_count_label">"Ett antal upprepningar"</string>
+    <plurals name="recurrence_end_count">
+        <item quantity="one">"För <xliff:g id="EVENT_COUNT">%d</xliff:g> event"</item>
+        <item quantity="other">"För <xliff:g id="EVENT_COUNT">%d</xliff:g> event"</item>
+    </plurals>
+    <string name="acessibility_recurrence_choose_end_date_description">"ändra slutdatum"</string>
+</resources>

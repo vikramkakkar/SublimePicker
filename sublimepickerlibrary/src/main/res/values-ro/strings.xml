@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8"?><!--  Copyright (C) 2006 The Android Open Source Project
+
+     Licensed under the Apache License, Version 2.0 (the "License");
+     you may not use this file except in compliance with the License.
+     You may obtain a copy of the License at
+
+          http://www.apache.org/licenses/LICENSE-2.0
+
+     Unless required by applicable law or agreed to in writing, software
+     distributed under the License is distributed on an "AS IS" BASIS,
+     WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+     See the License for the specific language governing permissions and
+     limitations under the License.
+ -->
+
+<resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
+
+    <string name="select_hours">"Selectați orele"</string>
+    <string name="select_minutes">"Selectați minutele"</string>
+    <string name="day_picker_description">"Afișare pe luni"</string>
+    <string name="year_picker_description">"Listă de ani"</string>
+    <string name="select_day">"Selectați luna și ziua"</string>
+    <string name="select_year">"Selectați anul"</string>
+    <string name="item_is_selected">"<xliff:g id="ITEM">%1$s</xliff:g> selectat"</string>
+    <string name="deleted_key">"<xliff:g id="KEY">%1$s</xliff:g> a fost șters"</string>
+
+    <string name="ok">"OK"</string>
+    <string name="cancel">"Anulaţi"</string>
+
+    <string name="endByDate">"; până la <xliff:g id="DATE">%s</xliff:g>"</string>
+    <plurals name="endByCount">
+        <item quantity="one">"; o dată"</item>
+        <item quantity="other">"; de <xliff:g id="NUMBER">%d</xliff:g> ori"</item>
+    </plurals>
+    <plurals name="daily">
+        <item quantity="one">"Zilnic"</item>
+        <item quantity="other">"O dată la <xliff:g id="NUMBER">%d</xliff:g> zile"</item>
+    </plurals>
+    <string name="every_weekday">"În fiecare zi lucrătoare (Luni – Vineri)"</string>
+    <plurals name="weekly">
+        <item quantity="one">"Săptămânal, <xliff:g id="DAYS_OF_WEEK">%2$s</xliff:g>"</item>
+        <item quantity="other">"La fiecare <xliff:g id="NUMBER">%1$d</xliff:g> săpt., <xliff:g id="DAYS_OF_WEEK">%2$s</xliff:g>"</item>
+    </plurals>
+    <string name="monthly">"Lunar"</string>
+    <string name="yearly_plain">"Anual"</string>
+    <plurals name="recurrence_interval_daily">
+        <item quantity="one">"O dată la <xliff:g id="COUNT">%d</xliff:g> zi"</item>
+        <item quantity="other">"O dată la <xliff:g id="COUNT">%d</xliff:g> zile"</item>
+    </plurals>
+    <plurals name="recurrence_interval_weekly">
+        <item quantity="one">"O dată la <xliff:g id="COUNT">%d</xliff:g> săptămână"</item>
+        <item quantity="other">"O dată la <xliff:g id="COUNT">%d</xliff:g> săptămâni"</item>
+    </plurals>
+    <plurals name="recurrence_interval_monthly">
+        <item quantity="one">"O dată la <xliff:g id="COUNT">%d</xliff:g> lună"</item>
+        <item quantity="other">"O dată la <xliff:g id="COUNT">%d</xliff:g> luni"</item>
+    </plurals>
+    <plurals name="recurrence_interval_yearly">
+        <item quantity="one">"O dată la <xliff:g id="COUNT">%d</xliff:g> an"</item>
+        <item quantity="other">"O dată la <xliff:g id="COUNT">%d</xliff:g> ani"</item>
+    </plurals>
+    <string name="recurrence_month_pattern_by_day">"în aceeași zi lunar"</string>
+    <string name="recurrence_end_continously">"Întotdeauna"</string>
+    <string name="recurrence_end_date_label">"Până la o anumită dată"</string>
+    <string name="recurrence_end_date">"Până la <xliff:g id="DATE">%s</xliff:g>"</string>
+    <string name="recurrence_end_count_label">"De mai multe ori"</string>
+    <plurals name="recurrence_end_count">
+        <item quantity="one">"Pentru <xliff:g id="EVENT_COUNT">%d</xliff:g> eveniment"</item>
+        <item quantity="other">"Pentru <xliff:g id="EVENT_COUNT">%d</xliff:g> evenimente"</item>
+    </plurals>
+    <string name="acessibility_recurrence_choose_end_date_description">"schimbați data de încheiere"</string>
+</resources>

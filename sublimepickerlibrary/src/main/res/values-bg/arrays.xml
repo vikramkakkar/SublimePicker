@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8"?><!--  Copyright (C) 2007 The Android Open Source Project
+
+     Licensed under the Apache License, Version 2.0 (the "License");
+     you may not use this file except in compliance with the License.
+     You may obtain a copy of the License at
+
+          http://www.apache.org/licenses/LICENSE-2.0
+
+     Unless required by applicable law or agreed to in writing, software
+     distributed under the License is distributed on an "AS IS" BASIS,
+     WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+     See the License for the specific language governing permissions and
+     limitations under the License.
+ -->
+
+<resources>
+    <string-array name="recurrence_freq">
+        <item>"ПОВТАРЯНЕ ДНЕВНО"</item>
+        <item>"ПОВТАРЯНЕ СЕДМИЧНО"</item>
+        <item>"ПОВТАРЯНЕ МЕСЕЧНО"</item>
+        <item>"ПОВТАРЯНЕ ГОДИШНО"</item>
+    </string-array>
+    <string-array name="repeat_by_nth_sun">
+        <item>"всяка първа неделя"</item>
+        <item>"всяка втора неделя"</item>
+        <item>"всяка трета неделя"</item>
+        <item>"всяка четвърта неделя"</item>
+        <item>"всяка последна неделя"</item>
+    </string-array>
+    <string-array name="repeat_by_nth_mon">
+        <item>"всеки първи понеделник"</item>
+        <item>"всеки втори понеделник"</item>
+        <item>"всеки трети понеделник"</item>
+        <item>"всеки четвърти понеделник"</item>
+        <item>"всеки последен понеделник"</item>
+    </string-array>
+    <string-array name="repeat_by_nth_tues">
+        <item>"всеки първи вторник"</item>
+        <item>"всеки втори вторник"</item>
+        <item>"всеки трети вторник"</item>
+        <item>"всеки четвърти вторник"</item>
+        <item>"всеки последен вторник"</item>
+    </string-array>
+    <string-array name="repeat_by_nth_wed">
+        <item>"всяка първа сряда"</item>
+        <item>"всяка втора сряда"</item>
+        <item>"всяка трета сряда"</item>
+        <item>"всяка четвърта сряда"</item>
+        <item>"всяка последна сряда"</item>
+    </string-array>
+    <string-array name="repeat_by_nth_thurs">
+        <item>"всеки първи четвъртък"</item>
+        <item>"всеки втори четвъртък"</item>
+        <item>"всеки трети четвъртък"</item>
+        <item>"всеки четвърти четвъртък"</item>
+        <item>"всеки последен четвъртък"</item>
+    </string-array>
+    <string-array name="repeat_by_nth_fri">
+        <item>"всеки първи петък"</item>
+        <item>"всеки втори петък"</item>
+        <item>"всеки трети петък"</item>
+        <item>"всеки четвърти петък"</item>
+        <item>"всеки последен петък"</item>
+    </string-array>
+    <string-array name="repeat_by_nth_sat">
+        <item>"всяка първа събота"</item>
+        <item>"всяка втора събота"</item>
+        <item>"всяка трета събота"</item>
+        <item>"всяка четвърта събота"</item>
+        <item>"всяка последна събота"</item>
+    </string-array>
+</resources>

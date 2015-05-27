@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8"?><!--  Copyright (C) 2006 The Android Open Source Project
+
+     Licensed under the Apache License, Version 2.0 (the "License");
+     you may not use this file except in compliance with the License.
+     You may obtain a copy of the License at
+
+          http://www.apache.org/licenses/LICENSE-2.0
+
+     Unless required by applicable law or agreed to in writing, software
+     distributed under the License is distributed on an "AS IS" BASIS,
+     WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+     See the License for the specific language governing permissions and
+     limitations under the License.
+ -->
+
+<resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
+
+    <string name="select_hours">"గంటలను ఎంచుకోండి"</string>
+    <string name="select_minutes">"నిమిషాలను ఎంచుకోండి"</string>
+    <string name="day_picker_description">"రోజుల యొక్క నెల గ్రిడ్"</string>
+    <string name="year_picker_description">"సంవత్సర జాబితా"</string>
+    <string name="select_day">"నెల మరియు రోజును ఎంచుకోండి"</string>
+    <string name="select_year">"సంవత్సరాన్ని ఎంచుకోండి"</string>
+    <string name="item_is_selected">"<xliff:g id="ITEM">%1$s</xliff:g> ఎంచుకోబడింది"</string>
+    <string name="deleted_key">"<xliff:g id="KEY">%1$s</xliff:g> తొలగించబడింది"</string>
+
+    <string name="ok">"సరే"</string>
+    <string name="cancel">"రద్దు చేయండి"</string>
+
+    <string name="endByDate">"; <xliff:g id="DATE">%s</xliff:g> వరకు"</string>
+    <plurals name="endByCount">
+        <item quantity="one">"; ఒకసారి"</item>
+        <item quantity="other">"; <xliff:g id="NUMBER">%d</xliff:g> సార్లు"</item>
+    </plurals>
+    <plurals name="daily">
+        <item quantity="one">"ప్రతిరోజు"</item>
+        <item quantity="other">"ప్రతి <xliff:g id="NUMBER">%d</xliff:g> రోజులు"</item>
+    </plurals>
+    <string name="every_weekday">"ప్రతి వారపురోజు (సోమ–శుక్ర)"</string>
+    <plurals name="weekly">
+        <item quantity="one">"ప్రతి వారం <xliff:g id="DAYS_OF_WEEK">%2$s</xliff:g> నాడు"</item>
+        <item quantity="other">"ప్రతి <xliff:g id="NUMBER">%1$d</xliff:g> వారాలకు <xliff:g id="DAYS_OF_WEEK">%2$s</xliff:g> నాడు"</item>
+    </plurals>
+    <string name="monthly">"ప్రతి నెల"</string>
+    <string name="yearly_plain">"ప్రతి సంవత్సరం"</string>
+    <plurals name="recurrence_interval_daily">
+        <item quantity="one">"ప్రతి <xliff:g id="COUNT">%d</xliff:g> రోజు"</item>
+        <item quantity="other">"ప్రతి <xliff:g id="COUNT">%d</xliff:g> రోజులు"</item>
+    </plurals>
+    <plurals name="recurrence_interval_weekly">
+        <item quantity="one">"ప్రతి <xliff:g id="COUNT">%d</xliff:g> వారం"</item>
+        <item quantity="other">"ప్రతి <xliff:g id="COUNT">%d</xliff:g> వారాలు"</item>
+    </plurals>
+    <plurals name="recurrence_interval_monthly">
+        <item quantity="one">"ప్రతి <xliff:g id="COUNT">%d</xliff:g> నెల"</item>
+        <item quantity="other">"ప్రతి <xliff:g id="COUNT">%d</xliff:g> నెలలు"</item>
+    </plurals>
+    <plurals name="recurrence_interval_yearly">
+        <item quantity="one">"ప్రతి <xliff:g id="COUNT">%d</xliff:g> సంవత్సరం"</item>
+        <item quantity="other">"ప్రతి <xliff:g id="COUNT">%d</xliff:g> సంవత్సరాలు"</item>
+    </plurals>
+    <string name="recurrence_month_pattern_by_day">"ప్రతి నెల అదే రోజున"</string>
+    <string name="recurrence_end_continously">"ఎప్పటికీ"</string>
+    <string name="recurrence_end_date_label">"ఒక తేదీ వరకు"</string>
+    <string name="recurrence_end_date">"<xliff:g id="DATE">%s</xliff:g> వరకు"</string>
+    <string name="recurrence_end_count_label">"ఇన్ని ఈవెంట్‌లకు"</string>
+    <plurals name="recurrence_end_count">
+        <item quantity="one">"<xliff:g id="EVENT_COUNT">%d</xliff:g> ఈవెంట్‌కు"</item>
+        <item quantity="other">"<xliff:g id="EVENT_COUNT">%d</xliff:g> ఈవెంట్‌లకు"</item>
+    </plurals>
+    <string name="acessibility_recurrence_choose_end_date_description">"ముగింపు తేదీని మార్చండి"</string>
+</resources>

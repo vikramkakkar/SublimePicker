@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8"?><!--  Copyright (C) 2007 The Android Open Source Project
+
+     Licensed under the Apache License, Version 2.0 (the "License");
+     you may not use this file except in compliance with the License.
+     You may obtain a copy of the License at
+
+          http://www.apache.org/licenses/LICENSE-2.0
+
+     Unless required by applicable law or agreed to in writing, software
+     distributed under the License is distributed on an "AS IS" BASIS,
+     WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+     See the License for the specific language governing permissions and
+     limitations under the License.
+ -->
+
+<resources>
+    <string-array name="recurrence_freq">
+        <item>"በየቀኑ ድገም"</item>
+        <item>"በየሳምንቱ ድገም"</item>
+        <item>"በየወሩ ድገም"</item>
+        <item>"በየዓመቱ ድገም"</item>
+    </string-array>
+    <string-array name="repeat_by_nth_sun">
+        <item>"በሁሉም የመጀመሪያ እሁድ"</item>
+        <item>"በሁሉም ሁለተኛ እሁድ"</item>
+        <item>"በሁሉም ሶስተኛ እሁድ"</item>
+        <item>"በሁሉም አራተኛ እሁድ"</item>
+        <item>"በሁሉም የመጨረሻ እሁድ"</item>
+    </string-array>
+    <string-array name="repeat_by_nth_mon">
+        <item>"በሁሉም የመጀመሪያ ሰኞ"</item>
+        <item>"በሁሉም ሁለተኛ ሰኞ"</item>
+        <item>"በሁሉም ሶስተኛ ሰኞ"</item>
+        <item>"በሁሉም አራተኛ ሰኞ"</item>
+        <item>"በሁሉም የመጨረሻ ሰኞ"</item>
+    </string-array>
+    <string-array name="repeat_by_nth_tues">
+        <item>"በሁሉም የመጀመሪያ ማክሰኞ"</item>
+        <item>"በሁሉም ሁለተኛ ማክሰኞ"</item>
+        <item>"በሁሉም ሶስተኛ ማክሰኞ"</item>
+        <item>"በሁሉም አራተኛ ማክሰኞ"</item>
+        <item>"በሁሉም የመጨረሻ ማክሰኞ"</item>
+    </string-array>
+    <string-array name="repeat_by_nth_wed">
+        <item>"በሁሉም የመጀመሪያ ረቡዕ"</item>
+        <item>"በሁሉም ሁለተኛ ረቡዕ"</item>
+        <item>"በሁሉም ሶስተኛ ረቡዕ"</item>
+        <item>"በሁሉም አራተኛ ረቡዕ"</item>
+        <item>"በሁሉም የመጨረሻ ረቡዕ"</item>
+    </string-array>
+    <string-array name="repeat_by_nth_thurs">
+        <item>"በሁሉም የመጀመሪያ ሃሙስ"</item>
+        <item>"በሁሉም ሁለተኛ ሃሙስ"</item>
+        <item>"በሁሉም ሶስተኛ ሃሙስ"</item>
+        <item>"በሁሉም አራተኛ ሃሙስ"</item>
+        <item>"በሁሉም የመጨረሻ ሃሙስ"</item>
+    </string-array>
+    <string-array name="repeat_by_nth_fri">
+        <item>"በሁሉም የመጀመሪያ አርብ"</item>
+        <item>"በሁሉም ሁለተኛ አርብ"</item>
+        <item>"በሁሉም ሶስተኛ አርብ"</item>
+        <item>"በሁሉም አራተኛ አርብ"</item>
+        <item>"በሁሉም የመጨረሻ አርብ"</item>
+    </string-array>
+    <string-array name="repeat_by_nth_sat">
+        <item>"በሁሉም የመጀመሪያ ቅዳሜ"</item>
+        <item>"በሁሉም ሁለተኛ ቅዳሜ"</item>
+        <item>"በሁሉም ሶስተኛ ቅዳሜ"</item>
+        <item>"በሁሉም አራተኛ ቅዳሜ"</item>
+        <item>"በሁሉም የመጨረሻ ቅዳሜ"</item>
+    </string-array>
+</resources>

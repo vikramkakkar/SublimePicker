@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
+
+    <!-- Date & Time Picker -->
+    <string name="item_is_selected">"<xliff:g id="ITEM">%1$s</xliff:g> gekies"</string>
+    <string name="day_picker_description">"Maandrooster van dae"</string>
+    <string name="year_picker_description">"Jaarlys"</string>
+    <string name="select_day">"Kies maand en dag"</string>
+    <string name="select_year">"Kies jaar"</string>
+
+    <string name="ok">"OK"</string>
+    <string name="cancel">"Kanselleer"</string>
+
+    <string name="select_hours">"Kies ure"</string>
+    <string name="select_minutes">"Kies minute"</string>
+    <string name="deleted_key">"<xliff:g id="KEY">%1$s</xliff:g> uitgevee"</string>
+
+    <!-- Recurrence Picker -->
+
+    <string name="yearly_plain">"Jaarliks"</string>
+    <string name="monthly">"Maandeliks"</string>
+
+    <plurals name="weekly">
+        <item quantity="one">"Weekliks op <xliff:g id="DAYS_OF_WEEK">%2$s</xliff:g>"</item>
+        <item quantity="other">"Elke <xliff:g id="NUMBER">%1$d</xliff:g> weke op <xliff:g id="DAYS_OF_WEEK">%2$s</xliff:g>"</item>
+    </plurals>
+
+    <string name="every_weekday">"Elke weeksdag (Ma-Vr)"</string>
+
+    <plurals name="daily">
+        <item quantity="one">"Daagliks"</item>
+        <item quantity="other">"Elke <xliff:g id="NUMBER">%d</xliff:g> dae"</item>
+    </plurals>
+
+    <plurals name="endByCount">
+        <item quantity="one">"; vir een keer"</item>
+        <item quantity="other">"; vir <xliff:g id="NUMBER">%d</xliff:g> kere"</item>
+    </plurals>
+
+    <string name="endByDate">"; tot <xliff:g id="DATE">%s</xliff:g>"</string>
+
+    <plurals name="recurrence_end_count">
+        <item quantity="one">"Vir <xliff:g id="EVENT_COUNT">%d</xliff:g> geleentheid"</item>
+        <item quantity="other">"Vir <xliff:g id="EVENT_COUNT">%d</xliff:g> geleenthede"</item>
+    </plurals>
+
+    <string name="recurrence_end_continously">"Vir altyd"</string>
+
+    <string name="recurrence_end_date_label">"Tot \'n datum"</string>
+    <string name="recurrence_end_date">"Tot <xliff:g id="DATE">%s</xliff:g>"</string>
+    <string name="recurrence_end_count_label">"Vir \'n aantal geleenthede"</string>
+
+    <plurals name="recurrence_interval_daily">
+        <item quantity="one">"Elke <xliff:g id="COUNT">%d</xliff:g> dag"</item>
+        <item quantity="other">"Elke <xliff:g id="COUNT">%d</xliff:g> dae"</item>
+    </plurals>
+    <plurals name="recurrence_interval_weekly">
+        <item quantity="one">"Elke <xliff:g id="COUNT">%d</xliff:g> week"</item>
+        <item quantity="other">"Elke <xliff:g id="COUNT">%d</xliff:g> weke"</item>
+    </plurals>
+    <plurals name="recurrence_interval_monthly">
+        <item quantity="one">"Elke <xliff:g id="COUNT">%d</xliff:g> maand"</item>
+        <item quantity="other">"Elke <xliff:g id="COUNT">%d</xliff:g> maande"</item>
+    </plurals>
+    <plurals name="recurrence_interval_yearly">
+        <item quantity="one">"Elke <xliff:g id="COUNT">%d</xliff:g> jaar"</item>
+        <item quantity="other">"Elke <xliff:g id="COUNT">%d</xliff:g> jaar"</item>
+    </plurals>
+
+    <string name="acessibility_recurrence_choose_end_date_description">"verander einddatum"</string>
+
+    <string name="recurrence_month_pattern_by_day">"op dieselfde dag elke maand"</string>
+</resources>

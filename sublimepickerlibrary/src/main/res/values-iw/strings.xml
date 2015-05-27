@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8"?><!--  Copyright (C) 2006 The Android Open Source Project
+
+     Licensed under the Apache License, Version 2.0 (the "License");
+     you may not use this file except in compliance with the License.
+     You may obtain a copy of the License at
+
+          http://www.apache.org/licenses/LICENSE-2.0
+
+     Unless required by applicable law or agreed to in writing, software
+     distributed under the License is distributed on an "AS IS" BASIS,
+     WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+     See the License for the specific language governing permissions and
+     limitations under the License.
+ -->
+
+<resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
+
+    <string name="select_hours">"בחר שעות"</string>
+    <string name="select_minutes">"בחר דקות"</string>
+    <string name="day_picker_description">"בחירת ימים בחודש בתצוגת רשת"</string>
+    <string name="year_picker_description">"רשימת שנים"</string>
+    <string name="select_day">"בחר חודש ויום"</string>
+    <string name="select_year">"בחר שנה"</string>
+    <string name="item_is_selected">"<xliff:g id="ITEM">%1$s</xliff:g> נבחר"</string>
+    <string name="deleted_key">"<xliff:g id="KEY">%1$s</xliff:g> נמחק"</string>
+
+    <string name="ok">"אישור"</string>
+    <string name="cancel">"ביטול"</string>
+
+    <string name="endByDate">"; עד <xliff:g id="DATE">%s</xliff:g>"</string>
+    <plurals name="endByCount">
+        <item quantity="one">"; פעם אחת"</item>
+        <item quantity="other">"; <xliff:g id="NUMBER">%d</xliff:g> פעמים"</item>
+    </plurals>
+    <plurals name="daily">
+        <item quantity="one">"יומי"</item>
+        <item quantity="other">"כל <xliff:g id="NUMBER">%d</xliff:g> ימים"</item>
+    </plurals>
+    <string name="every_weekday">"כל יום חול (ראשון-חמישי)"</string>
+    <plurals name="weekly">
+        <item quantity="one">"שבועי ביום <xliff:g id="DAYS_OF_WEEK">%2$s</xliff:g>"</item>
+        <item quantity="other">"כל <xliff:g id="NUMBER">%1$d</xliff:g> שבועות ביום <xliff:g id="DAYS_OF_WEEK">%2$s</xliff:g>"</item>
+    </plurals>
+    <string name="monthly">"כל חודש"</string>
+    <string name="yearly_plain">"כל שנה"</string>
+    <plurals name="recurrence_interval_daily">
+        <item quantity="one">"כל יום <xliff:g id="COUNT">%d</xliff:g>"</item>
+        <item quantity="other">"כל <xliff:g id="COUNT">%d</xliff:g> ימים"</item>
+    </plurals>
+    <plurals name="recurrence_interval_weekly">
+        <item quantity="one">"כל שבוע <xliff:g id="COUNT">%d</xliff:g>"</item>
+        <item quantity="other">"כל <xliff:g id="COUNT">%d</xliff:g> שבועות"</item>
+    </plurals>
+    <plurals name="recurrence_interval_monthly">
+        <item quantity="one">"כל חודש <xliff:g id="COUNT">%d</xliff:g>"</item>
+        <item quantity="other">"כל <xliff:g id="COUNT">%d</xliff:g> חודשים"</item>
+    </plurals>
+    <plurals name="recurrence_interval_yearly">
+        <item quantity="one">"כל שנה <xliff:g id="COUNT">%d</xliff:g>"</item>
+        <item quantity="other">"כל <xliff:g id="COUNT">%d</xliff:g> שנים"</item>
+    </plurals>
+    <string name="recurrence_month_pattern_by_day">"באותו יום בכל חודש"</string>
+    <string name="recurrence_end_continously">"ללא תאריך סיום"</string>
+    <string name="recurrence_end_date_label">"עד תאריך מסוים"</string>
+    <string name="recurrence_end_date">"עד <xliff:g id="DATE">%s</xliff:g>"</string>
+    <string name="recurrence_end_count_label">"למספר אירועים"</string>
+    <plurals name="recurrence_end_count">
+        <item quantity="one">"עבור אירוע <xliff:g id="EVENT_COUNT">%d</xliff:g>"</item>
+        <item quantity="other">"עבור <xliff:g id="EVENT_COUNT">%d</xliff:g> אירועים"</item>
+    </plurals>
+    <string name="acessibility_recurrence_choose_end_date_description">"שינוי של תאריך הסיום"</string>
+</resources>

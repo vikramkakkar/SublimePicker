@@ -1,0 +1,321 @@
+<?xml version="1.0" encoding="utf-8"?><!--
+     Copyright 2015 Vikram Kakkar
+
+     Licensed under the Apache License, Version 2.0 (the "License");
+     you may not use this file except in compliance with the License.
+     You may obtain a copy of the License at
+
+          http://www.apache.org/licenses/LICENSE-2.0
+
+     Unless required by applicable law or agreed to in writing, software
+     distributed under the License is distributed on an "AS IS" BASIS,
+     WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+     See the License for the specific language governing permissions and
+     limitations under the License.
+-->
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#f6f6f6">
+
+    <ScrollView
+        android:id="@+id/svMainContainer"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="?attr/actionBarSize">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/tvActivatedPickers"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Pickers to activate:"
+                android:paddingTop="20dp"
+                android:paddingLeft="20dp"
+                android:textStyle="bold"
+                android:textSize="@dimen/sampler_text_size" />
+
+            <LinearLayout
+                android:paddingLeft="20dp"
+                android:paddingTop="10dp"
+                android:paddingRight="20dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <CheckBox
+                    android:id="@+id/cbDatePicker"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="DatePicker"
+                    android:textSize="@dimen/sampler_text_size" />
+
+                <CheckBox
+                    android:id="@+id/cbTimePicker"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="TimePicker"
+                    android:textSize="@dimen/sampler_text_size" />
+
+                <CheckBox
+                    android:id="@+id/cbRecurrencePicker"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="RecurrencePicker"
+                    android:textSize="@dimen/sampler_text_size" />
+
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/tvPickerToShow"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Picker to show on dialog creation:"
+                android:paddingTop="20dp"
+                android:paddingLeft="20dp"
+                android:textStyle="bold"
+                android:textSize="@dimen/sampler_text_size" />
+
+            <RadioGroup
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingLeft="20dp"
+                android:paddingTop="10dp"
+                android:paddingRight="20dp"
+                android:orientation="vertical"
+                android:animateLayoutChanges="true">
+
+                <RadioButton
+                    android:id="@+id/rbDatePicker"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="DatePicker"
+                    android:textSize="@dimen/sampler_text_size" />
+
+                <RadioButton
+                    android:id="@+id/rbTimePicker"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="TimePicker"
+                    android:textSize="@dimen/sampler_text_size" />
+
+                <RadioButton
+                    android:id="@+id/rbRecurrencePicker"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="RecurrencePicker"
+                    android:textSize="@dimen/sampler_text_size" />
+
+            </RadioGroup>
+
+            <TextView
+                android:id="@+id/tvMoreOptionsLabel"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="More options:"
+                android:paddingTop="20dp"
+                android:paddingLeft="20dp"
+                android:textStyle="bold"
+                android:textSize="@dimen/sampler_text_size" />
+
+            <CheckBox
+                android:id="@+id/cbShowExtendedBg"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginRight="20dp"
+                android:text="Show extended background in landscape orientation?"
+                android:textSize="@dimen/sampler_text_size" />
+
+            <CheckBox
+                android:id="@+id/cbShowSingleMonthPerPosition"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="5dp"
+                android:layout_marginRight="20dp"
+                android:layout_marginBottom="20dp"
+                android:text="Show single month per position in DatePicker?"
+                android:textSize="@dimen/sampler_text_size" />
+
+            <RelativeLayout
+                android:id="@+id/rlDateTimeRecurrenceInfo"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:layout_marginBottom="100dp"
+                android:visibility="gone">
+
+                <TextView
+                    android:id="@+id/tvDateLabel"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="10dp"
+                    android:layout_marginTop="10dp"
+                    android:textSize="15sp"
+                    android:textStyle="bold"
+                    android:textColor="?attr/colorAccent"
+                    android:textAllCaps="true"
+                    android:text="date" />
+
+                <LinearLayout
+                    android:id="@+id/llDateHolder"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/tvDateLabel"
+                    android:background="@drawable/info_bg"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="10dp"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/tvYear"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:layout_margin="10dp"
+                        android:textColor="@android:color/white" />
+
+                    <TextView
+                        android:id="@+id/tvMonth"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:layout_margin="10dp"
+                        android:textColor="@android:color/white" />
+
+                    <TextView
+                        android:id="@+id/tvDay"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:layout_margin="10dp"
+                        android:textColor="@android:color/white" />
+
+                </LinearLayout>
+
+                <TextView
+                    android:id="@+id/tvTimeLabel"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/llDateHolder"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="10dp"
+                    android:layout_marginTop="10dp"
+                    android:textSize="15sp"
+                    android:textStyle="bold"
+                    android:textColor="?attr/colorAccent"
+                    android:textAllCaps="true"
+                    android:text="time" />
+
+                <LinearLayout
+                    android:id="@+id/llTimeHolder"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="10dp"
+                    android:background="@drawable/info_bg"
+                    android:layout_below="@id/tvTimeLabel">
+
+                    <TextView
+                        android:id="@+id/tvHour"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:layout_margin="10dp"
+                        android:textColor="@android:color/white" />
+
+                    <TextView
+                        android:id="@+id/tvMinute"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:layout_margin="10dp"
+                        android:textColor="@android:color/white" />
+
+                    <Space
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="10dp"
+                        android:layout_weight="1" />
+
+                </LinearLayout>
+
+                <TextView
+                    android:id="@+id/tvRecurrenceLabel"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/llTimeHolder"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="10dp"
+                    android:layout_marginTop="10dp"
+                    android:textSize="15sp"
+                    android:textStyle="bold"
+                    android:textColor="?attr/colorAccent"
+                    android:textAllCaps="true"
+                    android:text="Recurrence" />
+
+                <LinearLayout
+                    android:id="@+id/llRecurrenceHolder"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="10dp"
+                    android:background="@drawable/info_bg"
+                    android:layout_below="@id/tvRecurrenceLabel">
+
+                    <TextView
+                        android:id="@+id/tvRecurrenceOption"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginTop="10dp"
+                        android:layout_marginRight="10dp"
+                        android:textColor="@android:color/white" />
+
+                    <TextView
+                        android:id="@+id/tvRecurrenceRule"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginBottom="10dp"
+                        android:layout_marginRight="10dp"
+                        android:textColor="@android:color/white" />
+
+                </LinearLayout>
+
+            </RelativeLayout>
+
+        </LinearLayout>
+    </ScrollView>
+
+    <ImageView
+        android:id="@+id/ivLaunchPicker"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:padding="28dp"
+        android:layout_marginBottom="15dp"
+        android:layout_marginRight="15dp"
+        android:layout_gravity="bottom|right"
+        android:src="@drawable/launch_picker"
+        android:background="@drawable/floating_button_shape"
+        android:contentDescription="launch sublime picker" />
+
+    <android.support.v7.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:background="?attr/colorPrimary"
+        android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar" />
+
+</FrameLayout>

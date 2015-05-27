@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?><!--  Copyright (C) 2006 The Android Open Source Project
+
+     Licensed under the Apache License, Version 2.0 (the "License");
+     you may not use this file except in compliance with the License.
+     You may obtain a copy of the License at
+
+          http://www.apache.org/licenses/LICENSE-2.0
+
+     Unless required by applicable law or agreed to in writing, software
+     distributed under the License is distributed on an "AS IS" BASIS,
+     WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+     See the License for the specific language governing permissions and
+     limitations under the License.
+ -->
+
+<resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
+
+    <string name="select_hours">"گھنٹے منتخب کریں"</string>
+    <string name="select_minutes">"منٹ منتخب کریں"</string>
+    <string name="day_picker_description">"دنوں کا ماہ کا گرڈ"</string>
+    <string name="year_picker_description">"سال کی فہرست"</string>
+    <string name="select_day">"ماہ اور دن منتخب کریں"</string>
+    <string name="select_year">"سال منتخب کریں"</string>
+    <string name="item_is_selected">"<xliff:g id="ITEM">%1$s</xliff:g> کو منتخب کیا گیا"</string>
+    <string name="deleted_key">"<xliff:g id="KEY">%1$s</xliff:g> کو حذف کر دیا گیا"</string>
+
+    <string name="ok">"ٹھیک ہے"</string>
+    <string name="cancel">"منسوخ کریں"</string>
+
+    <skip />
+    <!-- no translation found for endByDate (7654221304929538201) -->
+    <skip />
+    <!-- no translation found for endByCount:one (3727754565990691816) -->
+    <!-- no translation found for endByCount:other (4855496837834652446) -->
+    <!-- no translation found for daily:one (5169052946627480942) -->
+    <!-- no translation found for daily:other (5455230727715859264) -->
+    <!-- no translation found for every_weekday (5896574838353902978) -->
+    <skip />
+    <!-- no translation found for weekly:one (5463021019301453273) -->
+    <!-- no translation found for weekly:other (2857390143157377867) -->
+    <!-- no translation found for monthly (4587116285383048586) -->
+    <skip />
+    <!-- no translation found for yearly_plain (3652692085322162449) -->
+    <skip />
+    <!-- no translation found for recurrence_interval_daily:one (1205422710088692631) -->
+    <!-- no translation found for recurrence_interval_daily:other (707566499994398250) -->
+    <!-- no translation found for recurrence_interval_weekly:one (4948681635464488351) -->
+    <!-- no translation found for recurrence_interval_weekly:other (7094801039989237061) -->
+    <!-- no translation found for recurrence_interval_monthly:one (4768178401603139718) -->
+    <!-- no translation found for recurrence_interval_monthly:other (5419723710346646523) -->
+    <!-- no translation found for recurrence_interval_yearly:one (5819562634008179102) -->
+    <!-- no translation found for recurrence_interval_yearly:other (5678653649746562060) -->
+    <!-- no translation found for recurrence_month_pattern_by_day (4400107556121003459) -->
+    <skip />
+    <!-- no translation found for recurrence_end_continously (6898950241634912991) -->
+    <skip />
+    <!-- no translation found for recurrence_end_date_label (4142791438636994952) -->
+    <skip />
+    <!-- no translation found for recurrence_end_date (3693751578164711701) -->
+    <skip />
+    <!-- no translation found for recurrence_end_count_label (1233883668293087977) -->
+    <skip />
+    <!-- no translation found for recurrence_end_count:one (1400782968090516215) -->
+    <!-- no translation found for recurrence_end_count:other (8779598489398048259) -->
+    <!-- no translation found for acessibility_recurrence_choose_end_date_description (5899029840837836711) -->
+    <skip />
+</resources>

@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8"?><!--  Copyright (C) 2006 The Android Open Source Project
+
+     Licensed under the Apache License, Version 2.0 (the "License");
+     you may not use this file except in compliance with the License.
+     You may obtain a copy of the License at
+
+          http://www.apache.org/licenses/LICENSE-2.0
+
+     Unless required by applicable law or agreed to in writing, software
+     distributed under the License is distributed on an "AS IS" BASIS,
+     WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+     See the License for the specific language governing permissions and
+     limitations under the License.
+ -->
+
+<resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
+
+    <string name="select_hours">"ជ្រើស​ម៉ោង"</string>
+    <string name="select_minutes">"ជ្រើស​នាទី"</string>
+    <string name="day_picker_description">"ក្រឡា​​​ខែ​នៃ​ថ្ងៃ"</string>
+    <string name="year_picker_description">"បញ្ជី​ឆ្នាំ"</string>
+    <string name="select_day">"ជ្រើស​ខែ និង​ថ្ងៃ"</string>
+    <string name="select_year">"ជ្រើស​ឆ្នាំ"</string>
+    <string name="item_is_selected">"បាន​ជ្រើស <xliff:g id="ITEM">%1$s</xliff:g>"</string>
+    <string name="deleted_key">"បាន​លុប <xliff:g id="KEY">%1$s</xliff:g>"</string>
+
+    <string name="ok">"យល់​ព្រម​"</string>
+    <string name="cancel">"បោះ​បង់​"</string>
+
+    <string name="endByDate">"; រហូតដល់ <xliff:g id="DATE">%s</xliff:g>"</string>
+    <plurals name="endByCount">
+        <item quantity="one">"; សម្រាប់​ម្ដង"</item>
+        <item quantity="other">"; សម្រាប់ <xliff:g id="NUMBER">%d</xliff:g> ដង"</item>
+    </plurals>
+    <plurals name="daily">
+        <item quantity="one">"ប្រចាំថ្ងៃ"</item>
+        <item quantity="other">"រាល់ <xliff:g id="NUMBER">%d</xliff:g> ថ្ងៃ"</item>
+    </plurals>
+    <string name="every_weekday">"រាល់ថ្ងៃ​ធ្វើការ (ចន្ទ–សុក្រ)"</string>
+    <plurals name="weekly">
+        <item quantity="one">"សប្ដាហ៍​នៃ <xliff:g id="DAYS_OF_WEEK">%2$s</xliff:g>"</item>
+        <item quantity="other">"រាល់ <xliff:g id="NUMBER">%1$d</xliff:g> សប្ដាហ៍​នៃ <xliff:g id="DAYS_OF_WEEK">%2$s</xliff:g>"</item>
+    </plurals>
+    <string name="monthly">"ប្រចាំខែ"</string>
+    <string name="yearly_plain">"ប្រចាំ​ឆ្នាំ"</string>
+    <plurals name="recurrence_interval_daily">
+        <item quantity="one">"រាល់ <xliff:g id="COUNT">%d</xliff:g> ថ្ងៃ"</item>
+        <item quantity="other">"រាល់ <xliff:g id="COUNT">%d</xliff:g> ថ្ងៃ"</item>
+    </plurals>
+    <plurals name="recurrence_interval_weekly">
+        <item quantity="one">"រាល់ <xliff:g id="COUNT">%d</xliff:g> សប្ដាហ៍"</item>
+        <item quantity="other">"រាល់ <xliff:g id="COUNT">%d</xliff:g> សប្ដាហ៍"</item>
+    </plurals>
+    <plurals name="recurrence_interval_monthly">
+        <item quantity="one">"រាល់ <xliff:g id="COUNT">%d</xliff:g> ខែ"</item>
+        <item quantity="other">"រាល់ <xliff:g id="COUNT">%d</xliff:g> ខែ"</item>
+    </plurals>
+    <plurals name="recurrence_interval_yearly">
+        <item quantity="one">"រាល់ <xliff:g id="COUNT">%d</xliff:g> ឆ្នាំ"</item>
+        <item quantity="other">"ឆ្នាំ <xliff:g id="COUNT">%d</xliff:g> ឆ្នាំ"</item>
+    </plurals>
+    <string name="recurrence_month_pattern_by_day">"នៅ​ថ្ងៃ​ដដែល​នៃ​ខែ​នីមួយៗ"</string>
+    <string name="recurrence_end_continously">"ជានិច្ច"</string>
+    <string name="recurrence_end_date_label">"រហូតដល់​កាលបរិច្ឆេទ"</string>
+    <string name="recurrence_end_date">"រហូតដល់ <xliff:g id="DATE">%s</xliff:g>"</string>
+    <string name="recurrence_end_count_label">"សម្រាប់​ព្រឹត្តិការណ៍​មួយ​ចំនួន"</string>
+    <plurals name="recurrence_end_count">
+        <item quantity="one">"សម្រាប់ <xliff:g id="EVENT_COUNT">%d</xliff:g> ព្រឹត្តិការណ៍"</item>
+        <item quantity="other">"សម្រាប់ <xliff:g id="EVENT_COUNT">%d</xliff:g> ព្រឹត្តិការណ៍"</item>
+    </plurals>
+    <string name="acessibility_recurrence_choose_end_date_description">"ប្ដូរ​កាលបរិច្ឆេទ​បញ្ចប់"</string>
+</resources>

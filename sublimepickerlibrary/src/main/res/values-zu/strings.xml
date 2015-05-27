@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8"?><!--  Copyright (C) 2006 The Android Open Source Project
+
+     Licensed under the Apache License, Version 2.0 (the "License");
+     you may not use this file except in compliance with the License.
+     You may obtain a copy of the License at
+
+          http://www.apache.org/licenses/LICENSE-2.0
+
+     Unless required by applicable law or agreed to in writing, software
+     distributed under the License is distributed on an "AS IS" BASIS,
+     WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+     See the License for the specific language governing permissions and
+     limitations under the License.
+ -->
+
+<resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
+
+    <string name="select_hours">"Khetha amahora"</string>
+    <string name="select_minutes">"Khetha amaminithi"</string>
+    <string name="day_picker_description">"Igridi yenyanga yezinsuku"</string>
+    <string name="year_picker_description">"Uhlu lonyaka"</string>
+    <string name="select_day">"Khetha inyanga nosuku"</string>
+    <string name="select_year">"Khetha unyaka"</string>
+    <string name="item_is_selected">"I-<xliff:g id="ITEM">%1$s</xliff:g> ekhethiwe"</string>
+    <string name="deleted_key">"I-<xliff:g id="KEY">%1$s</xliff:g> isusiwe"</string>
+
+    <string name="ok">"KULUNGILE"</string>
+    <string name="cancel">"Khansela"</string>
+
+    <string name="endByDate">"; kuze kube <xliff:g id="DATE">%s</xliff:g>"</string>
+    <plurals name="endByCount">
+        <item quantity="one">"; okwesikhathi esisodwa"</item>
+        <item quantity="other">"; okwezikhathi ezingu-<xliff:g id="NUMBER">%d</xliff:g>"</item>
+    </plurals>
+    <plurals name="daily">
+        <item quantity="one">"Nsuku zonke"</item>
+        <item quantity="other">"Njalo ngezinsuku ezingu-<xliff:g id="NUMBER">%d</xliff:g>"</item>
+    </plurals>
+    <string name="every_weekday">"Njalo phakathi nesonto (Msom-Lwes)"</string>
+    <plurals name="weekly">
+        <item quantity="one">"Njalo ngeviki nge-<xliff:g id="DAYS_OF_WEEK">%2$s</xliff:g>"</item>
+        <item quantity="other">"Njalo ngamaviki angu-<xliff:g id="NUMBER">%1$d</xliff:g> nge-<xliff:g id="DAYS_OF_WEEK">%2$s</xliff:g>"</item>
+    </plurals>
+    <string name="monthly">"Nyanga zonke"</string>
+    <string name="yearly_plain">"Mnyaka yonke"</string>
+    <plurals name="recurrence_interval_daily">
+        <item quantity="one">"Njalo ngosuku olungu-<xliff:g id="COUNT">%d</xliff:g>"</item>
+        <item quantity="other">"Njalo ngezinsuku ezingu-<xliff:g id="COUNT">%d</xliff:g>"</item>
+    </plurals>
+    <plurals name="recurrence_interval_weekly">
+        <item quantity="one">"Njalo ngeviki elingu-<xliff:g id="COUNT">%d</xliff:g>"</item>
+        <item quantity="other">"Njalo ngamaviki angu-<xliff:g id="COUNT">%d</xliff:g>"</item>
+    </plurals>
+    <plurals name="recurrence_interval_monthly">
+        <item quantity="one">"Njalo ngenyanga engu-<xliff:g id="COUNT">%d</xliff:g>"</item>
+        <item quantity="other">"Njalo ngezinyanga ezingu-<xliff:g id="COUNT">%d</xliff:g>"</item>
+    </plurals>
+    <plurals name="recurrence_interval_yearly">
+        <item quantity="one">"Njalo ngonyaka ongu-<xliff:g id="COUNT">%d</xliff:g>"</item>
+        <item quantity="other">"Njalo ngeminyaka engu-<xliff:g id="COUNT">%d</xliff:g>"</item>
+    </plurals>
+    <string name="recurrence_month_pattern_by_day">"ngosuku olufanayo njalo ngenyanga"</string>
+    <string name="recurrence_end_continously">"Phakade"</string>
+    <string name="recurrence_end_date_label">"Kuze kube idethi ethile"</string>
+    <string name="recurrence_end_date">"Kuze kube <xliff:g id="DATE">%s</xliff:g>"</string>
+    <string name="recurrence_end_count_label">"Okwezinombolo zemicimbi"</string>
+    <plurals name="recurrence_end_count">
+        <item quantity="one">"Okomcimbi ongu-<xliff:g id="EVENT_COUNT">%d</xliff:g>"</item>
+        <item quantity="other">"Okwemicimbi engu-<xliff:g id="EVENT_COUNT">%d</xliff:g>"</item>
+    </plurals>
+    <string name="acessibility_recurrence_choose_end_date_description">"shintsha idethi yokugcina"</string>
+</resources>

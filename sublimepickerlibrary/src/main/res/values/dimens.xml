@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="utf-8"?><!-- Copyright (C) 2015 Vikram Kakkar
+
+     Licensed under the Apache License, Version 2.0 (the "License");
+     you may not use this file except in compliance with the License.
+     You may obtain a copy of the License at
+
+          http://www.apache.org/licenses/LICENSE-2.0
+
+     Unless required by applicable law or agreed to in writing, software
+     distributed under the License is distributed on an "AS IS" BASIS,
+     WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+     See the License for the specific language governing permissions and
+     limitations under the License.
+-->
+<resources>
+
+    <!-- SublimeDatePicker -->
+    <dimen name="datepicker_year_label_height">64dp</dimen>
+    <dimen name="datepicker_year_picker_padding_top">8dp</dimen>
+    <dimen name="datepicker_view_animator_height">226dp</dimen>
+    <dimen name="datepicker_component_width">260dp</dimen>
+    <dimen name="datepicker_dialog_width">520dp</dimen>
+    <dimen name="datepicker_header_height">30dp</dimen>
+    <dimen name="text_size_body_1">14sp</dimen>
+    <dimen name="datepicker_header_text_size">14dp</dimen>
+    <dimen name="datepicker_selected_date_month_size">24dp</dimen>
+    <dimen name="datepicker_selected_date_day_size">88dp</dimen>
+    <dimen name="datepicker_selected_date_year_size">24dp</dimen>
+    <dimen name="datepicker_year_label_text_size">22dp</dimen>
+    <dimen name="datepicker_day_number_size">12sp</dimen>
+    <dimen name="datepicker_month_label_size">14sp</dimen>
+    <dimen name="datepicker_month_day_label_text_size">12sp</dimen>
+    <dimen name="datepicker_month_list_item_header_height">48dp</dimen>
+    <dimen name="datepicker_day_number_select_circle_radius">13.5dp</dimen>
+
+    <!-- Dialog button bar height -->
+    <dimen name="dialog_button_bar_height">48dip</dimen>
+
+    <dimen name="button_inset_horizontal_material">4dp</dimen>
+    <dimen name="button_inset_vertical_material">6dp</dimen>
+    <dimen name="button_padding_horizontal_material">8dp</dimen>
+    <dimen name="button_padding_vertical_material">4dp</dimen>
+    <dimen name="control_corner_material">2dp</dimen>
+    <dimen name="text_size_button_material">14sp</dimen>
+
+    <!-- SublimeTimePicker -->
+    <item name="timepicker_transition_mid_radius_multiplier" format="float" type="string">0.95
+    </item>
+    <item name="timepicker_transition_end_radius_multiplier" format="float" type="string">1.3</item>
+    <item name="timepicker_selection_radius_multiplier" format="float" type="string">0.16</item>
+    <item name="timepicker_circle_radius_multiplier_24HourMode" format="float" type="string">0.85
+    </item>
+    <item name="timepicker_numbers_radius_multiplier_outer" format="float" type="string">0.83</item>
+    <item name="timepicker_text_size_multiplier_outer" format="float" type="string">0.11</item>
+    <item name="timepicker_numbers_radius_multiplier_inner" format="float" type="string">0.60</item>
+    <item name="timepicker_text_size_multiplier_inner" format="float" type="string">0.14</item>
+    <item name="timepicker_circle_radius_multiplier" format="float" type="string">0.82</item>
+    <item name="timepicker_numbers_radius_multiplier_normal" format="float" type="string">0.81
+    </item>
+    <item name="timepicker_text_size_multiplier_normal" format="float" type="string">0.17</item>
+    <dimen name="timepicker_pm_top_padding">3dp</dimen>
+    <dimen name="timepicker_ampm_horizontal_padding">12dp</dimen>
+    <dimen name="timepicker_ampm_vertical_padding">16dp</dimen>
+    <dimen name="timepicker_separator_padding">4dp</dimen>
+    <dimen name="timepicker_header_height">96dp</dimen>
+    <dimen name="timepicker_radial_picker_dimen">270dp</dimen>
+    <dimen name="timepicker_left_side_width">250dip</dimen>
+    <dimen name="timepicker_ampm_label_size">16sp</dimen>
+    <dimen name="timepicker_time_label_size">60sp</dimen>
+
+    <dimen name="options_size">30dp</dimen>
+    <dimen name="close_drawable_size">32dp</dimen>
+
+    <!-- SublimeRecurrencePicker -->
+    <dimen name="recurrence_picker_width">300dp</dimen>
+    <!--<dimen name="recurrence_picker_height">340dp</dimen>-->
+    <dimen name="recurrence_picker_height">220dp</dimen>
+
+    <dimen name="selected_recurrence_option_drawable_padding">24dp</dimen>
+    <dimen name="repeat_options_menu_top_margin">10dp</dimen>
+
+    <!-- WeekButton -->
+    <dimen name="week_button_size">60dp</dimen>
+    <dimen name="week_button_state_on_circle_size">48dp</dimen>
+
+    <!-- fake shadow (not used at the moment) -->
+    <!-- Inset shadow for FakeShadowDrawable. It is used to avoid gaps between the card
+         and the shadow. -->
+    <dimen name="fake_shadow_inset">1dp</dimen>
+    <dimen name="fake_shadow_size">8dp</dimen>
+
+    <!-- Button Panel -->
+    <dimen name="button_bar_padding_start">12dp</dimen>
+    <dimen name="button_bar_padding_end">12dp</dimen>
+    <dimen name="button_bar_padding_top">8dp</dimen>
+    <dimen name="button_bar_padding_bottom">8dp</dimen>
+</resources>

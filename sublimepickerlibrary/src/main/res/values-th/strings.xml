@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8"?><!--  Copyright (C) 2006 The Android Open Source Project
+
+     Licensed under the Apache License, Version 2.0 (the "License");
+     you may not use this file except in compliance with the License.
+     You may obtain a copy of the License at
+
+          http://www.apache.org/licenses/LICENSE-2.0
+
+     Unless required by applicable law or agreed to in writing, software
+     distributed under the License is distributed on an "AS IS" BASIS,
+     WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+     See the License for the specific language governing permissions and
+     limitations under the License.
+ -->
+
+<resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
+
+    <string name="select_hours">"เลือกชั่วโมง"</string>
+    <string name="select_minutes">"เลือกนาที"</string>
+    <string name="day_picker_description">"ตารางเดือนของวัน"</string>
+    <string name="year_picker_description">"รายการปี"</string>
+    <string name="select_day">"เลือกเดือนและวัน"</string>
+    <string name="select_year">"เลือกปี"</string>
+    <string name="item_is_selected">"เลือก <xliff:g id="ITEM">%1$s</xliff:g>"</string>
+    <string name="deleted_key">"ลบ <xliff:g id="KEY">%1$s</xliff:g> แล้ว"</string>
+
+    <string name="ok">"ตกลง"</string>
+    <string name="cancel">"ยกเลิก"</string>
+
+    <string name="endByDate">"จนถึง <xliff:g id="DATE">%s</xliff:g>"</string>
+    <plurals name="endByCount">
+        <item quantity="one">"รวมหนึ่งครั้ง"</item>
+        <item quantity="other">"รวม <xliff:g id="NUMBER">%d</xliff:g> ครั้ง"</item>
+    </plurals>
+    <plurals name="daily">
+        <item quantity="one">"รายวัน"</item>
+        <item quantity="other">"ทุก <xliff:g id="NUMBER">%d</xliff:g> วัน"</item>
+    </plurals>
+    <string name="every_weekday">"ทุกวันทำการ (จันทร์-ศุกร์)"</string>
+    <plurals name="weekly">
+        <item quantity="one">"ทุก <xliff:g id="DAYS_OF_WEEK">%2$s</xliff:g> ของแต่ละสัปดาห์"</item>
+        <item quantity="other">"ทุก <xliff:g id="NUMBER">%1$d</xliff:g> สัปดาห์ใน <xliff:g id="DAYS_OF_WEEK">%2$s</xliff:g>"</item>
+    </plurals>
+    <string name="monthly">"รายเดือน"</string>
+    <string name="yearly_plain">"รายปี"</string>
+    <plurals name="recurrence_interval_daily">
+        <item quantity="one">"ทุก <xliff:g id="COUNT">%d</xliff:g> วัน"</item>
+        <item quantity="other">"ทุก <xliff:g id="COUNT">%d</xliff:g> วัน"</item>
+    </plurals>
+    <plurals name="recurrence_interval_weekly">
+        <item quantity="one">"ทุก <xliff:g id="COUNT">%d</xliff:g> สัปดาห์"</item>
+        <item quantity="other">"ทุก <xliff:g id="COUNT">%d</xliff:g> สัปดาห์"</item>
+    </plurals>
+    <plurals name="recurrence_interval_monthly">
+        <item quantity="one">"ทุก <xliff:g id="COUNT">%d</xliff:g> เดือน"</item>
+        <item quantity="other">"ทุก <xliff:g id="COUNT">%d</xliff:g> เดือน"</item>
+    </plurals>
+    <plurals name="recurrence_interval_yearly">
+        <item quantity="one">"ทุก <xliff:g id="COUNT">%d</xliff:g> ปี"</item>
+        <item quantity="other">"ทุก <xliff:g id="COUNT">%d</xliff:g> ปี"</item>
+    </plurals>
+    <string name="recurrence_month_pattern_by_day">"ในวันเดียวกันในแต่ละเดือน"</string>
+    <string name="recurrence_end_continously">"ตลอดไป"</string>
+    <string name="recurrence_end_date_label">"จนถึงวันที่"</string>
+    <string name="recurrence_end_date">"จนถึงวันที่ <xliff:g id="DATE">%s</xliff:g>"</string>
+    <string name="recurrence_end_count_label">"กำหนดจำนวนกิจกรรม"</string>
+    <plurals name="recurrence_end_count">
+        <item quantity="one">"สำหรับกิจกรรม <xliff:g id="EVENT_COUNT">%d</xliff:g> รายการ"</item>
+        <item quantity="other">"สำหรับกิจกรรม <xliff:g id="EVENT_COUNT">%d</xliff:g> รายการ"</item>
+    </plurals>
+    <string name="acessibility_recurrence_choose_end_date_description">"เปลี่ยนวันที่สิ้นสุด"</string>
+</resources>

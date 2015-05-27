@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8"?><!--  Copyright (C) 2007 The Android Open Source Project
+
+     Licensed under the Apache License, Version 2.0 (the "License");
+     you may not use this file except in compliance with the License.
+     You may obtain a copy of the License at
+
+          http://www.apache.org/licenses/LICENSE-2.0
+
+     Unless required by applicable law or agreed to in writing, software
+     distributed under the License is distributed on an "AS IS" BASIS,
+     WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+     See the License for the specific language governing permissions and
+     limitations under the License.
+ -->
+
+<resources>
+    <string-array name="recurrence_freq">
+        <item>"DNEVNO PONAVLJANJE"</item>
+        <item>"PONAVLJAJ TJEDNO"</item>
+        <item>"PONAVLJAJ MJESEČNO"</item>
+        <item>"PONAVLJAJ GODIŠNJE"</item>
+    </string-array>
+    <string-array name="repeat_by_nth_sun">
+        <item>"svake prve nedjelje"</item>
+        <item>"svake druge nedjelje"</item>
+        <item>"svake treće nedjelje"</item>
+        <item>"svake četvrte nedjelje"</item>
+        <item>"svake zadnje nedjelje"</item>
+    </string-array>
+    <string-array name="repeat_by_nth_mon">
+        <item>"svakog prvog ponedjeljka"</item>
+        <item>"svakog drugog ponedjeljka"</item>
+        <item>"svakog trećeg ponedjeljka"</item>
+        <item>"svakog četvrtog ponedjeljka"</item>
+        <item>"svakog zadnjeg ponedjeljka"</item>
+    </string-array>
+    <string-array name="repeat_by_nth_tues">
+        <item>"svakog prvog utorka"</item>
+        <item>"svakog drugog utorka"</item>
+        <item>"svakog trećeg utorka"</item>
+        <item>"svakog četvrtog utorka"</item>
+        <item>"svakog zadnjeg utorka"</item>
+    </string-array>
+    <string-array name="repeat_by_nth_wed">
+        <item>"svake prve srijede"</item>
+        <item>"svake druge srijede"</item>
+        <item>"svake treće srijede"</item>
+        <item>"svake četvrte srijede"</item>
+        <item>"svake zadnje srijede"</item>
+    </string-array>
+    <string-array name="repeat_by_nth_thurs">
+        <item>"svakog prvog četvrtka"</item>
+        <item>"svakog drugog četvrtka"</item>
+        <item>"svakog trećeg četvrtka"</item>
+        <item>"svakog četvrtog četvrtka"</item>
+        <item>"svakog zadnjeg četvrtka"</item>
+    </string-array>
+    <string-array name="repeat_by_nth_fri">
+        <item>"svakog prvog petka"</item>
+        <item>"svakog drugog petka"</item>
+        <item>"svakog trećeg petka"</item>
+        <item>"svakog četvrtog petka"</item>
+        <item>"svakog zadnjeg petka"</item>
+    </string-array>
+    <string-array name="repeat_by_nth_sat">
+        <item>"svake prve subote"</item>
+        <item>"svake druge subote"</item>
+        <item>"svake treće subote"</item>
+        <item>"svake četvrte subote"</item>
+        <item>"svake zadnje subote"</item>
+    </string-array>
+</resources>

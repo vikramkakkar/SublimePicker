@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8"?><!--  Copyright (C) 2007 The Android Open Source Project
+
+     Licensed under the Apache License, Version 2.0 (the "License");
+     you may not use this file except in compliance with the License.
+     You may obtain a copy of the License at
+
+          http://www.apache.org/licenses/LICENSE-2.0
+
+     Unless required by applicable law or agreed to in writing, software
+     distributed under the License is distributed on an "AS IS" BASIS,
+     WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+     See the License for the specific language governing permissions and
+     limitations under the License.
+ -->
+
+<resources>
+    <string-array name="recurrence_freq">
+        <item>"दैनिक दोहोर्याउनुहोस्"</item>
+        <item>"हप्तै पिच्छे दोहोर्याउनुहोस्"</item>
+        <item>"मासिक रूपमा दोहोर्याउनुहोस्"</item>
+        <item>"वर्षै पिच्छे दोहोर्याउनुहोस्"</item>
+    </string-array>
+    <string-array name="repeat_by_nth_sun">
+        <item>"प्रत्येक पहिलो आइतबारमा"</item>
+        <item>"प्रत्येक दोस्रो आइतबारमा"</item>
+        <item>"प्रत्येक तेस्रो आइतबारमा"</item>
+        <item>"प्रत्येक चौंथो आइतबारमा"</item>
+        <item>"प्रत्येक अन्तिम आइतबारमा"</item>
+    </string-array>
+    <string-array name="repeat_by_nth_mon">
+        <item>"प्रत्येक पहिलो सोमबारमा"</item>
+        <item>"प्रत्येक दोस्रो सोमबारमा"</item>
+        <item>"प्रत्येक तेस्रो सोमबारमा"</item>
+        <item>"प्रत्येक चौंथो सोमबारमा"</item>
+        <item>"प्रत्येक अन्तिम सोमबारमा"</item>
+    </string-array>
+    <string-array name="repeat_by_nth_tues">
+        <item>"प्रत्येक पहिलो मङ्गलबारमा"</item>
+        <item>"प्रत्येक दोस्रो मङ्गलबारमा"</item>
+        <item>"प्रत्येक तेस्रो मङ्गलबारमा"</item>
+        <item>"प्रत्येक चौंथो मङ्गलबारमा"</item>
+        <item>"प्रत्येक अन्तिम मङ्गलबारमा"</item>
+    </string-array>
+    <string-array name="repeat_by_nth_wed">
+        <item>"प्रत्येक पहिलो बुधबारमा"</item>
+        <item>"प्रत्येक दोस्रो बुधबारमा"</item>
+        <item>"प्रत्येक तेस्रो बुधबारमा"</item>
+        <item>"प्रत्येक चौंथो बुधबारमा"</item>
+        <item>"प्रत्येक अन्तिम बुधबारमा"</item>
+    </string-array>
+    <string-array name="repeat_by_nth_thurs">
+        <item>"प्रत्येक पहिलो बिहिबारमा"</item>
+        <item>"प्रत्येक दोस्रो बिहिबारमा"</item>
+        <item>"प्रत्येक तेस्रो बिहिबारमा"</item>
+        <item>"प्रत्येक चौंथो बिहिबारमा"</item>
+        <item>"प्रत्येक अन्तिम बिहिबारमा"</item>
+    </string-array>
+    <string-array name="repeat_by_nth_fri">
+        <item>"प्रत्येक पहिलो शुक्रबारमा"</item>
+        <item>"प्रत्येक दोस्रो शुक्रबारमा"</item>
+        <item>"प्रत्येक तेस्रो शुक्रबारमा"</item>
+        <item>"प्रत्येक चौंथो शुक्रबारमा"</item>
+        <item>"प्रत्येक अन्तिम शुक्रबारमा"</item>
+    </string-array>
+    <string-array name="repeat_by_nth_sat">
+        <item>"प्रत्येक पहिलो सोमबारमा"</item>
+        <item>"प्रत्येक दोस्रो शनिबारमा"</item>
+        <item>"प्रत्येक तेस्रो शनिबारमा"</item>
+        <item>"प्रत्येक चौंथो शनिबारमा"</item>
+        <item>"प्रत्येक अन्तिम शनिबारमा"</item>
+    </string-array>
+</resources>

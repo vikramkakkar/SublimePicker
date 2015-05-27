@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8"?><!--  Copyright (C) 2007 The Android Open Source Project
+
+     Licensed under the Apache License, Version 2.0 (the "License");
+     you may not use this file except in compliance with the License.
+     You may obtain a copy of the License at
+
+          http://www.apache.org/licenses/LICENSE-2.0
+
+     Unless required by applicable law or agreed to in writing, software
+     distributed under the License is distributed on an "AS IS" BASIS,
+     WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+     See the License for the specific language governing permissions and
+     limitations under the License.
+ -->
+
+<resources>
+    <string-array name="recurrence_freq">
+        <item>"ซ้ำทุกวัน"</item>
+        <item>"ซ้ำทุกสัปดาห์"</item>
+        <item>"ซ้ำทุกเดือน"</item>
+        <item>"ซ้ำทุกปี"</item>
+    </string-array>
+    <string-array name="repeat_by_nth_sun">
+        <item>"ในทุกวันอาทิตย์แรก"</item>
+        <item>"ในทุกวันอาทิตย์ที่สอง"</item>
+        <item>"ในทุกวันอาทิตย์ที่สาม"</item>
+        <item>"ในทุกวันอาทิตย์ที่สี่"</item>
+        <item>"ในทุกวันอาทิตย์สุดท้าย"</item>
+    </string-array>
+    <string-array name="repeat_by_nth_mon">
+        <item>"ในทุกวันจันทร์แรก"</item>
+        <item>"ในทุกวันจันทร์ที่สอง"</item>
+        <item>"ในทุกวันจันทร์ที่สาม"</item>
+        <item>"ในทุกวันจันทร์ที่สี่"</item>
+        <item>"ในทุกวันจันทร์สุดท้าย"</item>
+    </string-array>
+    <string-array name="repeat_by_nth_tues">
+        <item>"ในทุกวันอังคารแรก"</item>
+        <item>"ในทุกวันอังคารที่สอง"</item>
+        <item>"ในทุกวันอังคารที่สาม"</item>
+        <item>"ในทุกวันอังคารที่สี่"</item>
+        <item>"ในทุกวันอังคารสุดท้าย"</item>
+    </string-array>
+    <string-array name="repeat_by_nth_wed">
+        <item>"ในทุกวันพุธแรก"</item>
+        <item>"เมื่อทุกวันพุธที่สอง"</item>
+        <item>"ในทุกวันพุธที่สาม"</item>
+        <item>"ในทุกวันพุธที่สี่"</item>
+        <item>"ในทุกวันพุธสุดท้าย"</item>
+    </string-array>
+    <string-array name="repeat_by_nth_thurs">
+        <item>"ในทุกวันพฤหัสบดีแรก"</item>
+        <item>"ในทุกวันพฤหัสบดีที่สอง"</item>
+        <item>"ในทุกวันพฤหัสบดีที่สาม"</item>
+        <item>"ในทุกพฤหัสบดีที่สี่"</item>
+        <item>"ในทุกวันพฤหัสบดีสุดท้าย"</item>
+    </string-array>
+    <string-array name="repeat_by_nth_fri">
+        <item>"ในทุกวันศุกร์แรก"</item>
+        <item>"ในทุกวันศุกร์ที่สอง"</item>
+        <item>"ในทุกวันศุกร์ที่สาม"</item>
+        <item>"ในทุกวันศุกร์ที่สี่"</item>
+        <item>"ในทุกวันศุกร์สุดท้าย"</item>
+    </string-array>
+    <string-array name="repeat_by_nth_sat">
+        <item>"ในทุกวันเสาร์แรก"</item>
+        <item>"ในทุกวันเสาร์ที่สอง"</item>
+        <item>"ในทุกวันเสาร์ที่สาม"</item>
+        <item>"ในทุกวันเสาร์ที่สี่"</item>
+        <item>"ในทุกวันเสาร์สุดท้าย"</item>
+    </string-array>
+</resources>

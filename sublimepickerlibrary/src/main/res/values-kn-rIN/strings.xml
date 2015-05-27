@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8"?><!--  Copyright (C) 2006 The Android Open Source Project
+
+     Licensed under the Apache License, Version 2.0 (the "License");
+     you may not use this file except in compliance with the License.
+     You may obtain a copy of the License at
+
+          http://www.apache.org/licenses/LICENSE-2.0
+
+     Unless required by applicable law or agreed to in writing, software
+     distributed under the License is distributed on an "AS IS" BASIS,
+     WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+     See the License for the specific language governing permissions and
+     limitations under the License.
+ -->
+
+<resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
+
+    <string name="select_hours">"ಗಂಟೆಗಳನ್ನು ಆಯ್ಕೆಮಾಡಿ"</string>
+    <string name="select_minutes">"ನಿಮಿಷಗಳನ್ನು ಆಯ್ಕೆಮಾಡಿ"</string>
+    <string name="day_picker_description">"ದಿನಗಳ ತಿಂಗಳಿನ ಗ್ರಿಡ್"</string>
+    <string name="year_picker_description">"ವರ್ಷದ ಪಟ್ಟಿ"</string>
+    <string name="select_day">"ತಿಂಗಳು ಮತ್ತು ದಿನವನ್ನು ಆಯ್ಕೆಮಾಡಿ"</string>
+    <string name="select_year">"ವರ್ಷವನ್ನು ಆಯ್ಕೆಮಾಡಿ"</string>
+    <string name="item_is_selected">"<xliff:g id="ITEM">%1$s</xliff:g> ಆಯ್ಕೆ ಮಾಡಲಾಗಿದೆ"</string>
+    <string name="deleted_key">"<xliff:g id="KEY">%1$s</xliff:g> ಅಳಿಸಲಾಗಿದೆ"</string>
+
+    <string name="ok">"ಸರಿ"</string>
+    <string name="cancel">"ರದ್ದುಮಾಡು"</string>
+
+    <string name="endByDate">";<xliff:g id="DATE">%s</xliff:g> ವರೆಗೆ"</string>
+    <plurals name="endByCount">
+        <item quantity="one">"; ಒಂದು ಬಾರಿಗೆ"</item>
+        <item quantity="other">";  <xliff:g id="NUMBER">%d</xliff:g> ಬಾರಿಗೆ"</item>
+    </plurals>
+    <plurals name="daily">
+        <item quantity="one">"ಪ್ರತಿದಿನ"</item>
+        <item quantity="other">"ಪ್ರತಿ <xliff:g id="NUMBER">%d</xliff:g> ದಿನಗಳು"</item>
+    </plurals>
+    <string name="every_weekday">"ಪ್ರತಿ ವಾರದ ದಿನ (ಸೋಮ–ಶುಕ್ರವಾರ)"</string>
+    <plurals name="weekly">
+        <item quantity="one">"<xliff:g id="DAYS_OF_WEEK">%2$s</xliff:g> ರಂದು ಪ್ರತಿ ವಾರ"</item>
+        <item quantity="other">"<xliff:g id="DAYS_OF_WEEK">%2$s</xliff:g> ರಂದು ಪ್ರತಿ <xliff:g id="NUMBER">%1$d</xliff:g> ವಾರಗಳು"</item>
+    </plurals>
+    <string name="monthly">"ಮಾಸಿಕ"</string>
+    <string name="yearly_plain">"ವಾರ್ಷಿಕ"</string>
+    <plurals name="recurrence_interval_daily">
+        <item quantity="one">"ಪ್ರತಿ <xliff:g id="COUNT">%d</xliff:g> ದಿನ"</item>
+        <item quantity="other">"ಪ್ರತಿ <xliff:g id="COUNT">%d</xliff:g> ದಿನಗಳು"</item>
+    </plurals>
+    <plurals name="recurrence_interval_weekly">
+        <item quantity="one">"ಪ್ರತಿ <xliff:g id="COUNT">%d</xliff:g> ವಾರ"</item>
+        <item quantity="other">"ಪ್ರತಿ <xliff:g id="COUNT">%d</xliff:g> ವಾರಗಳು"</item>
+    </plurals>
+    <plurals name="recurrence_interval_monthly">
+        <item quantity="one">"ಪ್ರತಿ <xliff:g id="COUNT">%d</xliff:g> ತಿಂಗಳು"</item>
+        <item quantity="other">"ಪ್ರತಿ <xliff:g id="COUNT">%d</xliff:g> ತಿಂಗಳು"</item>
+    </plurals>
+    <plurals name="recurrence_interval_yearly">
+        <item quantity="one">"ಪ್ರತಿ <xliff:g id="COUNT">%d</xliff:g> ವರ್ಷ"</item>
+        <item quantity="other">"ಪ್ರತಿ <xliff:g id="COUNT">%d</xliff:g> ವರ್ಷಗಳು"</item>
+    </plurals>
+    <string name="recurrence_month_pattern_by_day">"ಪ್ರತಿ ತಿಂಗಳು ಅದೇ ದಿನ"</string>
+    <string name="recurrence_end_continously">"ಶಾಶ್ವತವಾಗಿ"</string>
+    <string name="recurrence_end_date_label">"ದಿನಾಂಕದವರೆಗೆ"</string>
+    <string name="recurrence_end_date">"<xliff:g id="DATE">%s</xliff:g> ವರೆಗೆ"</string>
+    <string name="recurrence_end_count_label">"ಹಲವು ಈವೆಂಟ್‌ಗಳಿಗೆ"</string>
+    <plurals name="recurrence_end_count">
+        <item quantity="one">"<xliff:g id="EVENT_COUNT">%d</xliff:g> ಈವೆಂಟ್‌ಗಾಗಿ"</item>
+        <item quantity="other">"<xliff:g id="EVENT_COUNT">%d</xliff:g> ಈವೆಂಟ್‌ಗಳಿಗಾಗಿ"</item>
+    </plurals>
+    <string name="acessibility_recurrence_choose_end_date_description">"ಅಂತಿಮ ದಿನಾಂಕವನ್ನು ಬದಲಾಯಿಸಿ"</string>
+</resources>

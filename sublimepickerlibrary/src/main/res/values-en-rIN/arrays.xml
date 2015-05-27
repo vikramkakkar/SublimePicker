@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8"?><!--  Copyright (C) 2007 The Android Open Source Project
+
+     Licensed under the Apache License, Version 2.0 (the "License");
+     you may not use this file except in compliance with the License.
+     You may obtain a copy of the License at
+
+          http://www.apache.org/licenses/LICENSE-2.0
+
+     Unless required by applicable law or agreed to in writing, software
+     distributed under the License is distributed on an "AS IS" BASIS,
+     WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+     See the License for the specific language governing permissions and
+     limitations under the License.
+ -->
+
+<resources>
+    <string-array name="recurrence_freq">
+        <item>"REPEAT DAILY"</item>
+        <item>"REPEAT WEEKLY"</item>
+        <item>"REPEAT MONTHLY"</item>
+        <item>"REPEAT YEARLY"</item>
+    </string-array>
+    <string-array name="repeat_by_nth_sun">
+        <item>"on every first Sunday"</item>
+        <item>"on every second Sunday"</item>
+        <item>"on every third Sunday"</item>
+        <item>"on every fourth Sunday"</item>
+        <item>"on every last Sunday"</item>
+    </string-array>
+    <string-array name="repeat_by_nth_mon">
+        <item>"on every first Monday"</item>
+        <item>"on every second Monday"</item>
+        <item>"on every third Monday"</item>
+        <item>"on every fourth Monday"</item>
+        <item>"on every last Monday"</item>
+    </string-array>
+    <string-array name="repeat_by_nth_tues">
+        <item>"on every first Tuesday"</item>
+        <item>"on every second Tuesday"</item>
+        <item>"on every third Tuesday"</item>
+        <item>"on every fourth Tuesday"</item>
+        <item>"on every last Tuesday"</item>
+    </string-array>
+    <string-array name="repeat_by_nth_wed">
+        <item>"on every first Wednesday"</item>
+        <item>"on every second Wednesday"</item>
+        <item>"on every third Wednesday"</item>
+        <item>"on every fourth Wednesday"</item>
+        <item>"on every last Wednesday"</item>
+    </string-array>
+    <string-array name="repeat_by_nth_thurs">
+        <item>"on every first Thursday"</item>
+        <item>"on every second Thursday"</item>
+        <item>"on every third Thursday"</item>
+        <item>"on every fourth Thursday"</item>
+        <item>"on every last Thursday"</item>
+    </string-array>
+    <string-array name="repeat_by_nth_fri">
+        <item>"on every first Friday"</item>
+        <item>"on every second Friday"</item>
+        <item>"on every third Friday"</item>
+        <item>"on every fourth Friday"</item>
+        <item>"on every last Friday"</item>
+    </string-array>
+    <string-array name="repeat_by_nth_sat">
+        <item>"on every first Saturday"</item>
+        <item>"on every second Saturday"</item>
+        <item>"on every third Saturday"</item>
+        <item>"on every fourth Saturday"</item>
+        <item>"on every last Saturday"</item>
+    </string-array>
+</resources>

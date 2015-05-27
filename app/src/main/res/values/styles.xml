@@ -1,0 +1,91 @@
+<!--
+     Copyright 2015 Vikram Kakkar
+
+     Licensed under the Apache License, Version 2.0 (the "License");
+     you may not use this file except in compliance with the License.
+     You may obtain a copy of the License at
+
+          http://www.apache.org/licenses/LICENSE-2.0
+
+     Unless required by applicable law or agreed to in writing, software
+     distributed under the License is distributed on an "AS IS" BASIS,
+     WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+     See the License for the specific language governing permissions and
+     limitations under the License.
+-->
+
+<resources>
+
+    <style name="AppTheme" parent="Theme.AppCompat.Light.NoActionBar">
+        <item name="colorAccent">#D94818</item>
+        <item name="colorPrimaryDark">#141414</item>
+        <item name="colorPrimary">#212121</item>
+        <item name="android:textColorPrimary">#212121</item>
+        <item name="android:textColorSecondary">#727272</item>
+        <item name="android:divider">#B6B6B6</item>
+        <item name="android:textColorPrimaryInverse">#FFFFFF</item>
+
+        <item name="sublimePickerStyle">@style/SPDefaultImpl</item>
+        <!--<item name="android:dialogTheme">@style/Theme.AppCompat.Dialog</item>-->
+    </style>
+
+    <!-- Switch to default -->
+
+    <style name="SublimePickerDefault">
+        <item name="sublimePickerStyle">@style/SPDefaultImpl</item>
+    </style>
+
+    <style name="SPDefaultImpl" parent="SublimePickerStyleLight">
+        <item name="colorAccent">#D94818</item>
+        <item name="colorPrimaryDark">#141414</item>
+        <item name="colorPrimary">#212121</item>
+        <item name="android:textColorPrimary">#212121</item>
+        <item name="android:textColorSecondary">#727272</item>
+        <item name="android:textColorPrimaryInverse">#FFFFFF</item>
+    </style>
+
+    <!-- ShowExtendedBg -->
+
+    <style name="ShowExtendedBg">
+        <item name="sublimePickerStyle">@style/SPExtendedBg</item>
+    </style>
+
+    <style name="SPExtendedBg" parent="SPDefaultImpl">
+        <item name="spButtonLayoutStyle">@style/BLExtendedBgImpl</item>
+    </style>
+
+    <style name="BLExtendedBgImpl" parent="ButtonLayoutStyle">
+        <item name="buttonModeSwitcherButtonStyle">@style/SInvertedButtonBarButtonStyle</item>
+        <item name="extendPartitionThroughButtonBar">true</item>
+        <item name="extendedPartitionBgColor">?attr/colorAccent</item>
+        <item name="buttonInvertedBgColor">?attr/colorAccent</item>
+        <item name="buttonPressedInvertedBgColor">@color/ripple_material_dark</item>
+    </style>
+
+    <!-- ShowSingleMonthPerPosition -->
+
+    <style name="ShowSingleMonthPerPosition">
+        <item name="sublimePickerStyle">@style/SPSingleMonthPerPosition</item>
+    </style>
+
+    <style name="SPSingleMonthPerPosition" parent="SPDefaultImpl">
+        <item name="spMonthViewStyle">@style/MVSingleMonthPerPositionImpl</item>
+    </style>
+
+    <style name="MVSingleMonthPerPositionImpl" parent="MonthViewStyle">
+        <item name="showSingleMonthPerPosition">true</item>
+    </style>
+
+    <!-- ShowExtendedBg + ShowSingleMonthPerPosition -->
+
+    <style name="ShowExtendedBgAndSingleMonthPerPosition">
+        <item name="sublimePickerStyle">@style/SPExtendedBgAndSingleMonthPerPosition</item>
+    </style>
+
+    <style name="SPExtendedBgAndSingleMonthPerPosition" parent="SPDefaultImpl">
+        <item name="spMonthViewStyle">@style/MVSingleMonthPerPositionImpl</item>
+        <item name="spButtonLayoutStyle">@style/BLExtendedBgImpl</item>
+    </style>
+
+
+</resources>

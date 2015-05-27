@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8"?><!--  Copyright (C) 2007 The Android Open Source Project
+
+     Licensed under the Apache License, Version 2.0 (the "License");
+     you may not use this file except in compliance with the License.
+     You may obtain a copy of the License at
+
+          http://www.apache.org/licenses/LICENSE-2.0
+
+     Unless required by applicable law or agreed to in writing, software
+     distributed under the License is distributed on an "AS IS" BASIS,
+     WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+     See the License for the specific language governing permissions and
+     limitations under the License.
+ -->
+
+<resources>
+    <string-array name="recurrence_freq">
+        <item>"REPETIR DIARIAMENTE"</item>
+        <item>"REPETIR SEMANALMENTE"</item>
+        <item>"REPETIR MENSALMENTE"</item>
+        <item>"REPETIR ANUALMENTE"</item>
+    </string-array>
+    <string-array name="repeat_by_nth_sun">
+        <item>"primeiro domingo do mês"</item>
+        <item>"segundo domingo do mês"</item>
+        <item>"terceiro domingo do mês"</item>
+        <item>"quarto domingo do mês"</item>
+        <item>"último domingo do mês"</item>
+    </string-array>
+    <string-array name="repeat_by_nth_mon">
+        <item>"primeira segunda-feira do mês"</item>
+        <item>"segunda segunda-feira do mês"</item>
+        <item>"terceira segunda-feira do mês"</item>
+        <item>"quarta segunda-feira do mês"</item>
+        <item>"última segunda-feira do mês"</item>
+    </string-array>
+    <string-array name="repeat_by_nth_tues">
+        <item>"primeira terça-feira do mês"</item>
+        <item>"segunda terça-feira do mês"</item>
+        <item>"terceira terça-feira do mês"</item>
+        <item>"quarta terça-feira do mês"</item>
+        <item>"última terça-feira do mês"</item>
+    </string-array>
+    <string-array name="repeat_by_nth_wed">
+        <item>"primeira quarta-feira do mês"</item>
+        <item>"segunda quarta-feira do mês"</item>
+        <item>"terceira quarta-feira do mês"</item>
+        <item>"quarta quarta-feira do mês"</item>
+        <item>"última quarta-feira do mês"</item>
+    </string-array>
+    <string-array name="repeat_by_nth_thurs">
+        <item>"primeira quinta-feira do mês"</item>
+        <item>"segunda quinta-feira do mês"</item>
+        <item>"terceira quinta-feira do mês"</item>
+        <item>"quarta quinta-feira do mês"</item>
+        <item>"última quinta-feira do mês"</item>
+    </string-array>
+    <string-array name="repeat_by_nth_fri">
+        <item>"primeira sexta-feira do mês"</item>
+        <item>"segunda sexta-feira do mês"</item>
+        <item>"terceira sexta-feira do mês"</item>
+        <item>"quarta sexta-feira do mês"</item>
+        <item>"última sexta-feira do mês"</item>
+    </string-array>
+    <string-array name="repeat_by_nth_sat">
+        <item>"primeiro sábado do mês"</item>
+        <item>"segundo sábado do mês"</item>
+        <item>"terceiro sábado do mês"</item>
+        <item>"quarto sábado do mês"</item>
+        <item>"último sábado do mês"</item>
+    </string-array>
+</resources>

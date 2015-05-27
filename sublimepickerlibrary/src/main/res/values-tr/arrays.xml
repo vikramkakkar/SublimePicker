@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8"?><!--  Copyright (C) 2007 The Android Open Source Project
+
+     Licensed under the Apache License, Version 2.0 (the "License");
+     you may not use this file except in compliance with the License.
+     You may obtain a copy of the License at
+
+          http://www.apache.org/licenses/LICENSE-2.0
+
+     Unless required by applicable law or agreed to in writing, software
+     distributed under the License is distributed on an "AS IS" BASIS,
+     WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+     See the License for the specific language governing permissions and
+     limitations under the License.
+ -->
+
+<resources>
+    <string-array name="recurrence_freq">
+        <item>"HER GÜN TEKRARLA"</item>
+        <item>"HER HAFTA TEKRARLA"</item>
+        <item>"HER AY TEKRARLA"</item>
+        <item>"HER YIL TEKRARLA"</item>
+    </string-array>
+    <string-array name="repeat_by_nth_sun">
+        <item>"her ayın ilk Pazar günü"</item>
+        <item>"her ayın ikinci Pazar günü"</item>
+        <item>"her ayın üçüncü Pazar günü"</item>
+        <item>"her ayın dördüncü Pazar günü"</item>
+        <item>"her ayın son Pazar günü"</item>
+    </string-array>
+    <string-array name="repeat_by_nth_mon">
+        <item>"her ayın ilk Pazartesi günü"</item>
+        <item>"her ayın ikinci Pazartesi günü"</item>
+        <item>"her ayın üçüncü Pazartesi günü"</item>
+        <item>"her ayın dördüncü Pazartesi günü"</item>
+        <item>"her ayın son Pazartesi günü"</item>
+    </string-array>
+    <string-array name="repeat_by_nth_tues">
+        <item>"her ayın ilk Salı günü"</item>
+        <item>"her ayın ikinci Salı günü"</item>
+        <item>"her ayın üçüncü Salı günü"</item>
+        <item>"her ayın dördüncü Salı günü"</item>
+        <item>"her ayın son Salı günü"</item>
+    </string-array>
+    <string-array name="repeat_by_nth_wed">
+        <item>"her ayın ilk Çarşamba günü"</item>
+        <item>"her ayın ikinci Çarşamba günü"</item>
+        <item>"her ayın üçüncü Çarşamba günü"</item>
+        <item>"her ayın dördüncü Çarşamba günü"</item>
+        <item>"her ayın son Çarşamba günü"</item>
+    </string-array>
+    <string-array name="repeat_by_nth_thurs">
+        <item>"her ayın ilk Perşembe günü"</item>
+        <item>"her ayın ikinci Perşembe günü"</item>
+        <item>"her ayın üçüncü Perşembe günü"</item>
+        <item>"her ayın dördüncü Perşembe günü"</item>
+        <item>"her ayın son Perşembe günü"</item>
+    </string-array>
+    <string-array name="repeat_by_nth_fri">
+        <item>"her ayın ilk Cuma günü"</item>
+        <item>"her ayın ikinci Cuma günü"</item>
+        <item>"her ayın üçüncü Cuma günü"</item>
+        <item>"her ayın dördüncü Cuma günü"</item>
+        <item>"her ayın son Cuma günü"</item>
+    </string-array>
+    <string-array name="repeat_by_nth_sat">
+        <item>"her ayın ilk Cumartesi günü"</item>
+        <item>"her ayın ikinci Cumartesi günü"</item>
+        <item>"her ayın üçüncü Cumartesi günü"</item>
+        <item>"her ayın dördüncü Cumartesi günü"</item>
+        <item>"her ayın son Cumartesi günü"</item>
+    </string-array>
+</resources>

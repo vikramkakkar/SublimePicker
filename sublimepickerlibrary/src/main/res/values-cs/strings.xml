@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8"?><!--  Copyright (C) 2006 The Android Open Source Project
+
+     Licensed under the Apache License, Version 2.0 (the "License");
+     you may not use this file except in compliance with the License.
+     You may obtain a copy of the License at
+
+          http://www.apache.org/licenses/LICENSE-2.0
+
+     Unless required by applicable law or agreed to in writing, software
+     distributed under the License is distributed on an "AS IS" BASIS,
+     WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+     See the License for the specific language governing permissions and
+     limitations under the License.
+ -->
+
+<resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
+
+    <string name="select_hours">"Zvolte hodiny"</string>
+    <string name="select_minutes">"Zvolte minuty"</string>
+    <string name="day_picker_description">"Dny uspořádané po měsících"</string>
+    <string name="year_picker_description">"Seznam roků"</string>
+    <string name="select_day">"Vyberte měsíc a den"</string>
+    <string name="select_year">"Vyberte rok"</string>
+    <string name="item_is_selected">"Vybrána položka <xliff:g id="ITEM">%1$s</xliff:g>"</string>
+    <string name="deleted_key">"Číslice <xliff:g id="KEY">%1$s</xliff:g> byla smazána"</string>
+
+    <string name="ok">"OK"</string>
+    <string name="cancel">"Zrušit"</string>
+
+    <string name="endByDate">"; do <xliff:g id="DATE">%s</xliff:g>"</string>
+    <plurals name="endByCount">
+        <item quantity="one">"; jednorázově"</item>
+        <item quantity="other">", <xliff:g id="NUMBER">%d</xliff:g>krát"</item>
+    </plurals>
+    <plurals name="daily">
+        <item quantity="one">"denně"</item>
+        <item quantity="other">"Jednou za <xliff:g id="NUMBER">%d</xliff:g> d."</item>
+    </plurals>
+    <string name="every_weekday">"Každý pracovní den (po–pá)"</string>
+    <plurals name="weekly">
+        <item quantity="one">"Týdně (<xliff:g id="DAYS_OF_WEEK">%2$s</xliff:g>)"</item>
+        <item quantity="other">"Jednou za <xliff:g id="NUMBER">%1$d</xliff:g> týd. v <xliff:g id="DAYS_OF_WEEK">%2$s</xliff:g>"</item>
+    </plurals>
+    <string name="monthly">"Měsíčně"</string>
+    <string name="yearly_plain">"Ročně"</string>
+    <plurals name="recurrence_interval_daily">
+        <item quantity="one">"Jednou za <xliff:g id="COUNT">%d</xliff:g> d."</item>
+        <item quantity="other">"Jednou za <xliff:g id="COUNT">%d</xliff:g> d."</item>
+    </plurals>
+    <plurals name="recurrence_interval_weekly">
+        <item quantity="one">"Jednou za <xliff:g id="COUNT">%d</xliff:g> týd."</item>
+        <item quantity="other">"Jednou za <xliff:g id="COUNT">%d</xliff:g> týd."</item>
+    </plurals>
+    <plurals name="recurrence_interval_monthly">
+        <item quantity="one">"Jednou za <xliff:g id="COUNT">%d</xliff:g> měs."</item>
+        <item quantity="other">"Jedno za <xliff:g id="COUNT">%d</xliff:g> měs."</item>
+    </plurals>
+    <plurals name="recurrence_interval_yearly">
+        <item quantity="one">"Jednou za <xliff:g id="COUNT">%d</xliff:g> r."</item>
+        <item quantity="other">"Jednou za <xliff:g id="COUNT">%d</xliff:g> r."</item>
+    </plurals>
+    <string name="recurrence_month_pattern_by_day">"měsíčně tentýž den"</string>
+    <string name="recurrence_end_continously">"Na věky věků"</string>
+    <string name="recurrence_end_date_label">"Do určitého data"</string>
+    <string name="recurrence_end_date">"Do <xliff:g id="DATE">%s</xliff:g>"</string>
+    <string name="recurrence_end_count_label">"Po určitý počet událostí"</string>
+    <plurals name="recurrence_end_count">
+        <item quantity="one">"Pro <xliff:g id="EVENT_COUNT">%d</xliff:g> událost"</item>
+        <item quantity="other">"Pro následující počet událostí: <xliff:g id="EVENT_COUNT">%d</xliff:g>"</item>
+    </plurals>
+    <string name="acessibility_recurrence_choose_end_date_description">"změnit datum ukončení"</string>
+</resources>

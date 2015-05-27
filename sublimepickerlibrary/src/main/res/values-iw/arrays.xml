@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8"?><!--  Copyright (C) 2007 The Android Open Source Project
+
+     Licensed under the Apache License, Version 2.0 (the "License");
+     you may not use this file except in compliance with the License.
+     You may obtain a copy of the License at
+
+          http://www.apache.org/licenses/LICENSE-2.0
+
+     Unless required by applicable law or agreed to in writing, software
+     distributed under the License is distributed on an "AS IS" BASIS,
+     WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+     See the License for the specific language governing permissions and
+     limitations under the License.
+ -->
+
+<resources>
+    <string-array name="recurrence_freq">
+        <item>"חזרה על בסיס יומי"</item>
+        <item>"חזרה על בסיס שבועי"</item>
+        <item>"חזרה על בסיס חודשי"</item>
+        <item>"חזרה על בסיס שנתי"</item>
+    </string-array>
+    <string-array name="repeat_by_nth_sun">
+        <item>"בכל יום ראשון הראשון בכל חודש"</item>
+        <item>"בכל יום ראשון השני בכל חודש"</item>
+        <item>"בכל יום ראשון השלישי בכל חודש"</item>
+        <item>"בכל יום ראשון הרביעי בכל חודש"</item>
+        <item>"בכל יום ראשון האחרון בכל חודש"</item>
+    </string-array>
+    <string-array name="repeat_by_nth_mon">
+        <item>"בכל יום שני הראשון בכל חודש"</item>
+        <item>"בכל יום שני השני בכל חודש"</item>
+        <item>"בכל יום שני השלישי בכל חודש"</item>
+        <item>"בכל יום שני הרביעי בכל חודש"</item>
+        <item>"בכל יום שני האחרון בכל חודש"</item>
+    </string-array>
+    <string-array name="repeat_by_nth_tues">
+        <item>"בכל יום שלישי הראשון בכל חודש"</item>
+        <item>"בכל יום שלישי השני בכל חודש"</item>
+        <item>"בכל יום שלישי השלישי בכל חודש"</item>
+        <item>"בכל יום שלישי הרביעי בכל חודש"</item>
+        <item>"בכל יום שלישי האחרון בכל חודש"</item>
+    </string-array>
+    <string-array name="repeat_by_nth_wed">
+        <item>"בכל יום רביעי הראשון בכל חודש"</item>
+        <item>"בכל יום רביעי השני בכל חודש"</item>
+        <item>"בכל יום רביעי השלישי בכל חודש"</item>
+        <item>"בכל יום רביעי הרביעי בכל חודש"</item>
+        <item>"בכל יום רביעי האחרון בכל חודש"</item>
+    </string-array>
+    <string-array name="repeat_by_nth_thurs">
+        <item>"בכל יום חמישי הראשון בכל חודש"</item>
+        <item>"בכל יום חמישי השני בכל חודש"</item>
+        <item>"בכל יום חמישי השלישי בכל חודש"</item>
+        <item>"בכל יום חמישי הרביעי בכל חודש"</item>
+        <item>"בכל יום חמישי האחרון בכל חודש"</item>
+    </string-array>
+    <string-array name="repeat_by_nth_fri">
+        <item>"בכל יום שישי הראשון בכל חודש"</item>
+        <item>"בכל יום שישי השני בכל חודש"</item>
+        <item>"בכל יום שישי השלישי בכל חודש"</item>
+        <item>"בכל יום שישי הרביעי בכל חודש"</item>
+        <item>"בכל יום שישי האחרון בכל חודש"</item>
+    </string-array>
+    <string-array name="repeat_by_nth_sat">
+        <item>"בכל יום שבת הראשון בכל חודש"</item>
+        <item>"בכל יום שבת השני בכל חודש"</item>
+        <item>"בכל יום שבת השלישי בכל חודש"</item>
+        <item>"בכל יום שבת הרביעי בכל חודש"</item>
+        <item>"בכל יום שבת האחרון בכל חודש"</item>
+    </string-array>
+</resources>

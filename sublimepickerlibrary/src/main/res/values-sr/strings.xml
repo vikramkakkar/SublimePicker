@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8"?><!--  Copyright (C) 2006 The Android Open Source Project
+
+     Licensed under the Apache License, Version 2.0 (the "License");
+     you may not use this file except in compliance with the License.
+     You may obtain a copy of the License at
+
+          http://www.apache.org/licenses/LICENSE-2.0
+
+     Unless required by applicable law or agreed to in writing, software
+     distributed under the License is distributed on an "AS IS" BASIS,
+     WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+     See the License for the specific language governing permissions and
+     limitations under the License.
+ -->
+
+<resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
+
+    <string name="select_hours">"Изаберите сате"</string>
+    <string name="select_minutes">"Изаберите минуте"</string>
+    <string name="day_picker_description">"Приказ дана у месецу у виду мреже"</string>
+    <string name="year_picker_description">"Листа година"</string>
+    <string name="select_day">"Изаберите месец и дан"</string>
+    <string name="select_year">"Изаберите годину"</string>
+    <string name="item_is_selected">"Изабрали сте <xliff:g id="ITEM">%1$s</xliff:g>"</string>
+    <string name="deleted_key">"Избрисали сте <xliff:g id="KEY">%1$s</xliff:g>"</string>
+
+    <string name="ok">"Потврди"</string>
+    <string name="cancel">"Откажи"</string>
+
+    <string name="endByDate">"; до <xliff:g id="DATE">%s</xliff:g>"</string>
+    <plurals name="endByCount">
+        <item quantity="one">"; једанпут"</item>
+        <item quantity="other">"; <xliff:g id="NUMBER">%d</xliff:g> пута"</item>
+    </plurals>
+    <plurals name="daily">
+        <item quantity="one">"Дневно"</item>
+        <item quantity="other">"На <xliff:g id="NUMBER">%d</xliff:g> дана"</item>
+    </plurals>
+    <string name="every_weekday">"Сваког радног дана (од понедељка до петка)"</string>
+    <plurals name="weekly">
+        <item quantity="one">"Недељно (<xliff:g id="DAYS_OF_WEEK">%2$s</xliff:g>)"</item>
+        <item quantity="other">"На <xliff:g id="NUMBER">%1$d</xliff:g> недеље(а) (<xliff:g id="DAYS_OF_WEEK">%2$s</xliff:g>)"</item>
+    </plurals>
+    <string name="monthly">"На месечном нивоу"</string>
+    <string name="yearly_plain">"На годишњем нивоу"</string>
+    <plurals name="recurrence_interval_daily">
+        <item quantity="one">"На <xliff:g id="COUNT">%d</xliff:g> дан"</item>
+        <item quantity="other">"На <xliff:g id="COUNT">%d</xliff:g> дана"</item>
+    </plurals>
+    <plurals name="recurrence_interval_weekly">
+        <item quantity="one">"На <xliff:g id="COUNT">%d</xliff:g> недељу"</item>
+        <item quantity="other">"На <xliff:g id="COUNT">%d</xliff:g> недеље(а)"</item>
+    </plurals>
+    <plurals name="recurrence_interval_monthly">
+        <item quantity="one">"На <xliff:g id="COUNT">%d</xliff:g> месец"</item>
+        <item quantity="other">"На <xliff:g id="COUNT">%d</xliff:g> месеца(и)"</item>
+    </plurals>
+    <plurals name="recurrence_interval_yearly">
+        <item quantity="one">"На <xliff:g id="COUNT">%d</xliff:g> годину"</item>
+        <item quantity="other">"На <xliff:g id="COUNT">%d</xliff:g> године(а)"</item>
+    </plurals>
+    <string name="recurrence_month_pattern_by_day">"истог дана сваког месеца"</string>
+    <string name="recurrence_end_continously">"Заувек"</string>
+    <string name="recurrence_end_date_label">"До одређеног датума"</string>
+    <string name="recurrence_end_date">"До <xliff:g id="DATE">%s</xliff:g>"</string>
+    <string name="recurrence_end_count_label">"За више догађаја"</string>
+    <plurals name="recurrence_end_count">
+        <item quantity="one">"За <xliff:g id="EVENT_COUNT">%d</xliff:g> догађај"</item>
+        <item quantity="other">"За <xliff:g id="EVENT_COUNT">%d</xliff:g> догађаја"</item>
+    </plurals>
+    <string name="acessibility_recurrence_choose_end_date_description">"промена крајњег датума"</string>
+</resources>

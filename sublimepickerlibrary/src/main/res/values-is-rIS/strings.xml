@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8"?><!--  Copyright (C) 2006 The Android Open Source Project
+
+     Licensed under the Apache License, Version 2.0 (the "License");
+     you may not use this file except in compliance with the License.
+     You may obtain a copy of the License at
+
+          http://www.apache.org/licenses/LICENSE-2.0
+
+     Unless required by applicable law or agreed to in writing, software
+     distributed under the License is distributed on an "AS IS" BASIS,
+     WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+     See the License for the specific language governing permissions and
+     limitations under the License.
+ -->
+
+<resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
+
+    <string name="select_hours">"Veldu klukkustundir"</string>
+    <string name="select_minutes">"Veldu mínútur"</string>
+    <string name="day_picker_description">"Mánaðartafla með dögum"</string>
+    <string name="year_picker_description">"Áralisti"</string>
+    <string name="select_day">"Veldu mánuð og dag"</string>
+    <string name="select_year">"Veldu ár"</string>
+    <string name="item_is_selected">"<xliff:g id="ITEM">%1$s</xliff:g> valið"</string>
+    <string name="deleted_key">"<xliff:g id="KEY">%1$s</xliff:g> eytt"</string>
+
+    <string name="ok">"Í lagi"</string>
+    <string name="cancel">"Hætta við"</string>
+
+    <string name="endByDate">", til <xliff:g id="DATE">%s</xliff:g>"</string>
+    <plurals name="endByCount">
+        <item quantity="one">", í eitt skipti"</item>
+        <item quantity="other">", <xliff:g id="NUMBER">%d</xliff:g> sinnum"</item>
+    </plurals>
+    <plurals name="daily">
+        <item quantity="one">"Daglega"</item>
+        <item quantity="other">"Á <xliff:g id="NUMBER">%d</xliff:g> daga fresti"</item>
+    </plurals>
+    <string name="every_weekday">"Alla virka daga (mán.–fös.)"</string>
+    <plurals name="weekly">
+        <item quantity="one">"Vikulega á <xliff:g id="DAYS_OF_WEEK">%2$s</xliff:g>"</item>
+        <item quantity="other">"Á <xliff:g id="NUMBER">%1$d</xliff:g> þriggja vikna fresti á <xliff:g id="DAYS_OF_WEEK">%2$s</xliff:g>"</item>
+    </plurals>
+    <string name="monthly">"Mánaðarlega"</string>
+    <string name="yearly_plain">"Árlega"</string>
+    <plurals name="recurrence_interval_daily">
+        <item quantity="one">"Á <xliff:g id="COUNT">%d</xliff:g> dags fresti"</item>
+        <item quantity="other">"Á <xliff:g id="COUNT">%d</xliff:g> daga fresti"</item>
+    </plurals>
+    <plurals name="recurrence_interval_weekly">
+        <item quantity="one">"Á <xliff:g id="COUNT">%d</xliff:g> viku fresti"</item>
+        <item quantity="other">"Á <xliff:g id="COUNT">%d</xliff:g> vikna fresti"</item>
+    </plurals>
+    <plurals name="recurrence_interval_monthly">
+        <item quantity="one">"Á <xliff:g id="COUNT">%d</xliff:g> mánaðar fresti"</item>
+        <item quantity="other">"Á <xliff:g id="COUNT">%d</xliff:g> mánaða fresti"</item>
+    </plurals>
+    <plurals name="recurrence_interval_yearly">
+        <item quantity="one">"Á <xliff:g id="COUNT">%d</xliff:g> árs fresti"</item>
+        <item quantity="other">"Á <xliff:g id="COUNT">%d</xliff:g> ára fresti"</item>
+    </plurals>
+    <string name="recurrence_month_pattern_by_day">"sama dag í hverjum mánuði"</string>
+    <string name="recurrence_end_continously">"Ótímabundið"</string>
+    <string name="recurrence_end_date_label">"Til"</string>
+    <string name="recurrence_end_date">"Til <xliff:g id="DATE">%s</xliff:g>"</string>
+    <string name="recurrence_end_count_label">"Fyrir marga viðburði"</string>
+    <plurals name="recurrence_end_count">
+        <item quantity="one">"Fyrir <xliff:g id="EVENT_COUNT">%d</xliff:g> viðburði"</item>
+        <item quantity="other">"Fyrir <xliff:g id="EVENT_COUNT">%d</xliff:g> viðburði"</item>
+    </plurals>
+    <string name="acessibility_recurrence_choose_end_date_description">"breyta lokadegi"</string>
+</resources>

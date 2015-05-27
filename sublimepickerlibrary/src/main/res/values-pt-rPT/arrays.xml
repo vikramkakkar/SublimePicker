@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8"?><!--  Copyright (C) 2007 The Android Open Source Project
+
+     Licensed under the Apache License, Version 2.0 (the "License");
+     you may not use this file except in compliance with the License.
+     You may obtain a copy of the License at
+
+          http://www.apache.org/licenses/LICENSE-2.0
+
+     Unless required by applicable law or agreed to in writing, software
+     distributed under the License is distributed on an "AS IS" BASIS,
+     WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+     See the License for the specific language governing permissions and
+     limitations under the License.
+ -->
+
+<resources>
+    <string-array name="recurrence_freq">
+        <item>"REPETIR DIARIAMENTE"</item>
+        <item>"REPETIR SEMANALMENTE"</item>
+        <item>"REPETIR MENSALMENTE"</item>
+        <item>"REPETIR ANUALMENTE"</item>
+    </string-array>
+    <string-array name="repeat_by_nth_sun">
+        <item>"em cada primeiro domingo"</item>
+        <item>"em cada segundo domingo"</item>
+        <item>"em cada terceiro domingo"</item>
+        <item>"em cada quarto domingo"</item>
+        <item>"em cada último domingo"</item>
+    </string-array>
+    <string-array name="repeat_by_nth_mon">
+        <item>"em cada primeira segunda-feira"</item>
+        <item>"em cada segunda segunda-feira"</item>
+        <item>"em cada terceira segunda-feira"</item>
+        <item>"em cada quarta segunda-feira"</item>
+        <item>"em cada última segunda-feira"</item>
+    </string-array>
+    <string-array name="repeat_by_nth_tues">
+        <item>"em cada primeira terça-feira"</item>
+        <item>"em cada segunda terça-feira"</item>
+        <item>"em cada terceira terça-feira"</item>
+        <item>"em cada quarta terça-feira"</item>
+        <item>"em cada última terça-feira"</item>
+    </string-array>
+    <string-array name="repeat_by_nth_wed">
+        <item>"em cada primeira quarta-feira"</item>
+        <item>"em cada segunda quarta-feira"</item>
+        <item>"em cada terceira quarta-feira"</item>
+        <item>"em cada quarta quarta-feira"</item>
+        <item>"em cada última quarta-feira"</item>
+    </string-array>
+    <string-array name="repeat_by_nth_thurs">
+        <item>"em cada primeira quinta-feira"</item>
+        <item>"em cada segunda quinta-feira"</item>
+        <item>"em cada terceira quinta-feira"</item>
+        <item>"em cada quarta quinta-feira"</item>
+        <item>"em cada última quinta-feira"</item>
+    </string-array>
+    <string-array name="repeat_by_nth_fri">
+        <item>"em cada primeira sexta-feira"</item>
+        <item>"em cada segunda sexta-feira"</item>
+        <item>"em cada terceira sexta-feira"</item>
+        <item>"em cada quarta sexta-feira"</item>
+        <item>"em cada última sexta-feira"</item>
+    </string-array>
+    <string-array name="repeat_by_nth_sat">
+        <item>"em cada primeiro sábado"</item>
+        <item>"em cada segundo sábado"</item>
+        <item>"em cada terceiro sábado"</item>
+        <item>"em cada quarto sábado"</item>
+        <item>"em cada último sábado"</item>
+    </string-array>
+</resources>

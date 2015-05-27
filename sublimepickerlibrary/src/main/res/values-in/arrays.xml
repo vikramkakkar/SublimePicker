@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8"?><!--  Copyright (C) 2007 The Android Open Source Project
+
+     Licensed under the Apache License, Version 2.0 (the "License");
+     you may not use this file except in compliance with the License.
+     You may obtain a copy of the License at
+
+          http://www.apache.org/licenses/LICENSE-2.0
+
+     Unless required by applicable law or agreed to in writing, software
+     distributed under the License is distributed on an "AS IS" BASIS,
+     WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+     See the License for the specific language governing permissions and
+     limitations under the License.
+ -->
+
+<resources>
+    <string-array name="recurrence_freq">
+        <item>"PENGULANGAN HARIAN"</item>
+        <item>"PENGULANGAN MINGGUAN"</item>
+        <item>"PENGULANGAN BULANAN"</item>
+        <item>"PENGULANGAN TAHUNAN"</item>
+    </string-array>
+    <string-array name="repeat_by_nth_sun">
+        <item>"setiap Minggu pertama"</item>
+        <item>"setiap Minggu kedua"</item>
+        <item>"setiap Minggu ketiga"</item>
+        <item>"setiap Minggu keempat"</item>
+        <item>"setiap Minggu terakhir"</item>
+    </string-array>
+    <string-array name="repeat_by_nth_mon">
+        <item>"setiap Senin pertama"</item>
+        <item>"setiap Senin kedua"</item>
+        <item>"setiap Senin ketiga"</item>
+        <item>"setiap Senin keempat"</item>
+        <item>"setiap Senin terakhir"</item>
+    </string-array>
+    <string-array name="repeat_by_nth_tues">
+        <item>"setiap Selasa pertama"</item>
+        <item>"setiap Selasa kedua"</item>
+        <item>"setiap Selasa ketiga"</item>
+        <item>"setiap Selasa keempat"</item>
+        <item>"setiap Selasa terakhir"</item>
+    </string-array>
+    <string-array name="repeat_by_nth_wed">
+        <item>"setiap Rabu pertama"</item>
+        <item>"setiap Rabu kedua"</item>
+        <item>"setiap Rabu ketiga"</item>
+        <item>"setiap Rabu keempat"</item>
+        <item>"setiap Rabu terakhir"</item>
+    </string-array>
+    <string-array name="repeat_by_nth_thurs">
+        <item>"setiap Kamis pertama"</item>
+        <item>"setiap Kamis kedua"</item>
+        <item>"setiap Kamis ketiga"</item>
+        <item>"setiap Kamis keempat"</item>
+        <item>"setiap Kamis terakhir"</item>
+    </string-array>
+    <string-array name="repeat_by_nth_fri">
+        <item>"setiap Jumat pertama"</item>
+        <item>"setiap Jumat kedua"</item>
+        <item>"setiap Jumat ketiga"</item>
+        <item>"setiap Jumat keempat"</item>
+        <item>"setiap Jumat terakhir"</item>
+    </string-array>
+    <string-array name="repeat_by_nth_sat">
+        <item>"setiap Sabtu pertama"</item>
+        <item>"setiap Sabtu kedua"</item>
+        <item>"setiap Sabtu ketiga"</item>
+        <item>"setiap Sabtu keempat"</item>
+        <item>"setiap Sabtu terakhir"</item>
+    </string-array>
+</resources>

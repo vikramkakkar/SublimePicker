@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8"?><!--  Copyright (C) 2007 The Android Open Source Project
+
+     Licensed under the Apache License, Version 2.0 (the "License");
+     you may not use this file except in compliance with the License.
+     You may obtain a copy of the License at
+
+          http://www.apache.org/licenses/LICENSE-2.0
+
+     Unless required by applicable law or agreed to in writing, software
+     distributed under the License is distributed on an "AS IS" BASIS,
+     WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+     See the License for the specific language governing permissions and
+     limitations under the License.
+ -->
+
+<resources>
+    <string-array name="recurrence_freq">
+        <item>"ЕЖЕДНЕВНО"</item>
+        <item>"ЕЖЕНЕДЕЛЬНО"</item>
+        <item>"ЕЖЕМЕСЯЧНО"</item>
+        <item>"ЕЖЕГОДНО"</item>
+    </string-array>
+    <string-array name="repeat_by_nth_sun">
+        <item>"первое воскресенье месяца"</item>
+        <item>"второе воскресенье месяца"</item>
+        <item>"третье воскресенье месяца"</item>
+        <item>"четвертое воскресенье месяца"</item>
+        <item>"последнее воскресенье месяца"</item>
+    </string-array>
+    <string-array name="repeat_by_nth_mon">
+        <item>"первый понедельник месяца"</item>
+        <item>"второй понедельник месяца"</item>
+        <item>"третий понедельник месяца"</item>
+        <item>"четвертый понедельник месяца"</item>
+        <item>"последний понедельник месяца"</item>
+    </string-array>
+    <string-array name="repeat_by_nth_tues">
+        <item>"первый вторник месяца"</item>
+        <item>"второй вторник месяца"</item>
+        <item>"третий вторник месяца"</item>
+        <item>"четвертый вторник месяца"</item>
+        <item>"последний вторник месяца"</item>
+    </string-array>
+    <string-array name="repeat_by_nth_wed">
+        <item>"первая среда месяца"</item>
+        <item>"вторая среда месяца"</item>
+        <item>"третья среда месяца"</item>
+        <item>"четвертая среда месяца"</item>
+        <item>"последняя среда месяца"</item>
+    </string-array>
+    <string-array name="repeat_by_nth_thurs">
+        <item>"первый четверг месяца"</item>
+        <item>"второй четверг месяца"</item>
+        <item>"третий четверг месяца"</item>
+        <item>"четвертый четверг месяца"</item>
+        <item>"последний четверг месяца"</item>
+    </string-array>
+    <string-array name="repeat_by_nth_fri">
+        <item>"первая пятница месяца"</item>
+        <item>"вторая пятница месяца"</item>
+        <item>"третья пятница месяца"</item>
+        <item>"четвертая пятница месяца"</item>
+        <item>"последняя пятница месяца"</item>
+    </string-array>
+    <string-array name="repeat_by_nth_sat">
+        <item>"первая суббота месяца"</item>
+        <item>"вторая суббота месяца"</item>
+        <item>"третья суббота месяца"</item>
+        <item>"четвертая суббота месяца"</item>
+        <item>"последняя суббота месяца"</item>
+    </string-array>
+</resources>

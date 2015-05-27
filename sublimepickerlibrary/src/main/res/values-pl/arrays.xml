@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8"?><!--  Copyright (C) 2007 The Android Open Source Project
+
+     Licensed under the Apache License, Version 2.0 (the "License");
+     you may not use this file except in compliance with the License.
+     You may obtain a copy of the License at
+
+          http://www.apache.org/licenses/LICENSE-2.0
+
+     Unless required by applicable law or agreed to in writing, software
+     distributed under the License is distributed on an "AS IS" BASIS,
+     WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+     See the License for the specific language governing permissions and
+     limitations under the License.
+ -->
+
+<resources>
+    <string-array name="recurrence_freq">
+        <item>"CODZIENNIE"</item>
+        <item>"CO TYDZIEŃ"</item>
+        <item>"CO MIESIĄC"</item>
+        <item>"CO ROK"</item>
+    </string-array>
+    <string-array name="repeat_by_nth_sun">
+        <item>"w każdą pierwszą niedzielę"</item>
+        <item>"w każdą drugą niedzielę"</item>
+        <item>"w każdą trzecią niedzielę"</item>
+        <item>"w każdą czwartą niedzielę"</item>
+        <item>"w każdą ostatnią niedzielę"</item>
+    </string-array>
+    <string-array name="repeat_by_nth_mon">
+        <item>"w każdy pierwszy poniedziałek"</item>
+        <item>"w każdy drugi poniedziałek"</item>
+        <item>"w każdy trzeci poniedziałek"</item>
+        <item>"w każdy czwarty poniedziałek"</item>
+        <item>"w każdy ostatni poniedziałek"</item>
+    </string-array>
+    <string-array name="repeat_by_nth_tues">
+        <item>"w każdy pierwszy wtorek"</item>
+        <item>"w każdy drugi wtorek"</item>
+        <item>"w każdy trzeci wtorek"</item>
+        <item>"w każdy czwarty wtorek"</item>
+        <item>"w każdy ostatni wtorek"</item>
+    </string-array>
+    <string-array name="repeat_by_nth_wed">
+        <item>"w każdą pierwszą środę"</item>
+        <item>"w każdą drugą środę"</item>
+        <item>"w każdą trzecią środę"</item>
+        <item>"w każdą czwartą środę"</item>
+        <item>"w każdą ostatnią środę"</item>
+    </string-array>
+    <string-array name="repeat_by_nth_thurs">
+        <item>"w każdy pierwszy czwartek"</item>
+        <item>"w każdy drugi czwartek"</item>
+        <item>"w każdy trzeci czwartek"</item>
+        <item>"w każdy czwarty czwartek"</item>
+        <item>"w każdy ostatni czwartek"</item>
+    </string-array>
+    <string-array name="repeat_by_nth_fri">
+        <item>"w każdy pierwszy piątek"</item>
+        <item>"w każdy drugi piątek"</item>
+        <item>"w każdy trzeci piątek"</item>
+        <item>"w każdy czwarty piątek"</item>
+        <item>"w każdy ostatni piątek"</item>
+    </string-array>
+    <string-array name="repeat_by_nth_sat">
+        <item>"w każdą pierwszą sobotę"</item>
+        <item>"w każdą drugą sobotę"</item>
+        <item>"w każdą trzecią sobotę"</item>
+        <item>"w każdą czwartą sobotę"</item>
+        <item>"w każdą ostatnią sobotę"</item>
+    </string-array>
+</resources>

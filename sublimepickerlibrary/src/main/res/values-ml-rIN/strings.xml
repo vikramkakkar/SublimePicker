@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8"?><!--  Copyright (C) 2006 The Android Open Source Project
+
+     Licensed under the Apache License, Version 2.0 (the "License");
+     you may not use this file except in compliance with the License.
+     You may obtain a copy of the License at
+
+          http://www.apache.org/licenses/LICENSE-2.0
+
+     Unless required by applicable law or agreed to in writing, software
+     distributed under the License is distributed on an "AS IS" BASIS,
+     WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+     See the License for the specific language governing permissions and
+     limitations under the License.
+ -->
+
+<resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
+
+    <string name="select_hours">"മണിക്കൂർ തിരഞ്ഞെടുക്കുക"</string>
+    <string name="select_minutes">"മിനിറ്റ് തിരഞ്ഞെടുക്കുക"</string>
+    <string name="day_picker_description">"മാസപ്രകാരമുള്ള ദിവസ ഗ്രിഡ്"</string>
+    <string name="year_picker_description">"വർഷങ്ങളുടെ ലിസ്റ്റ്"</string>
+    <string name="select_day">"മാസവും ദിവസവും തിരഞ്ഞെടുക്കുക"</string>
+    <string name="select_year">"വർഷം തിരഞ്ഞെടുക്കുക"</string>
+    <string name="item_is_selected">"<xliff:g id="ITEM">%1$s</xliff:g> തിരഞ്ഞെടുത്തു"</string>
+    <string name="deleted_key">"<xliff:g id="KEY">%1$s</xliff:g> ഇല്ലാതാക്കി"</string>
+
+    <string name="ok">"ശരി"</string>
+    <string name="cancel">"റദ്ദാക്കുക"</string>
+
+    <string name="endByDate">"; <xliff:g id="DATE">%s</xliff:g> വരെ"</string>
+    <plurals name="endByCount">
+        <item quantity="one">"; ഒരു തവണ"</item>
+        <item quantity="other">"; <xliff:g id="NUMBER">%d</xliff:g> തവണ"</item>
+    </plurals>
+    <plurals name="daily">
+        <item quantity="one">"പ്രതിദിനം"</item>
+        <item quantity="other">"ഓരോ <xliff:g id="NUMBER">%d</xliff:g> ദിവസവും"</item>
+    </plurals>
+    <string name="every_weekday">"എല്ലാ പ്രവർത്തിദിനങ്ങളും (തിങ്കൾ–വെള്ളി)"</string>
+    <plurals name="weekly">
+        <item quantity="one">"പ്രതിവാരം <xliff:g id="DAYS_OF_WEEK">%2$s</xliff:g> ദിവസം"</item>
+        <item quantity="other">"ഓരോ <xliff:g id="NUMBER">%1$d</xliff:g> ആഴ്ച കൂടുമ്പോഴും <xliff:g id="DAYS_OF_WEEK">%2$s</xliff:g>"</item>
+    </plurals>
+    <string name="monthly">"പ്രതിമാസം"</string>
+    <string name="yearly_plain">"പ്രതിവർഷം"</string>
+    <plurals name="recurrence_interval_daily">
+        <item quantity="one">"ഓരോ <xliff:g id="COUNT">%d</xliff:g> ദിവസവും"</item>
+        <item quantity="other">"ഓരോ <xliff:g id="COUNT">%d</xliff:g> ദിവസവും"</item>
+    </plurals>
+    <plurals name="recurrence_interval_weekly">
+        <item quantity="one">"ഓരോ <xliff:g id="COUNT">%d</xliff:g> ആഴ്ച കൂടുമ്പോഴും"</item>
+        <item quantity="other">"ഓരോ <xliff:g id="COUNT">%d</xliff:g> ആഴ്‌ച കൂടുമ്പോഴും"</item>
+    </plurals>
+    <plurals name="recurrence_interval_monthly">
+        <item quantity="one">"ഓരോ <xliff:g id="COUNT">%d</xliff:g> മാസം കൂടുമ്പോഴും"</item>
+        <item quantity="other">"ഓരോ <xliff:g id="COUNT">%d</xliff:g> മാസം കൂടുമ്പോഴും"</item>
+    </plurals>
+    <plurals name="recurrence_interval_yearly">
+        <item quantity="one">"ഓരോ <xliff:g id="COUNT">%d</xliff:g> വർഷം കൂടുമ്പോഴും"</item>
+        <item quantity="other">"ഓരോ <xliff:g id="COUNT">%d</xliff:g> വർഷം കൂടുമ്പോഴും"</item>
+    </plurals>
+    <string name="recurrence_month_pattern_by_day">"ഓരോ മാസവും ഒരേ ദിവസം"</string>
+    <string name="recurrence_end_continously">"എന്നന്നേയ്‌ക്കും"</string>
+    <string name="recurrence_end_date_label">"ഒരു തീയതി വരെ"</string>
+    <string name="recurrence_end_date">"<xliff:g id="DATE">%s</xliff:g> വരെ"</string>
+    <string name="recurrence_end_count_label">"ഇവന്റുകൾ ആവർത്തിക്കേണ്ട എണ്ണം"</string>
+    <plurals name="recurrence_end_count">
+        <item quantity="one">"<xliff:g id="EVENT_COUNT">%d</xliff:g> ഇവന്റിന്"</item>
+        <item quantity="other">"<xliff:g id="EVENT_COUNT">%d</xliff:g> ഇവന്റുകൾക്ക്"</item>
+    </plurals>
+    <string name="acessibility_recurrence_choose_end_date_description">"അവസാനിക്കുന്ന ദിവസം മാറ്റുക"</string>
+</resources>

@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8"?><!--  Copyright (C) 2006 The Android Open Source Project
+
+     Licensed under the Apache License, Version 2.0 (the "License");
+     you may not use this file except in compliance with the License.
+     You may obtain a copy of the License at
+
+          http://www.apache.org/licenses/LICENSE-2.0
+
+     Unless required by applicable law or agreed to in writing, software
+     distributed under the License is distributed on an "AS IS" BASIS,
+     WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+     See the License for the specific language governing permissions and
+     limitations under the License.
+ -->
+
+<resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
+
+    <string name="select_hours">"ঘন্টা নির্বাচন করুন"</string>
+    <string name="select_minutes">"মিনিট নির্বাচন করুন"</string>
+    <string name="day_picker_description">"দিন দিয়ে সংগঠিত মাসের গ্রিড"</string>
+    <string name="year_picker_description">"বছরের তালিকা"</string>
+    <string name="select_day">"মাস এবং দিন নির্বাচন করুন"</string>
+    <string name="select_year">"বছর নির্বাচন করুন"</string>
+    <string name="item_is_selected">"<xliff:g id="ITEM">%1$s</xliff:g> নির্বাচন করা হয়েছে"</string>
+    <string name="deleted_key">"<xliff:g id="KEY">%1$s</xliff:g> মুছে ফেলা হয়েছে"</string>
+
+    <string name="ok">"ঠিক আছে"</string>
+    <string name="cancel">"বাতিল করুন"</string>
+
+    <string name="endByDate">"; <xliff:g id="DATE">%s</xliff:g> তারিখ পর্যন্ত"</string>
+    <plurals name="endByCount">
+        <item quantity="one">"; একবারের জন্য"</item>
+        <item quantity="other">"; <xliff:g id="NUMBER">%d</xliff:g> বারের জন্য"</item>
+    </plurals>
+    <plurals name="daily">
+        <item quantity="one">"প্রতিদিন"</item>
+        <item quantity="other">"প্রতি <xliff:g id="NUMBER">%d</xliff:g> দিনে"</item>
+    </plurals>
+    <string name="every_weekday">"প্রতিটি কর্মদিবসে (সোম–শুক্র)"</string>
+    <plurals name="weekly">
+        <item quantity="one">"প্রতি সপ্তাহের <xliff:g id="DAYS_OF_WEEK">%2$s</xliff:g> এ"</item>
+        <item quantity="other">"প্রতি <xliff:g id="NUMBER">%1$d</xliff:g> সপ্তাহ পর পর <xliff:g id="DAYS_OF_WEEK">%2$s</xliff:g> এ"</item>
+    </plurals>
+    <string name="monthly">"মাসিক"</string>
+    <string name="yearly_plain">"বাৎসরিক"</string>
+    <plurals name="recurrence_interval_daily">
+        <item quantity="one">"প্রতি <xliff:g id="COUNT">%d</xliff:g> দিনে"</item>
+        <item quantity="other">"প্রতি <xliff:g id="COUNT">%d</xliff:g> দিনে"</item>
+    </plurals>
+    <plurals name="recurrence_interval_weekly">
+        <item quantity="one">"প্রতি <xliff:g id="COUNT">%d</xliff:g> সপ্তাহে"</item>
+        <item quantity="other">"প্রতি <xliff:g id="COUNT">%d</xliff:g> সপ্তাহে"</item>
+    </plurals>
+    <plurals name="recurrence_interval_monthly">
+        <item quantity="one">"প্রতি <xliff:g id="COUNT">%d</xliff:g> মাসে"</item>
+        <item quantity="other">"প্রতি <xliff:g id="COUNT">%d</xliff:g> মাসে"</item>
+    </plurals>
+    <plurals name="recurrence_interval_yearly">
+        <item quantity="one">"প্রতি <xliff:g id="COUNT">%d</xliff:g> বছরে"</item>
+        <item quantity="other">"প্রতি <xliff:g id="COUNT">%d</xliff:g> বছরে"</item>
+    </plurals>
+    <string name="recurrence_month_pattern_by_day">"প্রতি মাসের একই দিনে"</string>
+    <string name="recurrence_end_continously">"চিরকাল"</string>
+    <string name="recurrence_end_date_label">"একটি তারিখ পর্যন্ত"</string>
+    <string name="recurrence_end_date">"<xliff:g id="DATE">%s</xliff:g> পর্যন্ত"</string>
+    <string name="recurrence_end_count_label">"একাধিক ঘটনার জন্য"</string>
+    <plurals name="recurrence_end_count">
+        <item quantity="one">"<xliff:g id="EVENT_COUNT">%d</xliff:g>টি ইভেন্টের জন্য"</item>
+        <item quantity="other">"<xliff:g id="EVENT_COUNT">%d</xliff:g>টি ইভেন্টের জন্য"</item>
+    </plurals>
+    <string name="acessibility_recurrence_choose_end_date_description">"সমাপ্তির তারিখ পরিবর্তন করুন"</string>
+</resources>

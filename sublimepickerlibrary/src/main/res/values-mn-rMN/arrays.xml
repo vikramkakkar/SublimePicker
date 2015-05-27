@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8"?><!--  Copyright (C) 2007 The Android Open Source Project
+
+     Licensed under the Apache License, Version 2.0 (the "License");
+     you may not use this file except in compliance with the License.
+     You may obtain a copy of the License at
+
+          http://www.apache.org/licenses/LICENSE-2.0
+
+     Unless required by applicable law or agreed to in writing, software
+     distributed under the License is distributed on an "AS IS" BASIS,
+     WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+     See the License for the specific language governing permissions and
+     limitations under the License.
+ -->
+
+<resources>
+    <string-array name="recurrence_freq">
+        <item>"ӨДӨР БҮР ДАВТАХ"</item>
+        <item>"ДОЛОО ХОНОГ БҮР ДАВТАХ"</item>
+        <item>"САР БҮР ДАВТАХ"</item>
+        <item>"ЖИЛ БҮР ДАВТАХ"</item>
+    </string-array>
+    <string-array name="repeat_by_nth_sun">
+        <item>"Эхний Ням гараг бүрт"</item>
+        <item>"Хоёрдох Ням гараг бүрт"</item>
+        <item>"Гуравдах Ням гараг бүрт"</item>
+        <item>"Дөрөвдэх Ням гараг бүрт"</item>
+        <item>"Сүүлийн Ням гараг бүрт"</item>
+    </string-array>
+    <string-array name="repeat_by_nth_mon">
+        <item>"Эхний Даваа гараг бүрт"</item>
+        <item>"Хоёрдох Даваа гараг бүрт"</item>
+        <item>"Гуравдах Даваа гараг бүрт"</item>
+        <item>"Дөрөвдэх Даваа гараг бүрт"</item>
+        <item>"Сүүлийн Даваа гараг бүрт"</item>
+    </string-array>
+    <string-array name="repeat_by_nth_tues">
+        <item>"Эхний Мягмар гараг бүрт"</item>
+        <item>"Хоёрдох Мягмар гараг бүрт"</item>
+        <item>"Гуравдах Мягмар гараг бүрт"</item>
+        <item>"Дөрөвдэх Мягмар гараг бүрт"</item>
+        <item>"Сүүлийн Мягмар гараг бүрт"</item>
+    </string-array>
+    <string-array name="repeat_by_nth_wed">
+        <item>"Эхний Лхагва гараг бүрт"</item>
+        <item>"Хоёрдох Лхагва гараг бүрт"</item>
+        <item>"Гуравдах Лхагва гараг бүрт"</item>
+        <item>"Дөрөвдэх Лхагва гараг бүрт"</item>
+        <item>"Сүүлийн Лхагва гараг бүрт"</item>
+    </string-array>
+    <string-array name="repeat_by_nth_thurs">
+        <item>"Эхний Пүрэв гараг бүрт"</item>
+        <item>"Хоёрдох Пүрэв гараг бүрт"</item>
+        <item>"Гуравдах Пүрэв гараг бүрт"</item>
+        <item>"Дөрөвдэх Пүрэв гараг бүрт"</item>
+        <item>"Сүүлийн Пүрэв гараг бүрт"</item>
+    </string-array>
+    <string-array name="repeat_by_nth_fri">
+        <item>"Эхний Баасан гараг бүрт"</item>
+        <item>"Хоёрдох Баасан гараг бүрт"</item>
+        <item>"Гуравдах Баасан гараг бүрт"</item>
+        <item>"Дөрөвдэх Баасан гараг бүрт"</item>
+        <item>"Сүүлийн Баасан гараг бүрт"</item>
+    </string-array>
+    <string-array name="repeat_by_nth_sat">
+        <item>"Эхний Бямба гараг бүрт"</item>
+        <item>"Хоёрдох Бямба гараг бүрт"</item>
+        <item>"Гуравдах Бямба гараг бүрт"</item>
+        <item>"Дөрөвдэх Бямба гараг бүрт"</item>
+        <item>"Сүүлийн Бямба гараг бүрт"</item>
+    </string-array>
+</resources>

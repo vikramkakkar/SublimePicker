@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8"?><!--  Copyright (C) 2007 The Android Open Source Project
+
+     Licensed under the Apache License, Version 2.0 (the "License");
+     you may not use this file except in compliance with the License.
+     You may obtain a copy of the License at
+
+          http://www.apache.org/licenses/LICENSE-2.0
+
+     Unless required by applicable law or agreed to in writing, software
+     distributed under the License is distributed on an "AS IS" BASIS,
+     WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+     See the License for the specific language governing permissions and
+     limitations under the License.
+ -->
+
+<resources>
+    <string-array name="recurrence_freq">
+        <item>"REPETEIX DIÀRIAMENT"</item>
+        <item>"REPETEIX SETMANALMENT"</item>
+        <item>"REPETEIX MENSUALMENT"</item>
+        <item>"REPETEIX ANUALMENT"</item>
+    </string-array>
+    <string-array name="repeat_by_nth_sun">
+        <item>"primer diumenge de cada mes"</item>
+        <item>"segon diumenge de cada mes"</item>
+        <item>"tercer diumenge de cada mes"</item>
+        <item>"quart diumenge de cada mes"</item>
+        <item>"últim diumenge de cada mes"</item>
+    </string-array>
+    <string-array name="repeat_by_nth_mon">
+        <item>"primer dilluns de cada mes"</item>
+        <item>"segon dilluns de cada mes"</item>
+        <item>"tercer dilluns de cada mes"</item>
+        <item>"quart dilluns de cada mes"</item>
+        <item>"últim dilluns de cada mes"</item>
+    </string-array>
+    <string-array name="repeat_by_nth_tues">
+        <item>"primer dimarts de cada mes"</item>
+        <item>"segon dimarts de cada mes"</item>
+        <item>"tercer dimarts de cada mes"</item>
+        <item>"quart dimarts de cada mes"</item>
+        <item>"últim dimarts de cada mes"</item>
+    </string-array>
+    <string-array name="repeat_by_nth_wed">
+        <item>"primer dimecres de cada mes"</item>
+        <item>"segon dimecres de cada mes"</item>
+        <item>"tercer dimecres de cada mes"</item>
+        <item>"quart dimecres de cada mes"</item>
+        <item>"últim dimecres de cada mes"</item>
+    </string-array>
+    <string-array name="repeat_by_nth_thurs">
+        <item>"primer dijous de cada mes"</item>
+        <item>"segon dijous de cada mes"</item>
+        <item>"tercer dijous de cada mes"</item>
+        <item>"quart dijous de cada mes"</item>
+        <item>"últim dijous de cada mes"</item>
+    </string-array>
+    <string-array name="repeat_by_nth_fri">
+        <item>"primer divendres de cada mes"</item>
+        <item>"segon divendres de cada mes"</item>
+        <item>"tercer divendres de cada mes"</item>
+        <item>"quart divendres de cada mes"</item>
+        <item>"últim divendres de cada mes"</item>
+    </string-array>
+    <string-array name="repeat_by_nth_sat">
+        <item>"primer dissabte de cada mes"</item>
+        <item>"segon dissabte de cada mes"</item>
+        <item>"tercer dissabte de cada mes"</item>
+        <item>"quart dissabte de cada mes"</item>
+        <item>"últim dissabte de cada mes"</item>
+    </string-array>
+</resources>

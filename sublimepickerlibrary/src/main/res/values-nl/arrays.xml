@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8"?><!--  Copyright (C) 2007 The Android Open Source Project
+
+     Licensed under the Apache License, Version 2.0 (the "License");
+     you may not use this file except in compliance with the License.
+     You may obtain a copy of the License at
+
+          http://www.apache.org/licenses/LICENSE-2.0
+
+     Unless required by applicable law or agreed to in writing, software
+     distributed under the License is distributed on an "AS IS" BASIS,
+     WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+     See the License for the specific language governing permissions and
+     limitations under the License.
+ -->
+
+<resources>
+    <string-array name="recurrence_freq">
+        <item>"DAGELIJKS HERHALEN"</item>
+        <item>"WEKELIJKS HERHALEN"</item>
+        <item>"MAANDELIJKS HERHALEN"</item>
+        <item>"JAARLIJKS HERHALEN"</item>
+    </string-array>
+    <string-array name="repeat_by_nth_sun">
+        <item>"op elke eerste zondag"</item>
+        <item>"op elke tweede zondag"</item>
+        <item>"op elke derde zondag"</item>
+        <item>"op elke vierde zondag"</item>
+        <item>"op elke laatste zondag"</item>
+    </string-array>
+    <string-array name="repeat_by_nth_mon">
+        <item>"op elke eerste maandag"</item>
+        <item>"op elke tweede maandag"</item>
+        <item>"op elke derde maandag"</item>
+        <item>"op elke vierde maandag"</item>
+        <item>"op elke laatste maandag"</item>
+    </string-array>
+    <string-array name="repeat_by_nth_tues">
+        <item>"op elke eerste dinsdag"</item>
+        <item>"op elke tweede dinsdag"</item>
+        <item>"op elke derde dinsdag"</item>
+        <item>"op elke vierde dinsdag"</item>
+        <item>"op elke laatste dinsdag"</item>
+    </string-array>
+    <string-array name="repeat_by_nth_wed">
+        <item>"op elke eerste woensdag"</item>
+        <item>"op elke tweede woensdag"</item>
+        <item>"op elke derde woensdag"</item>
+        <item>"op elke vierde woensdag"</item>
+        <item>"op elke laatste woensdag"</item>
+    </string-array>
+    <string-array name="repeat_by_nth_thurs">
+        <item>"op elke eerste donderdag"</item>
+        <item>"op elke tweede donderdag"</item>
+        <item>"op elke derde donderdag"</item>
+        <item>"op elke vierde donderdag"</item>
+        <item>"op elke laatste donderdag"</item>
+    </string-array>
+    <string-array name="repeat_by_nth_fri">
+        <item>"op elke eerste vrijdag"</item>
+        <item>"op elke tweede vrijdag"</item>
+        <item>"op elke derde vrijdag"</item>
+        <item>"op elke vierde vrijdag"</item>
+        <item>"op elke laatste vrijdag"</item>
+    </string-array>
+    <string-array name="repeat_by_nth_sat">
+        <item>"op elke eerste zaterdag"</item>
+        <item>"op elke tweede zaterdag"</item>
+        <item>"op elke derde zaterdag"</item>
+        <item>"op elke vierde zaterdag"</item>
+        <item>"op elke laatste zaterdag"</item>
+    </string-array>
+</resources>

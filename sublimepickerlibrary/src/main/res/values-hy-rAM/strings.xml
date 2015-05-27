@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8"?><!--  Copyright (C) 2006 The Android Open Source Project
+
+     Licensed under the Apache License, Version 2.0 (the "License");
+     you may not use this file except in compliance with the License.
+     You may obtain a copy of the License at
+
+          http://www.apache.org/licenses/LICENSE-2.0
+
+     Unless required by applicable law or agreed to in writing, software
+     distributed under the License is distributed on an "AS IS" BASIS,
+     WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+     See the License for the specific language governing permissions and
+     limitations under the License.
+ -->
+
+<resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
+
+    <string name="select_hours">"Ընտրեք ժամը"</string>
+    <string name="select_minutes">"Ընտրեք րոպեն"</string>
+    <string name="day_picker_description">"Ամսաթվի ընտրության պատուհան"</string>
+    <string name="year_picker_description">"Տարիների ցանկ"</string>
+    <string name="select_day">"Ընտրեք ամիսն ու օրը"</string>
+    <string name="select_year">"Ընտրեք տարին"</string>
+    <string name="item_is_selected">"Ընտրված է <xliff:g id="ITEM">%1$s</xliff:g> տարրը"</string>
+    <string name="deleted_key">"<xliff:g id="KEY">%1$s</xliff:g> թիվը ջնջված է"</string>
+
+    <string name="ok">"Լավ"</string>
+    <string name="cancel">"Չեղարկել"</string>
+
+    <string name="endByDate">"; մինչև <xliff:g id="DATE">%s</xliff:g>"</string>
+    <plurals name="endByCount">
+        <item quantity="one">"; մեկ անգամ"</item>
+        <item quantity="other">"; <xliff:g id="NUMBER">%d</xliff:g> անգամ"</item>
+    </plurals>
+    <plurals name="daily">
+        <item quantity="one">"Ամեն օր"</item>
+        <item quantity="other">"<xliff:g id="NUMBER">%d</xliff:g> օրը մեկ"</item>
+    </plurals>
+    <string name="every_weekday">"Յուրաքանչյուր աշխատանքային օր (երկ-ուրբ)"</string>
+    <plurals name="weekly">
+        <item quantity="one">"Շաբաթը մեկ՝ <xliff:g id="DAYS_OF_WEEK">%2$s</xliff:g>"</item>
+        <item quantity="other">"<xliff:g id="NUMBER">%1$d</xliff:g> շաբաթը մեկ՝ <xliff:g id="DAYS_OF_WEEK">%2$s</xliff:g>"</item>
+    </plurals>
+    <string name="monthly">"Ամեն ամիս"</string>
+    <string name="yearly_plain">"Ամեն տարի"</string>
+    <plurals name="recurrence_interval_daily">
+        <item quantity="one">"<xliff:g id="COUNT">%d</xliff:g> օրը մեկ"</item>
+        <item quantity="other">"<xliff:g id="COUNT">%d</xliff:g> օրը մեկ"</item>
+    </plurals>
+    <plurals name="recurrence_interval_weekly">
+        <item quantity="one">"<xliff:g id="COUNT">%d</xliff:g> շաբաթը մեկ"</item>
+        <item quantity="other">"<xliff:g id="COUNT">%d</xliff:g> շաբաթը մեկ"</item>
+    </plurals>
+    <plurals name="recurrence_interval_monthly">
+        <item quantity="one">"<xliff:g id="COUNT">%d</xliff:g> ամիսը մեկ"</item>
+        <item quantity="other">"<xliff:g id="COUNT">%d</xliff:g> ամիսը մեկ"</item>
+    </plurals>
+    <plurals name="recurrence_interval_yearly">
+        <item quantity="one">"<xliff:g id="COUNT">%d</xliff:g> տարին մեկ"</item>
+        <item quantity="other">"<xliff:g id="COUNT">%d</xliff:g> տարին մեկ"</item>
+    </plurals>
+    <string name="recurrence_month_pattern_by_day">"ամեն ամսվա նույն օրը"</string>
+    <string name="recurrence_end_continously">"Ընդմիշտ"</string>
+    <string name="recurrence_end_date_label">"Մինչև ամսաթիվը"</string>
+    <string name="recurrence_end_date">"Մինչև <xliff:g id="DATE">%s</xliff:g>-ը"</string>
+    <string name="recurrence_end_count_label">"Իրադարձությունների քանակով"</string>
+    <plurals name="recurrence_end_count">
+        <item quantity="one">"<xliff:g id="EVENT_COUNT">%d</xliff:g> իրադարձության համար"</item>
+        <item quantity="other">"<xliff:g id="EVENT_COUNT">%d</xliff:g> իրադարձության համար"</item>
+    </plurals>
+    <string name="acessibility_recurrence_choose_end_date_description">"փոխել ավարտի ամսաթիվը"</string>
+</resources>

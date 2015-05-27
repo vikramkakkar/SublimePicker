@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8"?><!--  Copyright (C) 2007 The Android Open Source Project
+
+     Licensed under the Apache License, Version 2.0 (the "License");
+     you may not use this file except in compliance with the License.
+     You may obtain a copy of the License at
+
+          http://www.apache.org/licenses/LICENSE-2.0
+
+     Unless required by applicable law or agreed to in writing, software
+     distributed under the License is distributed on an "AS IS" BASIS,
+     WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+     See the License for the specific language governing permissions and
+     limitations under the License.
+ -->
+
+<resources>
+    <string-array name="recurrence_freq">
+        <item>"ყოველდღიურად გამეორება"</item>
+        <item>"ყოველკვირეულად გამეორება"</item>
+        <item>"ყოველთვიურად გამეორება"</item>
+        <item>"ყოველწლიურად გამეორება"</item>
+    </string-array>
+    <string-array name="repeat_by_nth_sun">
+        <item>"ყოველ პირველ კვირას"</item>
+        <item>"ყოველ მეორე კვირას"</item>
+        <item>"ყოველ მესამე კვირას"</item>
+        <item>"ყოველ მეოთხე კვირას"</item>
+        <item>"ყოველ მეხუთე კვირას"</item>
+    </string-array>
+    <string-array name="repeat_by_nth_mon">
+        <item>"ყოველ პირველ ორშაბათს"</item>
+        <item>"ყოველ მეორე ორშაბათს"</item>
+        <item>"ყოველ მესამე ორშაბათს"</item>
+        <item>"ყოველ მეოთხე ორშაბათს"</item>
+        <item>"ყოველ ბოლო ორშაბათს"</item>
+    </string-array>
+    <string-array name="repeat_by_nth_tues">
+        <item>"ყოველ პირველ სამშაბათს"</item>
+        <item>"ყოველ მეორე სამშაბათს"</item>
+        <item>"ყოველ მესამე სამშაბათს"</item>
+        <item>"ყოველ მეოთხე სამშაბათს"</item>
+        <item>"ყოველ ბოლო სამშაბათს"</item>
+    </string-array>
+    <string-array name="repeat_by_nth_wed">
+        <item>"ყოველ პირველ ოთხშაბათს"</item>
+        <item>"ყოველ მეორე ოთხშაბათს"</item>
+        <item>"ყოველ მესამე ოთხშაბათს"</item>
+        <item>"ყოველ მეოთხე ოთხშაბათს"</item>
+        <item>"ყოველ ბოლო ოთხშაბათს"</item>
+    </string-array>
+    <string-array name="repeat_by_nth_thurs">
+        <item>"ყოველ პირველ ხუთშაბათს"</item>
+        <item>"ყოველ მეორე ხუთშაბათს"</item>
+        <item>"ყოველ მესამე ხუთშაბათს"</item>
+        <item>"ყოველ მეოთხე ხუთშაბათს"</item>
+        <item>"ყოველ ბოლო ხუთშაბათს"</item>
+    </string-array>
+    <string-array name="repeat_by_nth_fri">
+        <item>"ყოველ პირველ პარასკევს"</item>
+        <item>"ყოველ მეორე პარასკევს"</item>
+        <item>"ყოველ მესამე პარასკევს"</item>
+        <item>"ყოველ მეოთხე პარასკევს"</item>
+        <item>"ყოველ ბოლო პარასკევს"</item>
+    </string-array>
+    <string-array name="repeat_by_nth_sat">
+        <item>"ყოველ პირველ შაბათს"</item>
+        <item>"ყოველ მეორე შაბათს"</item>
+        <item>"ყოველ მესამე შაბათს"</item>
+        <item>"ყოველ მეოთხე შაბათს"</item>
+        <item>"ყოველ ბოლო შაბათს"</item>
+    </string-array>
+</resources>

@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8"?><!--  Copyright (C) 2007 The Android Open Source Project
+
+     Licensed under the Apache License, Version 2.0 (the "License");
+     you may not use this file except in compliance with the License.
+     You may obtain a copy of the License at
+
+          http://www.apache.org/licenses/LICENSE-2.0
+
+     Unless required by applicable law or agreed to in writing, software
+     distributed under the License is distributed on an "AS IS" BASIS,
+     WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+     See the License for the specific language governing permissions and
+     limitations under the License.
+ -->
+
+<resources>
+    <string-array name="recurrence_freq">
+        <item>"PONAVLJAJ VSAK DAN"</item>
+        <item>"PONAVLJAJ VSAK TEDEN"</item>
+        <item>"PONAVLJAJ VSAK MESEC"</item>
+        <item>"PONAVLJAJ VSAKO LETO"</item>
+    </string-array>
+    <string-array name="repeat_by_nth_sun">
+        <item>"vsako prvo nedeljo v mesecu"</item>
+        <item>"vsako drugo nedeljo v mesecu"</item>
+        <item>"vsako tretjo nedeljo v mesecu"</item>
+        <item>"vsako četrto nedeljo v mesecu"</item>
+        <item>"vsako zadnjo nedeljo v mesecu"</item>
+    </string-array>
+    <string-array name="repeat_by_nth_mon">
+        <item>"vsak prvi ponedeljek v mesecu"</item>
+        <item>"vsak drugi ponedeljek v mesecu"</item>
+        <item>"vsak tretji ponedeljek v mes."</item>
+        <item>"vsak četrti ponedeljek v mes."</item>
+        <item>"vsak zadnji ponedeljek v mes."</item>
+    </string-array>
+    <string-array name="repeat_by_nth_tues">
+        <item>"vsak prvi torek v mesecu"</item>
+        <item>"vsak drugi torek v mesecu"</item>
+        <item>"vsak tretji torek v mesecu"</item>
+        <item>"vsak četrti torek v mesecu"</item>
+        <item>"vsak zadnji torek v mesecu"</item>
+    </string-array>
+    <string-array name="repeat_by_nth_wed">
+        <item>"vsako prvo sredo v mesecu"</item>
+        <item>"vsako drugo sredo v mesecu"</item>
+        <item>"vsako tretjo sredo v mesecu"</item>
+        <item>"vsako četrto sredo v mesecu"</item>
+        <item>"vsako zadnjo sredo v mesecu"</item>
+    </string-array>
+    <string-array name="repeat_by_nth_thurs">
+        <item>"vsak prvi četrtek v mesecu"</item>
+        <item>"vsak drugi četrtek v mesecu"</item>
+        <item>"vsak tretji četrtek v mesecu"</item>
+        <item>"vsak četrti četrtek v mesecu"</item>
+        <item>"vsak zadnji četrtek v mesecu"</item>
+    </string-array>
+    <string-array name="repeat_by_nth_fri">
+        <item>"vsak prvi petek v mesecu"</item>
+        <item>"vsak drugi petek v mesecu"</item>
+        <item>"vsak tretji petek v mesecu"</item>
+        <item>"vsak četrti petek v mesecu"</item>
+        <item>"vsak zadnji petek v mesecu"</item>
+    </string-array>
+    <string-array name="repeat_by_nth_sat">
+        <item>"vsako prvo soboto v mesecu"</item>
+        <item>"vsako drugo soboto v mesecu"</item>
+        <item>"vsako tretjo soboto v mesecu"</item>
+        <item>"vsako četrto soboto v mesecu"</item>
+        <item>"vsako zadnjo soboto v mesecu"</item>
+    </string-array>
+</resources>

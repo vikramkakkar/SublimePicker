@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8"?><!--  Copyright (C) 2007 The Android Open Source Project
+
+     Licensed under the Apache License, Version 2.0 (the "License");
+     you may not use this file except in compliance with the License.
+     You may obtain a copy of the License at
+
+          http://www.apache.org/licenses/LICENSE-2.0
+
+     Unless required by applicable law or agreed to in writing, software
+     distributed under the License is distributed on an "AS IS" BASIS,
+     WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+     See the License for the specific language governing permissions and
+     limitations under the License.
+ -->
+
+<resources>
+    <string-array name="recurrence_freq">
+        <item>"تکرار روزانه"</item>
+        <item>"تکرار هفتگی"</item>
+        <item>"تکرار ماهانه"</item>
+        <item>"تکرار سالانه"</item>
+    </string-array>
+    <string-array name="repeat_by_nth_sun">
+        <item>"اولین یکشنبه هر ماه"</item>
+        <item>"دومین یکشنبه هر ماه"</item>
+        <item>"سومین یکشنبه هر ماه"</item>
+        <item>"چهارمین یکشنبه هر ماه"</item>
+        <item>"آخرین یکشنبه هر ماه"</item>
+    </string-array>
+    <string-array name="repeat_by_nth_mon">
+        <item>"اولین دوشنبه هر ماه"</item>
+        <item>"دومین دوشنبه هر ماه"</item>
+        <item>"سومین دوشنبه هر ماه"</item>
+        <item>"چهارمین دوشنبه هر ماه"</item>
+        <item>"آخرین دوشنبه هر ماه"</item>
+    </string-array>
+    <string-array name="repeat_by_nth_tues">
+        <item>"اولین سه‌شنبه هر ماه"</item>
+        <item>"دومین سه‌شنبه هر ماه"</item>
+        <item>"سومین سه‌شنبه هر ماه"</item>
+        <item>"چهارمین سه‌شنبه هر ماه"</item>
+        <item>"آخرین سه‌شنبه هر ماه"</item>
+    </string-array>
+    <string-array name="repeat_by_nth_wed">
+        <item>"اولین چهارشنبه هر ماه"</item>
+        <item>"دومین چهارشنبه هر ماه"</item>
+        <item>"سومین چهارشنبه هر ماه"</item>
+        <item>"چهارمین چهارشنبه هر ماه"</item>
+        <item>"آخرین چهارشنبه هر ماه"</item>
+    </string-array>
+    <string-array name="repeat_by_nth_thurs">
+        <item>"اولین پنج‌شنبه هر ماه"</item>
+        <item>"دومین پنج‌شنبه هر ماه"</item>
+        <item>"سومین پنج‌شنبه هر ماه"</item>
+        <item>"چهارمین پنج‌شنبه هر ماه"</item>
+        <item>"آخرین پنج‌شنبه هر ماه"</item>
+    </string-array>
+    <string-array name="repeat_by_nth_fri">
+        <item>"اولین جمعه هر ماه"</item>
+        <item>"دومین جمعه هر ماه"</item>
+        <item>"سومین جمعه هر ماه"</item>
+        <item>"چهارمین جمعه هر ماه"</item>
+        <item>"آخرین جمعه هر ماه"</item>
+    </string-array>
+    <string-array name="repeat_by_nth_sat">
+        <item>"اولین شنبه هر ماه"</item>
+        <item>"دومین شنبه هر ماه"</item>
+        <item>"سومین شنبه هر ماه"</item>
+        <item>"چهارمین شنبه هر ماه"</item>
+        <item>"آخرین شنبه هر ماه"</item>
+    </string-array>
+</resources>

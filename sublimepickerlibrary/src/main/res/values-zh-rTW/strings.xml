@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8"?><!--  Copyright (C) 2006 The Android Open Source Project
+
+     Licensed under the Apache License, Version 2.0 (the "License");
+     you may not use this file except in compliance with the License.
+     You may obtain a copy of the License at
+
+          http://www.apache.org/licenses/LICENSE-2.0
+
+     Unless required by applicable law or agreed to in writing, software
+     distributed under the License is distributed on an "AS IS" BASIS,
+     WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+     See the License for the specific language governing permissions and
+     limitations under the License.
+ -->
+
+<resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
+
+    <string name="select_hours">"選取小時數"</string>
+    <string name="select_minutes">"選取分鐘數"</string>
+    <string name="day_picker_description">"日期網格 (按月顯示)"</string>
+    <string name="year_picker_description">"年份清單"</string>
+    <string name="select_day">"選取月份和日期"</string>
+    <string name="select_year">"選取年份"</string>
+    <string name="item_is_selected">"已選取 <xliff:g id="ITEM">%1$s</xliff:g>"</string>
+    <string name="deleted_key">"已刪除 <xliff:g id="KEY">%1$s</xliff:g>"</string>
+
+    <string name="ok">"確定"</string>
+    <string name="cancel">"取消"</string>
+
+    <string name="endByDate">"；直到 <xliff:g id="DATE">%s</xliff:g>"</string>
+    <plurals name="endByCount">
+        <item quantity="one">"；1 次"</item>
+        <item quantity="other">"；<xliff:g id="NUMBER">%d</xliff:g> 次"</item>
+    </plurals>
+    <plurals name="daily">
+        <item quantity="one">"每天"</item>
+        <item quantity="other">"每 <xliff:g id="NUMBER">%d</xliff:g> 天"</item>
+    </plurals>
+    <string name="every_weekday">"平日 (週一至週五)"</string>
+    <plurals name="weekly">
+        <item quantity="one">"每週 (每<xliff:g id="DAYS_OF_WEEK">%2$s</xliff:g>)"</item>
+        <item quantity="other">"每 <xliff:g id="NUMBER">%1$d</xliff:g> 週 (每<xliff:g id="DAYS_OF_WEEK">%2$s</xliff:g>)"</item>
+    </plurals>
+    <string name="monthly">"每月"</string>
+    <string name="yearly_plain">"每年"</string>
+    <plurals name="recurrence_interval_daily">
+        <item quantity="one">"每 <xliff:g id="COUNT">%d</xliff:g> 天"</item>
+        <item quantity="other">"每 <xliff:g id="COUNT">%d</xliff:g> 天"</item>
+    </plurals>
+    <plurals name="recurrence_interval_weekly">
+        <item quantity="one">"每 <xliff:g id="COUNT">%d</xliff:g> 週"</item>
+        <item quantity="other">"每 <xliff:g id="COUNT">%d</xliff:g> 週"</item>
+    </plurals>
+    <plurals name="recurrence_interval_monthly">
+        <item quantity="one">"每 <xliff:g id="COUNT">%d</xliff:g> 個月"</item>
+        <item quantity="other">"每 <xliff:g id="COUNT">%d</xliff:g> 個月"</item>
+    </plurals>
+    <plurals name="recurrence_interval_yearly">
+        <item quantity="one">"每 <xliff:g id="COUNT">%d</xliff:g> 年"</item>
+        <item quantity="other">"每 <xliff:g id="COUNT">%d</xliff:g> 年"</item>
+    </plurals>
+    <string name="recurrence_month_pattern_by_day">"每月的同一天"</string>
+    <string name="recurrence_end_continously">"無限期"</string>
+    <string name="recurrence_end_date_label">"直到指定日期為止"</string>
+    <string name="recurrence_end_date">"結束日期：<xliff:g id="DATE">%s</xliff:g>"</string>
+    <string name="recurrence_end_count_label">"固定次數重複"</string>
+    <plurals name="recurrence_end_count">
+        <item quantity="one">"重複 <xliff:g id="EVENT_COUNT">%d</xliff:g> 次活動"</item>
+        <item quantity="other">"重複 <xliff:g id="EVENT_COUNT">%d</xliff:g> 次活動"</item>
+    </plurals>
+    <string name="acessibility_recurrence_choose_end_date_description">"變更結束日期"</string>
+</resources>

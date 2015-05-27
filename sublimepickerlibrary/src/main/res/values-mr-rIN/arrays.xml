@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8"?><!--  Copyright (C) 2007 The Android Open Source Project
+
+     Licensed under the Apache License, Version 2.0 (the "License");
+     you may not use this file except in compliance with the License.
+     You may obtain a copy of the License at
+
+          http://www.apache.org/licenses/LICENSE-2.0
+
+     Unless required by applicable law or agreed to in writing, software
+     distributed under the License is distributed on an "AS IS" BASIS,
+     WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+     See the License for the specific language governing permissions and
+     limitations under the License.
+ -->
+
+<resources>
+    <string-array name="recurrence_freq">
+        <item>"दररोज पुनरावृत्ती"</item>
+        <item>"साप्ताहिक पुनरावृत्ती"</item>
+        <item>"मासिक पुनरावृत्ती"</item>
+        <item>"वार्षिक पुनरावृत्ती"</item>
+    </string-array>
+    <string-array name="repeat_by_nth_sun">
+        <item>"प्रत्येक पहिल्या रविवारी"</item>
+        <item>"प्रत्येक दुसर्‍या रविवारी"</item>
+        <item>"प्रत्येक तिसर्‍या रविवारी"</item>
+        <item>"प्रत्येक चौथ्या रविवारी"</item>
+        <item>"प्रत्येक शेवटच्या रविवारी"</item>
+    </string-array>
+    <string-array name="repeat_by_nth_mon">
+        <item>"प्रत्येक पहिल्या सोमवारी"</item>
+        <item>"प्रत्येक दुसर्‍या सोमवारी"</item>
+        <item>"प्रत्येक तिसर्‍या सोमवारी"</item>
+        <item>"प्रत्येक चौथ्या सोमवारी"</item>
+        <item>"प्रत्येक शेवटच्या सोमवारी"</item>
+    </string-array>
+    <string-array name="repeat_by_nth_tues">
+        <item>"प्रत्येक पहिल्या मंगळवारी"</item>
+        <item>"प्रत्येक दुसर्‍या मंगळवारी"</item>
+        <item>"प्रत्येक तिसर्‍या मंगळवारी"</item>
+        <item>"प्रत्येक चौथ्या मंगळवारी"</item>
+        <item>"प्रत्येक शेवटच्या मंगळवारी"</item>
+    </string-array>
+    <string-array name="repeat_by_nth_wed">
+        <item>"प्रत्येक पहिल्या बुधवारी"</item>
+        <item>"प्रत्येक दुसर्‍या बुधवारी"</item>
+        <item>"प्रत्येक तिसर्‍या बुधवारी"</item>
+        <item>"प्रत्येक चौथ्या बुधवारी"</item>
+        <item>"प्रत्येक शेवटच्या बुधवारी"</item>
+    </string-array>
+    <string-array name="repeat_by_nth_thurs">
+        <item>"प्रत्येक पहिल्या गुरुवारी"</item>
+        <item>"प्रत्येक दुसर्‍या गुरुवारी"</item>
+        <item>"प्रत्येक तिसर्‍या गुरुवारी"</item>
+        <item>"प्रत्येक चौथ्या गुरुवारी"</item>
+        <item>"प्रत्येक शेवटच्या गुरुवारी"</item>
+    </string-array>
+    <string-array name="repeat_by_nth_fri">
+        <item>"प्रत्येक पहिल्या शुक्रवारी"</item>
+        <item>"प्रत्येक दुसर्‍या शुक्रवारी"</item>
+        <item>"प्रत्येक तिसर्‍या शुक्रवारी"</item>
+        <item>"प्रत्येक चौथ्या शुक्रवारी"</item>
+        <item>"प्रत्येक शेवटच्या शुक्रवारी"</item>
+    </string-array>
+    <string-array name="repeat_by_nth_sat">
+        <item>"प्रत्येक पहिल्या शनिवारी"</item>
+        <item>"प्रत्येक दुसर्‍या शनिवारी"</item>
+        <item>"प्रत्येक तिसर्‍या शनिवारी"</item>
+        <item>"प्रत्येक चौथ्या शनिवारी"</item>
+        <item>"प्रत्येक शेवटच्या शनिवारी"</item>
+    </string-array>
+</resources>

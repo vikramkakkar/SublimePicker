@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8"?><!--  Copyright (C) 2007 The Android Open Source Project
+
+     Licensed under the Apache License, Version 2.0 (the "License");
+     you may not use this file except in compliance with the License.
+     You may obtain a copy of the License at
+
+          http://www.apache.org/licenses/LICENSE-2.0
+
+     Unless required by applicable law or agreed to in writing, software
+     distributed under the License is distributed on an "AS IS" BASIS,
+     WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+     See the License for the specific language governing permissions and
+     limitations under the License.
+ -->
+
+<resources>
+    <string-array name="recurrence_freq">
+        <item>"繰り返し: 毎日"</item>
+        <item>"繰り返し: 毎週"</item>
+        <item>"繰り返し: 毎月"</item>
+        <item>"繰り返し: 毎年"</item>
+    </string-array>
+    <string-array name="repeat_by_nth_sun">
+        <item>"毎月第1日曜日"</item>
+        <item>"毎月第2日曜日"</item>
+        <item>"毎月第3日曜日"</item>
+        <item>"毎月第4日曜日"</item>
+        <item>"毎月最終日曜日"</item>
+    </string-array>
+    <string-array name="repeat_by_nth_mon">
+        <item>"毎月第1月曜日"</item>
+        <item>"毎月第2月曜日"</item>
+        <item>"毎月第3月曜日"</item>
+        <item>"毎月第4月曜日"</item>
+        <item>"毎月最終月曜日"</item>
+    </string-array>
+    <string-array name="repeat_by_nth_tues">
+        <item>"毎月第1火曜日"</item>
+        <item>"毎月第2火曜日"</item>
+        <item>"毎月第3火曜日"</item>
+        <item>"毎月第4火曜日"</item>
+        <item>"毎月最終火曜日"</item>
+    </string-array>
+    <string-array name="repeat_by_nth_wed">
+        <item>"毎月第1水曜日"</item>
+        <item>"毎月第2水曜日"</item>
+        <item>"毎月第3水曜日"</item>
+        <item>"毎月第4水曜日"</item>
+        <item>"毎月最終水曜日"</item>
+    </string-array>
+    <string-array name="repeat_by_nth_thurs">
+        <item>"毎月第1木曜日"</item>
+        <item>"毎月第2木曜日"</item>
+        <item>"毎月第3木曜日"</item>
+        <item>"毎月第4木曜日"</item>
+        <item>"毎月最終木曜日"</item>
+    </string-array>
+    <string-array name="repeat_by_nth_fri">
+        <item>"毎月第1金曜日"</item>
+        <item>"毎月第2金曜日"</item>
+        <item>"毎月第3金曜日"</item>
+        <item>"毎月第4金曜日"</item>
+        <item>"毎月最終金曜日"</item>
+    </string-array>
+    <string-array name="repeat_by_nth_sat">
+        <item>"毎月第1土曜日"</item>
+        <item>"毎月第2土曜日"</item>
+        <item>"毎月第3土曜日"</item>
+        <item>"毎月第4土曜日"</item>
+        <item>"毎月最終土曜日"</item>
+    </string-array>
+</resources>

@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8"?><!--  Copyright (C) 2007 The Android Open Source Project
+
+     Licensed under the Apache License, Version 2.0 (the "License");
+     you may not use this file except in compliance with the License.
+     You may obtain a copy of the License at
+
+          http://www.apache.org/licenses/LICENSE-2.0
+
+     Unless required by applicable law or agreed to in writing, software
+     distributed under the License is distributed on an "AS IS" BASIS,
+     WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+     See the License for the specific language governing permissions and
+     limitations under the License.
+ -->
+
+<resources>
+    <string-array name="recurrence_freq">
+        <item>"RUDIA KILA SIKU"</item>
+        <item>"RUDIA KILA WIKI"</item>
+        <item>"RUDIA KILA MWEZI"</item>
+        <item>"RUDIA KILA MWAKA"</item>
+    </string-array>
+    <string-array name="repeat_by_nth_sun">
+        <item>"kila Jumapili ya kwanza"</item>
+        <item>"kila Jumapili ya pili"</item>
+        <item>"kila Jumapili ya tatu"</item>
+        <item>"kila Jumapili ya nne"</item>
+        <item>"kila Jumapili ya mwisho"</item>
+    </string-array>
+    <string-array name="repeat_by_nth_mon">
+        <item>"kila Jumatatu ya kwanza"</item>
+        <item>"kila Jumatatu ya pili"</item>
+        <item>"kila Jumatatu ya tatu"</item>
+        <item>"kila Jumatatu ya nne"</item>
+        <item>"kila Jumatatu ya mwisho"</item>
+    </string-array>
+    <string-array name="repeat_by_nth_tues">
+        <item>"kila Jumanne ya kwanza"</item>
+        <item>"kila Jumanne ya pili"</item>
+        <item>"kila Jumanne ya tatu"</item>
+        <item>"kila Jumanne ya nne"</item>
+        <item>"kila Jumanne ya mwisho"</item>
+    </string-array>
+    <string-array name="repeat_by_nth_wed">
+        <item>"kila Jumatano ya kwanza"</item>
+        <item>"kila Jumatano ya pili"</item>
+        <item>"kila Jumatano ya tatu"</item>
+        <item>"kila Jumatano ya nne"</item>
+        <item>"kila Jumatano ya mwisho"</item>
+    </string-array>
+    <string-array name="repeat_by_nth_thurs">
+        <item>"kila Alhamisi ya kwanza"</item>
+        <item>"kila Alhamisi ya pili"</item>
+        <item>"kila Alhamisi ya tatu"</item>
+        <item>"kila Alhamisi ya nne"</item>
+        <item>"kila Alhamisi ya mwisho"</item>
+    </string-array>
+    <string-array name="repeat_by_nth_fri">
+        <item>"kila Ijumaa ya kwanza"</item>
+        <item>"kila Ijumaa ya pili"</item>
+        <item>"kila Ijumaa ya tatu"</item>
+        <item>"kila Ijumaa ya nne"</item>
+        <item>"kila Ijumaa ya mwisho"</item>
+    </string-array>
+    <string-array name="repeat_by_nth_sat">
+        <item>"kila Jumamosi ya kwanza"</item>
+        <item>"kila Jumamosi ya pili"</item>
+        <item>"kila Jumamosi ya tatu"</item>
+        <item>"kila Jumamosi ya nne"</item>
+        <item>"kila Jumamosi ya mwisho"</item>
+    </string-array>
+</resources>

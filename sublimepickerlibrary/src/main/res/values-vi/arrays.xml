@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8"?><!--  Copyright (C) 2007 The Android Open Source Project
+
+     Licensed under the Apache License, Version 2.0 (the "License");
+     you may not use this file except in compliance with the License.
+     You may obtain a copy of the License at
+
+          http://www.apache.org/licenses/LICENSE-2.0
+
+     Unless required by applicable law or agreed to in writing, software
+     distributed under the License is distributed on an "AS IS" BASIS,
+     WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+     See the License for the specific language governing permissions and
+     limitations under the License.
+ -->
+
+<resources>
+    <string-array name="recurrence_freq">
+        <item>"LẶP LẠI HÀNG NGÀY"</item>
+        <item>"LẶP LẠI HÀNG TUẦN"</item>
+        <item>"LẶP LẠI HÀNG THÁNG"</item>
+        <item>"LẶP LẠI HÀNG NĂM"</item>
+    </string-array>
+    <string-array name="repeat_by_nth_sun">
+        <item>"vào mọi Chủ Nhật đầu tiên"</item>
+        <item>"vào mọi Chủ Nhật thứ hai"</item>
+        <item>"vào mọi Chủ Nhật thứ ba"</item>
+        <item>"vào mọi Chủ Nhật thứ tư"</item>
+        <item>"vào mọi Chủ Nhật cuối cùng"</item>
+    </string-array>
+    <string-array name="repeat_by_nth_mon">
+        <item>"vào mọi Thứ Hai đầu tiên"</item>
+        <item>"vào mọi Thứ Hai thứ hai"</item>
+        <item>"vào mọi Thứ Hai thứ ba"</item>
+        <item>"vào mọi Thứ Hai thứ tư"</item>
+        <item>"vào mọi Thứ Hai cuối cùng"</item>
+    </string-array>
+    <string-array name="repeat_by_nth_tues">
+        <item>"vào mọi Thứ Ba đầu tiên"</item>
+        <item>"vào mọi Thứ Ba thứ hai"</item>
+        <item>"vào mọi Thứ Ba thứ ba"</item>
+        <item>"vào mọi Thứ Ba thứ tư"</item>
+        <item>"vào mọi Thứ Ba cuối cùng"</item>
+    </string-array>
+    <string-array name="repeat_by_nth_wed">
+        <item>"vào mọi Thứ Tư đầu tiên"</item>
+        <item>"vào mọi Thứ Tư thứ hai"</item>
+        <item>"vào mọi Thứ Tư thứ ba"</item>
+        <item>"vào mọi Thứ Tư thứ tư"</item>
+        <item>"vào mọi Thứ Tư cuối cùng"</item>
+    </string-array>
+    <string-array name="repeat_by_nth_thurs">
+        <item>"vào mọi Thứ Năm đầu tiên"</item>
+        <item>"vào mọi Thứ Năm thứ hai"</item>
+        <item>"vào mọi Thứ Năm thứ ba"</item>
+        <item>"vào mọi Thứ Năm thứ tư"</item>
+        <item>"vào mọi Thứ Năm cuối cùng"</item>
+    </string-array>
+    <string-array name="repeat_by_nth_fri">
+        <item>"vào mọi Thứ Sáu đầu tiên"</item>
+        <item>"vào mọi Thứ Sáu thứ hai"</item>
+        <item>"vào mọi Thứ Sáu thứ ba"</item>
+        <item>"vào mọi Thứ Sáu thứ tư"</item>
+        <item>"vào mọi Thứ Sáu cuối cùng"</item>
+    </string-array>
+    <string-array name="repeat_by_nth_sat">
+        <item>"vào mọi Thứ Bảy đầu tiên"</item>
+        <item>"vào mọi Thứ Bảy thứ hai"</item>
+        <item>"vào mọi Thứ Bảy thứ ba"</item>
+        <item>"vào mọi Thứ Bảy thứ tư"</item>
+        <item>"vào mọi Thứ Bảy cuối cùng"</item>
+    </string-array>
+</resources>

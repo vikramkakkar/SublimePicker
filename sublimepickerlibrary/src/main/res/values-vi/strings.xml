@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8"?><!--  Copyright (C) 2006 The Android Open Source Project
+
+     Licensed under the Apache License, Version 2.0 (the "License");
+     you may not use this file except in compliance with the License.
+     You may obtain a copy of the License at
+
+          http://www.apache.org/licenses/LICENSE-2.0
+
+     Unless required by applicable law or agreed to in writing, software
+     distributed under the License is distributed on an "AS IS" BASIS,
+     WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+     See the License for the specific language governing permissions and
+     limitations under the License.
+ -->
+
+<resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
+
+    <string name="select_hours">"Chọn giờ"</string>
+    <string name="select_minutes">"Chọn phút"</string>
+    <string name="day_picker_description">"Lưới ngày theo tháng"</string>
+    <string name="year_picker_description">"Danh sách năm"</string>
+    <string name="select_day">"Chọn tháng và ngày"</string>
+    <string name="select_year">"Chọn năm"</string>
+    <string name="item_is_selected">"Đã chọn <xliff:g id="ITEM">%1$s</xliff:g>"</string>
+    <string name="deleted_key">"Đã xóa <xliff:g id="KEY">%1$s</xliff:g>"</string>
+
+    <string name="ok">"OK"</string>
+    <string name="cancel">"Hủy"</string>
+
+    <string name="endByDate">"; cho đến <xliff:g id="DATE">%s</xliff:g>"</string>
+    <plurals name="endByCount">
+        <item quantity="one">"; một lần"</item>
+        <item quantity="other">"; <xliff:g id="NUMBER">%d</xliff:g> lần"</item>
+    </plurals>
+    <plurals name="daily">
+        <item quantity="one">"Hàng ngày"</item>
+        <item quantity="other">"Định kỳ <xliff:g id="NUMBER">%d</xliff:g> ngày"</item>
+    </plurals>
+    <string name="every_weekday">"Ngày trong tuần (Thứ Hai - Thứ Sáu)"</string>
+    <plurals name="weekly">
+        <item quantity="one">"Hàng tuần vào <xliff:g id="DAYS_OF_WEEK">%2$s</xliff:g>"</item>
+        <item quantity="other">"Định kỳ <xliff:g id="NUMBER">%1$d</xliff:g> tuần vào <xliff:g id="DAYS_OF_WEEK">%2$s</xliff:g>"</item>
+    </plurals>
+    <string name="monthly">"Hàng tháng"</string>
+    <string name="yearly_plain">"Hàng năm"</string>
+    <plurals name="recurrence_interval_daily">
+        <item quantity="one">"Cứ <xliff:g id="COUNT">%d</xliff:g> ngày một lần"</item>
+        <item quantity="other">"Cứ <xliff:g id="COUNT">%d</xliff:g> ngày một lần"</item>
+    </plurals>
+    <plurals name="recurrence_interval_weekly">
+        <item quantity="one">"Cứ <xliff:g id="COUNT">%d</xliff:g> tuần một lần"</item>
+        <item quantity="other">"Cứ <xliff:g id="COUNT">%d</xliff:g> tuần một lần"</item>
+    </plurals>
+    <plurals name="recurrence_interval_monthly">
+        <item quantity="one">"Cứ <xliff:g id="COUNT">%d</xliff:g> tháng một lần"</item>
+        <item quantity="other">"Cứ <xliff:g id="COUNT">%d</xliff:g> tháng một lần"</item>
+    </plurals>
+    <plurals name="recurrence_interval_yearly">
+        <item quantity="one">"Cứ <xliff:g id="COUNT">%d</xliff:g> năm một lần"</item>
+        <item quantity="other">"Cứ <xliff:g id="COUNT">%d</xliff:g> năm một lần"</item>
+    </plurals>
+    <string name="recurrence_month_pattern_by_day">"vào cùng một ngày trong mỗi tháng"</string>
+    <string name="recurrence_end_continously">"Vĩnh viễn"</string>
+    <string name="recurrence_end_date_label">"Đến một ngày nhất định"</string>
+    <string name="recurrence_end_date">"Cho đến ngày <xliff:g id="DATE">%s</xliff:g>"</string>
+    <string name="recurrence_end_count_label">"Đối với một số sự kiện"</string>
+    <plurals name="recurrence_end_count">
+        <item quantity="one">"Cho <xliff:g id="EVENT_COUNT">%d</xliff:g> sự kiện"</item>
+        <item quantity="other">"Cho <xliff:g id="EVENT_COUNT">%d</xliff:g> sự kiện"</item>
+    </plurals>
+    <string name="acessibility_recurrence_choose_end_date_description">"thay đổi ngày kết thúc"</string>
+</resources>

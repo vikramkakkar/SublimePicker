@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8"?><!--  Copyright (C) 2007 The Android Open Source Project
+
+     Licensed under the Apache License, Version 2.0 (the "License");
+     you may not use this file except in compliance with the License.
+     You may obtain a copy of the License at
+
+          http://www.apache.org/licenses/LICENSE-2.0
+
+     Unless required by applicable law or agreed to in writing, software
+     distributed under the License is distributed on an "AS IS" BASIS,
+     WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+     See the License for the specific language governing permissions and
+     limitations under the License.
+ -->
+
+<resources>
+    <string-array name="recurrence_freq">
+        <item>"ПОНАВЉАЈ ДНЕВНО"</item>
+        <item>"ПОНАВЉАЈ НЕДЕЉНО"</item>
+        <item>"ПОНАВЉАЈ МЕСЕЧНО"</item>
+        <item>"ПОНАВЉАЈ ГОДИШЊЕ"</item>
+    </string-array>
+    <string-array name="repeat_by_nth_sun">
+        <item>"сваке прве недеље"</item>
+        <item>"сваке друге недеље"</item>
+        <item>"сваке треће недеље"</item>
+        <item>"сваке четврте недеље"</item>
+        <item>"сваке последње недеље"</item>
+    </string-array>
+    <string-array name="repeat_by_nth_mon">
+        <item>"сваког првог понедељка"</item>
+        <item>"сваког другог понедељка"</item>
+        <item>"сваког трећег понедељка"</item>
+        <item>"сваког четвртог понедељка"</item>
+        <item>"сваког последњег понедељка"</item>
+    </string-array>
+    <string-array name="repeat_by_nth_tues">
+        <item>"сваког првог уторка"</item>
+        <item>"сваког другог уторка"</item>
+        <item>"сваког трећег уторка"</item>
+        <item>"сваког четвртог уторка"</item>
+        <item>"сваког последњег уторка"</item>
+    </string-array>
+    <string-array name="repeat_by_nth_wed">
+        <item>"сваке прве среде"</item>
+        <item>"сваке друге среде"</item>
+        <item>"сваке треће среде"</item>
+        <item>"сваке четврте среде"</item>
+        <item>"сваке последње среде"</item>
+    </string-array>
+    <string-array name="repeat_by_nth_thurs">
+        <item>"сваког првог четвртка"</item>
+        <item>"сваког другог четвртка"</item>
+        <item>"сваког трећег четвртка"</item>
+        <item>"сваког четвртог четвртка"</item>
+        <item>"сваког последњег четвртка"</item>
+    </string-array>
+    <string-array name="repeat_by_nth_fri">
+        <item>"сваког првог петка"</item>
+        <item>"сваког другог петка"</item>
+        <item>"сваког трећег петка"</item>
+        <item>"сваког четвртог петка"</item>
+        <item>"сваког последњег петка"</item>
+    </string-array>
+    <string-array name="repeat_by_nth_sat">
+        <item>"сваке прве суботе"</item>
+        <item>"сваке друге суботе"</item>
+        <item>"сваке треће суботе"</item>
+        <item>"сваке четврте суботе"</item>
+        <item>"сваке последње суботе"</item>
+    </string-array>
+</resources>

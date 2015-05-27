@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8"?><!--  Copyright (C) 2006 The Android Open Source Project
+
+     Licensed under the Apache License, Version 2.0 (the "License");
+     you may not use this file except in compliance with the License.
+     You may obtain a copy of the License at
+
+          http://www.apache.org/licenses/LICENSE-2.0
+
+     Unless required by applicable law or agreed to in writing, software
+     distributed under the License is distributed on an "AS IS" BASIS,
+     WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+     See the License for the specific language governing permissions and
+     limitations under the License.
+ -->
+
+<resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
+
+    <string name="select_hours">"පැය තෝරන්න"</string>
+    <string name="select_minutes">"මිනිත්තු තෝරන්න"</string>
+    <string name="day_picker_description">"දින ජාලයකින් මාසය"</string>
+    <string name="year_picker_description">"වසර ලැයිස්තුව"</string>
+    <string name="select_day">"මාසය සහ දිනය තෝරන්න"</string>
+    <string name="select_year">"වසර තෝරන්න"</string>
+    <string name="item_is_selected">"<xliff:g id="ITEM">%1$s</xliff:g> තෝරාගෙන ඇත"</string>
+    <string name="deleted_key">"<xliff:g id="KEY">%1$s</xliff:g> මකා දමන ලදි"</string>
+
+    <string name="ok">"හරි"</string>
+    <string name="cancel">"අවලංගු කරන්න"</string>
+
+    <string name="endByDate">"; <xliff:g id="DATE">%s</xliff:g> තෙක්"</string>
+    <plurals name="endByCount">
+        <item quantity="one">"; එක් වරක් සඳහා"</item>
+        <item quantity="other">"; වාර <xliff:g id="NUMBER">%d</xliff:g> සඳහා"</item>
+    </plurals>
+    <plurals name="daily">
+        <item quantity="one">"දිනපතා"</item>
+        <item quantity="other">"සෑම දින <xliff:g id="NUMBER">%d</xliff:g> කට"</item>
+    </plurals>
+    <string name="every_weekday">"සෑම සතියේ දිනකම (සඳු–සිකු)"</string>
+    <plurals name="weekly">
+        <item quantity="one">"සතිපතාම <xliff:g id="DAYS_OF_WEEK">%2$s</xliff:g> දින"</item>
+        <item quantity="other">"සෑම සති <xliff:g id="NUMBER">%1$d</xliff:g> කට වරක් <xliff:g id="DAYS_OF_WEEK">%2$s</xliff:g> දින"</item>
+    </plurals>
+    <string name="monthly">"මාසිකව"</string>
+    <string name="yearly_plain">"වාර්ෂිකව"</string>
+    <plurals name="recurrence_interval_daily">
+        <item quantity="one">"සෑම දින <xliff:g id="COUNT">%d</xliff:g> කට"</item>
+        <item quantity="other">"සෑම දින <xliff:g id="COUNT">%d</xliff:g> කට"</item>
+    </plurals>
+    <plurals name="recurrence_interval_weekly">
+        <item quantity="one">"සෑම සති <xliff:g id="COUNT">%d</xliff:g> කට"</item>
+        <item quantity="other">"සෑම සති <xliff:g id="COUNT">%d</xliff:g> කට"</item>
+    </plurals>
+    <plurals name="recurrence_interval_monthly">
+        <item quantity="one">"සෑම මාස <xliff:g id="COUNT">%d</xliff:g> කට"</item>
+        <item quantity="other">"සෑම මාස <xliff:g id="COUNT">%d</xliff:g> කට"</item>
+    </plurals>
+    <plurals name="recurrence_interval_yearly">
+        <item quantity="one">"සෑම වසර <xliff:g id="COUNT">%d</xliff:g> කට"</item>
+        <item quantity="other">"සෑම වසර <xliff:g id="COUNT">%d</xliff:g> කට"</item>
+    </plurals>
+    <string name="recurrence_month_pattern_by_day">"සෑම මසකම එකම දිනයේ"</string>
+    <string name="recurrence_end_continously">"සදහටම"</string>
+    <string name="recurrence_end_date_label">"දිනයක් දක්වා"</string>
+    <string name="recurrence_end_date">"<xliff:g id="DATE">%s</xliff:g> තෙක්"</string>
+    <string name="recurrence_end_count_label">"සිදුවීම් ගණනක් සඳහා"</string>
+    <plurals name="recurrence_end_count">
+        <item quantity="one">"සිදුවීම් <xliff:g id="EVENT_COUNT">%d</xliff:g> සඳහා"</item>
+        <item quantity="other">"සිදුවීම් <xliff:g id="EVENT_COUNT">%d</xliff:g> සඳහා"</item>
+    </plurals>
+    <string name="acessibility_recurrence_choose_end_date_description">"අවසන්වන දිනය වෙනස් කරන්න"</string>
+</resources>

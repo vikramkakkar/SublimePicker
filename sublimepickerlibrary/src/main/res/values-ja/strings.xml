@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8"?><!--  Copyright (C) 2006 The Android Open Source Project
+
+     Licensed under the Apache License, Version 2.0 (the "License");
+     you may not use this file except in compliance with the License.
+     You may obtain a copy of the License at
+
+          http://www.apache.org/licenses/LICENSE-2.0
+
+     Unless required by applicable law or agreed to in writing, software
+     distributed under the License is distributed on an "AS IS" BASIS,
+     WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+     See the License for the specific language governing permissions and
+     limitations under the License.
+ -->
+
+<resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
+
+    <string name="select_hours">"時間を選択"</string>
+    <string name="select_minutes">"分を選択"</string>
+    <string name="day_picker_description">"日グリッド（月別）"</string>
+    <string name="year_picker_description">"年リスト"</string>
+    <string name="select_day">"月と日を選択"</string>
+    <string name="select_year">"年を選択"</string>
+    <string name="item_is_selected">"<xliff:g id="ITEM">%1$s</xliff:g>を選択しました"</string>
+    <string name="deleted_key">"<xliff:g id="KEY">%1$s</xliff:g>を削除しました"</string>
+
+    <string name="ok">"OK"</string>
+    <string name="cancel">"キャンセル"</string>
+
+    <string name="endByDate">"（<xliff:g id="DATE">%s</xliff:g>まで）"</string>
+    <plurals name="endByCount">
+        <item quantity="one">"（1回）"</item>
+        <item quantity="other">"（<xliff:g id="NUMBER">%d</xliff:g>回）"</item>
+    </plurals>
+    <plurals name="daily">
+        <item quantity="one">"毎日"</item>
+        <item quantity="other">"<xliff:g id="NUMBER">%d</xliff:g>日ごと"</item>
+    </plurals>
+    <string name="every_weekday">"平日（月～金）"</string>
+    <plurals name="weekly">
+        <item quantity="one">"毎週<xliff:g id="DAYS_OF_WEEK">%2$s</xliff:g>"</item>
+        <item quantity="other">"<xliff:g id="NUMBER">%1$d</xliff:g>週間ごとの<xliff:g id="DAYS_OF_WEEK">%2$s</xliff:g>"</item>
+    </plurals>
+    <string name="monthly">"月次"</string>
+    <string name="yearly_plain">"毎年"</string>
+    <plurals name="recurrence_interval_daily">
+        <item quantity="one">"繰り返す間隔: <xliff:g id="COUNT">%d</xliff:g>日"</item>
+        <item quantity="other">"繰り返す間隔: <xliff:g id="COUNT">%d</xliff:g>日"</item>
+    </plurals>
+    <plurals name="recurrence_interval_weekly">
+        <item quantity="one">"繰り返す間隔: <xliff:g id="COUNT">%d</xliff:g>週間"</item>
+        <item quantity="other">"繰り返す間隔: <xliff:g id="COUNT">%d</xliff:g>週間"</item>
+    </plurals>
+    <plurals name="recurrence_interval_monthly">
+        <item quantity="one">"繰り返す間隔: <xliff:g id="COUNT">%d</xliff:g>か月"</item>
+        <item quantity="other">"繰り返す間隔: <xliff:g id="COUNT">%d</xliff:g>か月"</item>
+    </plurals>
+    <plurals name="recurrence_interval_yearly">
+        <item quantity="one">"繰り返す間隔: <xliff:g id="COUNT">%d</xliff:g>年"</item>
+        <item quantity="other">"繰り返す間隔: <xliff:g id="COUNT">%d</xliff:g>年"</item>
+    </plurals>
+    <string name="recurrence_month_pattern_by_day">"毎月同じ日"</string>
+    <string name="recurrence_end_continously">"終了日なし"</string>
+    <string name="recurrence_end_date_label">"終了日:"</string>
+    <string name="recurrence_end_date">"<xliff:g id="DATE">%s</xliff:g>まで"</string>
+    <string name="recurrence_end_count_label">"回数"</string>
+    <plurals name="recurrence_end_count">
+        <item quantity="one">"<xliff:g id="EVENT_COUNT">%d</xliff:g>回繰り返す"</item>
+        <item quantity="other">"<xliff:g id="EVENT_COUNT">%d</xliff:g>回繰り返す"</item>
+    </plurals>
+    <string name="acessibility_recurrence_choose_end_date_description">"終了日を変更します"</string>
+</resources>

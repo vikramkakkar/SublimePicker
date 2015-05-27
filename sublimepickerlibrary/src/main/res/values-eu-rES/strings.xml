@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8"?><!--  Copyright (C) 2006 The Android Open Source Project
+
+     Licensed under the Apache License, Version 2.0 (the "License");
+     you may not use this file except in compliance with the License.
+     You may obtain a copy of the License at
+
+          http://www.apache.org/licenses/LICENSE-2.0
+
+     Unless required by applicable law or agreed to in writing, software
+     distributed under the License is distributed on an "AS IS" BASIS,
+     WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+     See the License for the specific language governing permissions and
+     limitations under the License.
+ -->
+
+<resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
+
+    <string name="select_hours">"Hautatu orduak"</string>
+    <string name="select_minutes">"Hautatu minutuak"</string>
+    <string name="day_picker_description">"Hilabete-ikuspegiko eguna aukeratzeko sareta"</string>
+    <string name="year_picker_description">"Urteen zerrenda"</string>
+    <string name="select_day">"Hautatu hilabetea eta eguna"</string>
+    <string name="select_year">"Hautatu urtea"</string>
+    <string name="item_is_selected">"<xliff:g id="ITEM">%1$s</xliff:g> hautatu da"</string>
+    <string name="deleted_key">"<xliff:g id="KEY">%1$s</xliff:g> ezabatu da"</string>
+
+    <string name="ok">"Ados"</string>
+    <string name="cancel">"Utzi"</string>
+
+    <string name="endByDate">"; <xliff:g id="DATE">%s</xliff:g> arte"</string>
+    <plurals name="endByCount">
+        <item quantity="one">"; behin"</item>
+        <item quantity="other">"; <xliff:g id="NUMBER">%d</xliff:g> aldiz"</item>
+    </plurals>
+    <plurals name="daily">
+        <item quantity="one">"Egunero"</item>
+        <item quantity="other">"<xliff:g id="NUMBER">%d</xliff:g> egunez behin"</item>
+    </plurals>
+    <string name="every_weekday">"Astegun guztietan (al.-ol.)"</string>
+    <plurals name="weekly">
+        <item quantity="one">"Astero, egun honetan: <xliff:g id="DAYS_OF_WEEK">%2$s</xliff:g>"</item>
+        <item quantity="other">"<xliff:g id="NUMBER">%1$d</xliff:g> astez behin, egun honetan: <xliff:g id="DAYS_OF_WEEK">%2$s</xliff:g>"</item>
+    </plurals>
+    <string name="monthly">"Hilero"</string>
+    <string name="yearly_plain">"Urtero"</string>
+    <plurals name="recurrence_interval_daily">
+        <item quantity="one">"<xliff:g id="COUNT">%d</xliff:g> egunez behin"</item>
+        <item quantity="other">"<xliff:g id="COUNT">%d</xliff:g> egunez behin"</item>
+    </plurals>
+    <plurals name="recurrence_interval_weekly">
+        <item quantity="one">"<xliff:g id="COUNT">%d</xliff:g> astez behin"</item>
+        <item quantity="other">"<xliff:g id="COUNT">%d</xliff:g> astez behin"</item>
+    </plurals>
+    <plurals name="recurrence_interval_monthly">
+        <item quantity="one">"<xliff:g id="COUNT">%d</xliff:g> hilabetez behin"</item>
+        <item quantity="other">"<xliff:g id="COUNT">%d</xliff:g> hilabetez behin"</item>
+    </plurals>
+    <plurals name="recurrence_interval_yearly">
+        <item quantity="one">"<xliff:g id="COUNT">%d</xliff:g> urtez behin"</item>
+        <item quantity="other">"<xliff:g id="COUNT">%d</xliff:g> urtez behin"</item>
+    </plurals>
+    <string name="recurrence_month_pattern_by_day">"hilero, beti egun berean"</string>
+    <string name="recurrence_end_continously">"Beti"</string>
+    <string name="recurrence_end_date_label">"Data batera arte"</string>
+    <string name="recurrence_end_date">"<xliff:g id="DATE">%s</xliff:g> arte"</string>
+    <string name="recurrence_end_count_label">"Gertaldi jakin batzuk"</string>
+    <plurals name="recurrence_end_count">
+        <item quantity="one">"<xliff:g id="EVENT_COUNT">%d</xliff:g> gertaeratan"</item>
+        <item quantity="other">"<xliff:g id="EVENT_COUNT">%d</xliff:g> gertaeratan"</item>
+    </plurals>
+    <string name="acessibility_recurrence_choose_end_date_description">"aldatu amaiera-data"</string>
+</resources>

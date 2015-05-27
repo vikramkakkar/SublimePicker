@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8"?><!--  Copyright (C) 2006 The Android Open Source Project
+
+     Licensed under the Apache License, Version 2.0 (the "License");
+     you may not use this file except in compliance with the License.
+     You may obtain a copy of the License at
+
+          http://www.apache.org/licenses/LICENSE-2.0
+
+     Unless required by applicable law or agreed to in writing, software
+     distributed under the License is distributed on an "AS IS" BASIS,
+     WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+     See the License for the specific language governing permissions and
+     limitations under the License.
+ -->
+
+<resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
+
+    <string name="select_hours">"Izberite ure"</string>
+    <string name="select_minutes">"Izberite minute"</string>
+    <string name="day_picker_description">"Mesečna mreža dni"</string>
+    <string name="year_picker_description">"Seznam let"</string>
+    <string name="select_day">"Izberite mesec in dan"</string>
+    <string name="select_year">"Izberite leto"</string>
+    <string name="item_is_selected">"Izbrano: <xliff:g id="ITEM">%1$s</xliff:g>"</string>
+    <string name="deleted_key">"Številka <xliff:g id="KEY">%1$s</xliff:g> je izbrisana"</string>
+
+    <string name="ok">"V redu"</string>
+    <string name="cancel">"Prekliči"</string>
+
+    <string name="endByDate">"– do <xliff:g id="DATE">%s</xliff:g>"</string>
+    <plurals name="endByCount">
+        <item quantity="one">"– enkrat"</item>
+        <item quantity="other">"– tolikokrat: <xliff:g id="NUMBER">%d</xliff:g>"</item>
+    </plurals>
+    <plurals name="daily">
+        <item quantity="one">"Dnevno"</item>
+        <item quantity="other">"Vsakih toliko dni: <xliff:g id="NUMBER">%d</xliff:g>"</item>
+    </plurals>
+    <string name="every_weekday">"Vsak delovni dan (pon–pet)"</string>
+    <plurals name="weekly">
+        <item quantity="one">"Tedensko: <xliff:g id="DAYS_OF_WEEK">%2$s</xliff:g>"</item>
+        <item quantity="other">"<xliff:g id="DAYS_OF_WEEK">%2$s</xliff:g> – na vsakih toliko tednov: <xliff:g id="NUMBER">%1$d</xliff:g>"</item>
+    </plurals>
+    <string name="monthly">"Mesečno"</string>
+    <string name="yearly_plain">"Letno"</string>
+    <plurals name="recurrence_interval_daily">
+        <item quantity="one">"Vsakih toliko dni: <xliff:g id="COUNT">%d</xliff:g>"</item>
+        <item quantity="other">"Vsakih toliko dni: <xliff:g id="COUNT">%d</xliff:g>"</item>
+    </plurals>
+    <plurals name="recurrence_interval_weekly">
+        <item quantity="one">"Vsakih toliko tednov: <xliff:g id="COUNT">%d</xliff:g>"</item>
+        <item quantity="other">"Vsakih toliko tednov: <xliff:g id="COUNT">%d</xliff:g>"</item>
+    </plurals>
+    <plurals name="recurrence_interval_monthly">
+        <item quantity="one">"Vsakih toliko mesecev: <xliff:g id="COUNT">%d</xliff:g>"</item>
+        <item quantity="other">"Vsakih toliko mesecev: <xliff:g id="COUNT">%d</xliff:g>"</item>
+    </plurals>
+    <plurals name="recurrence_interval_yearly">
+        <item quantity="one">"Vsakih toliko let: <xliff:g id="COUNT">%d</xliff:g>"</item>
+        <item quantity="other">"Vsakih toliko let: <xliff:g id="COUNT">%d</xliff:g>"</item>
+    </plurals>
+    <string name="recurrence_month_pattern_by_day">"istega dne vsak mesec"</string>
+    <string name="recurrence_end_continously">"Za vedno"</string>
+    <string name="recurrence_end_date_label">"Do datuma"</string>
+    <string name="recurrence_end_date">"Do <xliff:g id="DATE">%s</xliff:g>"</string>
+    <string name="recurrence_end_count_label">"Za določeno št. dogodkov"</string>
+    <plurals name="recurrence_end_count">
+        <item quantity="one">"Za toliko dogodkov: <xliff:g id="EVENT_COUNT">%d</xliff:g>"</item>
+        <item quantity="other">"Za toliko dogodkov: <xliff:g id="EVENT_COUNT">%d</xliff:g>"</item>
+    </plurals>
+    <string name="acessibility_recurrence_choose_end_date_description">"sprememba končnega datuma"</string>
+</resources>

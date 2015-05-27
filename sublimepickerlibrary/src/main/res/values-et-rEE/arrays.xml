@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8"?><!--  Copyright (C) 2007 The Android Open Source Project
+
+     Licensed under the Apache License, Version 2.0 (the "License");
+     you may not use this file except in compliance with the License.
+     You may obtain a copy of the License at
+
+          http://www.apache.org/licenses/LICENSE-2.0
+
+     Unless required by applicable law or agreed to in writing, software
+     distributed under the License is distributed on an "AS IS" BASIS,
+     WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+     See the License for the specific language governing permissions and
+     limitations under the License.
+ -->
+
+<resources>
+    <string-array name="recurrence_freq">
+        <item>"KORDA IGA PÄEV"</item>
+        <item>"KORDA IGAL NÄDALAL"</item>
+        <item>"KORDA IGAS KUUS"</item>
+        <item>"KORDA IGAL AASTAL"</item>
+    </string-array>
+    <string-array name="repeat_by_nth_sun">
+        <item>"iga kuu esimesel pühapäeval"</item>
+        <item>"iga kuu teisel pühapäeval"</item>
+        <item>"iga kuu kolmandal pühapäeval"</item>
+        <item>"iga kuu neljandal pühapäeval"</item>
+        <item>"iga kuu viimasel pühapäeval"</item>
+    </string-array>
+    <string-array name="repeat_by_nth_mon">
+        <item>"iga kuu esimesel esmaspäeval"</item>
+        <item>"iga kuu teisel esmaspäeval"</item>
+        <item>"iga kuu kolmandal esmaspäeval"</item>
+        <item>"iga kuu neljandal esmaspäeval"</item>
+        <item>"iga kuu viimasel esmaspäeval"</item>
+    </string-array>
+    <string-array name="repeat_by_nth_tues">
+        <item>"iga kuu esimesel teisipäeval"</item>
+        <item>"iga kuu teisel teisipäeval"</item>
+        <item>"iga kuu kolmandal teisipäeval"</item>
+        <item>"iga kuu neljandal teisipäeval"</item>
+        <item>"iga kuu viimasel teisipäeval"</item>
+    </string-array>
+    <string-array name="repeat_by_nth_wed">
+        <item>"iga kuu esimesel kolmapäeval"</item>
+        <item>"iga kuu teisel kolmapäeval"</item>
+        <item>"iga kuu kolmandal kolmapäeval"</item>
+        <item>"iga kuu neljandal kolmapäeval"</item>
+        <item>"iga kuu viimasel kolmapäeval"</item>
+    </string-array>
+    <string-array name="repeat_by_nth_thurs">
+        <item>"iga kuu esimesel neljapäeval"</item>
+        <item>"iga kuu teisel neljapäeval"</item>
+        <item>"iga kuu kolmandal neljapäeval"</item>
+        <item>"iga kuu neljandal neljapäeval"</item>
+        <item>"iga kuu viimasel neljapäeval"</item>
+    </string-array>
+    <string-array name="repeat_by_nth_fri">
+        <item>"iga kuu esimesel reedel"</item>
+        <item>"iga kuu teisel reedel"</item>
+        <item>"iga kuu kolmandal reedel"</item>
+        <item>"iga kuu neljandal reedel"</item>
+        <item>"iga kuu viimasel reedel"</item>
+    </string-array>
+    <string-array name="repeat_by_nth_sat">
+        <item>"iga kuu esimesel laupäeval"</item>
+        <item>"iga kuu teisel laupäeval"</item>
+        <item>"iga kuu kolmandal laupäeval"</item>
+        <item>"iga kuu neljandal laupäeval"</item>
+        <item>"iga kuu viimasel laupäeval"</item>
+    </string-array>
+</resources>

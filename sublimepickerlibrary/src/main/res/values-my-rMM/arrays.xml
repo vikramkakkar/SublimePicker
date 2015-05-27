@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8"?><!--  Copyright (C) 2007 The Android Open Source Project
+
+     Licensed under the Apache License, Version 2.0 (the "License");
+     you may not use this file except in compliance with the License.
+     You may obtain a copy of the License at
+
+          http://www.apache.org/licenses/LICENSE-2.0
+
+     Unless required by applicable law or agreed to in writing, software
+     distributed under the License is distributed on an "AS IS" BASIS,
+     WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+     See the License for the specific language governing permissions and
+     limitations under the License.
+ -->
+
+<resources>
+    <string-array name="recurrence_freq">
+        <item>"နေ့စဉ် ထပ်လုပ်ပါ"</item>
+        <item>"အပတ်စဉ် ထပ်လုပ်ပါ"</item>
+        <item>"လစဉ် ထပ်လုပ်ပါ"</item>
+        <item>"နှစ်စဉ် ထပ်လုပ်"</item>
+    </string-array>
+    <string-array name="repeat_by_nth_sun">
+        <item>"ပထမ တနင်္ဂနွေနေ့တိုင်း"</item>
+        <item>"ဒုတိယ တနင်္ဂနွေနေ့တိုင်း"</item>
+        <item>"တတိယ တနင်္ဂနွေနေ့တိုင်း"</item>
+        <item>"စတုတ္ထ တနင်္ဂနွေနေ့တိုင်း"</item>
+        <item>"နောက်ဆုံး တနင်္ဂနွေနေ့တိုင်း"</item>
+    </string-array>
+    <string-array name="repeat_by_nth_mon">
+        <item>"ပထမ တနင်္လာနေ့တိုင်း"</item>
+        <item>"ဒုတိယ တနင်္လာနေ့တိုင်း"</item>
+        <item>"တတိယ တနင်္လာနေ့တိုင်း"</item>
+        <item>"စတုတ္ထ တနင်္လာနေ့တိုင်း"</item>
+        <item>"နောက်ဆုံး တနင်္လာနေ့တိုင်း"</item>
+    </string-array>
+    <string-array name="repeat_by_nth_tues">
+        <item>"ပထမ အင်္ဂါနေ့တိုင်း"</item>
+        <item>"ဒုတိယ အင်္ဂါနေ့တိုင်း"</item>
+        <item>"တတိယ အင်္ဂါနေ့တိုင်း"</item>
+        <item>"စတုတ္ထ အင်္ဂါနေ့တိုင်း"</item>
+        <item>"နောက်ဆုံး အင်္ဂါနေ့တိုင်း"</item>
+    </string-array>
+    <string-array name="repeat_by_nth_wed">
+        <item>"ပထမ ဗုဒ္ဓဟူးနေ့တိုင်း"</item>
+        <item>"ဒုတိယ ဗုဒ္ဓဟူးနေ့တိုင်း"</item>
+        <item>"တတိယ ဗုဒ္ဓဟူးနေ့တိုင်း"</item>
+        <item>"စတုတ္ထ ဗုဒ္ဓဟူးနေ့တိုင်း"</item>
+        <item>"နောက်ဆုံး ဗုဒ္ဓဟူးနေ့တိုင်း"</item>
+    </string-array>
+    <string-array name="repeat_by_nth_thurs">
+        <item>"ပထမ ကြာသပတေးနေ့တိုင်း"</item>
+        <item>"ဒုတိယ ကြာသပတေးနေ့တိုင်း"</item>
+        <item>"တတိယ ကြာသပတေးနေ့တိုင်း"</item>
+        <item>"စတုတ္ထ ကြာသပတေးနေ့တိုင်း"</item>
+        <item>"နောက်ဆုံး ကြာသပတေးနေ့တိုင်း"</item>
+    </string-array>
+    <string-array name="repeat_by_nth_fri">
+        <item>"ပထမ သောကြာနေ့တိုင်း"</item>
+        <item>"ဒုတိယ သောကြာနေ့တိုင်း"</item>
+        <item>"တတိယ သောကြာနေ့တိုင်း"</item>
+        <item>"စတုတ္ထ သောကြာနေ့တိုင်း"</item>
+        <item>"နောက်ဆုံး သောကြာနေ့တိုင်း"</item>
+    </string-array>
+    <string-array name="repeat_by_nth_sat">
+        <item>"ပထမ စနေနေ့တိုင်း"</item>
+        <item>"ဒုတိယ စနေနေ့တိုင်း"</item>
+        <item>"တတိယ စနေနေ့တိုင်း"</item>
+        <item>"စတုတ္ထ စနေနေ့တိုင်း"</item>
+        <item>"နောက်ဆုံး စနေနေ့တိုင်း"</item>
+    </string-array>
+</resources>

@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="utf-8"?><!--
+  ~ Copyright (C) 2013 The Android Open Source Project
+  ~ Copyright (C) 2015 Vikram Kakkar
+  ~
+  ~ Licensed under the Apache License, Version 2.0 (the "License");
+  ~ you may not use this file except in compliance with the License.
+  ~ You may obtain a copy of the License at
+  ~
+  ~      http://www.apache.org/licenses/LICENSE-2.0
+  ~
+  ~ Unless required by applicable law or agreed to in writing, software
+  ~ distributed under the License is distributed on an "AS IS" BASIS,
+  ~ WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+  ~ See the License for the specific language governing permissions and
+  ~ limitations under the License
+  -->
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/time_header"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="@dimen/timepicker_separator_padding"
+    android:gravity="center"
+    android:minWidth="@dimen/timepicker_left_side_width">
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:gravity="bottom"
+        android:orientation="horizontal"
+        android:layoutDirection="ltr">
+
+        <TextView
+            android:id="@+id/hours"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="end"
+            android:layoutDirection="locale" />
+
+        <TextView
+            android:id="@+id/separator"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/timepicker_separator_padding"
+            android:layout_marginRight="@dimen/timepicker_separator_padding"
+            android:importantForAccessibility="no"
+            android:layoutDirection="locale" />
+
+        <TextView
+            android:id="@+id/minutes"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="start"
+            android:layoutDirection="locale" />
+
+        <LinearLayout
+            android:id="@+id/ampm_layout"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:baselineAlignedChildIndex="1"
+            android:layoutDirection="locale">
+
+            <CheckedTextView
+                android:id="@+id/am_label"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                style="@style/AmPmCheckedTextViewStyle"
+                android:paddingTop="@dimen/timepicker_ampm_vertical_padding"
+                android:lines="1"
+                android:ellipsize="none" />
+
+            <CheckedTextView
+                android:id="@+id/pm_label"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                style="@style/AmPmCheckedTextViewStyle"
+                android:paddingTop="@dimen/timepicker_pm_top_padding"
+                android:lines="1"
+                android:ellipsize="none" />
+        </LinearLayout>
+    </LinearLayout>
+
+    <ImageView
+        android:id="@+id/ivRecurrenceOptionsTP"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="top|end" />
+
+</FrameLayout>

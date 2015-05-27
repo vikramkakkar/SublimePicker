@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8"?><!--  Copyright (C) 2007 The Android Open Source Project
+
+     Licensed under the Apache License, Version 2.0 (the "License");
+     you may not use this file except in compliance with the License.
+     You may obtain a copy of the License at
+
+          http://www.apache.org/licenses/LICENSE-2.0
+
+     Unless required by applicable law or agreed to in writing, software
+     distributed under the License is distributed on an "AS IS" BASIS,
+     WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+     See the License for the specific language governing permissions and
+     limitations under the License.
+ -->
+
+<resources>
+    <string-array name="recurrence_freq">
+        <item>"TOUS LES JOURS"</item>
+        <item>"TOUTES LES SEMAINES"</item>
+        <item>"TOUS LES MOIS"</item>
+        <item>"TOUS LES ANS"</item>
+    </string-array>
+    <string-array name="repeat_by_nth_sun">
+        <item>"tous les premiers dimanches"</item>
+        <item>"tous les deuxièmes dimanches"</item>
+        <item>"tous les troisièmes dimanches"</item>
+        <item>"tous les quatrièmes dimanches"</item>
+        <item>"tous les derniers dimanches"</item>
+    </string-array>
+    <string-array name="repeat_by_nth_mon">
+        <item>"tous les premiers lundis"</item>
+        <item>"tous les deuxièmes lundis"</item>
+        <item>"tous les troisièmes lundis"</item>
+        <item>"tous les quatrièmes lundis"</item>
+        <item>"tous les derniers lundis"</item>
+    </string-array>
+    <string-array name="repeat_by_nth_tues">
+        <item>"tous les premiers mardis"</item>
+        <item>"tous les deuxièmes mardis"</item>
+        <item>"tous les troisièmes mardis"</item>
+        <item>"tous les quatrièmes mardis"</item>
+        <item>"tous les derniers mardis"</item>
+    </string-array>
+    <string-array name="repeat_by_nth_wed">
+        <item>"tous les premiers mercredis"</item>
+        <item>"tous les deuxièmes mercredis"</item>
+        <item>"tous les troisièmes mercredis"</item>
+        <item>"tous les quatrièmes mercredis"</item>
+        <item>"tous les derniers mercredis"</item>
+    </string-array>
+    <string-array name="repeat_by_nth_thurs">
+        <item>"tous les premiers jeudis"</item>
+        <item>"tous les deuxièmes jeudis"</item>
+        <item>"tous les troisièmes jeudis"</item>
+        <item>"tous les quatrièmes jeudis"</item>
+        <item>"tous les derniers jeudis"</item>
+    </string-array>
+    <string-array name="repeat_by_nth_fri">
+        <item>"tous les premiers vendredis"</item>
+        <item>"tous les deuxièmes vendredis"</item>
+        <item>"tous les troisièmes vendredis"</item>
+        <item>"tous les quatrièmes vendredis"</item>
+        <item>"tous les derniers vendredis"</item>
+    </string-array>
+    <string-array name="repeat_by_nth_sat">
+        <item>"tous les premiers samedis"</item>
+        <item>"tous les deuxièmes samedis"</item>
+        <item>"tous les troisièmes samedis"</item>
+        <item>"tous les quatrièmes samedis"</item>
+        <item>"tous les derniers samedis"</item>
+    </string-array>
+</resources>

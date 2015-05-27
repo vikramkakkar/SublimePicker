@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8"?><!--  Copyright (C) 2007 The Android Open Source Project
+
+     Licensed under the Apache License, Version 2.0 (the "License");
+     you may not use this file except in compliance with the License.
+     You may obtain a copy of the License at
+
+          http://www.apache.org/licenses/LICENSE-2.0
+
+     Unless required by applicable law or agreed to in writing, software
+     distributed under the License is distributed on an "AS IS" BASIS,
+     WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+     See the License for the specific language governing permissions and
+     limitations under the License.
+ -->
+
+<resources>
+    <string-array name="recurrence_freq">
+        <item>"ULANG SETIAP HARI"</item>
+        <item>"ULANG SETIAP MINGGU"</item>
+        <item>"ULANG SETIAP BULAN"</item>
+        <item>"ULANG SETIAP TAHUN"</item>
+    </string-array>
+    <string-array name="repeat_by_nth_sun">
+        <item>"pada setiap Ahad pertama"</item>
+        <item>"pada setiap Ahad kedua"</item>
+        <item>"pada setiap Ahad ketiga"</item>
+        <item>"pada setiap Ahad keempat"</item>
+        <item>"pada setiap Ahad terakhir"</item>
+    </string-array>
+    <string-array name="repeat_by_nth_mon">
+        <item>"pada setiap Isnin pertama"</item>
+        <item>"pada setiap Isnin kedua"</item>
+        <item>"pada setiap Isnin ketiga"</item>
+        <item>"pada setiap Isnin keempat"</item>
+        <item>"pada setiap Isnin terakhir"</item>
+    </string-array>
+    <string-array name="repeat_by_nth_tues">
+        <item>"pada setiap Selasa pertama"</item>
+        <item>"pada setiap Selasa kedua"</item>
+        <item>"pada setiap Selasa ketiga"</item>
+        <item>"pada setiap Selasa keempat"</item>
+        <item>"pada setiap Selasa terakhir"</item>
+    </string-array>
+    <string-array name="repeat_by_nth_wed">
+        <item>"pada setiap Rabu pertama"</item>
+        <item>"pada setiap Rabu kedua"</item>
+        <item>"pada setiap Rabu ketiga"</item>
+        <item>"pada setiap Rabu keempat"</item>
+        <item>"pada setiap Rabu terakhir"</item>
+    </string-array>
+    <string-array name="repeat_by_nth_thurs">
+        <item>"pada setiap Khamis pertama"</item>
+        <item>"pada setiap Khamis kedua"</item>
+        <item>"pada setiap Khamis ketiga"</item>
+        <item>"pada setiap Khamis keempat"</item>
+        <item>"pada setiap Khamis terakhir"</item>
+    </string-array>
+    <string-array name="repeat_by_nth_fri">
+        <item>"pada setiap Jumaat pertama"</item>
+        <item>"pada setiap Jumaat kedua"</item>
+        <item>"pada setiap Jumaat ketiga"</item>
+        <item>"pada setiap Jumaat keempat"</item>
+        <item>"pada setiap Jumaat terakhir"</item>
+    </string-array>
+    <string-array name="repeat_by_nth_sat">
+        <item>"pada setiap Sabtu pertama"</item>
+        <item>"pada setiap Sabtu kedua"</item>
+        <item>"pada setiap Sabtu ketiga"</item>
+        <item>"pada setiap Sabtu keempat"</item>
+        <item>"pada setiap Sabtu terakhir"</item>
+    </string-array>
+</resources>

@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8"?><!--  Copyright (C) 2007 The Android Open Source Project
+
+     Licensed under the Apache License, Version 2.0 (the "License");
+     you may not use this file except in compliance with the License.
+     You may obtain a copy of the License at
+
+          http://www.apache.org/licenses/LICENSE-2.0
+
+     Unless required by applicable law or agreed to in writing, software
+     distributed under the License is distributed on an "AS IS" BASIS,
+     WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+     See the License for the specific language governing permissions and
+     limitations under the License.
+ -->
+
+<resources>
+    <string-array name="recurrence_freq">
+        <item>"REPETAȚI ZILNIC"</item>
+        <item>"REPETAȚI SĂPTĂMÂNAL"</item>
+        <item>"REPETAȚI LUNAR"</item>
+        <item>"REPETAȚI ANUAL"</item>
+    </string-array>
+    <string-array name="repeat_by_nth_sun">
+        <item>"în prima duminică din lună"</item>
+        <item>"în a doua duminică din lună"</item>
+        <item>"în a treia duminică din lună"</item>
+        <item>"în a patra duminică din lună"</item>
+        <item>"în ultima duminică din lună"</item>
+    </string-array>
+    <string-array name="repeat_by_nth_mon">
+        <item>"în prima luni din lună"</item>
+        <item>"în a doua luni din lună"</item>
+        <item>"în a treia luni din lună"</item>
+        <item>"în a patra luni din lună"</item>
+        <item>"în ultima luni din lună"</item>
+    </string-array>
+    <string-array name="repeat_by_nth_tues">
+        <item>"în prima marți din lună"</item>
+        <item>"în a doua marți din lună"</item>
+        <item>"în a treia marți din lună"</item>
+        <item>"în a patra marți din lună"</item>
+        <item>"în ultima marți din lună"</item>
+    </string-array>
+    <string-array name="repeat_by_nth_wed">
+        <item>"în prima miercuri din lună"</item>
+        <item>"în a doua miercuri din lună"</item>
+        <item>"în a treia miercuri din lună"</item>
+        <item>"în a patra miercuri din lună"</item>
+        <item>"în ultima miercuri din lună"</item>
+    </string-array>
+    <string-array name="repeat_by_nth_thurs">
+        <item>"în prima joi din lună"</item>
+        <item>"în a doua joi din lună"</item>
+        <item>"în a treia joi din lună"</item>
+        <item>"în a patra joi din lună"</item>
+        <item>"în ultima joi din lună"</item>
+    </string-array>
+    <string-array name="repeat_by_nth_fri">
+        <item>"în prima vineri din lună"</item>
+        <item>"în a doua vineri din lună"</item>
+        <item>"în a treia vineri din lună"</item>
+        <item>"în a patra vineri din lună"</item>
+        <item>"în ultima vineri din lună"</item>
+    </string-array>
+    <string-array name="repeat_by_nth_sat">
+        <item>"în prima sâmbătă din lună"</item>
+        <item>"în a doua sâmbătă din lună"</item>
+        <item>"în a treia sâmbătă din lună"</item>
+        <item>"în a patra sâmbătă din lună"</item>
+        <item>"în ultima sâmbătă din lună"</item>
+    </string-array>
+</resources>

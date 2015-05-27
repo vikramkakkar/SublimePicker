@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8"?><!--  Copyright (C) 2006 The Android Open Source Project
+
+     Licensed under the Apache License, Version 2.0 (the "License");
+     you may not use this file except in compliance with the License.
+     You may obtain a copy of the License at
+
+          http://www.apache.org/licenses/LICENSE-2.0
+
+     Unless required by applicable law or agreed to in writing, software
+     distributed under the License is distributed on an "AS IS" BASIS,
+     WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+     See the License for the specific language governing permissions and
+     limitations under the License.
+ -->
+
+<resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
+
+    <string name="select_hours">"နာရီများ ရွေးပါ"</string>
+    <string name="select_minutes">"မိနစ်များ ရွေးပါ"</string>
+    <string name="day_picker_description">"လအလိုက် ရွေးနိုင်သော ရက်များ"</string>
+    <string name="year_picker_description">"ခုနှစ် အစဉ်"</string>
+    <string name="select_day">"လ နှင့် ရက် ရွေးပါ"</string>
+    <string name="select_year">"ခုနှစ်ကို ရွေးပါ"</string>
+    <string name="item_is_selected">"<xliff:g id="ITEM">%1$s</xliff:g> ခုရွေးချယ်ထားပြီး"</string>
+    <string name="deleted_key">"<xliff:g id="KEY">%1$s</xliff:g> ကို ဖျက်ပြီးပါပြီ"</string>
+
+    <string name="ok">"ကောင်းပြီ"</string>
+    <string name="cancel">"ထားတော့"</string>
+
+    <string name="endByDate">";<xliff:g id="DATE">%s</xliff:g> အထိ"</string>
+    <plurals name="endByCount">
+        <item quantity="one">"၊ တစ်ကြိမ်"</item>
+        <item quantity="other">";၊ <xliff:g id="NUMBER">%d</xliff:g> ကြိမ်"</item>
+    </plurals>
+    <plurals name="daily">
+        <item quantity="one">"နေ့စဉ်"</item>
+        <item quantity="other">"<xliff:g id="NUMBER">%d</xliff:g> ရက်တိုင်း"</item>
+    </plurals>
+    <string name="every_weekday">"ရုံးရက်တိုင်း (တနင်္လာ–သောကြာ)"</string>
+    <plurals name="weekly">
+        <item quantity="one">"အပတ်စဉ် <xliff:g id="DAYS_OF_WEEK">%2$s</xliff:g> တွင်"</item>
+        <item quantity="other">"<xliff:g id="NUMBER">%1$d</xliff:g> ပတ်တိုင်း <xliff:g id="DAYS_OF_WEEK">%2$s</xliff:g> တွင်"</item>
+    </plurals>
+    <string name="monthly">"လစဉ်"</string>
+    <string name="yearly_plain">"နှစ်စဉ်"</string>
+    <plurals name="recurrence_interval_daily">
+        <item quantity="one">"<xliff:g id="COUNT">%d</xliff:g> ရက်တိုင်း"</item>
+        <item quantity="other">"<xliff:g id="COUNT">%d</xliff:g> ရက်တိုင်း"</item>
+    </plurals>
+    <plurals name="recurrence_interval_weekly">
+        <item quantity="one">"<xliff:g id="COUNT">%d</xliff:g> ပတ်တိုင်း"</item>
+        <item quantity="other">"<xliff:g id="COUNT">%d</xliff:g> ပတ်တိုင်း"</item>
+    </plurals>
+    <plurals name="recurrence_interval_monthly">
+        <item quantity="one">"<xliff:g id="COUNT">%d</xliff:g> လတိုင်း"</item>
+        <item quantity="other">"<xliff:g id="COUNT">%d</xliff:g> လတိုင်း"</item>
+    </plurals>
+    <plurals name="recurrence_interval_yearly">
+        <item quantity="one">"<xliff:g id="COUNT">%d</xliff:g> နှစ်တိုင်း"</item>
+        <item quantity="other">"<xliff:g id="COUNT">%d</xliff:g> နှစ်တိုင်း"</item>
+    </plurals>
+    <string name="recurrence_month_pattern_by_day">"လစဉ် ထို နေ့မှာ"</string>
+    <string name="recurrence_end_continously">"ထာဝရ"</string>
+    <string name="recurrence_end_date_label">"ရက်စွဲ အထိ"</string>
+    <string name="recurrence_end_date">"<xliff:g id="DATE">%s</xliff:g> အထိ"</string>
+    <string name="recurrence_end_count_label">"ဖြစ်ရပ် တစ်သီကြီး အတွက်"</string>
+    <plurals name="recurrence_end_count">
+        <item quantity="one">"ဖြစ်ရပ် <xliff:g id="EVENT_COUNT">%d</xliff:g> အတွက်"</item>
+        <item quantity="other">"ဖြစ်ရပ်များ <xliff:g id="EVENT_COUNT">%d</xliff:g> အတွက်"</item>
+    </plurals>
+    <string name="acessibility_recurrence_choose_end_date_description">"ပြီးဆုံးရက်စွဲကို ပြောင်းရန်"</string>
+</resources>

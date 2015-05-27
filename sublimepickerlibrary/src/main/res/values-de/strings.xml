@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8"?><!--  Copyright (C) 2006 The Android Open Source Project
+
+     Licensed under the Apache License, Version 2.0 (the "License");
+     you may not use this file except in compliance with the License.
+     You may obtain a copy of the License at
+
+          http://www.apache.org/licenses/LICENSE-2.0
+
+     Unless required by applicable law or agreed to in writing, software
+     distributed under the License is distributed on an "AS IS" BASIS,
+     WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+     See the License for the specific language governing permissions and
+     limitations under the License.
+ -->
+
+<resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
+
+    <string name="select_hours">"Stunden auswählen"</string>
+    <string name="select_minutes">"Minuten auswählen"</string>
+    <string name="day_picker_description">"Monatsraster mit einzelnen Tagen"</string>
+    <string name="year_picker_description">"Jahresliste"</string>
+    <string name="select_day">"Monat und Tag auswählen"</string>
+    <string name="select_year">"Jahr auswählen"</string>
+    <string name="item_is_selected">"<xliff:g id="ITEM">%1$s</xliff:g> ausgewählt"</string>
+    <string name="deleted_key">"<xliff:g id="KEY">%1$s</xliff:g> gelöscht"</string>
+
+    <string name="ok">"OK"</string>
+    <string name="cancel">"Abbrechen"</string>
+
+    <string name="endByDate">", bis <xliff:g id="DATE">%s</xliff:g>"</string>
+    <plurals name="endByCount">
+        <item quantity="one">", ein Mal"</item>
+        <item quantity="other">", <xliff:g id="NUMBER">%d</xliff:g> Mal"</item>
+    </plurals>
+    <plurals name="daily">
+        <item quantity="one">"Täglich"</item>
+        <item quantity="other">"Alle <xliff:g id="NUMBER">%d</xliff:g> Tage"</item>
+    </plurals>
+    <string name="every_weekday">"Jeden Werktag (Mo. - Fr.)"</string>
+    <plurals name="weekly">
+        <item quantity="one">"Wöchentlich am <xliff:g id="DAYS_OF_WEEK">%2$s</xliff:g>"</item>
+        <item quantity="other">"Alle <xliff:g id="NUMBER">%1$d</xliff:g> Wochen am <xliff:g id="DAYS_OF_WEEK">%2$s</xliff:g>"</item>
+    </plurals>
+    <string name="monthly">"Monatlich"</string>
+    <string name="yearly_plain">"Jährlich"</string>
+    <plurals name="recurrence_interval_daily">
+        <item quantity="one">"Nach <xliff:g id="COUNT">%d</xliff:g> Tag"</item>
+        <item quantity="other">"Alle <xliff:g id="COUNT">%d</xliff:g> Tage"</item>
+    </plurals>
+    <plurals name="recurrence_interval_weekly">
+        <item quantity="one">"Nach <xliff:g id="COUNT">%d</xliff:g> Woche"</item>
+        <item quantity="other">"Alle <xliff:g id="COUNT">%d</xliff:g> Wochen"</item>
+    </plurals>
+    <plurals name="recurrence_interval_monthly">
+        <item quantity="one">"Nach <xliff:g id="COUNT">%d</xliff:g> Monat"</item>
+        <item quantity="other">"Alle <xliff:g id="COUNT">%d</xliff:g> Monate"</item>
+    </plurals>
+    <plurals name="recurrence_interval_yearly">
+        <item quantity="one">"Nach <xliff:g id="COUNT">%d</xliff:g> Jahr"</item>
+        <item quantity="other">"Alle <xliff:g id="COUNT">%d</xliff:g> Jahre"</item>
+    </plurals>
+    <string name="recurrence_month_pattern_by_day">"am gleichen Tag des Monats"</string>
+    <string name="recurrence_end_continously">"Dauerhaft"</string>
+    <string name="recurrence_end_date_label">"Bis zu bestimmtem Datum"</string>
+    <string name="recurrence_end_date">"Bis <xliff:g id="DATE">%s</xliff:g>"</string>
+    <string name="recurrence_end_count_label">"Mehrere Wiederholungen"</string>
+    <plurals name="recurrence_end_count">
+        <item quantity="one">"<xliff:g id="EVENT_COUNT">%d</xliff:g>-mal"</item>
+        <item quantity="other">"<xliff:g id="EVENT_COUNT">%d</xliff:g>-mal"</item>
+    </plurals>
+    <string name="acessibility_recurrence_choose_end_date_description">"Enddatum ändern"</string>
+</resources>

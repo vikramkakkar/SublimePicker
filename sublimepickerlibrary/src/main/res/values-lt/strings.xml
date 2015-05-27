@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8"?><!--  Copyright (C) 2006 The Android Open Source Project
+
+     Licensed under the Apache License, Version 2.0 (the "License");
+     you may not use this file except in compliance with the License.
+     You may obtain a copy of the License at
+
+          http://www.apache.org/licenses/LICENSE-2.0
+
+     Unless required by applicable law or agreed to in writing, software
+     distributed under the License is distributed on an "AS IS" BASIS,
+     WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+     See the License for the specific language governing permissions and
+     limitations under the License.
+ -->
+
+<resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
+
+    <string name="select_hours">"Pasirinkite valandas"</string>
+    <string name="select_minutes">"Pasirinkite minutes"</string>
+    <string name="day_picker_description">"Mėnesio dienų tinklelis"</string>
+    <string name="year_picker_description">"Metų sąrašas"</string>
+    <string name="select_day">"Pasirinkite mėnesį ir dieną"</string>
+    <string name="select_year">"Pasirinkite metus"</string>
+    <string name="item_is_selected">"Pasirinkta: <xliff:g id="ITEM">%1$s</xliff:g>"</string>
+    <string name="deleted_key">"Ištrinta: <xliff:g id="KEY">%1$s</xliff:g>"</string>
+
+    <string name="ok">"Gerai"</string>
+    <string name="cancel">"Atšaukti"</string>
+
+    <string name="endByDate">", iki <xliff:g id="DATE">%s</xliff:g>"</string>
+    <plurals name="endByCount">
+        <item quantity="one">", vieną kartą"</item>
+        <item quantity="other">", <xliff:g id="NUMBER">%d</xliff:g> k."</item>
+    </plurals>
+    <plurals name="daily">
+        <item quantity="one">"Kasdien"</item>
+        <item quantity="other">"Kas <xliff:g id="NUMBER">%d</xliff:g> d."</item>
+    </plurals>
+    <string name="every_weekday">"Savaitės dienomis (Pi–Pe)"</string>
+    <plurals name="weekly">
+        <item quantity="one">"Kas savaitę, <xliff:g id="DAYS_OF_WEEK">%2$s</xliff:g>"</item>
+        <item quantity="other">"Kas <xliff:g id="NUMBER">%1$d</xliff:g> sav., <xliff:g id="DAYS_OF_WEEK">%2$s</xliff:g>"</item>
+    </plurals>
+    <string name="monthly">"Kas mėnesį"</string>
+    <string name="yearly_plain">"Kasmet"</string>
+    <plurals name="recurrence_interval_daily">
+        <item quantity="one">"Kas <xliff:g id="COUNT">%d</xliff:g> d."</item>
+        <item quantity="other">"Kas <xliff:g id="COUNT">%d</xliff:g> d."</item>
+    </plurals>
+    <plurals name="recurrence_interval_weekly">
+        <item quantity="one">"Kas <xliff:g id="COUNT">%d</xliff:g> sav."</item>
+        <item quantity="other">"Kas <xliff:g id="COUNT">%d</xliff:g> sav."</item>
+    </plurals>
+    <plurals name="recurrence_interval_monthly">
+        <item quantity="one">"Kas <xliff:g id="COUNT">%d</xliff:g> mėn."</item>
+        <item quantity="other">"Kas <xliff:g id="COUNT">%d</xliff:g> mėn."</item>
+    </plurals>
+    <plurals name="recurrence_interval_yearly">
+        <item quantity="one">"Kas <xliff:g id="COUNT">%d</xliff:g> m."</item>
+        <item quantity="other">"Kas <xliff:g id="COUNT">%d</xliff:g> m."</item>
+    </plurals>
+    <string name="recurrence_month_pattern_by_day">"kas mėn. tą pačią d."</string>
+    <string name="recurrence_end_continously">"Visada"</string>
+    <string name="recurrence_end_date_label">"Iki nurodytos datos"</string>
+    <string name="recurrence_end_date">"Iki <xliff:g id="DATE">%s</xliff:g>"</string>
+    <string name="recurrence_end_count_label">"Vykstant keliems įvykiams"</string>
+    <plurals name="recurrence_end_count">
+        <item quantity="one">"Vykstant <xliff:g id="EVENT_COUNT">%d</xliff:g> įvyk."</item>
+        <item quantity="other">"Vykstant <xliff:g id="EVENT_COUNT">%d</xliff:g> įvyk."</item>
+    </plurals>
+    <string name="acessibility_recurrence_choose_end_date_description">"keisti pabaigos datą"</string>
+</resources>

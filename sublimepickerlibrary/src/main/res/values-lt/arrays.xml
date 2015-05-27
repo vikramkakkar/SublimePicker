@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8"?><!--  Copyright (C) 2007 The Android Open Source Project
+
+     Licensed under the Apache License, Version 2.0 (the "License");
+     you may not use this file except in compliance with the License.
+     You may obtain a copy of the License at
+
+          http://www.apache.org/licenses/LICENSE-2.0
+
+     Unless required by applicable law or agreed to in writing, software
+     distributed under the License is distributed on an "AS IS" BASIS,
+     WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+     See the License for the specific language governing permissions and
+     limitations under the License.
+ -->
+
+<resources>
+    <string-array name="recurrence_freq">
+        <item>"KARTOTI KASDIEN"</item>
+        <item>"KARTOTI KAS SAVAITĘ"</item>
+        <item>"KARTOTI KAS MĖNESĮ"</item>
+        <item>"KARTOTI KASMET"</item>
+    </string-array>
+    <string-array name="repeat_by_nth_sun">
+        <item>"kiekvieną pirmą sekmadienį"</item>
+        <item>"kiekvieną antrą sekmadienį"</item>
+        <item>"kiekvieną trečią sekmadienį"</item>
+        <item>"kiekvieną ketvirtą sekmadienį"</item>
+        <item>"kiekvieną paskutinį sekmadienį"</item>
+    </string-array>
+    <string-array name="repeat_by_nth_mon">
+        <item>"kiekvieną pirmą pirmadienį"</item>
+        <item>"kiekvieną antrą pirmadienį"</item>
+        <item>"kiekvieną trečią pirmadienį"</item>
+        <item>"kiekvieną ketvirtą pirmadienį"</item>
+        <item>"kiekvieną paskutinį pirmadienį"</item>
+    </string-array>
+    <string-array name="repeat_by_nth_tues">
+        <item>"kiekvieną pirmą antradienį"</item>
+        <item>"kiekvieną antrą antradienį"</item>
+        <item>"kiekvieną trečią antradienį"</item>
+        <item>"kiekvieną ketvirtą antradienį"</item>
+        <item>"kiekvieną paskutinį antradienį"</item>
+    </string-array>
+    <string-array name="repeat_by_nth_wed">
+        <item>"kiekvieną pirmą trečiadienį"</item>
+        <item>"kiekvieną antrą trečiadienį"</item>
+        <item>"kiekvieną trečią trečiadienį"</item>
+        <item>"kiekvieną ketvirtą trečiadienį"</item>
+        <item>"kiekvieną paskut. trečiadienį"</item>
+    </string-array>
+    <string-array name="repeat_by_nth_thurs">
+        <item>"kiekvieną pirmą ketvirtadienį"</item>
+        <item>"kiekvieną antrą ketvirtadienį"</item>
+        <item>"kiekvieną trečią ketvirtadienį"</item>
+        <item>"kiekvieną ketv. ketvirtadienį"</item>
+        <item>"kiekvieną pask. ketvirtadienį"</item>
+    </string-array>
+    <string-array name="repeat_by_nth_fri">
+        <item>"kiekvieną pirmą penktadienį"</item>
+        <item>"kiekvieną antrą penktadienį"</item>
+        <item>"kiekvieną trečią penktadienį"</item>
+        <item>"kiekvieną ketvirtą penktadienį"</item>
+        <item>"kiekvieną paskut. penktadienį"</item>
+    </string-array>
+    <string-array name="repeat_by_nth_sat">
+        <item>"kiekvieną pirmą šeštadienį"</item>
+        <item>"kiekvieną antrą šeštadienį"</item>
+        <item>"kiekvieną trečią šeštadienį"</item>
+        <item>"kiekvieną ketvirtą šeštadienį"</item>
+        <item>"kiekvieną paskutinį šeštadienį"</item>
+    </string-array>
+</resources>

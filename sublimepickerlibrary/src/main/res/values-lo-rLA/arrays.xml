@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8"?><!--  Copyright (C) 2007 The Android Open Source Project
+
+     Licensed under the Apache License, Version 2.0 (the "License");
+     you may not use this file except in compliance with the License.
+     You may obtain a copy of the License at
+
+          http://www.apache.org/licenses/LICENSE-2.0
+
+     Unless required by applicable law or agreed to in writing, software
+     distributed under the License is distributed on an "AS IS" BASIS,
+     WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+     See the License for the specific language governing permissions and
+     limitations under the License.
+ -->
+
+<resources>
+    <string-array name="recurrence_freq">
+        <item>"ຊ້ຳທຸກໆມື້"</item>
+        <item>"ຊ້ຳທຸກໆອາທິດ"</item>
+        <item>"ຊ້ຳທຸກໆເດືອນ"</item>
+        <item>"ຊ້ຳທຸກໆປີ"</item>
+    </string-array>
+    <string-array name="repeat_by_nth_sun">
+        <item>"ໃນທຸກໆວັນອາທິດທຳອິດ"</item>
+        <item>"ໃນທຸກໆວັນອາທິດທີສອງ"</item>
+        <item>"ໃນທຸກໆວັນອາທິດທີສາມ"</item>
+        <item>"ໃນທຸກໆວັນອາທິດທີສີ່"</item>
+        <item>"ໃນທຸກໆວັນອາທິດສຸດທ້າຍ"</item>
+    </string-array>
+    <string-array name="repeat_by_nth_mon">
+        <item>"ໃນທຸກໆວັນຈັນທຳອິດ"</item>
+        <item>"ໃນທຸກໆວັນຈັນທີສອງ"</item>
+        <item>"ໃນທຸກໆວັນຈັນທີສາມ"</item>
+        <item>"ໃນທຸກໆວັນຈັນທີສີ່"</item>
+        <item>"ໃນທຸກໆວັນຈັນສຸດທ້າຍ"</item>
+    </string-array>
+    <string-array name="repeat_by_nth_tues">
+        <item>"ໃນທຸກໆວັນອັງຄານທຳອິດ"</item>
+        <item>"ໃນທຸກໆວັນອັງຄານທີສອງ"</item>
+        <item>"ໃນທຸກໆວັນອັງຄານທີສາມ"</item>
+        <item>"ໃນທຸກໆວັນອັງຄານທີສີ່"</item>
+        <item>"ໃນທຸກໆວັນອັງຄານສຸດທ້າຍ"</item>
+    </string-array>
+    <string-array name="repeat_by_nth_wed">
+        <item>"ໃນທຸກໆວັນພຸດທຳອິດ"</item>
+        <item>"ໃນທຸກໆວັນພຸດທີສອງ"</item>
+        <item>"ໃນທຸກໆວັນພຸດທີສາມ"</item>
+        <item>"ໃນທຸກໆວັນພຸດທີສີ່"</item>
+        <item>"ໃນທຸກໆວັນພຸດທີສຸດທ້າຍ"</item>
+    </string-array>
+    <string-array name="repeat_by_nth_thurs">
+        <item>"ໃນທຸກໆວັນພະຫັດທຳອິດ"</item>
+        <item>"ໃນທຸກໆວັນພະຫັດທີສອງ"</item>
+        <item>"ໃນທຸກໆວັນພະຫັດທີສາມ"</item>
+        <item>"ໃນທຸກໆວັນພະຫັດທີສີ່"</item>
+        <item>"ໃນທຸກໆວັນພະຫັດທີສຸດທ້າຍ"</item>
+    </string-array>
+    <string-array name="repeat_by_nth_fri">
+        <item>"ໃນທຸກໆວັນສຸກທໍາອິດ"</item>
+        <item>"ໃນທຸກໆວັນສຸກທີສອງ"</item>
+        <item>"ໃນທຸກໆວັນສຸກທີສາມ"</item>
+        <item>"ໃນທຸກໆວັນສຸກທີສີ່"</item>
+        <item>"ໃນທຸກໆວັນສຸກສຸດທ້າຍ"</item>
+    </string-array>
+    <string-array name="repeat_by_nth_sat">
+        <item>"ໃນທຸກໆວັນເສົາທຳອິດ"</item>
+        <item>"ໃນທຸກໆວັນເສົາທີສອງ"</item>
+        <item>"ໃນທຸກໆວັນເສົາທີສາມ"</item>
+        <item>"ໃນທຸກໆວັນເສົາທີສີ່"</item>
+        <item>"ໃນທຸກໆວັນເສົາສຸດທ້າຍ"</item>
+    </string-array>
+</resources>

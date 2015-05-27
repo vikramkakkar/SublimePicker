@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8"?><!--  Copyright (C) 2007 The Android Open Source Project
+
+     Licensed under the Apache License, Version 2.0 (the "License");
+     you may not use this file except in compliance with the License.
+     You may obtain a copy of the License at
+
+          http://www.apache.org/licenses/LICENSE-2.0
+
+     Unless required by applicable law or agreed to in writing, software
+     distributed under the License is distributed on an "AS IS" BASIS,
+     WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+     See the License for the specific language governing permissions and
+     limitations under the License.
+ -->
+
+<resources>
+    <string-array name="recurrence_freq">
+        <item>"매일 반복"</item>
+        <item>"매주 반복"</item>
+        <item>"매월 반복"</item>
+        <item>"매년 반복"</item>
+    </string-array>
+    <string-array name="repeat_by_nth_sun">
+        <item>"매월 첫 번째 일요일"</item>
+        <item>"매월 두 번째 일요일"</item>
+        <item>"매월 세 번째 일요일"</item>
+        <item>"매월 네 번째 일요일"</item>
+        <item>"매월 마지막 일요일"</item>
+    </string-array>
+    <string-array name="repeat_by_nth_mon">
+        <item>"매월 첫 번째 월요일"</item>
+        <item>"매월 두 번째 월요일"</item>
+        <item>"매월 세 번째 월요일"</item>
+        <item>"매월 네 번째 월요일"</item>
+        <item>"매월 마지막 월요일"</item>
+    </string-array>
+    <string-array name="repeat_by_nth_tues">
+        <item>"매월 첫 번째 화요일"</item>
+        <item>"매월 두 번째 화요일"</item>
+        <item>"매월 세 번째 화요일"</item>
+        <item>"매월 네 번째 화요일"</item>
+        <item>"매월 마지막 화요일"</item>
+    </string-array>
+    <string-array name="repeat_by_nth_wed">
+        <item>"매월 첫 번째 수요일"</item>
+        <item>"매월 두 번째 수요일"</item>
+        <item>"매월 세 번째 수요일"</item>
+        <item>"매월 네 번째 수요일"</item>
+        <item>"매월 마지막 수요일"</item>
+    </string-array>
+    <string-array name="repeat_by_nth_thurs">
+        <item>"매월 첫 번째 목요일"</item>
+        <item>"매월 두 번째 목요일"</item>
+        <item>"매월 세 번째 목요일"</item>
+        <item>"매월 네 번째 목요일"</item>
+        <item>"매월 마지막 목요일"</item>
+    </string-array>
+    <string-array name="repeat_by_nth_fri">
+        <item>"매월 첫 번째 금요일"</item>
+        <item>"매월 두 번째 금요일"</item>
+        <item>"매월 세 번째 금요일"</item>
+        <item>"매월 네 번째 금요일"</item>
+        <item>"매월 마지막 금요일"</item>
+    </string-array>
+    <string-array name="repeat_by_nth_sat">
+        <item>"매월 첫 번째 토요일"</item>
+        <item>"매월 두 번째 토요일"</item>
+        <item>"매월 세 번째 토요일"</item>
+        <item>"매월 네 번째 토요일"</item>
+        <item>"매월 마지막 토요일"</item>
+    </string-array>
+</resources>

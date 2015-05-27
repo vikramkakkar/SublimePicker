@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8"?><!--  Copyright (C) 2006 The Android Open Source Project
+
+     Licensed under the Apache License, Version 2.0 (the "License");
+     you may not use this file except in compliance with the License.
+     You may obtain a copy of the License at
+
+          http://www.apache.org/licenses/LICENSE-2.0
+
+     Unless required by applicable law or agreed to in writing, software
+     distributed under the License is distributed on an "AS IS" BASIS,
+     WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+     See the License for the specific language governing permissions and
+     limitations under the License.
+ -->
+
+<resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
+
+    <string name="select_hours">"Pilih jam"</string>
+    <string name="select_minutes">"Pilih menit"</string>
+    <string name="day_picker_description">"Kisi hari pada bulan"</string>
+    <string name="year_picker_description">"Daftar tahun"</string>
+    <string name="select_day">"Pilih bulan dan hari"</string>
+    <string name="select_year">"Pilih tahun"</string>
+    <string name="item_is_selected">"<xliff:g id="ITEM">%1$s</xliff:g> dipilih"</string>
+    <string name="deleted_key">"<xliff:g id="KEY">%1$s</xliff:g> dihapus"</string>
+
+    <string name="ok">"Oke"</string>
+    <string name="cancel">"Batal"</string>
+
+    <string name="endByDate">"; sampai <xliff:g id="DATE">%s</xliff:g>"</string>
+    <plurals name="endByCount">
+        <item quantity="one">"; sekali saja"</item>
+        <item quantity="other">"; untuk <xliff:g id="NUMBER">%d</xliff:g> kali"</item>
+    </plurals>
+    <plurals name="daily">
+        <item quantity="one">"Harian"</item>
+        <item quantity="other">"Setiap <xliff:g id="NUMBER">%d</xliff:g> hari"</item>
+    </plurals>
+    <string name="every_weekday">"Setiap hari kerja (Sen–Jum)"</string>
+    <plurals name="weekly">
+        <item quantity="one">"Mingguan setiap <xliff:g id="DAYS_OF_WEEK">%2$s</xliff:g>"</item>
+        <item quantity="other">"Setiap <xliff:g id="NUMBER">%1$d</xliff:g> minggu hari <xliff:g id="DAYS_OF_WEEK">%2$s</xliff:g>"</item>
+    </plurals>
+    <string name="monthly">"Bulanan"</string>
+    <string name="yearly_plain">"Tahunan"</string>
+    <plurals name="recurrence_interval_daily">
+        <item quantity="one">"<xliff:g id="COUNT">%d</xliff:g> hari sekali"</item>
+        <item quantity="other">"<xliff:g id="COUNT">%d</xliff:g> hari sekali"</item>
+    </plurals>
+    <plurals name="recurrence_interval_weekly">
+        <item quantity="one">"<xliff:g id="COUNT">%d</xliff:g> minggu sekali"</item>
+        <item quantity="other">"<xliff:g id="COUNT">%d</xliff:g> minggu sekali"</item>
+    </plurals>
+    <plurals name="recurrence_interval_monthly">
+        <item quantity="one">"<xliff:g id="COUNT">%d</xliff:g> bulan sekali"</item>
+        <item quantity="other">"<xliff:g id="COUNT">%d</xliff:g> bulan sekali"</item>
+    </plurals>
+    <plurals name="recurrence_interval_yearly">
+        <item quantity="one">"<xliff:g id="COUNT">%d</xliff:g> tahun sekali"</item>
+        <item quantity="other">"<xliff:g id="COUNT">%d</xliff:g> tahun sekali"</item>
+    </plurals>
+    <string name="recurrence_month_pattern_by_day">"bulanan-hari yg sama"</string>
+    <string name="recurrence_end_continously">"Selamanya"</string>
+    <string name="recurrence_end_date_label">"Sampai tanggal tertentu"</string>
+    <string name="recurrence_end_date">"Sampai <xliff:g id="DATE">%s</xliff:g>"</string>
+    <string name="recurrence_end_count_label">"Untuk sejumlah acara"</string>
+    <plurals name="recurrence_end_count">
+        <item quantity="one">"Untuk <xliff:g id="EVENT_COUNT">%d</xliff:g> acara"</item>
+        <item quantity="other">"Untuk <xliff:g id="EVENT_COUNT">%d</xliff:g> acara"</item>
+    </plurals>
+    <string name="acessibility_recurrence_choose_end_date_description">"ubah tanggal akhir"</string>
+</resources>

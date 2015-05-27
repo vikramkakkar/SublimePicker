@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8"?><!--  Copyright (C) 2007 The Android Open Source Project
+
+     Licensed under the Apache License, Version 2.0 (the "License");
+     you may not use this file except in compliance with the License.
+     You may obtain a copy of the License at
+
+          http://www.apache.org/licenses/LICENSE-2.0
+
+     Unless required by applicable law or agreed to in writing, software
+     distributed under the License is distributed on an "AS IS" BASIS,
+     WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+     See the License for the specific language governing permissions and
+     limitations under the License.
+ -->
+
+<resources>
+    <string-array name="recurrence_freq">
+        <item>"ദിവസവും ആവർത്തിക്കുക"</item>
+        <item>"ആഴ്ചതോറും ആവർത്തിക്കുക"</item>
+        <item>"എല്ലാമാസവും ആവർത്തിക്കുക"</item>
+        <item>"എല്ലാവർഷവും ആവർത്തിക്കുക"</item>
+    </string-array>
+    <string-array name="repeat_by_nth_sun">
+        <item>"എല്ലാ ആദ്യ ഞായറാഴ്ചയും"</item>
+        <item>"എല്ലാ രണ്ടാമത്തെ ഞായറാഴ്ചയും"</item>
+        <item>"എല്ലാ മൂന്നാമത്തെ ഞായറാഴ്ചയും"</item>
+        <item>"എല്ലാ നാലാമത്തെ ഞായറാഴ്ചയും"</item>
+        <item>"എല്ലാ  അവസാന ഞായറാഴ്ചയും"</item>
+    </string-array>
+    <string-array name="repeat_by_nth_mon">
+        <item>"എല്ലാ ആദ്യ തിങ്കളാഴ്‌ചയും"</item>
+        <item>"എല്ലാ രണ്ടാമത്തെ തിങ്കളാഴ്‌ചയും"</item>
+        <item>"എല്ലാ മൂന്നാമത്തെ തിങ്കളാഴ്‌ചയും"</item>
+        <item>"എല്ലാ നാലാമത്തെ തിങ്കളാഴ്‌ചയും"</item>
+        <item>"എല്ലാ അവസാന തിങ്കളാഴ്‌ചയും"</item>
+    </string-array>
+    <string-array name="repeat_by_nth_tues">
+        <item>"എല്ലാ ആദ്യ ചൊവ്വാഴ്ചയും"</item>
+        <item>"എല്ലാ രണ്ടാമത്തെ ചൊവ്വാഴ്ചയും"</item>
+        <item>"എല്ലാ മൂന്നാമത്തെ  ചൊവ്വാഴ്ചയും"</item>
+        <item>"എല്ലാ നാലാമത്തെ ചൊവ്വാഴ്ചയും"</item>
+        <item>"എല്ലാ അവസാന ചൊവ്വാഴ്ചയും"</item>
+    </string-array>
+    <string-array name="repeat_by_nth_wed">
+        <item>"എല്ലാ ആദ്യ ബുധനാഴ്ചയും"</item>
+        <item>"എല്ലാ രണ്ടാമത്തെ ബുധനാഴ്ചയും"</item>
+        <item>"എല്ലാ മൂന്നാമത്തെ ബുധനാഴ്ചയും"</item>
+        <item>"എല്ലാ നാലാമത്തെ ബുധനാഴ്ചയും"</item>
+        <item>"എല്ലാ അവസാന ബുധനാഴ്ചയും"</item>
+    </string-array>
+    <string-array name="repeat_by_nth_thurs">
+        <item>"എല്ലാ ആദ്യ വ്യാഴാഴ്ചയും"</item>
+        <item>"എല്ലാ രണ്ടാമത്തെ വ്യാഴാഴ്ചയും"</item>
+        <item>"എല്ലാ മൂന്നാമത്തെ വ്യാഴാഴ്ചയും"</item>
+        <item>"എല്ലാ നാലാമത്തെ വ്യാഴാഴ്ചയും"</item>
+        <item>"എല്ലാ അവസാന വ്യാഴാഴ്ചയും"</item>
+    </string-array>
+    <string-array name="repeat_by_nth_fri">
+        <item>"എല്ലാ ആദ്യ വെള്ളിയാഴ്ചയും"</item>
+        <item>"എല്ലാ രണ്ടാമത്തെ വെള്ളിയാഴ്ചയും"</item>
+        <item>"എല്ലാ മൂന്നാമത്തെ വെള്ളിയാഴ്ചയും"</item>
+        <item>"എല്ലാ നാലാമത്തെ വെള്ളിയാഴ്ചയും"</item>
+        <item>"എല്ലാ അവസാന വെള്ളിയാഴ്ചയും"</item>
+    </string-array>
+    <string-array name="repeat_by_nth_sat">
+        <item>"എല്ലാ ആദ്യ ശനിയാഴ്ചയും"</item>
+        <item>"എല്ലാ രണ്ടാമത്തെ ശനിയാഴ്ചയും"</item>
+        <item>"എല്ലാ മൂന്നാമത്തെ ശനിയാഴ്ചയും"</item>
+        <item>"എല്ലാ നാലാമത്തെ ശനിയാഴ്ചയും"</item>
+        <item>"എല്ലാ അവസാന ശനിയാഴ്ചയും"</item>
+    </string-array>
+</resources>

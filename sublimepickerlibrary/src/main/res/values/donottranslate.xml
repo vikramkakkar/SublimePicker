@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="font_family_body_1">sans-serif</string>
+    <string name="day_of_week_label_typeface">sans-serif</string>
+    <string name="sans_serif">sans-serif</string>
+    <string name="font_family_button_material">sans-serif</string>
+
+    <string name="time_placeholder">--</string>
+</resources>

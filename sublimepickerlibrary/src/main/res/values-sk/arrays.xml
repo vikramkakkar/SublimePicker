@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8"?><!--  Copyright (C) 2007 The Android Open Source Project
+
+     Licensed under the Apache License, Version 2.0 (the "License");
+     you may not use this file except in compliance with the License.
+     You may obtain a copy of the License at
+
+          http://www.apache.org/licenses/LICENSE-2.0
+
+     Unless required by applicable law or agreed to in writing, software
+     distributed under the License is distributed on an "AS IS" BASIS,
+     WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+     See the License for the specific language governing permissions and
+     limitations under the License.
+ -->
+
+<resources>
+    <string-array name="recurrence_freq">
+        <item>"OPAKOVAŤ DENNE"</item>
+        <item>"OPAKOVAŤ TÝŽDENNE"</item>
+        <item>"OPAKOVAŤ MESAČNE"</item>
+        <item>"OPAKOVAŤ ROČNE"</item>
+    </string-array>
+    <string-array name="repeat_by_nth_sun">
+        <item>"každú prvú nedeľu"</item>
+        <item>"každú druhú nedeľu"</item>
+        <item>"každú tretiu nedeľu"</item>
+        <item>"každú štvrtú nedeľu"</item>
+        <item>"každú poslednú nedeľu"</item>
+    </string-array>
+    <string-array name="repeat_by_nth_mon">
+        <item>"každý prvý pondelok"</item>
+        <item>"každý druhý pondelok"</item>
+        <item>"každý tretí pondelok"</item>
+        <item>"každý štvrtý pondelok"</item>
+        <item>"každý posledný pondelok"</item>
+    </string-array>
+    <string-array name="repeat_by_nth_tues">
+        <item>"každý prvý utorok"</item>
+        <item>"každý druhý utorok"</item>
+        <item>"každý tretí utorok"</item>
+        <item>"každý štvrtý utorok"</item>
+        <item>"každý posledný utorok"</item>
+    </string-array>
+    <string-array name="repeat_by_nth_wed">
+        <item>"každú prvú stredu"</item>
+        <item>"každú druhú stredu"</item>
+        <item>"každú tretiu stredu"</item>
+        <item>"každú štvrtú stredu"</item>
+        <item>"každú poslednú stredu"</item>
+    </string-array>
+    <string-array name="repeat_by_nth_thurs">
+        <item>"každý prvý štvrtok"</item>
+        <item>"každý druhý štvrtok"</item>
+        <item>"každý tretí štvrtok"</item>
+        <item>"každý štvrtý štvrtok"</item>
+        <item>"každý posledný štvrtok"</item>
+    </string-array>
+    <string-array name="repeat_by_nth_fri">
+        <item>"každý prvý piatok"</item>
+        <item>"každý druhý piatok"</item>
+        <item>"každý tretí piatok"</item>
+        <item>"každý štvrtý piatok"</item>
+        <item>"každý posledný piatok"</item>
+    </string-array>
+    <string-array name="repeat_by_nth_sat">
+        <item>"každú prvú sobotu"</item>
+        <item>"každú druhú sobotu"</item>
+        <item>"každú tretiu sobotu"</item>
+        <item>"každú štvrtú sobotu"</item>
+        <item>"každú poslednú sobotu"</item>
+    </string-array>
+</resources>
