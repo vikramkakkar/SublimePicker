@@ -10,6 +10,7 @@ SublimePicker provides a single point of entry to all three pickers. What I mean
 
 Date Picker
 :---------:
+
 ![Date Picker](https://github.com/vikramkakkar/SublimePicker/blob/master/img/date_picker.png?raw=true)
 
 License
