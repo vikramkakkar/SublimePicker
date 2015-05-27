@@ -10,7 +10,9 @@ SublimePicker provides a single point of entry to all three pickers. What I mean
 
 Walkthrough
 -----------
-Launch:
+Following screenshots have been taken from the sample application available on Google Play store: [<img src="http://developer.android.com/images/brand/en_generic_rgb_wo_45.png"/>][1]
+
+Launching into **DatePicker**:
 
 <p align="center">
 <img src="https://github.com/vikramkakkar/SublimePicker/blob/master/img/date_picker.png?raw=true" width="307" height="512" />
@@ -67,3 +69,7 @@ License
     WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
     See the License for the specific language governing permissions and
     limitations under the License.
+	
+	
+	
+[1]: https://play.google.com/store/apps/details?id=com.appeaser.sublimepicker
