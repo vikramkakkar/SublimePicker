@@ -15,6 +15,15 @@ Date Picker
 <img src="https://github.com/vikramkakkar/SublimePicker/blob/master/img/date_picker.png?raw=true" width="307" height="512" />
 </p>
 
+Button at bottom-left corner can be used to switch to TimePicker: 
+                                                      ----------
+
+<p align="center">
+<img src="https://github.com/vikramkakkar/SublimePicker/blob/master/img/time_picker.png?raw=true" width="307" height="512" />
+</p>
+
+The overflow button at top-right open the recurrence option
+
 License
 -------
     Copyright (c) 2015 Vikram Kakkar
