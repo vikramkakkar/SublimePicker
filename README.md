@@ -54,6 +54,8 @@ Results of the selection in **sample application**:
 <img src="https://github.com/vikramkakkar/SublimePicker/blob/master/img/sampler_results.png?raw=true" width="307" height="512" />
 </p>
 
+###How-tos will be added in a day or two...
+
 License
 -------
     Copyright (c) 2015 Vikram Kakkar
