@@ -46,9 +46,9 @@ public class SublimePickerFragment extends DialogFragment {
     SublimeListenerAdapter mListener = new SublimeListenerAdapter() {
         @Override
         public void onCancelled() {
-            mCallback.onDismiss();
+            mCallback.onCancelled();
 
-            // Should actually be called by activity inside `Callback.onDismiss()`
+            // Should actually be called by activity inside `Callback.onCancelled()`
             dismiss();
         }
 
@@ -61,7 +61,7 @@ public class SublimePickerFragment extends DialogFragment {
             mCallback.onDateTimeRecurrenceSet(year, monthOfYear, dayOfMonth,
                     hourOfDay, minute, recurrenceOption, recurrenceRule);
 
-            // Should actually be called by activity inside `Callback.onDismiss()`
+            // Should actually be called by activity inside `Callback.onCancelled()`
             dismiss();
         }
 
@@ -103,7 +103,7 @@ public class SublimePickerFragment extends DialogFragment {
 
     // For communicating with the activity
     public interface Callback {
-        void onDismiss();
+        void onCancelled();
 
         void onDateTimeRecurrenceSet(int year, int monthOfYear, int dayOfMonth,
                                      int hourOfDay, int minute,

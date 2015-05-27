@@ -64,8 +64,7 @@ public class Sampler extends AppCompatActivity {
 
     SublimePickerFragment.Callback mFragmentCallback = new SublimePickerFragment.Callback() {
         @Override
-        public void onDismiss() {
-            // Intentionally left empty
+        public void onCancelled() {
             rlDateTimeRecurrenceInfo.setVisibility(View.GONE);
         }
 
