@@ -12,7 +12,7 @@ Date Picker
 -----------
 
 <p align="center">
-<img src="https://github.com/vikramkakkar/SublimePicker/blob/master/img/date_picker.png?raw=true" />
+<img src="https://github.com/vikramkakkar/SublimePicker/blob/master/img/date_picker.png?raw=true" width="307" height="512" />
 </p>
 
 License
