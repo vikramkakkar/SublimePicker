@@ -275,6 +275,13 @@ public class Sampler extends AppCompatActivity {
                     }
                 });
             }
+
+            // Set callback
+            SublimePickerFragment restoredFragment = (SublimePickerFragment)
+                    getSupportFragmentManager().findFragmentByTag("SUBLIME_PICKER");
+            if (restoredFragment != null) {
+                restoredFragment.setCallback(mFragmentCallback);
+            }
         }
     }
 
