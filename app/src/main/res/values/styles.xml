@@ -22,16 +22,8 @@
         <item name="colorPrimary">#212121</item>
         <item name="android:textColorPrimary">#212121</item>
         <item name="android:textColorSecondary">#727272</item>
-        <item name="android:divider">#B6B6B6</item>
         <item name="android:textColorPrimaryInverse">#FFFFFF</item>
 
-        <item name="sublimePickerStyle">@style/SPDefaultImpl</item>
-        <!--<item name="android:dialogTheme">@style/Theme.AppCompat.Dialog</item>-->
-    </style>
-
-    <!-- Switch to default -->
-
-    <style name="SublimePickerDefault">
         <item name="sublimePickerStyle">@style/SPDefaultImpl</item>
     </style>
 
@@ -42,6 +34,12 @@
         <item name="android:textColorPrimary">#212121</item>
         <item name="android:textColorSecondary">#727272</item>
         <item name="android:textColorPrimaryInverse">#FFFFFF</item>
+    </style>
+
+    <!-- Switch to default -->
+
+    <style name="SublimePickerDefault">
+        <item name="sublimePickerStyle">@style/SPDefaultImpl</item>
     </style>
 
     <!-- ShowExtendedBg -->

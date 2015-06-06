@@ -26,7 +26,7 @@
     <dimen name="datepicker_selected_date_month_size">24dp</dimen>
     <dimen name="datepicker_selected_date_day_size">88dp</dimen>
     <dimen name="datepicker_selected_date_year_size">24dp</dimen>
-    <dimen name="datepicker_year_label_text_size">22dp</dimen>
+    <dimen name="datepicker_year_label_text_size">14dp</dimen>
     <dimen name="datepicker_day_number_size">12sp</dimen>
     <dimen name="datepicker_month_label_size">14sp</dimen>
     <dimen name="datepicker_month_day_label_text_size">12sp</dimen>
