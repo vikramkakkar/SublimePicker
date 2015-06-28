@@ -1,5 +1,29 @@
 apply plugin: 'com.android.library'
 
+ext {
+    bintrayRepo = 'maven'
+    bintrayName = 'sublime-picker'
+
+    publishedGroupId = 'com.appeaser.sublimepickerlibrary'
+    libraryName = 'SublimePicker'
+    artifact = 'sublimepickerlibrary'
+
+    libraryDescription = 'A material-styled android view that provisions picking of a date, time & recurrence option, all from a single user-interface.'
+
+    siteUrl = 'https://github.com/vikramkakkar/SublimePicker'
+    gitUrl = 'https://github.com/vikramkakkar/SublimePicker.git'
+
+    libraryVersion = '1.0.0'
+
+    developerId = 'vikramkakkar'
+    developerName = 'Vikram Kakkar'
+    developerEmail = 'vikram.kakkar.85@gmail.com'
+
+    licenseName = 'The Apache Software License, Version 2.0'
+    licenseUrl = 'http://www.apache.org/licenses/LICENSE-2.0.txt'
+    allLicenses = ["Apache-2.0"]
+}
+
 android {
     compileSdkVersion 22
     buildToolsVersion "22.0.1"
@@ -8,7 +32,7 @@ android {
         minSdkVersion 16
         targetSdkVersion 22
         versionCode 1
-        versionName "1.0"
+        versionName "1.0.0"
     }
     buildTypes {
         release {
@@ -16,10 +40,18 @@ android {
             proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
         }
     }
+
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_7
+        targetCompatibility JavaVersion.VERSION_1_7
+    }
 }
 
 dependencies {
     compile fileTree(include: ['*.jar'], dir: 'libs')
-    compile 'com.android.support:appcompat-v7:22.1.1'
-    compile 'com.android.support:support-v4:22.1.1'
+    compile 'com.android.support:appcompat-v7:22.2.0'
+    compile 'com.android.support:support-v4:22.2.0'
 }
+
+apply from: 'https://raw.githubusercontent.com/nuuneoi/JCenter/master/installv1.gradle'
+apply from: 'https://raw.githubusercontent.com/nuuneoi/JCenter/master/bintrayv1.gradle'

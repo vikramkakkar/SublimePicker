@@ -419,10 +419,8 @@ public class EventRecurrence {
     /**
      * Determines whether this rule specifies a simple monthly rule by weekday, such as
      * "FREQ=MONTHLY;BYDAY=3TU" (the 3rd Tuesday of every month).
-     * <p/>
      * Negative days, e.g. "FREQ=MONTHLY;BYDAY=-1TU" (the last Tuesday of every month),
      * will cause "false" to be returned.
-     * <p/>
      * Rules that fire every week, such as "FREQ=MONTHLY;BYDAY=TU" (every Tuesday of every
      * month) will cause "false" to be returned.  (Note these are usually expressed as
      * WEEKLY rules, and hence are uncommon.)
@@ -447,12 +445,10 @@ public class EventRecurrence {
 
     /**
      * Determines whether two integer arrays contain identical elements.
-     * <p/>
      * The native implementation over-allocated the arrays (and may have stuff left over from
      * a previous run), so we can't just check the arrays -- the separately-maintained count
      * field also matters.  We assume that a null array will have a count of zero, and that the
      * array can hold as many elements as the associated count indicates.
-     * <p/>
      * TODO: replace this with Arrays.equals() when the old parser goes away.
      */
     private static boolean arraysEqual(int[] array1, int count1, int[] array2, int count2) {
@@ -505,12 +501,10 @@ public class EventRecurrence {
 
     /**
      * Resets parser-modified fields to their initial state.  Does not alter startDate.
-     * <p/>
      * The original parser always set all of the "count" fields, "wkst", and "until",
      * essentially allowing the same object to be used multiple times by calling parse().
      * It's unclear whether this behavior was intentional.  For now, be paranoid and
      * preserve the existing behavior by resetting the fields.
-     * <p/>
      * We don't need to touch the integer arrays; they will either be ignored or
      * overwritten.  The "startDate" field is not set by the parser, so we ignore it here.
      */

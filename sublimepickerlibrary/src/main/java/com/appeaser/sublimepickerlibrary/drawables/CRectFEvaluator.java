@@ -61,7 +61,6 @@ public class CRectFEvaluator implements TypeEvaluator<RectF> {
      * between the start and end values. The calculation is a simple parametric
      * calculation on each of the separate components in the Rect objects
      * (left, top, right, and bottom).
-     * <p/>
      * <p>If #CRectFEvaluator(android.graphics.Rect) was used to construct
      * this RectEvaluator, the object returned will be the <code>reuseRect</code>
      * passed into the constructor.</p>

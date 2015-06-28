@@ -31,7 +31,7 @@ import android.view.animation.AnticipateInterpolator;
 import android.view.animation.OvershootInterpolator;
 
 /**
- * Provides animated transition between 'on' & 'off' state.
+ * Provides animated transition between 'on' and 'off' state.
  * Used as background for 'WeekButton'.
  */
 public class CheckableDrawable extends Drawable {

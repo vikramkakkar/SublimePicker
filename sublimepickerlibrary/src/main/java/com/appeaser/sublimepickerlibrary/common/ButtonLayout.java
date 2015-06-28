@@ -259,7 +259,7 @@ public class ButtonLayout extends LinearLayout implements View.OnClickListener {
 
     /**
      * Updates 'ButtonBarBgDrawable' when the picker is switched.
-     * This is required because 'SublimeDatePicker' & 'SublimeTimePicker'
+     * This is required because 'SublimeDatePicker' and 'SublimeTimePicker'
      * have different header-partition widths.
      *
      * @param callingPicker Currently visible picker
@@ -280,7 +280,7 @@ public class ButtonLayout extends LinearLayout implements View.OnClickListener {
         mSwitcherButton.setText(text);
     }
 
-    // Disables the positive button as & when the user selected options
+    // Disables the positive button as and when the user selected options
     // become invalid.
     public void updateValidity(boolean valid) {
         mPositiveButton.setEnabled(valid);

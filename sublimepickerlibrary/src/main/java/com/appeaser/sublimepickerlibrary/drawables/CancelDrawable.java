@@ -28,7 +28,7 @@ import com.appeaser.sublimepickerlibrary.R;
 
 /**
  * Currently not used.
- * Draws a pair of lines at 45 degrees & 135 degrees
+ * Draws a pair of lines at 45 degrees and 135 degrees
  * that pass through the center.
  */
 public class CancelDrawable extends Drawable {

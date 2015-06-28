@@ -52,10 +52,10 @@ import java.util.TimeZone;
 
 /**
  * A customizable view that provisions picking of a date,
- * time & recurrence option, all from a single user-interface.
+ * time and recurrence option, all from a single user-interface.
  * You can also view 'SublimePicker' as a collection of
- * material-styled (API 22, & _not_ 21) DatePicker, TimePicker
- * & RecurrencePicker, backported to API 16.
+ * material-styled (API 22, and _not_ 21) DatePicker, TimePicker
+ * and RecurrencePicker, backported to API 16.
  * You can opt for any combination of these three Pickers.
  */
 public class SublimePicker extends FrameLayout

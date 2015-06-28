@@ -23,7 +23,7 @@ import android.view.accessibility.AccessibilityEvent;
 import android.widget.ViewAnimator;
 
 /**
- * Houses DayPickerView & YearPickerView
+ * Houses DayPickerView and YearPickerView
  */
 public class AccessibleDateAnimator extends ViewAnimator {
     private long mDateMillis;
