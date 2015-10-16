@@ -39,6 +39,7 @@ import com.appeaser.sublimepickerlibrary.R;
 import com.appeaser.sublimepickerlibrary.common.ButtonLayout;
 import com.appeaser.sublimepickerlibrary.datepicker.DayPickerView;
 import com.appeaser.sublimepickerlibrary.datepicker.OnSublimeDateChangedListener;
+import com.appeaser.sublimepickerlibrary.helpers.AccessibilityUtils;
 import com.appeaser.sublimepickerlibrary.helpers.SublimeOptions;
 
 import java.text.SimpleDateFormat;
@@ -220,7 +221,7 @@ public class DatePickerView extends LinearLayout {
         long millis = mCurrentDate.getTimeInMillis();
         int flags = DateUtils.FORMAT_SHOW_DATE | DateUtils.FORMAT_SHOW_YEAR;
         String fullDateText = DateUtils.formatDateTime(mContext, millis, flags);
-        announceForAccessibility(fullDateText);
+        AccessibilityUtils.makeAnnouncement(this, fullDateText);
     }
 
     private void setCurrentView() {
@@ -229,7 +230,7 @@ public class DatePickerView extends LinearLayout {
         final int flags = DateUtils.FORMAT_SHOW_DATE;
         final String dayString = DateUtils.formatDateTime(mContext, millis, flags);
         mDayPickerView.setContentDescription(mDayPickerDescription + ": " + dayString);
-        mDayPickerView.announceForAccessibility(mSelectDay);
+        AccessibilityUtils.makeAnnouncement(this,mSelectDay);
     }
 
     public void init(int year, int monthOfYear, int dayOfMonth,

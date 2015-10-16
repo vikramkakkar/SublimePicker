@@ -128,7 +128,8 @@ public class SUtils {
         int paddingR = view.getPaddingRight();
         int paddingB = view.getPaddingBottom();
 
-        view.setBackground(bg);
+
+        view.setBackgroundDrawable(bg);
         view.setPadding(paddingL, paddingT, paddingR, paddingB);
     }
 
