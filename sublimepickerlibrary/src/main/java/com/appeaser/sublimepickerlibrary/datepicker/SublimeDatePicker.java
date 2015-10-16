@@ -27,7 +27,6 @@ import android.graphics.Color;
 import android.os.Build;
 import android.os.Parcel;
 import android.os.Parcelable;
-import android.support.v4.view.ViewCompat;
 import android.text.format.DateUtils;
 import android.util.AttributeSet;
 import android.view.ContextThemeWrapper;
@@ -35,7 +34,6 @@ import android.view.HapticFeedbackConstants;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.accessibility.AccessibilityEvent;
-import android.view.accessibility.AccessibilityManager;
 import android.view.accessibility.AccessibilityNodeInfo;
 import android.view.animation.AlphaAnimation;
 import android.view.animation.Animation;
@@ -45,7 +43,6 @@ import android.widget.LinearLayout;
 import android.widget.TextView;
 
 import com.appeaser.sublimepickerlibrary.R;
-import com.appeaser.sublimepickerlibrary.helpers.AccessibilityUtils;
 import com.appeaser.sublimepickerlibrary.utilities.SUtils;
 
 import java.text.DateFormat;
@@ -412,7 +409,7 @@ public class SublimeDatePicker extends FrameLayout implements
         if (announce) {
             flags = DateUtils.FORMAT_SHOW_DATE | DateUtils.FORMAT_SHOW_YEAR;
             String fullDateText = DateUtils.formatDateTime(mContext, millis, flags);
-            AccessibilityUtils.makeAnnouncement(mAnimator,fullDateText);
+            mAnimator.announceForAccessibility(fullDateText);
         }
     }
 
@@ -432,7 +429,7 @@ public class SublimeDatePicker extends FrameLayout implements
                 final int flags = DateUtils.FORMAT_SHOW_DATE;
                 final String dayString = DateUtils.formatDateTime(mContext, millis, flags);
                 mAnimator.setContentDescription(mDayPickerDescription + ": " + dayString);
-                AccessibilityUtils.makeAnnouncement(mAnimator, mSelectDay);
+                mAnimator.announceForAccessibility(mSelectDay);
                 break;
             case YEAR_VIEW:
                 mYearPickerView.onDateChanged();
@@ -445,11 +442,10 @@ public class SublimeDatePicker extends FrameLayout implements
 
                 final CharSequence yearString = mYearFormat.format(millis);
                 mAnimator.setContentDescription(mYearPickerDescription + ": " + yearString);
-                AccessibilityUtils.makeAnnouncement(mAnimator, mSelectYear);
+                mAnimator.announceForAccessibility(mSelectYear);
                 break;
         }
     }
-
 
     @Override
     public void init(int year, int monthOfYear, int dayOfMonth,

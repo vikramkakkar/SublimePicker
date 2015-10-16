@@ -31,7 +31,6 @@ import android.widget.AbsListView;
 import android.widget.ListView;
 
 import com.appeaser.sublimepickerlibrary.R;
-import com.appeaser.sublimepickerlibrary.helpers.AccessibilityUtils;
 import com.appeaser.sublimepickerlibrary.utilities.SUtils;
 
 import java.text.SimpleDateFormat;
@@ -545,7 +544,7 @@ public class DayPickerView extends ListView implements AbsListView.OnScrollListe
         }
 
         // Go to that month.
-        AccessibilityUtils.makeAnnouncement(this,getMonthAndYearString(day));
+        announceForAccessibility(getMonthAndYearString(day));
         goTo(day.getTimeInMillis(), true, false, true);
         mPerformingScroll = true;
         return true;
