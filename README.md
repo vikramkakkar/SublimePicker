@@ -10,7 +10,7 @@ SublimePicker provides a single point of entry to all three pickers. What I mean
 
 Walkthrough
 -----------
-Following screenshots have been taken from the sample application: [<img src="http://developer.android.com/images/brand/en_generic_rgb_wo_45.png"/>][1]
+Following screenshots have been taken from the sample application: [<img alt="Get it on Google Play" height="45px" src="https://play.google.com/intl/en_us/badges/images/apps/en-play-badge-border.png" />][1]
 
 Launching into **DatePicker**:
 
