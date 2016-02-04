@@ -49,6 +49,7 @@ import android.widget.FrameLayout;
 import android.widget.TextView;
 
 import com.appeaser.sublimepickerlibrary.R;
+import com.appeaser.sublimepickerlibrary.helpers.AccessibilityUtils;
 import com.appeaser.sublimepickerlibrary.utilities.SUtils;
 
 import java.text.DateFormatSymbols;
@@ -742,7 +743,7 @@ public class SublimeTimePicker extends FrameLayout implements
                 if (mAllowAutoAdvance && autoAdvance) {
                     updateHeaderHour(newValue, false);
                     setCurrentItemShowing(MINUTE_INDEX, true, false);
-                    announceForAccessibility(newValue + ". " + mSelectMinutes);
+                    AccessibilityUtils.makeAnnouncement(this, newValue + ". " + mSelectMinutes);
                 } else {
                     updateHeaderHour(newValue, true);
                 }
@@ -820,7 +821,7 @@ public class SublimeTimePicker extends FrameLayout implements
     private void tryAnnounceForAccessibility(CharSequence text, boolean isHour) {
         if (mLastAnnouncedIsHour != isHour || !text.equals(mLastAnnouncedText)) {
             // TODO: Find a better solution, potentially live regions?
-            announceForAccessibility(text);
+            AccessibilityUtils.makeAnnouncement(this,text);
             mLastAnnouncedText = text;
             mLastAnnouncedIsHour = isHour;
         }
@@ -904,11 +905,11 @@ public class SublimeTimePicker extends FrameLayout implements
 
         if (index == HOUR_INDEX) {
             if (announce) {
-                announceForAccessibility(mSelectHours);
+                AccessibilityUtils.makeAnnouncement(this, mSelectHours);
             }
         } else {
             if (announce) {
-                announceForAccessibility(mSelectMinutes);
+                AccessibilityUtils.makeAnnouncement(this, mSelectMinutes);
             }
         }
 
@@ -941,7 +942,7 @@ public class SublimeTimePicker extends FrameLayout implements
                         deletedKeyStr = String.format("%d", getValFromKeyCode(deleted));
                     }
 
-                    announceForAccessibility(String.format(mDeletedKeyFormat, deletedKeyStr));
+                    AccessibilityUtils.makeAnnouncement(this, String.format(mDeletedKeyFormat, deletedKeyStr));
                     updateDisplay(true);
                 }
             }
@@ -1002,7 +1003,7 @@ public class SublimeTimePicker extends FrameLayout implements
         }
 
         int val = getValFromKeyCode(keyCode);
-        announceForAccessibility(String.format("%d", val));
+        AccessibilityUtils.makeAnnouncement(this, String.format("%d", val));
         // Automatically fill in 0's if AM or PM was legally entered.
         if (isTypedTimeFullyLegal()) {
             if (!mIs24HourView && mTypedTimes.size() <= 3) {
