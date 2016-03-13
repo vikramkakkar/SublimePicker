@@ -148,10 +148,10 @@ public class SublimeRecurrencePicker extends FrameLayout
                 = context.obtainStyledAttributes(R.styleable.SublimeRecurrencePicker);
         try {
             int headingBgColor = a.getColor(
-                    R.styleable.SublimeRecurrencePicker_headerBackground,
+                    R.styleable.SublimeRecurrencePicker_spHeaderBackground,
                     SUtils.COLOR_ACCENT);
             int pickerBgColor = a.getColor(
-                    R.styleable.SublimeRecurrencePicker_pickerBackground,
+                    R.styleable.SublimeRecurrencePicker_spPickerBackground,
                     SUtils.COLOR_BACKGROUND);
 
             // Sets background color for API versions >= Lollipop
@@ -165,18 +165,18 @@ public class SublimeRecurrencePicker extends FrameLayout
 
             // State colors
             mSelectedStateTextColor = a.getColor(
-                    R.styleable.SublimeRecurrencePicker_selectedOptionTextColor,
+                    R.styleable.SublimeRecurrencePicker_spSelectedOptionTextColor,
                     SUtils.COLOR_ACCENT);
             mUnselectedStateTextColor = a.getColor(
-                    R.styleable.SublimeRecurrencePicker_unselectedOptionsTextColor,
+                    R.styleable.SublimeRecurrencePicker_spUnselectedOptionsTextColor,
                     SUtils.COLOR_TEXT_PRIMARY);
             mPressedStateColor = a.getColor(
-                    R.styleable.SublimeRecurrencePicker_pressedOptionBgColor,
+                    R.styleable.SublimeRecurrencePicker_spPressedOptionBgColor,
                     SUtils.COLOR_CONTROL_HIGHLIGHT);
 
             // Defaults to the included checkmark drawable
             mCheckmarkDrawable
-                    = a.getDrawable(R.styleable.SublimeRecurrencePicker_selectedOptionDrawable);
+                    = a.getDrawable(R.styleable.SublimeRecurrencePicker_spSelectedOptionDrawable);
             if (mCheckmarkDrawable == null) {
                 mCheckmarkDrawable = context.getResources()
                         .getDrawable(R.drawable.checkmark_medium_ff);

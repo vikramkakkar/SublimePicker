@@ -28,7 +28,7 @@ import java.util.HashMap;
  * Event recurrence utility functions.
  */
 public class EventRecurrence {
-    private static String TAG = "EventRecur";
+    private static String TAG = EventRecurrence.class.getSimpleName();
 
     public static final int SECONDLY = 1;
     public static final int MINUTELY = 2;

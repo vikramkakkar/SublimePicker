@@ -17,29 +17,27 @@
 package com.appeaser.sublimepickerlibrary.helpers;
 
 import com.appeaser.sublimepickerlibrary.SublimePicker;
+import com.appeaser.sublimepickerlibrary.datepicker.SelectedDate;
 import com.appeaser.sublimepickerlibrary.recurrencepicker.SublimeRecurrencePicker;
 
 import java.util.Date;
 
 public abstract class SublimeListenerAdapter {
     /**
-     * @param sublimePicker    SublimePicker view
-     * @param year             The year that was set.
-     * @param monthOfYear      The month that was set (0-11) for compatibility
-     *                         with {@link java.util.Calendar}.
-     * @param dayOfMonth       The day of the month that was set.
-     * @param hourOfDay        The hour of day that was set.
-     * @param minute           The minute that was set.
-     * @param recurrenceOption One of the options defined in
-     *                         SublimeRecurrencePicker.RecurrenceOption.
-     *                         'recurrenceRule' will only be passed if
-     *                         'recurrenceOption' is 'CUSTOM'.
-     * @param recurrenceRule   The recurrence rule that was set. This will
-     *                         be 'null' if 'recurrenceOption' is anything
-     *                         other than 'CUSTOM'.
+     * @param sublimeMaterialPicker SublimeMaterialPicker view
+     * @param selectedDate          The date that was set.
+     * @param hourOfDay             The hour of day that was set.
+     * @param minute                The minute that was set.
+     * @param recurrenceOption      One of the options defined in
+     *                              SublimeRecurrencePicker.RecurrenceOption.
+     *                              'recurrenceRule' will only be passed if
+     *                              'recurrenceOption' is 'CUSTOM'.
+     * @param recurrenceRule        The recurrence rule that was set. This will
+     *                              be 'null' if 'recurrenceOption' is anything
+     *                              other than 'CUSTOM'.
      */
-    public abstract void onDateTimeRecurrenceSet(SublimePicker sublimePicker,
-                                                 int year, int monthOfYear, int dayOfMonth,
+    public abstract void onDateTimeRecurrenceSet(SublimePicker sublimeMaterialPicker,
+                                                 SelectedDate selectedDate,
                                                  int hourOfDay, int minute,
                                                  SublimeRecurrencePicker.RecurrenceOption recurrenceOption,
                                                  String recurrenceRule);
@@ -48,10 +46,11 @@ public abstract class SublimeListenerAdapter {
     public abstract void onCancelled();
 
     /**
-     * @param selectedDate The date that is selected.
+     * @param selectedDate The date(or range) that is selected.
      * @return Formatted date to display on `Switcher` button
      */
-    public CharSequence formatDate(Date selectedDate) {
+    @SuppressWarnings("UnusedParameters")
+    public CharSequence formatDate(SelectedDate selectedDate) {
         return null;
     }
 
@@ -59,6 +58,7 @@ public abstract class SublimeListenerAdapter {
      * @param selectedTime The time of day that was set.
      * @return Formatted time to display on `Switcher` button
      */
+    @SuppressWarnings("UnusedParameters")
     public CharSequence formatTime(Date selectedTime) {
         return null;
     }

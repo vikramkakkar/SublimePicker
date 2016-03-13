@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <Space
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:visibility="invisible" />
+
+    <ImageView
+        android:id="@+id/imageViewNegative"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:clickable="true"
+        android:src="?attr/spCancelActionDrawable"
+        android:minWidth="@dimen/sp_dialog_button_bar_height"
+        android:minHeight="@dimen/sp_dialog_button_bar_height"
+        android:scaleType="center"
+        android:contentDescription="@string/cd_negative_component"
+        android:visibility="gone"
+        android:layout_weight="0" />
+
+    <ImageView
+        android:id="@+id/imageViewPositive"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:clickable="true"
+        android:src="?attr/spOkActionDrawable"
+        android:minWidth="@dimen/sp_dialog_button_bar_height"
+        android:minHeight="@dimen/sp_dialog_button_bar_height"
+        android:scaleType="center"
+        android:contentDescription="@string/cd_positive_component"
+        android:visibility="gone"
+        android:layout_weight="0" />
+
+    <Button
+        android:id="@+id/buttonNegative"
+        style="?attr/spButtonModeOkCancelButtonStyle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:visibility="gone"
+        android:layout_weight="0" />
+
+    <Button
+        android:id="@+id/buttonPositive"
+        style="?attr/spButtonModeOkCancelButtonStyle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:visibility="gone"
+        android:layout_weight="0" />
+</merge>

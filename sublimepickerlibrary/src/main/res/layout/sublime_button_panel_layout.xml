@@ -16,58 +16,12 @@
 
     <Button
         android:id="@+id/buttonSwitcher"
-        style="?attr/buttonModeSwitcherButtonStyle"
+        style="?attr/spButtonModeSwitcherButtonStyle"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:visibility="gone"
         android:layout_weight="0" />
 
-    <Space
-        android:layout_width="0dp"
-        android:layout_height="0dp"
-        android:layout_weight="1"
-        android:visibility="invisible" />
-
-    <ImageView
-        android:id="@+id/imageViewNegative"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:clickable="true"
-        android:src="?attr/cancelActionDrawable"
-        android:minWidth="@dimen/dialog_button_bar_height"
-        android:minHeight="@dimen/dialog_button_bar_height"
-        android:scaleType="center"
-        android:contentDescription="@string/cd_negative_component"
-        android:visibility="gone"
-        android:layout_weight="0" />
-
-    <ImageView
-        android:id="@+id/imageViewPositive"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:clickable="true"
-        android:src="?attr/okActionDrawable"
-        android:minWidth="@dimen/dialog_button_bar_height"
-        android:minHeight="@dimen/dialog_button_bar_height"
-        android:scaleType="center"
-        android:contentDescription="@string/cd_positive_component"
-        android:visibility="gone"
-        android:layout_weight="0" />
-
-    <Button
-        android:id="@+id/buttonNegative"
-        style="?attr/buttonModeOkCancelButtonStyle"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:visibility="gone"
-        android:layout_weight="0" />
-
-    <Button
-        android:id="@+id/buttonPositive"
-        style="?attr/buttonModeOkCancelButtonStyle"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:visibility="gone"
-        android:layout_weight="0" />
+    <include layout="@layout/decision_button_layout"/>
 
 </merge>

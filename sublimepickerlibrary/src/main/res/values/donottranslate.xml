@@ -6,4 +6,18 @@
     <string name="font_family_button_material">sans-serif</string>
 
     <string name="time_placeholder">--</string>
+
+    <!-- DO NOT TRANSLATE -->
+    <string name="sp_date_picker_month_typeface">sans-serif-medium</string>
+    <!-- DO NOT TRANSLATE -->
+    <string name="sp_date_picker_day_of_week_typeface">sans-serif-medium</string>
+    <!-- DO NOT TRANSLATE -->
+    <string name="sp_date_picker_day_typeface">sans-serif-medium</string>
+
+    <!-- Tag used to load a particular layout. This is needed because
+         the layouts contain android.support.v4.view.ViewPager. Having more
+         than one ViewPager with the same ID will cause problems in
+         onRestoreInstanceState(Parcelable). -->
+    <string name="recurrence_end_date_picker_tag">redp</string>
+    <string name="sublime_date_picker_tag">sdp</string>
 </resources>

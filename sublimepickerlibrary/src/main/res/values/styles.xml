@@ -17,26 +17,53 @@
     <!-- SublimeDatePicker -->
 
     <style name="SublimeDatePickerStyle">
-        <item name="firstDayOfWeek">0</item>
-        <item name="dayOfWeekBackground">#10000000</item>
-        <item name="dayOfWeekTextAppearance">@style/STextAppearance.DatePicker.DayOfWeekLabel</item>
-        <item name="headerMonthTextAppearance">@style/STextAppearance.DatePicker.MonthLabel</item>
-        <item name="headerDayOfMonthTextAppearance">
-            @style/STextAppearance.DatePicker.DayOfMonthLabel
-        </item>
-        <item name="headerYearTextAppearance">@style/STextAppearance.DatePicker.YearLabel</item>
-        <item name="headerSelectedTextColor">?android:attr/textColorPrimaryInverse</item>
-        <item name="headerPressedTextColor">?android:attr/textColorPrimaryInverse</item>
-        <item name="headerBackground">?colorAccent</item>
+        <item name="spFirstDayOfWeek">0</item>
+        <item name="spHeaderBackground">?spHeaderBackgroundPtr</item>
+        <item name="spMinDate">01/01/1900</item>
+        <item name="spMaxDate">12/31/2100</item>
+        <item name="spHeaderTextColor">?attr/spPrimaryTextSecondaryWhenActivatedMaterialInversePtr</item>
+    </style>
+
+    <style name="SPDateLabelTextAppearance" parent="TextAppearance.AppCompat">
+        <item name="android:textColor">?attr/spPrimaryTextSecondaryWhenActivatedMaterialInversePtr</item>
+        <item name="android:textSize">@dimen/sp_date_picker_date_label_size</item>
+        <item name="android:fontFamily">sans-serif-medium</item>
+    </style>
+
+    <style name="SPDateRangeLabelTextAppearance" parent="TextAppearance.AppCompat">
+        <item name="android:textColor">?attr/spPrimaryTextSecondaryWhenActivatedMaterialInversePtr</item>
+        <item name="android:textSize">@dimen/sp_date_picker_date_range_label_size</item>
+        <item name="android:fontFamily">sans-serif-medium</item>
+    </style>
+
+    <style name="SPMonthLabelTextAppearance" parent="TextAppearance.AppCompat.Body2" />
+
+    <style name="SPWeekDayLabelTextAppearance" parent="TextAppearance.AppCompat.Caption" />
+
+    <!-- TextAppearance.Material.Widget.Calendar.Day -->
+    <style name="SPDayTextAppearance" parent="TextAppearance.AppCompat.Caption">
+        <item name="android:textColor">?attr/spCalendarDayTextColorPtr</item>
     </style>
 
     <!-- YearPickerView -->
 
     <style name="YearPickerViewStyle">
-        <item name="yearListItemTextAppearance">@style/STextAppearance.DatePicker.List.YearLabel
+        <item name="spYearListItemTextAppearance">@style/STextAppearance.DatePicker.List.YearLabel
         </item>
-        <item name="yearListSelectorColor">?colorControlActivated</item>
-        <item name="yearPickerBgColor">@android:color/transparent</item>
+        <item name="spYearListSelectorColor">?attr/colorControlActivated</item>
+        <item name="spYearPickerBgColor">@android:color/transparent</item>
+    </style>
+
+    <style name="SPYearLabelTextAppearance" parent="TextAppearance.AppCompat">
+        <item name="android:textColor">?android:attr/textColorPrimary</item>
+        <item name="android:textSize">@dimen/sp_datepicker_list_year_label_size</item>
+        <item name="android:fontFamily">sans-serif</item>
+    </style>
+
+    <style name="SPYearLabelActivatedTextAppearance" parent="TextAppearance.AppCompat">
+        <item name="android:textColor">?attr/colorControlActivated</item>
+        <item name="android:textSize">@dimen/sp_datepicker_list_year_activated_label_size</item>
+        <item name="android:fontFamily">sans-serif-medium</item>
     </style>
 
     <style name="STextAppearance.DatePicker.List.YearLabel" parent="STextAppearance">
@@ -47,19 +74,23 @@
     <!-- DayPickerView -->
 
     <style name="DayPickerViewStyle">
-        <item name="dayPickerBgColor">@android:color/transparent</item>
+        <item name="spDayPickerBgColor">@android:color/transparent</item>
+        <item name="spMonthTextAppearance">@style/SPMonthLabelTextAppearance</item>
+        <item name="spWeekDayTextAppearance">@style/SPWeekDayLabelTextAppearance</item>
+        <item name="spDateTextAppearance">@style/SPDayTextAppearance</item>
+        <item name="spDaySelectorColor">?attr/colorControlActivated</item>
+        <item name="spDayHighlightColor">?attr/colorControlHighlight</item>
     </style>
 
     <!-- SimpleMonthView -->
 
     <style name="MonthViewStyle">
-        <item name="showSingleMonthPerPosition">false</item>
-        <item name="selectedDayCircleAlpha">60</item>
-        <item name="calendarEnabledTextColor">?android:attr/textColorSecondary</item>
-        <item name="calendarDisabledTextColor">?attr/spCalendarDisabledTextColor</item>
-        <item name="calendarEnabledSelectedTextColor">?attr/colorAccent</item>
-        <item name="monthNameTextColor">?android:attr/textColorSecondary</item>
-        <item name="dayNameTextColor">?android:attr/textColorSecondary</item>
+        <item name="spSelectedDayCircleAlpha">60</item>
+        <item name="spCalendarEnabledTextColor">?android:attr/textColorSecondary</item>
+        <item name="spCalendarDisabledTextColor">?attr/spCalendarDisabledTextColor</item>
+        <item name="spCalendarEnabledSelectedTextColor">?attr/colorAccent</item>
+        <item name="spMonthNameTextColor">?android:attr/textColorSecondary</item>
+        <item name="spDayNameTextColor">?android:attr/textColorSecondary</item>
     </style>
 
     <style name="STextAppearanceBase">
@@ -105,7 +136,7 @@
         <item name="android:textColor">?attr/colorAccent</item>
         <item name="android:minWidth">64dp</item>
         <item name="android:maxLines">1</item>
-        <item name="android:minHeight">@dimen/dialog_button_bar_height</item>
+        <item name="android:minHeight">@dimen/sp_dialog_button_bar_height</item>
     </style>
 
     <style name="SButtonBarButtonStyle" parent="SButtonBarButtonStyleBase" />
@@ -129,26 +160,27 @@
     <!-- TimePicker -->
 
     <style name="SublimeTimePickerStyle">
-        <item name="headerAmPmTextAppearance">@style/STextAppearance.TimePicker.AmPmLabel</item>
-        <item name="headerTimeTextAppearance">@style/STextAppearance.TimePicker.TimeLabel</item>
-        <item name="timePickerHeaderSelectedTextColor">?android:attr/textColorPrimaryInverse</item>
-        <item name="timePickerHeaderPressedTextColor">?android:attr/textColorPrimaryInverse</item>
-        <item name="headerBackground">?attr/colorAccent</item>
+        <item name="spHeaderBackground">?spHeaderBackgroundPtr</item>
+        <item name="spHeaderTextColor">?attr/spPrimaryTextSecondaryWhenActivatedMaterialInversePtr</item>
     </style>
 
-    <!-- AM/PM CheckedTextViews -->
+    <style name="SPTimeLabelTextAppearance" parent="TextAppearance.AppCompat">
+        <item name="android:textSize">@dimen/sp_timepicker_time_label_size</item>
+        <item name="android:textColor">?attr/spPrimaryTextSecondaryWhenActivatedMaterialInversePtr</item>
+    </style>
 
-    <style name="AmPmCheckedTextViewStyle" parent="">
-        <item name="android:paddingLeft">@dimen/timepicker_ampm_horizontal_padding</item>
-        <item name="android:paddingRight">@dimen/timepicker_ampm_horizontal_padding</item>
+    <style name="SPAmPmLabelTextAppearance" parent="TextAppearance.AppCompat.Button">
+        <item name="android:textSize">@dimen/sp_timepicker_ampm_label_size</item>
+        <item name="android:textColor">?attr/spPrimaryTextSecondaryWhenActivatedMaterialInversePtr</item>
     </style>
 
     <!-- RadialTimePickerView -->
 
     <style name="RadialTimePickerViewStyle">
-        <item name="numbersTextColor">?android:attr/textColorSecondary</item>
-        <item name="numbersSelectorColor">?attr/colorControlActivated</item>
-        <item name="numbersBackgroundColor">?attr/spNumbersBackgroundColor</item>
+        <item name="spNumbersTextColor">?attr/spNumbersTextColorPtr</item>
+        <item name="spNumbersSelectorColor">?attr/colorControlActivated</item>
+        <item name="spNumbersBackgroundColor">?attr/spNumbersBackgroundColorPtr</item>
+        <item name="spNumbersInnerTextColor">?attr/spNumbersInnerTextColorPtr</item>
     </style>
 
     <style name="STextAppearance.TimePicker.AmPmLabel" parent="STextAppearance">
@@ -166,14 +198,14 @@
     <!-- SublimeRecurrencePicker -->
 
     <style name="SublimeRecurrencePickerStyle">
-        <item name="recurrencePickerHeadingStyle">@style/RecurrencePickerHeadingStyle</item>
-        <item name="recurrencePickerOptionsStyle">@style/RecurrencePickerOptionsStyle</item>
-        <item name="headerBackground">?attr/colorAccent</item>
-        <item name="pickerBackground">@android:color/transparent</item>
-        <item name="selectedOptionTextColor">?attr/colorAccent</item>
-        <item name="unselectedOptionsTextColor">?android:attr/textColorPrimary</item>
-        <item name="pressedOptionBgColor">?attr/colorControlHighlight</item>
-        <item name="selectedOptionDrawable">@drawable/checkmark_medium_ff</item>
+        <item name="spRecurrencePickerHeadingStyle">@style/RecurrencePickerHeadingStyle</item>
+        <item name="spRecurrencePickerOptionsStyle">@style/RecurrencePickerOptionsStyle</item>
+        <item name="spHeaderBackground">?attr/colorAccent</item>
+        <item name="spPickerBackground">@android:color/transparent</item>
+        <item name="spSelectedOptionTextColor">?attr/colorAccent</item>
+        <item name="spUnselectedOptionsTextColor">?android:attr/textColorPrimary</item>
+        <item name="spPressedOptionBgColor">?attr/colorControlHighlight</item>
+        <item name="spSelectedOptionDrawable">@drawable/checkmark_medium_ff</item>
     </style>
 
     <style name="RecurrencePickerHeadingStyle">
@@ -214,25 +246,25 @@
     <!-- RecurrenceOptionCreator -->
 
     <style name="RecurrenceOptionCreatorStyle">
-        <item name="headerBackground">?attr/colorAccent</item>
-        <item name="endDateFormat">mediumFormat</item>
-        <item name="rocLabelTextAppearance">
+        <item name="spHeaderBackground">?attr/colorAccent</item>
+        <item name="spEndDateFormat">spMediumFormat</item>
+        <item name="spRocLabelTextAppearance">
             @style/STextAppearance.RecurrenceOptionCreatorLabelStyle
         </item>
-        <item name="rocWeekButtonStyle">
+        <item name="spRocWeekButtonStyle">
             @style/RecurrenceOptionCreatorWeekButtonStyle
         </item>
-        <item name="rocEndDateStyle">
+        <item name="spRocEndDateStyle">
             @style/RecurrenceOptionCreatorEndDateStyle
         </item>
-        <item name="rocFreqSpinnerStyle">@style/RecurrenceOptionCreatorFreqSpinnerStyle</item>
-        <item name="rocEndSpinnerStyle">@style/RecurrenceOptionCreatorEndSpinnerStyle</item>
-        <item name="rocFreqSpinnerItemStyle">@style/FreqSpinnerItemStyle</item>
-        <item name="rocEndSpinnerItemStyle">@style/EndSpinnerItemStyle</item>
-        <item name="rocEndSpinnerDropDownItemStyle">@style/EndSpinnerDropDownItemStyle</item>
-        <item name="weekButtonUnselectedTextColor">?attr/colorAccent</item>
-        <item name="weekButtonSelectedTextColor">?android:attr/textColorPrimaryInverse</item>
-        <item name="weekButtonSelectedCircleColor">?attr/colorAccent</item>
+        <item name="spRocFreqSpinnerStyle">@style/RecurrenceOptionCreatorFreqSpinnerStyle</item>
+        <item name="spRocEndSpinnerStyle">@style/RecurrenceOptionCreatorEndSpinnerStyle</item>
+        <item name="spRocFreqSpinnerItemStyle">@style/FreqSpinnerItemStyle</item>
+        <item name="spRocEndSpinnerItemStyle">@style/EndSpinnerItemStyle</item>
+        <item name="spRocEndSpinnerDropDownItemStyle">@style/EndSpinnerDropDownItemStyle</item>
+        <item name="spWeekButtonUnselectedTextColor">?attr/colorAccent</item>
+        <item name="spWeekButtonSelectedTextColor">?android:attr/textColorPrimaryInverse</item>
+        <item name="spWeekButtonSelectedCircleColor">?attr/colorAccent</item>
     </style>
 
     <style name="STextAppearance.RecurrenceOptionCreatorLabelStyle">
@@ -335,19 +367,17 @@
     <!-- Button Panel Style -->
 
     <style name="ButtonLayoutStyle">
-        <item name="presentation">button</item>
-        <item name="okActionDrawable">@drawable/checkmark_medium_ff</item>
-        <item name="cancelActionDrawable">@drawable/cancel_medium_ff</item>
-        <item name="iconColor">?attr/colorAccent</item>
-        <item name="buttonBgColor">?attr/colorButtonNormal</item>
-        <item name="buttonPressedBgColor">?attr/colorControlHighlight</item>
-        <item name="buttonBarBgColor">@android:color/transparent</item>
-        <item name="buttonModeOkCancelButtonStyle">@style/SButtonBarButtonStyle</item>
-        <item name="buttonModeSwitcherButtonStyle">?attr/buttonModeOkCancelButtonStyle</item>
-        <item name="extendPartitionThroughButtonBar">false</item>
-        <item name="extendedPartitionBgColor">?attr/colorAccent</item>
-        <item name="buttonInvertedBgColor">?attr/colorAccent</item>
-        <item name="buttonPressedInvertedBgColor">@color/ripple_material_dark</item>
+        <item name="spPresentation">spButton</item>
+        <item name="spOkActionDrawable">@drawable/checkmark_medium_ff</item>
+        <item name="spCancelActionDrawable">@drawable/cancel_medium_ff</item>
+        <item name="spIconColor">?attr/colorAccent</item>
+        <item name="spButtonBgColor">?attr/colorButtonNormal</item>
+        <item name="spButtonPressedBgColor">?attr/colorControlHighlight</item>
+        <item name="spButtonBarBgColor">@android:color/transparent</item>
+        <item name="spButtonModeOkCancelButtonStyle">@style/SButtonBarButtonStyle</item>
+        <item name="spButtonModeSwitcherButtonStyle">?attr/spButtonModeOkCancelButtonStyle</item>
+        <item name="spButtonInvertedBgColor">?attr/colorAccent</item>
+        <item name="spButtonPressedInvertedBgColor">@color/sp_ripple_material_dark</item>
     </style>
 
 </resources>

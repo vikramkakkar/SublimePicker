@@ -1,7 +1,7 @@
-<?xml version="1.0" encoding="utf-8"?><!--
+<?xml version="1.0" encoding="utf-8"?>
+<!--
 **
 ** Copyright 2013, The Android Open Source Project
-** Copyright (C) 2015 Vikram Kakkar
 **
 ** Licensed under the Apache License, Version 2.0 (the "License");
 ** you may not use this file except in compliance with the License.
@@ -23,15 +23,20 @@
     android:orientation="vertical">
 
     <include
-        layout="@layout/time_header_label"
+        layout="@layout/time_picker_header"
         android:layout_width="match_parent"
-        android:layout_height="@dimen/timepicker_header_height"
+        android:layout_height="@dimen/sp_timepicker_header_height"
         android:layout_gravity="center" />
 
     <com.appeaser.sublimepickerlibrary.timepicker.RadialTimePickerView
         android:id="@+id/radial_picker"
         android:layout_width="wrap_content"
-        android:layout_height="@dimen/timepicker_radial_picker_dimen"
-        android:layout_gravity="center" />
+        android:layout_height="@dimen/sp_timepicker_radial_picker_dimen"
+        android:layout_gravity="center"
+        android:layout_marginTop="@dimen/sp_timepicker_radial_picker_top_margin"
+        android:layout_marginStart="@dimen/sp_timepicker_radial_picker_horizontal_margin"
+        android:layout_marginEnd="@dimen/sp_timepicker_radial_picker_horizontal_margin"
+        android:layout_marginLeft="@dimen/sp_timepicker_radial_picker_horizontal_margin"
+        android:layout_marginRight="@dimen/sp_timepicker_radial_picker_horizontal_margin"/>
 
 </LinearLayout>

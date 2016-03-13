@@ -1,5 +1,5 @@
 /*
- * Copyright 2015 Vikram Kakkar
+ * Copyright 2016 Vikram Kakkar
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -35,7 +35,8 @@ import android.widget.FrameLayout;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
 
-import com.appeaser.sublimepickerlibrary.common.ButtonLayout;
+import com.appeaser.sublimepickerlibrary.common.ButtonHandler;
+import com.appeaser.sublimepickerlibrary.datepicker.SelectedDate;
 import com.appeaser.sublimepickerlibrary.datepicker.SublimeDatePicker;
 import com.appeaser.sublimepickerlibrary.drawables.OverflowDrawable;
 import com.appeaser.sublimepickerlibrary.helpers.SublimeListenerAdapter;
@@ -54,25 +55,30 @@ import java.util.TimeZone;
  * A customizable view that provisions picking of a date,
  * time and recurrence option, all from a single user-interface.
  * You can also view 'SublimePicker' as a collection of
- * material-styled (API 22, and _not_ 21) DatePicker, TimePicker
- * and RecurrencePicker, backported to API 16.
+ * material-styled (API 23) DatePicker, TimePicker
+ * and RecurrencePicker, backported to API 14.
  * You can opt for any combination of these three Pickers.
  */
 public class SublimePicker extends FrameLayout
         implements SublimeDatePicker.OnDateChangedListener,
-        SublimeDatePicker.ValidationCallback,
-        SublimeTimePicker.ValidationCallback {
+        SublimeDatePicker.DatePickerValidationCallback,
+        SublimeTimePicker.TimePickerValidationCallback {
+    private static final String TAG = SublimePicker.class.getSimpleName();
+
+    // Used for formatting date range
+    private static final long MONTH_IN_MILLIS = DateUtils.YEAR_IN_MILLIS / 12;
+
     // Container for 'SublimeDatePicker' & 'SublimeTimePicker'
-    LinearLayout llMainContentHolder;
+    private LinearLayout llMainContentHolder;
 
     // For access to 'SublimeRecurrencePicker'
-    ImageView ivRecurrenceOptionsDP, ivRecurrenceOptionsTP;
+    private ImageView ivRecurrenceOptionsDP, ivRecurrenceOptionsTP;
 
     // Recurrence picker options
-    SublimeRecurrencePicker mSublimeRecurrencePicker;
-    SublimeRecurrencePicker.RecurrenceOption mCurrentRecurrenceOption
+    private SublimeRecurrencePicker mSublimeRecurrencePicker;
+    private SublimeRecurrencePicker.RecurrenceOption mCurrentRecurrenceOption
             = SublimeRecurrencePicker.RecurrenceOption.DOES_NOT_REPEAT;
-    String mRecurrenceRule;
+    private String mRecurrenceRule;
 
     // Keeps track which picker is showing
     private SublimeOptions.Picker mCurrentPicker, mHiddenPicker;
@@ -90,7 +96,7 @@ public class SublimePicker extends FrameLayout
     private SublimeOptions mOptions;
 
     // Ok, cancel & switch button handler
-    private ButtonLayout mButtonLayout;
+    private ButtonHandler mButtonLayout;
 
     // Flags set based on client-set options {SublimeOptions}
     private boolean mDatePickerValid = true, mTimePickerValid = true,
@@ -99,10 +105,10 @@ public class SublimePicker extends FrameLayout
 
     // Used if listener returns
     // null/invalid(zero-length, empty) string
-    DateFormat mDefaultDateFormatter, mDefaultTimeFormatter;
+    private DateFormat mDefaultDateFormatter, mDefaultTimeFormatter;
 
     // Listener for recurrence picker
-    private SublimeRecurrencePicker.OnRepeatOptionSetListener mRepeatOptionSetListener = new SublimeRecurrencePicker.OnRepeatOptionSetListener() {
+    private final SublimeRecurrencePicker.OnRepeatOptionSetListener mRepeatOptionSetListener = new SublimeRecurrencePicker.OnRepeatOptionSetListener() {
         @Override
         public void onRepeatOptionSet(SublimeRecurrencePicker.RecurrenceOption option, String recurrenceRule) {
             mCurrentRecurrenceOption = option;
@@ -122,15 +128,13 @@ public class SublimePicker extends FrameLayout
     };
 
     // Handle ok, cancel & switch button click events
-    private ButtonLayout.Callback mButtonLayoutCallback = new ButtonLayout.Callback() {
+    private final ButtonHandler.Callback mButtonLayoutCallback = new ButtonHandler.Callback() {
         @Override
         public void onOkay() {
-            int year = -1, month = -1, day = -1;
+            SelectedDate selectedDate = null;
 
             if (mDatePickerEnabled) {
-                year = mDatePicker.getYear();
-                month = mDatePicker.getMonth();
-                day = mDatePicker.getDayOfMonth();
+                selectedDate = mDatePicker.getSelectedDate();
             }
 
             int hour = -1, minute = -1;
@@ -154,7 +158,7 @@ public class SublimePicker extends FrameLayout
 
             mListener.onDateTimeRecurrenceSet(SublimePicker.this,
                     // DatePicker
-                    year, month, day,
+                    selectedDate,
                     // TimePicker
                     hour, minute,
                     // RecurrencePicker
@@ -218,8 +222,7 @@ public class SublimePicker extends FrameLayout
         mDefaultTimeFormatter.setTimeZone(TimeZone.getTimeZone("GMT+0"));
 
         llMainContentHolder = (LinearLayout) findViewById(R.id.llMainContentHolder);
-        mButtonLayout = (ButtonLayout) findViewById(R.id.button_layout);
-
+        mButtonLayout = new ButtonHandler(this);
         initializeRecurrencePickerSwitch();
 
         mDatePicker = (SublimeDatePicker) findViewById(R.id.datePicker);
@@ -272,7 +275,7 @@ public class SublimePicker extends FrameLayout
         }
     }
 
-    public void updateDisplay() {
+    private void updateDisplay() {
         CharSequence switchButtonText;
 
         if (mCurrentPicker == SublimeOptions.Picker.DATE_PICKER) {
@@ -298,13 +301,10 @@ public class SublimePicker extends FrameLayout
                     switchButtonText = mDefaultTimeFormatter.format(toFormat);
                 }
 
-                mButtonLayout.updateSwitcherText(switchButtonText);
+                mButtonLayout.updateSwitcherText(SublimeOptions.Picker.DATE_PICKER, switchButtonText);
             }
 
-            mButtonLayout.updateVisiblePicker(SublimeOptions.Picker.DATE_PICKER);
-
             if (!mDatePickerSyncStateCalled) {
-                mDatePicker.syncState();
                 mDatePickerSyncStateCalled = true;
             }
         } else if (mCurrentPicker == SublimeOptions.Picker.TIME_PICKER) {
@@ -320,19 +320,20 @@ public class SublimePicker extends FrameLayout
             llMainContentHolder.setVisibility(View.VISIBLE);
 
             if (mButtonLayout.isSwitcherButtonEnabled()) {
-
-                Date toFormat = new Date(mDatePicker.getSelectedDay().getTimeInMillis());
-
-                switchButtonText = mListener.formatDate(toFormat);
+                SelectedDate selectedDate = mDatePicker.getSelectedDate();
+                switchButtonText = mListener.formatDate(selectedDate);
 
                 if (TextUtils.isEmpty(switchButtonText)) {
-                    switchButtonText = mDefaultDateFormatter.format(toFormat);
+                    if (selectedDate.getType() == SelectedDate.Type.SINGLE) {
+                        Date toFormat = new Date(mDatePicker.getSelectedDateInMillis());
+                        switchButtonText = mDefaultDateFormatter.format(toFormat);
+                    } else if (selectedDate.getType() == SelectedDate.Type.RANGE) {
+                        switchButtonText = formatDateRange(selectedDate);
+                    }
                 }
 
-                mButtonLayout.updateSwitcherText(switchButtonText);
+                mButtonLayout.updateSwitcherText(SublimeOptions.Picker.TIME_PICKER, switchButtonText);
             }
-
-            mButtonLayout.updateVisiblePicker(SublimeOptions.Picker.TIME_PICKER);
         } else if (mCurrentPicker == SublimeOptions.Picker.REPEAT_OPTION_PICKER) {
             updateHiddenPicker();
             mSublimeRecurrencePicker.updateView();
@@ -345,7 +346,49 @@ public class SublimePicker extends FrameLayout
         }
     }
 
-    void initializeRecurrencePickerSwitch() {
+    private String formatDateRange(SelectedDate selectedDate) {
+        Calendar startDate = selectedDate.getStartDate();
+        Calendar endDate = selectedDate.getEndDate();
+
+        startDate.set(Calendar.MILLISECOND, 0);
+        startDate.set(Calendar.SECOND, 0);
+        startDate.set(Calendar.MINUTE, 0);
+        startDate.set(Calendar.HOUR, 0);
+
+        endDate.set(Calendar.MILLISECOND, 0);
+        endDate.set(Calendar.SECOND, 0);
+        endDate.set(Calendar.MINUTE, 0);
+        endDate.set(Calendar.HOUR, 0);
+        // Move to next day since we are nulling out the time fields
+        endDate.add(Calendar.DAY_OF_MONTH, 1);
+
+        float elapsedTime = endDate.getTimeInMillis() - startDate.getTimeInMillis();
+
+        if (elapsedTime >= DateUtils.YEAR_IN_MILLIS) {
+            final float years = elapsedTime / DateUtils.YEAR_IN_MILLIS;
+
+            boolean roundUp = years - (int) years > 0.5f;
+            final int yearsVal = roundUp ? (int) (years + 1) : (int) years;
+
+            return "~" + yearsVal + " " + (yearsVal == 1 ? "year" : "years");
+        } else if (elapsedTime >= MONTH_IN_MILLIS) {
+            final float months = elapsedTime / MONTH_IN_MILLIS;
+
+            boolean roundUp = months - (int) months > 0.5f;
+            final int monthsVal = roundUp ? (int) (months + 1) : (int) months;
+
+            return "~" + monthsVal + " " + (monthsVal == 1 ? "month" : "months");
+        } else {
+            final float days = elapsedTime / DateUtils.DAY_IN_MILLIS;
+
+            boolean roundUp = days - (int) days > 0.5f;
+            final int daysVal = roundUp ? (int) (days + 1) : (int) days;
+
+            return "~" + daysVal + " " + (daysVal == 1 ? "day" : "days");
+        }
+    }
+
+    private void initializeRecurrencePickerSwitch() {
         ivRecurrenceOptionsDP = (ImageView) findViewById(R.id.ivRecurrenceOptionsDP);
         ivRecurrenceOptionsTP = (ImageView) findViewById(R.id.ivRecurrenceOptionsTP);
 
@@ -493,7 +536,9 @@ public class SublimePicker extends FrameLayout
         if (mOptions.animateLayoutChanges()) {
             // Basic Layout Change Animation(s)
             LayoutTransition layoutTransition = new LayoutTransition();
-            layoutTransition.enableTransitionType(LayoutTransition.CHANGING);
+            if (SUtils.isApi_16_OrHigher()) {
+                layoutTransition.enableTransitionType(LayoutTransition.CHANGING);
+            }
             setLayoutTransition(layoutTransition);
         } else {
             setLayoutTransition(null);
@@ -504,11 +549,13 @@ public class SublimePicker extends FrameLayout
         mRecurrencePickerEnabled = mOptions.isRecurrencePickerActive();
 
         if (mDatePickerEnabled) {
-            int[] dateParams = mOptions.getDateParams();
-            mDatePicker.init(dateParams[0] /* year */,
-                    dateParams[1] /* month of year */,
-                    dateParams[2] /* day of month */,
-                    this);
+            //int[] dateParams = mOptions.getDateParams();
+            //mDatePicker.init(dateParams[0] /* year */,
+            //        dateParams[1] /* month of year */,
+            //        dateParams[2] /* day of month */,
+            //        mOptions.canPickDateRange(),
+            //        this);
+            mDatePicker.init(mOptions.getDateParams(), mOptions.canPickDateRange(), this);
 
             long[] dateRange = mOptions.getDateRange();
 
@@ -545,10 +592,10 @@ public class SublimePicker extends FrameLayout
 
         if (mDatePickerEnabled && mTimePickerEnabled) {
             mButtonLayout.applyOptions(true /* show switch button */,
-                    mButtonLayoutCallback, /* STUB */ SublimeOptions.Picker.DATE_PICKER);
+                    mButtonLayoutCallback);
         } else {
             mButtonLayout.applyOptions(false /* hide switch button */,
-                    mButtonLayoutCallback, /* STUB */ SublimeOptions.Picker.DATE_PICKER);
+                    mButtonLayoutCallback);
         }
 
         if (!mDatePickerEnabled && !mTimePickerEnabled) {
@@ -559,7 +606,7 @@ public class SublimePicker extends FrameLayout
 
         if (mRecurrencePickerEnabled) {
             Calendar cal = mDatePickerEnabled ?
-                    mDatePicker.getSelectedDay()
+                    mDatePicker.getSelectedDate().getStartDate()
                     : SUtils.getCalendarForLocale(null, Locale.getDefault());
 
             mSublimeRecurrencePicker.initializeData(mRepeatOptionSetListener,
@@ -580,8 +627,13 @@ public class SublimePicker extends FrameLayout
     }
 
     @Override
-    public void onDateChanged(SublimeDatePicker view, int year, int monthOfYear, int dayOfMonth) {
-        mDatePicker.init(year, monthOfYear, dayOfMonth, this);
+    public void onDateChanged(SublimeDatePicker view, SelectedDate selectedDate) {
+        // TODO: Consider removing this propagation of date change event altogether
+        //mDatePicker.init(selectedDate.getStartDate().get(Calendar.YEAR),
+                //selectedDate.getStartDate().get(Calendar.MONTH),
+                //selectedDate.getStartDate().get(Calendar.DAY_OF_MONTH),
+                //mOptions.canPickDateRange(), this);
+        mDatePicker.init(selectedDate, mOptions.canPickDateRange(), this);
     }
 
     @Override

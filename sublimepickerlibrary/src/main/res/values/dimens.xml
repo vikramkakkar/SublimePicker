@@ -34,7 +34,7 @@
     <dimen name="datepicker_day_number_select_circle_radius">13.5dp</dimen>
 
     <!-- Dialog button bar height -->
-    <dimen name="dialog_button_bar_height">48dip</dimen>
+    <dimen name="sp_dialog_button_bar_height">48dip</dimen>
 
     <dimen name="button_inset_horizontal_material">4dp</dimen>
     <dimen name="button_inset_vertical_material">6dp</dimen>
@@ -68,7 +68,7 @@
     <dimen name="timepicker_ampm_label_size">16sp</dimen>
     <dimen name="timepicker_time_label_size">60sp</dimen>
 
-    <dimen name="options_size">30dp</dimen>
+    <dimen name="options_size">36dp</dimen>
     <dimen name="close_drawable_size">32dp</dimen>
 
     <!-- SublimeRecurrencePicker -->
@@ -90,8 +90,55 @@
     <dimen name="fake_shadow_size">8dp</dimen>
 
     <!-- Button Panel -->
-    <dimen name="button_bar_padding_start">12dp</dimen>
-    <dimen name="button_bar_padding_end">12dp</dimen>
-    <dimen name="button_bar_padding_top">8dp</dimen>
-    <dimen name="button_bar_padding_bottom">8dp</dimen>
+    <dimen name="sp_button_bar_padding_start">12dp</dimen>
+    <dimen name="sp_button_bar_padding_end">12dp</dimen>
+    <dimen name="sp_button_bar_padding_top">8dp</dimen>
+    <dimen name="sp_button_bar_padding_bottom">8dp</dimen>
+
+    <!-- Text size for the time picker header HH:MM label. This value is large
+         enough that we don't need to use scaled pixels, dp is fine. -->
+    <dimen name="sp_timepicker_time_label_size">60dp</dimen>
+    <dimen name="sp_timepicker_ampm_label_size">16dp</dimen>
+
+    <dimen name="sp_date_picker_date_range_label_size">18dp</dimen>
+    <dimen name="sp_date_picker_date_label_size">34dp</dimen>
+
+    <dimen name="sp_datepicker_list_year_activated_label_size">26sp</dimen>
+    <dimen name="sp_datepicker_list_year_label_size">16sp</dimen>
+
+    <dimen name="sp_date_picker_month_text_size">14sp</dimen>
+    <dimen name="sp_date_picker_day_of_week_text_size">12sp</dimen>
+    <dimen name="sp_date_picker_day_text_size">12sp</dimen>
+
+    <dimen name="sp_month_view_range_padding">1dp</dimen>
+    <dimen name="sp_date_picker_day_selector_radius">20dp</dimen>
+    <dimen name="sp_date_picker_day_width">44dp</dimen>
+    <dimen name="sp_date_picker_day_height">40dp</dimen>
+    <dimen name="sp_date_picker_day_of_week_height">36dp</dimen>
+    <dimen name="sp_date_picker_month_height">56dp</dimen>
+
+    <dimen name="sp_month_scroll_threshold">30dp</dimen>
+
+    <dimen name="sp_day_picker_padding_horizontal">20dp</dimen>
+    <dimen name="sp_day_picker_padding_top">6dp</dimen>
+
+    <dimen name="sp_timepicker_selector_radius">20dp</dimen>
+    <dimen name="sp_timepicker_selector_stroke">2dp</dimen>
+    <dimen name="sp_timepicker_selector_dot_radius">2dp</dimen>
+    <dimen name="sp_timepicker_center_dot_radius">3dp</dimen>
+    <dimen name="sp_timepicker_text_size_normal">16sp</dimen>
+    <dimen name="sp_timepicker_text_size_inner">12sp</dimen>
+    <dimen name="sp_timepicker_text_inset_normal">22dp</dimen>
+    <dimen name="sp_timepicker_text_inset_inner">58dp</dimen>
+
+    <dimen name="sp_timepicker_radial_picker_horizontal_margin">16dp</dimen>
+    <dimen name="sp_timepicker_radial_picker_top_margin">16dp</dimen>
+    <dimen name="sp_timepicker_radial_picker_dimen">296dp</dimen>
+
+    <dimen name="sp_timepicker_separator_padding">2dp</dimen>
+    <dimen name="sp_timepicker_am_top_padding">4dp</dimen>
+    <dimen name="sp_timepicker_pm_top_padding">4dp</dimen>
+    <dimen name="sp_timepicker_ampm_horizontal_padding">16dp</dimen>
+
+    <dimen name="sp_timepicker_header_height">96dp</dimen>
 </resources>

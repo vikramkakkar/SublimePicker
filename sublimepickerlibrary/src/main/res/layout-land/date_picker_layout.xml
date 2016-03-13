@@ -1,6 +1,6 @@
-<?xml version="1.0" encoding="utf-8"?><!--
-     Copyright (C) 2011 The Android Open Source Project
-     Copyright (C) 2015 Vikram Kakkar
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+     Copyright (C) 2015 The Android Open Source Project
 
      Licensed under the Apache License, Version 2.0 (the "License");
      you may not use this file except in compliance with the License.
@@ -17,17 +17,88 @@
 
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
-    android:layout_height="@dimen/datepicker_view_animator_height"
-    android:gravity="center"
-    android:orientation="horizontal"
-    android:minWidth="@dimen/datepicker_dialog_width">
+    android:layout_height="match_parent"
+    android:orientation="horizontal">
 
     <include
-        layout="@layout/date_picker_selected_date"
+        layout="@layout/date_picker_header"
+        android:layout_width="168dp"
+        android:layout_height="match_parent" />
+
+    <LinearLayout
         android:layout_width="0dp"
         android:layout_height="match_parent"
-        android:layout_weight="1" />
+        android:layout_weight="1"
+        android:orientation="vertical">
 
-    <include layout="@layout/date_picker_view_animator" />
+        <include
+            layout="@layout/date_picker_view_animator"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_weight="0"
+            android:paddingStart="@dimen/sp_button_bar_padding_start"
+            android:paddingLeft="@dimen/sp_button_bar_padding_start"
+            android:paddingEnd="@dimen/sp_button_bar_padding_end"
+            android:paddingRight="@dimen/sp_button_bar_padding_end"
+            android:paddingTop="@dimen/sp_button_bar_padding_top"
+            android:paddingBottom="@dimen/sp_button_bar_padding_bottom">
+
+            <Space
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:visibility="invisible" />
+
+            <ImageView
+                android:id="@+id/imageViewNegativeDP"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:clickable="true"
+                android:src="?attr/spLandscapeCancelActionDrawable"
+                android:minWidth="@dimen/sp_dialog_button_bar_height"
+                android:minHeight="@dimen/sp_dialog_button_bar_height"
+                android:scaleType="center"
+                android:contentDescription="@string/cd_negative_component"
+                android:visibility="gone"
+                android:layout_weight="0" />
+
+            <ImageView
+                android:id="@+id/imageViewPositiveDP"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:clickable="true"
+                android:src="?attr/spLandscapeOkActionDrawable"
+                android:minWidth="@dimen/sp_dialog_button_bar_height"
+                android:minHeight="@dimen/sp_dialog_button_bar_height"
+                android:scaleType="center"
+                android:contentDescription="@string/cd_positive_component"
+                android:visibility="gone"
+                android:layout_weight="0" />
+
+            <Button
+                android:id="@+id/buttonNegativeDP"
+                style="?attr/spLandscapeButtonModeOkCancelButtonStyle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:visibility="gone"
+                android:layout_weight="0" />
+
+            <Button
+                android:id="@+id/buttonPositiveDP"
+                style="?attr/spLandscapeButtonModeOkCancelButtonStyle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:visibility="gone"
+                android:layout_weight="0" />
+
+        </LinearLayout>
+
+    </LinearLayout>
 
 </LinearLayout>

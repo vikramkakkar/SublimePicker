@@ -14,4 +14,7 @@
 -->
 <resources>
     <integer name="sp_disabled_alpha_animation_duration">100</integer>
+
+     <integer name="sp_time_picker_column_start_material">0</integer>
+     <integer name="sp_time_picker_column_end_material">1</integer>
 </resources>

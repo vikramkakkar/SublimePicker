@@ -24,7 +24,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="@string/recurrence_heading"
-        style="?attr/recurrencePickerHeadingStyle" />
+        style="?attr/spRecurrencePickerHeadingStyle" />
 
     <ScrollView
         android:id="@+id/svRecurrenceOptionsMenu"
@@ -41,49 +41,49 @@
 
             <TextView
                 android:id="@+id/tvChosenCustomOption"
-                style="?attr/recurrencePickerOptionsStyle"
+                style="?attr/spRecurrencePickerOptionsStyle"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:visibility="gone" />
 
             <TextView
                 android:id="@+id/tvDoesNotRepeat"
-                style="?attr/recurrencePickerOptionsStyle"
+                style="?attr/spRecurrencePickerOptionsStyle"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:text="@string/recurrence_does_not_repeat" />
 
             <TextView
                 android:id="@+id/tvDaily"
-                style="?attr/recurrencePickerOptionsStyle"
+                style="?attr/spRecurrencePickerOptionsStyle"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:text="@string/recurrence_daily" />
 
             <TextView
                 android:id="@+id/tvWeekly"
-                style="?attr/recurrencePickerOptionsStyle"
+                style="?attr/spRecurrencePickerOptionsStyle"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:text="@string/recurrence_weekly" />
 
             <TextView
                 android:id="@+id/tvMonthly"
-                style="?attr/recurrencePickerOptionsStyle"
+                style="?attr/spRecurrencePickerOptionsStyle"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:text="@string/recurrence_monthly" />
 
             <TextView
                 android:id="@+id/tvYearly"
-                style="?attr/recurrencePickerOptionsStyle"
+                style="?attr/spRecurrencePickerOptionsStyle"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:text="@string/recurrence_yearly" />
 
             <TextView
                 android:id="@+id/tvCustom"
-                style="?attr/recurrencePickerOptionsStyle"
+                style="?attr/spRecurrencePickerOptionsStyle"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:text="@string/recurrence_custom" />

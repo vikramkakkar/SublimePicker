@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <integer name="sp_time_picker_column_start_material">1</integer>
+    <integer name="sp_time_picker_column_end_material">0</integer>
+
+</resources>

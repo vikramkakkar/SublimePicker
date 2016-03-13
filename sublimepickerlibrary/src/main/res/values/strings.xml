@@ -129,4 +129,9 @@
     <string name="recurrence_yearly">every year</string>
     <string name="recurrence_custom">custom&#8230;</string>
 
+    <!-- Description of the button to move to the previous month. [CHAR LIMIT=NONE] -->
+    <string name="sp_date_picker_prev_month_button">Previous month</string>
+    <!-- Description of the button to move to the next month. [CHAR LIMIT=NONE] -->
+    <string name="sp_date_picker_next_month_button">Next month</string>
+
 </resources>

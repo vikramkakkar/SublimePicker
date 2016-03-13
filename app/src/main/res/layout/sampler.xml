@@ -123,24 +123,14 @@
                 android:textSize="@dimen/sampler_text_size" />
 
             <CheckBox
-                android:id="@+id/cbShowExtendedBg"
+                android:id="@+id/cbAllowDateRangeSelection"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="20dp"
                 android:layout_marginTop="10dp"
                 android:layout_marginRight="20dp"
-                android:text="Show extended background in landscape orientation?"
-                android:textSize="@dimen/sampler_text_size" />
-
-            <CheckBox
-                android:id="@+id/cbShowSingleMonthPerPosition"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginLeft="20dp"
-                android:layout_marginTop="5dp"
-                android:layout_marginRight="20dp"
                 android:layout_marginBottom="20dp"
-                android:text="Show single month per position in DatePicker?"
+                android:text="Allow date range selection?"
                 android:textSize="@dimen/sampler_text_size" />
 
             <RelativeLayout
@@ -166,47 +156,80 @@
                     android:textAllCaps="true"
                     android:text="date" />
 
-                <LinearLayout
-                    android:id="@+id/llDateHolder"
+                <FrameLayout
+                    android:id="@+id/flDateHolder"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_below="@id/tvDateLabel"
                     android:background="@drawable/info_bg"
                     android:layout_marginLeft="10dp"
-                    android:layout_marginRight="10dp"
-                    android:orientation="horizontal">
+                    android:layout_marginRight="10dp">
 
-                    <TextView
-                        android:id="@+id/tvYear"
-                        android:layout_width="0dp"
+                    <LinearLayout
+                        android:id="@+id/llDateHolder"
+                        android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:layout_weight="1"
-                        android:layout_margin="10dp"
-                        android:textColor="@android:color/white" />
+                        android:orientation="horizontal">
 
-                    <TextView
-                        android:id="@+id/tvMonth"
-                        android:layout_width="0dp"
+                        <TextView
+                            android:id="@+id/tvYear"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:layout_margin="10dp"
+                            android:textColor="@android:color/white" />
+
+                        <TextView
+                            android:id="@+id/tvMonth"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:layout_margin="10dp"
+                            android:textColor="@android:color/white" />
+
+                        <TextView
+                            android:id="@+id/tvDay"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:layout_margin="10dp"
+                            android:textColor="@android:color/white" />
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/llDateRangeHolder"
+                        android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:layout_weight="1"
-                        android:layout_margin="10dp"
-                        android:textColor="@android:color/white" />
+                        android:orientation="vertical">
 
-                    <TextView
-                        android:id="@+id/tvDay"
-                        android:layout_width="0dp"
-                        android:layout_height="wrap_content"
-                        android:layout_weight="1"
-                        android:layout_margin="10dp"
-                        android:textColor="@android:color/white" />
+                        <TextView
+                            android:id="@+id/tvStartDate"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="10dp"
+                            android:layout_marginRight="10dp"
+                            android:layout_marginTop="10dp"
+                            android:textColor="@android:color/white" />
 
-                </LinearLayout>
+                        <TextView
+                            android:id="@+id/tvEndDate"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="10dp"
+                            android:layout_marginRight="10dp"
+                            android:layout_marginBottom="10dp"
+                            android:textColor="@android:color/white" />
+
+                    </LinearLayout>
+
+                </FrameLayout>
 
                 <TextView
                     android:id="@+id/tvTimeLabel"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_below="@id/llDateHolder"
+                    android:layout_below="@id/flDateHolder"
                     android:layout_marginLeft="10dp"
                     android:layout_marginRight="10dp"
                     android:layout_marginTop="10dp"

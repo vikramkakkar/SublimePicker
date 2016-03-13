@@ -45,16 +45,8 @@
                         android:id="@+id/freqSpinner"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        style="?attr/rocFreqSpinnerStyle" />
+                        style="?attr/spRocFreqSpinnerStyle" />
 
-                    <!-- Don't understand what the purpose of
-                         this switch is -->
-                    <!--<Switch
-                        android:id="@+id/repeat_switch"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_gravity="center_vertical"
-                        android:layout_marginLeft="4dp" />-->
                 </FrameLayout>
 
                 <LinearLayout
@@ -76,7 +68,7 @@
 
                         <TextView
                             android:id="@+id/intervalPreText"
-                            android:textAppearance="?attr/rocLabelTextAppearance"
+                            android:textAppearance="?attr/spRocLabelTextAppearance"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content" />
 
@@ -96,7 +88,7 @@
 
                         <TextView
                             android:id="@+id/intervalPostText"
-                            android:textAppearance="?attr/rocLabelTextAppearance"
+                            android:textAppearance="?attr/spRocLabelTextAppearance"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content" />
                     </LinearLayout>
@@ -134,7 +126,7 @@
                             android:id="@+id/endSpinner"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            style="?attr/rocEndSpinnerStyle" />
+                            style="?attr/spRocEndSpinnerStyle" />
 
                         <EditText
                             android:id="@+id/endCount"
@@ -151,7 +143,7 @@
 
                         <TextView
                             android:id="@+id/postEndCount"
-                            android:textAppearance="?attr/rocLabelTextAppearance"
+                            android:textAppearance="?attr/spRocLabelTextAppearance"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:layout_gravity="center_vertical"
@@ -161,7 +153,7 @@
 
                         <TextView
                             android:id="@+id/endDate"
-                            style="?attr/rocEndDateStyle"
+                            style="?attr/spRocEndDateStyle"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content" />
                     </LinearLayout>
@@ -169,14 +161,14 @@
             </LinearLayout>
         </ScrollView>
 
-        <com.appeaser.sublimepickerlibrary.common.ButtonLayout
-            android:id="@+id/button_layout"
+        <com.appeaser.sublimepickerlibrary.common.DecisionButtonLayout
+            android:id="@+id/roc_decision_button_layout"
             android:layout_width="match_parent"
             android:layout_height="wrap_content" />
 
     </LinearLayout>
 
-    <com.appeaser.sublimepickerlibrary.recurrencepicker.DatePickerView
+    <com.appeaser.sublimepickerlibrary.datepicker.RecurrenceEndDatePicker
         android:id="@+id/date_only_picker"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content" />

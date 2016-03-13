@@ -17,9 +17,9 @@
 <resources>
 
     <style name="AppTheme" parent="Theme.AppCompat.Light.NoActionBar">
-        <item name="colorAccent">#D94818</item>
-        <item name="colorPrimaryDark">#141414</item>
-        <item name="colorPrimary">#212121</item>
+        <item name="colorAccent">@color/c_accent</item>
+        <item name="colorPrimaryDark">@color/c_primary_dark</item>
+        <item name="colorPrimary">@color/c_primary</item>
         <item name="android:textColorPrimary">#212121</item>
         <item name="android:textColorSecondary">#727272</item>
         <item name="android:textColorPrimaryInverse">#FFFFFF</item>
@@ -28,62 +28,12 @@
     </style>
 
     <style name="SPDefaultImpl" parent="SublimePickerStyleLight">
-        <item name="colorAccent">#D94818</item>
-        <item name="colorPrimaryDark">#141414</item>
-        <item name="colorPrimary">#212121</item>
+        <item name="colorAccent">@color/c_accent</item>
+        <item name="colorPrimaryDark">@color/c_primary_dark</item>
+        <item name="colorPrimary">@color/c_primary</item>
         <item name="android:textColorPrimary">#212121</item>
         <item name="android:textColorSecondary">#727272</item>
         <item name="android:textColorPrimaryInverse">#FFFFFF</item>
     </style>
-
-    <!-- Switch to default -->
-
-    <style name="SublimePickerDefault">
-        <item name="sublimePickerStyle">@style/SPDefaultImpl</item>
-    </style>
-
-    <!-- ShowExtendedBg -->
-
-    <style name="ShowExtendedBg">
-        <item name="sublimePickerStyle">@style/SPExtendedBg</item>
-    </style>
-
-    <style name="SPExtendedBg" parent="SPDefaultImpl">
-        <item name="spButtonLayoutStyle">@style/BLExtendedBgImpl</item>
-    </style>
-
-    <style name="BLExtendedBgImpl" parent="ButtonLayoutStyle">
-        <item name="buttonModeSwitcherButtonStyle">@style/SInvertedButtonBarButtonStyle</item>
-        <item name="extendPartitionThroughButtonBar">true</item>
-        <item name="extendedPartitionBgColor">?attr/colorAccent</item>
-        <item name="buttonInvertedBgColor">?attr/colorAccent</item>
-        <item name="buttonPressedInvertedBgColor">@color/ripple_material_dark</item>
-    </style>
-
-    <!-- ShowSingleMonthPerPosition -->
-
-    <style name="ShowSingleMonthPerPosition">
-        <item name="sublimePickerStyle">@style/SPSingleMonthPerPosition</item>
-    </style>
-
-    <style name="SPSingleMonthPerPosition" parent="SPDefaultImpl">
-        <item name="spMonthViewStyle">@style/MVSingleMonthPerPositionImpl</item>
-    </style>
-
-    <style name="MVSingleMonthPerPositionImpl" parent="MonthViewStyle">
-        <item name="showSingleMonthPerPosition">true</item>
-    </style>
-
-    <!-- ShowExtendedBg + ShowSingleMonthPerPosition -->
-
-    <style name="ShowExtendedBgAndSingleMonthPerPosition">
-        <item name="sublimePickerStyle">@style/SPExtendedBgAndSingleMonthPerPosition</item>
-    </style>
-
-    <style name="SPExtendedBgAndSingleMonthPerPosition" parent="SPDefaultImpl">
-        <item name="spMonthViewStyle">@style/MVSingleMonthPerPositionImpl</item>
-        <item name="spButtonLayoutStyle">@style/BLExtendedBgImpl</item>
-    </style>
-
 
 </resources>

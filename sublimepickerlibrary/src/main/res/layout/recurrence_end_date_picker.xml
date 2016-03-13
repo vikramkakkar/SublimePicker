@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <com.appeaser.sublimepickerlibrary.datepicker.DayPickerView
+        android:id="@+id/redp_day_picker"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:tag="@string/recurrence_end_date_picker_tag"/>
+
+    <com.appeaser.sublimepickerlibrary.common.DecisionButtonLayout
+        android:id="@+id/redp_decision_button_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="0"/>
+
+</LinearLayout>

@@ -30,19 +30,31 @@ import android.graphics.drawable.StateListDrawable;
 import android.graphics.drawable.shapes.OvalShape;
 import android.graphics.drawable.shapes.RoundRectShape;
 import android.os.Build;
+import android.support.annotation.NonNull;
+import android.support.v4.graphics.drawable.DrawableCompat;
+import android.support.v4.view.ViewCompat;
+import android.util.Log;
 import android.view.ContextThemeWrapper;
+import android.view.HapticFeedbackConstants;
 import android.view.View;
+import android.widget.ImageView;
 
 import com.appeaser.sublimepickerlibrary.R;
 
+import java.text.DateFormat;
+import java.text.ParseException;
+import java.text.SimpleDateFormat;
 import java.util.Arrays;
 import java.util.Calendar;
+import java.util.Date;
 import java.util.Locale;
 
 /**
  * Utilities
  */
 public class SUtils {
+
+    private static final String TAG = SUtils.class.getSimpleName();
 
     // Frequently used theme-dependent colors
     public static int COLOR_ACCENT,
@@ -54,7 +66,8 @@ public class SUtils {
             COLOR_PRIMARY,
             COLOR_PRIMARY_DARK,
             COLOR_TEXT_SECONDARY,
-            COLOR_BACKGROUND;
+            COLOR_BACKGROUND,
+            COLOR_TEXT_SECONDARY_INVERSE;
 
     // Corner radius for drawables
     public static int CORNER_RADIUS;
@@ -72,7 +85,8 @@ public class SUtils {
                         R.attr.colorPrimary,
                         R.attr.colorPrimaryDark,
                         android.R.attr.textColorSecondary,
-                        android.R.attr.colorBackground});
+                        android.R.attr.colorBackground,
+                        android.R.attr.textColorSecondaryInverse});
 
         if (a.hasValue(0))
             COLOR_ACCENT = a.getColor(0, Color.TRANSPARENT);
@@ -104,10 +118,35 @@ public class SUtils {
         if (a.hasValue(9))
             COLOR_BACKGROUND = a.getColor(9, Color.TRANSPARENT);
 
+        if (a.hasValue(10))
+            COLOR_TEXT_SECONDARY_INVERSE = a.getColor(10, Color.TRANSPARENT);
+
         a.recycle();
 
         CORNER_RADIUS = context.getResources()
                 .getDimensionPixelSize(R.dimen.control_corner_material);
+
+        if (Config.DEBUG) {
+            Log.i(TAG, "COLOR_ACCENT: " + Integer.toHexString(COLOR_ACCENT));
+            Log.i(TAG, "COLOR_CONTROL_HIGHLIGHT: " + Integer.toHexString(COLOR_CONTROL_HIGHLIGHT));
+            Log.i(TAG, "COLOR_CONTROL_ACTIVATED: " + Integer.toHexString(COLOR_CONTROL_ACTIVATED));
+            Log.i(TAG, "COLOR_BUTTON_NORMAL: " + Integer.toHexString(COLOR_BUTTON_NORMAL));
+            Log.i(TAG, "COLOR_TEXT_PRIMARY: " + Integer.toHexString(COLOR_TEXT_PRIMARY));
+            Log.i(TAG, "COLOR_TEXT_PRIMARY_INVERSE: " + Integer.toHexString(COLOR_TEXT_PRIMARY_INVERSE));
+            Log.i(TAG, "COLOR_PRIMARY: " + Integer.toHexString(COLOR_PRIMARY));
+            Log.i(TAG, "COLOR_PRIMARY_DARK: " + Integer.toHexString(COLOR_PRIMARY_DARK));
+            Log.i(TAG, "COLOR_TEXT_SECONDARY: " + Integer.toHexString(COLOR_TEXT_SECONDARY));
+            Log.i(TAG, "COLOR_BACKGROUND: " + Integer.toHexString(COLOR_BACKGROUND));
+            Log.i(TAG, "COLOR_TEXT_SECONDARY_INVERSE: " + Integer.toHexString(COLOR_TEXT_SECONDARY_INVERSE));
+        }
+    }
+
+    public static boolean isApi_16_OrHigher() {
+        return Build.VERSION.SDK_INT >= Build.VERSION_CODES.JELLY_BEAN;
+    }
+
+    public static boolean isApi_17_OrHigher() {
+        return Build.VERSION.SDK_INT >= Build.VERSION_CODES.JELLY_BEAN_MR1;
     }
 
     public static boolean isApi_18_OrHigher() {
@@ -122,13 +161,23 @@ public class SUtils {
         return Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP_MR1;
     }
 
+    public static boolean isApi_23_OrHigher() {
+        return Build.VERSION.SDK_INT >= Build.VERSION_CODES.M;
+    }
+
     public static void setViewBackground(View view, Drawable bg) {
         int paddingL = view.getPaddingLeft();
         int paddingT = view.getPaddingTop();
         int paddingR = view.getPaddingRight();
         int paddingB = view.getPaddingBottom();
 
-        view.setBackground(bg);
+        if (isApi_16_OrHigher()) {
+            view.setBackground(bg);
+        } else {
+            //noinspection deprecation
+            view.setBackgroundDrawable(bg);
+        }
+
         view.setPadding(paddingL, paddingT, paddingR, paddingB);
     }
 
@@ -224,8 +273,18 @@ public class SUtils {
         return shapeDrawable;
     }
 
+    // Borrowed from MathUtils
     public static int constrain(int amount, int low, int high) {
         return amount < low ? low : (amount > high ? high : amount);
+    }
+
+    // Borrowed from MathUtils
+    public static long constrain(long amount, long low, long high) {
+        return amount < low ? low : (amount > high ? high : amount);
+    }
+
+    public static boolean isLayoutRtlCompat(@NonNull View view) {
+        return (ViewCompat.getLayoutDirection(view) == ViewCompat.LAYOUT_DIRECTION_RTL);
     }
 
     // Creates a drawable with the supplied color and corner radii
@@ -318,5 +377,118 @@ public class SUtils {
                             (corners & CORNER_BOTTOM_RIGHT) != 0 ? CORNER_RADIUS : 0,
                             (corners & CORNER_BOTTOM_LEFT) != 0 ? CORNER_RADIUS : 0));
         }
+    }
+
+    public static void setImageTintList(ImageView imageView, ColorStateList colorStateList) {
+        if (isApi_21_OrHigher()) {
+            imageView.setImageTintList(colorStateList);
+        } else {
+            Drawable drawable = imageView.getDrawable();
+
+            if (drawable != null) {
+                Drawable wrapped = DrawableCompat.wrap(drawable);
+                DrawableCompat.setTintList(wrapped, colorStateList);
+                imageView.setImageDrawable(wrapped);
+            }
+        }
+    }
+
+    public static final int STATE_ENABLED = 1, STATE_ACTIVATED = 1 << 1, STATE_PRESSED = 1 << 2;
+
+    private static final int[][] STATE_SETS = new int[8][];
+
+    static {
+        STATE_SETS[0] = new int[]{0};
+        STATE_SETS[1] = new int[]{android.R.attr.state_enabled};
+        STATE_SETS[2] = new int[]{android.R.attr.state_activated};
+        STATE_SETS[3] = new int[]{android.R.attr.state_enabled, android.R.attr.state_activated};
+        STATE_SETS[4] = new int[]{android.R.attr.state_pressed};
+        STATE_SETS[5] = new int[]{android.R.attr.state_enabled, android.R.attr.state_pressed};
+        STATE_SETS[6] = new int[]{android.R.attr.state_activated, android.R.attr.state_pressed};
+        STATE_SETS[7] = new int[]{android.R.attr.state_enabled, android.R.attr.state_activated, android.R.attr.state_pressed};
+    }
+
+    public static int[] resolveStateSet(int mask) {
+        return STATE_SETS[mask];
+    }
+
+    /**
+     * String for parsing dates.
+     */
+    private static final String DATE_FORMAT = "MM/dd/yyyy";
+
+    /**
+     * Date format for parsing dates.
+     */
+    private static final DateFormat DATE_FORMATTER = new SimpleDateFormat(DATE_FORMAT);
+
+    public static boolean parseDate(String date, Calendar outDate) {
+        if (date == null || date.isEmpty()) {
+            return false;
+        }
+
+        try {
+            final Date parsedDate = DATE_FORMATTER.parse(date);
+            outDate.setTime(parsedDate);
+            return true;
+        } catch (ParseException e) {
+            Log.w(TAG, "Date: " + date + " not in format: " + DATE_FORMAT);
+            return false;
+        }
+    }
+
+    private static final int CHANGE_YEAR = 1582;
+
+    /**
+     * Borrowed from {@link java.util.GregorianCalendar}
+     *
+     * @param year Year to check
+     * @return true if given `year` is a leap year, false otherwise
+     */
+    private static boolean isLeapYear(int year) {
+        if (year > CHANGE_YEAR) {
+            return year % 4 == 0 && (year % 100 != 0 || year % 400 == 0);
+        }
+
+        return year % 4 == 0;
+    }
+
+    public static int getDaysInMonth(int month, int year) {
+        switch (month) {
+            case Calendar.JANUARY:
+            case Calendar.MARCH:
+            case Calendar.MAY:
+            case Calendar.JULY:
+            case Calendar.AUGUST:
+            case Calendar.OCTOBER:
+            case Calendar.DECEMBER:
+                return 31;
+            case Calendar.APRIL:
+            case Calendar.JUNE:
+            case Calendar.SEPTEMBER:
+            case Calendar.NOVEMBER:
+                return 30;
+            case Calendar.FEBRUARY:
+                // This is not correct. See isLeapYear(int) above
+                //return (year % 4 == 0) ? 29 : 28;
+                return isLeapYear(year) ? 29 : 28;
+            default:
+                throw new IllegalArgumentException("Invalid Month");
+        }
+    }
+
+    @TargetApi(Build.VERSION_CODES.LOLLIPOP)
+    public static void vibrateForDatePicker(View view) {
+        // Using a different haptic feedback constant
+        view.performHapticFeedback(HapticFeedbackConstants.VIRTUAL_KEY
+                                     /*(5) - HapticFeedbackConstants.CALENDAR_DATE*/);
+    }
+
+    @TargetApi(Build.VERSION_CODES.LOLLIPOP)
+    public static void vibrateForTimePicker(View view) {
+        view.performHapticFeedback(isApi_21_OrHigher() ?
+                        HapticFeedbackConstants.CLOCK_TICK
+                        : HapticFeedbackConstants.VIRTUAL_KEY
+        );
     }
 }

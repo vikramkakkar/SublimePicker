@@ -55,9 +55,9 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import com.appeaser.sublimepickerlibrary.R;
-import com.appeaser.sublimepickerlibrary.common.ButtonLayout;
+import com.appeaser.sublimepickerlibrary.common.DecisionButtonLayout;
+import com.appeaser.sublimepickerlibrary.datepicker.RecurrenceEndDatePicker;
 import com.appeaser.sublimepickerlibrary.drawables.CheckableDrawable;
-import com.appeaser.sublimepickerlibrary.helpers.SublimeOptions;
 import com.appeaser.sublimepickerlibrary.utilities.RecurrenceUtils;
 import com.appeaser.sublimepickerlibrary.utilities.SUtils;
 
@@ -75,7 +75,7 @@ public class RecurrenceOptionCreator extends FrameLayout
         implements AdapterView.OnItemSelectedListener,
         RadioGroup.OnCheckedChangeListener,
         CompoundButton.OnCheckedChangeListener,
-        View.OnClickListener, DatePickerView.OnDateSetListener {
+        View.OnClickListener, RecurrenceEndDatePicker.OnDateSetListener {
 
     private static final String TAG = "RecurrenceOptionCreator";
 
@@ -96,12 +96,13 @@ public class RecurrenceOptionCreator extends FrameLayout
     private static final int FIFTH_WEEK_IN_A_MONTH = 5;
     private static final int LAST_NTH_DAY_OF_WEEK = -1;
 
-    // Stripped down version of 'SublimeDatePicker'
-    private DatePickerView mDateOnlyPicker;
+    // Stripped down version of 'SublimeMaterialDatePicker'
+    //private DatePickerView mDateOnlyPicker;
+    private RecurrenceEndDatePicker mDateOnlyPicker;
     private View mRecurrencePicker;
 
     // OK/Cancel buttons
-    private ButtonLayout mButtonLayout;
+    private DecisionButtonLayout mButtonLayout;
 
     // Uses either to DateFormat.SHORT or DateFormat.MEDIUM
     // to format the supplied end date. The option can only be
@@ -177,7 +178,7 @@ public class RecurrenceOptionCreator extends FrameLayout
     private OnRecurrenceSetListener mRecurrenceSetListener;
     int mHeaderBackgroundColor;
 
-    private ButtonLayout.Callback mButtonLayoutCallback = new ButtonLayout.Callback() {
+    private DecisionButtonLayout.Callback mButtonLayoutCallback = new DecisionButtonLayout.Callback() {
         @Override
         public void onOkay() {
             String rrule;
@@ -194,11 +195,6 @@ public class RecurrenceOptionCreator extends FrameLayout
         @Override
         public void onCancel() {
             mRecurrenceSetListener.onCancelled();
-        }
-
-        @Override
-        public void onSwitch() {
-            // Intentionally left empty
         }
     };
 
@@ -324,6 +320,10 @@ public class RecurrenceOptionCreator extends FrameLayout
         public RecurrenceModel() {
         }
 
+        public RecurrenceModel(Parcel in) {
+            readFromParcel(in);
+        }
+
         @Override
         public void writeToParcel(Parcel dest, int flags) {
             dest.writeInt(freq);
@@ -340,6 +340,36 @@ public class RecurrenceOptionCreator extends FrameLayout
             dest.writeInt(monthlyByNthDayOfWeek);
             dest.writeInt(recurrenceState);
         }
+
+        private void readFromParcel(Parcel in) {
+            freq = in.readInt();
+            interval = in.readInt();
+            end = in.readInt();
+            endDate = new Time();
+            endDate.year = in.readInt();
+            endDate.month = in.readInt();
+            endDate.monthDay = in.readInt();
+            endCount = in.readInt();
+            in.readBooleanArray(weeklyByDayOfWeek);
+            monthlyRepeat = in.readInt();
+            monthlyByMonthDay = in.readInt();
+            monthlyByDayOfWeek = in.readInt();
+            monthlyByNthDayOfWeek = in.readInt();
+            recurrenceState = in.readInt();
+        }
+
+        @SuppressWarnings("all")
+        // suppress unused and hiding
+        public final Parcelable.Creator<RecurrenceModel> CREATOR = new Creator<RecurrenceModel>() {
+
+            public RecurrenceModel createFromParcel(Parcel in) {
+                return new RecurrenceModel(in);
+            }
+
+            public RecurrenceModel[] newArray(int size) {
+                return new RecurrenceModel[size];
+            }
+        };
     }
 
     class minMaxTextWatcher implements TextWatcher {
@@ -691,9 +721,9 @@ public class RecurrenceOptionCreator extends FrameLayout
         final TypedArray a = getContext()
                 .obtainStyledAttributes(R.styleable.RecurrenceOptionCreator);
         try {
-            mHeaderBackgroundColor = a.getColor(R.styleable.RecurrenceOptionCreator_headerBackground, 0);
+            mHeaderBackgroundColor = a.getColor(R.styleable.RecurrenceOptionCreator_spHeaderBackground, 0);
 
-            int endDateFormat = a.getInt(R.styleable.RecurrenceOptionCreator_endDateFormat, 1);
+            int endDateFormat = a.getInt(R.styleable.RecurrenceOptionCreator_spEndDateFormat, 1);
 
             mEndDateFormatter = DateFormat.getDateInstance(
                     endDateFormat == 0 ?
@@ -701,13 +731,13 @@ public class RecurrenceOptionCreator extends FrameLayout
                     Locale.getDefault());
 
             weekButtonUnselectedTextColor =
-                    a.getColor(R.styleable.RecurrenceOptionCreator_weekButtonUnselectedTextColor,
+                    a.getColor(R.styleable.RecurrenceOptionCreator_spWeekButtonUnselectedTextColor,
                             SUtils.COLOR_ACCENT);
             weekButtonSelectedTextColor =
-                    a.getColor(R.styleable.RecurrenceOptionCreator_weekButtonSelectedTextColor,
+                    a.getColor(R.styleable.RecurrenceOptionCreator_spWeekButtonSelectedTextColor,
                             SUtils.COLOR_TEXT_PRIMARY_INVERSE);
             weekButtonSelectedCircleColor =
-                    a.getColor(R.styleable.RecurrenceOptionCreator_weekButtonSelectedCircleColor,
+                    a.getColor(R.styleable.RecurrenceOptionCreator_spWeekButtonSelectedCircleColor,
                             SUtils.COLOR_ACCENT);
         } finally {
             a.recycle();
@@ -719,13 +749,12 @@ public class RecurrenceOptionCreator extends FrameLayout
 
         mRecurrencePicker = findViewById(R.id.recurrence_picker);
 
-        mDateOnlyPicker = (DatePickerView) findViewById(R.id.date_only_picker);
+        mDateOnlyPicker = (RecurrenceEndDatePicker) findViewById(R.id.date_only_picker);
         mDateOnlyPicker.setVisibility(View.GONE);
 
         // OK/Cancel buttons
-        mButtonLayout = (ButtonLayout) findViewById(R.id.button_layout);
-        mButtonLayout.applyOptions(false, mButtonLayoutCallback,
-                SublimeOptions.Picker.REPEAT_OPTION_PICKER);
+        mButtonLayout = (DecisionButtonLayout) findViewById(R.id.roc_decision_button_layout);
+        mButtonLayout.applyOptions(mButtonLayoutCallback);
 
         SUtils.setViewBackground(findViewById(R.id.freqSpinnerHolder), mHeaderBackgroundColor,
                 SUtils.CORNER_TOP_LEFT | SUtils.CORNER_TOP_RIGHT);
@@ -746,7 +775,7 @@ public class RecurrenceOptionCreator extends FrameLayout
                 PorterDuff.Mode.SRC_IN);
         if (freqSpinnerBg != null) {
             freqSpinnerBg.setColorFilter(cfFreqSpinner);
-            mFreqSpinner.setBackground(freqSpinnerBg);
+            SUtils.setViewBackground(mFreqSpinner, freqSpinnerBg);
         }
 
         mInterval = (EditText) findViewById(R.id.interval);
@@ -850,7 +879,7 @@ public class RecurrenceOptionCreator extends FrameLayout
 
         for (int i = 0; i < mWeekByDayButtons.length; i++) {
             mWeekByDayButtons[idx] = tempWeekButtons[i];
-            mWeekByDayButtons[idx].setBackgroundDrawable(
+            SUtils.setViewBackground(mWeekByDayButtons[idx],
                     new CheckableDrawable(weekButtonSelectedCircleColor,
                             false, expandedWidthHeight));
             mWeekByDayButtons[idx].setTextColor(weekButtonUnselectedTextColor);
@@ -1291,7 +1320,7 @@ public class RecurrenceOptionCreator extends FrameLayout
     }
 
     @Override
-    public void onDateSet(DatePickerView view, int year, int monthOfYear, int dayOfMonth) {
+    public void onDateSet(RecurrenceEndDatePicker view, int year, int monthOfYear, int dayOfMonth) {
         showRecurrencePicker();
 
         if (mModel.endDate == null) {
@@ -1306,7 +1335,7 @@ public class RecurrenceOptionCreator extends FrameLayout
     }
 
     @Override
-    public void onDateOnlyPickerCancelled(DatePickerView view) {
+    public void onDateOnlyPickerCancelled(RecurrenceEndDatePicker view) {
         showRecurrencePicker();
     }
 

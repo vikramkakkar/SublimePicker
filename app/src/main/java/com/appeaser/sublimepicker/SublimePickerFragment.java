@@ -24,6 +24,7 @@ import android.view.View;
 import android.view.ViewGroup;
 
 import com.appeaser.sublimepickerlibrary.SublimePicker;
+import com.appeaser.sublimepickerlibrary.datepicker.SelectedDate;
 import com.appeaser.sublimepickerlibrary.helpers.SublimeListenerAdapter;
 import com.appeaser.sublimepickerlibrary.helpers.SublimeOptions;
 import com.appeaser.sublimepickerlibrary.recurrencepicker.SublimeRecurrencePicker;
@@ -55,21 +56,20 @@ public class SublimePickerFragment extends DialogFragment {
         }
 
         @Override
-        public void onDateTimeRecurrenceSet(SublimePicker sublimePicker,
-                                            int year, int monthOfYear, int dayOfMonth,
+        public void onDateTimeRecurrenceSet(SublimePicker sublimeMaterialPicker,
+                                            SelectedDate selectedDate,
                                             int hourOfDay, int minute,
                                             SublimeRecurrencePicker.RecurrenceOption recurrenceOption,
                                             String recurrenceRule) {
             if (mCallback != null) {
-                mCallback.onDateTimeRecurrenceSet(year, monthOfYear, dayOfMonth,
+                mCallback.onDateTimeRecurrenceSet(selectedDate,
                         hourOfDay, minute, recurrenceOption, recurrenceRule);
             }
 
             // Should actually be called by activity inside `Callback.onCancelled()`
             dismiss();
         }
-
-        // You can also override 'formatDate(Date)' & 'formatTime(Date)'
+// You can also override 'formatDate(Date)' & 'formatTime(Date)'
         // to supply custom formatters.
     };
 
@@ -88,6 +88,16 @@ public class SublimePickerFragment extends DialogFragment {
     @Nullable
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
+        /*try {
+            //getActivity().getLayoutInflater()
+                    //.inflate(R.layout.sublime_recurrence_picker, new FrameLayout(getActivity()), true);
+            getActivity().getLayoutInflater()
+                    .inflate(R.layout.sublime_date_picker, new FrameLayout(getActivity()), true);
+        } catch (Exception e) {
+            e.printStackTrace();
+            throw new RuntimeException();
+        }*/
+
         mSublimePicker = (SublimePicker) getActivity()
                 .getLayoutInflater().inflate(R.layout.sublime_picker, container);
 
@@ -109,7 +119,7 @@ public class SublimePickerFragment extends DialogFragment {
     public interface Callback {
         void onCancelled();
 
-        void onDateTimeRecurrenceSet(int year, int monthOfYear, int dayOfMonth,
+        void onDateTimeRecurrenceSet(SelectedDate selectedDate,
                                      int hourOfDay, int minute,
                                      SublimeRecurrencePicker.RecurrenceOption recurrenceOption,
                                      String recurrenceRule);

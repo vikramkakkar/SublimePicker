@@ -36,4 +36,9 @@
     <color name="overflow_icon_pressed_state_bg_color_light">#40ffffff</color>
     <color name="overflow_icon_pressed_state_bg_color_dark">#40000000</color>
 
+    <color name="sp_ripple_material_dark">#33ffffff</color>
+
+    <color name="sp_primary_text_default_material_dark">#ffffffff</color>
+    <color name="sp_secondary_text_default_material_dark">#b3ffffff</color>
+
 </resources>

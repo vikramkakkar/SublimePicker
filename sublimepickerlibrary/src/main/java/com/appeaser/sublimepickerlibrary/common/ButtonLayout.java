@@ -18,7 +18,6 @@ package com.appeaser.sublimepickerlibrary.common;
 
 import android.annotation.TargetApi;
 import android.content.Context;
-import android.content.res.Configuration;
 import android.content.res.Resources;
 import android.content.res.TypedArray;
 import android.graphics.Color;
@@ -27,7 +26,6 @@ import android.os.Build;
 import android.support.annotation.NonNull;
 import android.util.AttributeSet;
 import android.util.TypedValue;
-import android.view.ContextThemeWrapper;
 import android.view.Gravity;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -36,8 +34,6 @@ import android.widget.ImageView;
 import android.widget.LinearLayout;
 
 import com.appeaser.sublimepickerlibrary.R;
-import com.appeaser.sublimepickerlibrary.drawables.ButtonBarBgDrawable;
-import com.appeaser.sublimepickerlibrary.helpers.SublimeOptions;
 import com.appeaser.sublimepickerlibrary.utilities.SUtils;
 
 public class ButtonLayout extends LinearLayout implements View.OnClickListener {
@@ -52,13 +48,7 @@ public class ButtonLayout extends LinearLayout implements View.OnClickListener {
             mDisabledAlpha /* android.R.attr.disabledAlpha * 255 */,
             mButtonBarBgColor;
 
-    Callback mCallback;
-
-    // A drawable that creates the effect of full-height
-    // partition between the two halves
-    // of {SublimeDatePicker, SublimeTimePicker} in landscape
-    // orientation. See sample images on project's Github page.
-    ButtonBarBgDrawable mButtonBarBgDrawable;
+    ButtonHandler.Callback mCallback;
 
     public ButtonLayout(Context context) {
         this(context, null);
@@ -83,38 +73,23 @@ public class ButtonLayout extends LinearLayout implements View.OnClickListener {
         initialize();
     }
 
-    @SuppressWarnings("unused")
-    private static ContextThemeWrapper createThemeWrapper(Context context) {
-        final TypedArray forParent = context.obtainStyledAttributes(
-                new int[]{R.attr.sublimePickerStyle});
-        int parentStyle = forParent.getResourceId(0, R.style.SublimePickerStyleLight);
-        forParent.recycle();
-
-        TypedArray forButtonPanel = context.obtainStyledAttributes(parentStyle,
-                new int[]{R.attr.spButtonLayoutStyle});
-        int buttonPanelStyleId = forButtonPanel.getResourceId(0, R.style.ButtonLayoutStyle);
-        forButtonPanel.recycle();
-
-        return new ContextThemeWrapper(context, buttonPanelStyleId);
-    }
-
     void initialize() {
         Context context = getContext();
         final Resources res = getResources();
 
         final TypedArray a = context.obtainStyledAttributes(R.styleable.ButtonLayout);
 
-        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.JELLY_BEAN_MR1) {
+        if (SUtils.isApi_17_OrHigher()) {
             setLayoutDirection(LAYOUT_DIRECTION_LOCALE);
         }
 
         setOrientation(HORIZONTAL);
         setGravity(Gravity.BOTTOM);
 
-        setPadding(res.getDimensionPixelSize(R.dimen.button_bar_padding_start),
-                res.getDimensionPixelSize(R.dimen.button_bar_padding_top),
-                res.getDimensionPixelSize(R.dimen.button_bar_padding_end),
-                res.getDimensionPixelSize(R.dimen.button_bar_padding_bottom));
+        setPadding(res.getDimensionPixelSize(R.dimen.sp_button_bar_padding_start),
+                res.getDimensionPixelSize(R.dimen.sp_button_bar_padding_top),
+                res.getDimensionPixelSize(R.dimen.sp_button_bar_padding_end),
+                res.getDimensionPixelSize(R.dimen.sp_button_bar_padding_bottom));
 
         final LayoutInflater inflater = (LayoutInflater) context.getSystemService(
                 Context.LAYOUT_INFLATER_SERVICE);
@@ -140,51 +115,19 @@ public class ButtonLayout extends LinearLayout implements View.OnClickListener {
                     : 122;
 
             // buttons or icons?
-            int presentation = a.getInt(R.styleable.ButtonLayout_presentation, 0);
+            int presentation = a.getInt(R.styleable.ButtonLayout_spPresentation, 0);
 
-            int bgColor = a.getColor(R.styleable.ButtonLayout_buttonBgColor,
+            int bgColor = a.getColor(R.styleable.ButtonLayout_spButtonBgColor,
                     SUtils.COLOR_BUTTON_NORMAL);
-            int pressedBgColor = a.getColor(R.styleable.ButtonLayout_buttonPressedBgColor,
+            int pressedBgColor = a.getColor(R.styleable.ButtonLayout_spButtonPressedBgColor,
                     SUtils.COLOR_CONTROL_HIGHLIGHT);
 
-            mButtonBarBgColor = a.getColor(R.styleable.ButtonLayout_buttonBarBgColor,
+            mButtonBarBgColor = a.getColor(R.styleable.ButtonLayout_spButtonBarBgColor,
                     Color.TRANSPARENT);
-
-            // Check if client has requested extended partition
-            if (res.getConfiguration().orientation == Configuration.ORIENTATION_LANDSCAPE) {
-                boolean extendPartitionThroughButtonBar =
-                        a.getBoolean(R.styleable.ButtonLayout_extendPartitionThroughButtonBar, false);
-
-                if (extendPartitionThroughButtonBar) {
-                    int extendedPartitionBgColor =
-                            a.getColor(R.styleable.ButtonLayout_extendedPartitionBgColor,
-                                    Color.TRANSPARENT);
-                    mButtonBarBgDrawable = new ButtonBarBgDrawable(getContext(),
-                            extendedPartitionBgColor,
-                            SublimeOptions.Picker.DATE_PICKER);
-                    setBackground(mButtonBarBgDrawable);
-
-                    int buttonInvertedBgColor =
-                            a.getColor(R.styleable.ButtonLayout_buttonInvertedBgColor,
-                                    SUtils.COLOR_ACCENT);
-                    int buttonPressedInvertedBgColor =
-                            a.getColor(R.styleable.ButtonLayout_buttonPressedInvertedBgColor,
-                                    res.getColor(R.color.ripple_material_dark));
-                    SUtils.setViewBackground(mSwitcherButton,
-                            SUtils.createButtonBg(context, buttonInvertedBgColor,
-                                    buttonPressedInvertedBgColor));
-                } else { /* fix switcher button's bg */
-                    SUtils.setViewBackground(mSwitcherButton,
-                            SUtils.createButtonBg(context, bgColor,
-                                    pressedBgColor));
-                    setBackgroundColor(mButtonBarBgColor);
-                }
-            } else { /* fix switcher button's bg */
-                SUtils.setViewBackground(mSwitcherButton,
-                        SUtils.createButtonBg(context, bgColor,
-                                pressedBgColor));
-                setBackgroundColor(mButtonBarBgColor);
-            }
+            SUtils.setViewBackground(mSwitcherButton,
+                    SUtils.createButtonBg(context, bgColor,
+                            pressedBgColor));
+            setBackgroundColor(mButtonBarBgColor);
 
             if (presentation == 0 /* mode: Button */) {
                 bPositive.setVisibility(View.VISIBLE);
@@ -206,7 +149,7 @@ public class ButtonLayout extends LinearLayout implements View.OnClickListener {
                 ivPositive.setVisibility(View.VISIBLE);
                 ivNegative.setVisibility(View.VISIBLE);
 
-                mIconOverlayColor = a.getColor(R.styleable.ButtonLayout_iconColor,
+                mIconOverlayColor = a.getColor(R.styleable.ButtonLayout_spIconColor,
                         SUtils.COLOR_ACCENT);
 
                 ivPositive.setColorFilter(mIconOverlayColor, PorterDuff.Mode.MULTIPLY);
@@ -238,36 +181,10 @@ public class ButtonLayout extends LinearLayout implements View.OnClickListener {
      * @param switcherRequired Whether the switcher button needs
      *                         to be shown.
      * @param callback         Callback to 'SublimePicker'
-     * @param callingPicker    This is used in the implementation of
-     *                         extended partition.
-     *                         If the picker using this layout is not one
-     *                         of {SublimeDatePicker, SublimeTimePicker},
-     *                         dispose off of 'ButtonBarBgDrawable'.
      */
-    public void applyOptions(boolean switcherRequired, @NonNull Callback callback,
-                             @NonNull SublimeOptions.Picker callingPicker) {
+    public void applyOptions(boolean switcherRequired, @NonNull ButtonHandler.Callback callback) {
         mSwitcherButton.setVisibility(switcherRequired ? View.VISIBLE : View.GONE);
         mCallback = callback;
-
-        if (callingPicker != SublimeOptions.Picker.DATE_PICKER
-                && callingPicker != SublimeOptions.Picker.TIME_PICKER
-                && mButtonBarBgDrawable != null) {
-            setBackgroundColor(mButtonBarBgColor);
-            mButtonBarBgDrawable = null;
-        }
-    }
-
-    /**
-     * Updates 'ButtonBarBgDrawable' when the picker is switched.
-     * This is required because 'SublimeDatePicker' and 'SublimeTimePicker'
-     * have different header-partition widths.
-     *
-     * @param callingPicker Currently visible picker
-     */
-    public void updateVisiblePicker(@NonNull SublimeOptions.Picker callingPicker) {
-        if (mButtonBarBgDrawable != null) { /* LANDSCAPE */
-            mButtonBarBgDrawable.setPicker(callingPicker);
-        }
     }
 
     // Returns whether switcher button is being used in this layout
@@ -308,13 +225,5 @@ public class ButtonLayout extends LinearLayout implements View.OnClickListener {
         } else if (v == mSwitcherButton) {
             mCallback.onSwitch();
         }
-    }
-
-    public interface Callback {
-        void onOkay();
-
-        void onCancel();
-
-        void onSwitch();
     }
 }

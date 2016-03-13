@@ -16,7 +16,6 @@
 
 package com.appeaser.sublimepicker;
 
-import android.app.DatePickerDialog;
 import android.graphics.Color;
 import android.graphics.PorterDuff;
 import android.graphics.Typeface;
@@ -30,24 +29,30 @@ import android.text.style.StyleSpan;
 import android.util.Pair;
 import android.view.View;
 import android.widget.CheckBox;
-import android.widget.DatePicker;
 import android.widget.ImageView;
+import android.widget.LinearLayout;
 import android.widget.RadioButton;
 import android.widget.RelativeLayout;
 import android.widget.ScrollView;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.appeaser.sublimepickerlibrary.datepicker.SelectedDate;
 import com.appeaser.sublimepickerlibrary.helpers.SublimeOptions;
 import com.appeaser.sublimepickerlibrary.recurrencepicker.SublimeRecurrencePicker;
 
+import java.text.DateFormat;
+import java.util.Calendar;
+
 public class Sampler extends AppCompatActivity {
+
+    private final int INVALID_VAL = -1;
+
     // Launches SublimePicker
     ImageView ivLaunchPicker;
 
     // SublimePicker options
-    CheckBox cbDatePicker, cbTimePicker, cbRecurrencePicker,
-            cbShowExtendedBg, cbShowSingleMonthPerPosition;
+    CheckBox cbDatePicker, cbTimePicker, cbRecurrencePicker, cbAllowDateRangeSelection;
     RadioButton rbDatePicker, rbTimePicker, rbRecurrencePicker;
 
     // Labels
@@ -57,11 +62,14 @@ public class Sampler extends AppCompatActivity {
 
     // Views to display the chosen Date, Time & Recurrence options
     TextView tvYear, tvMonth, tvDay, tvHour,
-            tvMinute, tvRecurrenceOption, tvRecurrenceRule;
+            tvMinute, tvRecurrenceOption, tvRecurrenceRule,
+            tvStartDate, tvEndDate;
     RelativeLayout rlDateTimeRecurrenceInfo;
+    LinearLayout llDateHolder, llDateRangeHolder;
 
     // Chosen values
-    int mYear, mMonth, mDay, mHour, mMinute;
+    SelectedDate mSelectedDate;
+    int mHour, mMinute;
     String mRecurrenceOption, mRecurrenceRule;
 
     SublimePickerFragment.Callback mFragmentCallback = new SublimePickerFragment.Callback() {
@@ -71,13 +79,12 @@ public class Sampler extends AppCompatActivity {
         }
 
         @Override
-        public void onDateTimeRecurrenceSet(int year, int monthOfYear, int dayOfMonth,
+        public void onDateTimeRecurrenceSet(SelectedDate selectedDate,
                                             int hourOfDay, int minute,
                                             SublimeRecurrencePicker.RecurrenceOption recurrenceOption,
                                             String recurrenceRule) {
-            mYear = year;
-            mMonth = monthOfYear;
-            mDay = dayOfMonth;
+
+            mSelectedDate = selectedDate;
             mHour = hourOfDay;
             mMinute = minute;
             mRecurrenceOption = recurrenceOption != null ?
@@ -91,7 +98,7 @@ public class Sampler extends AppCompatActivity {
                 @Override
                 public void run() {
                     svMainContainer.scrollTo(svMainContainer.getScrollX(),
-                            cbShowSingleMonthPerPosition.getBottom());
+                            cbAllowDateRangeSelection.getBottom());
                 }
             });
         }
@@ -122,9 +129,6 @@ public class Sampler extends AppCompatActivity {
         cbDatePicker = (CheckBox) findViewById(R.id.cbDatePicker);
         cbTimePicker = (CheckBox) findViewById(R.id.cbTimePicker);
         cbRecurrencePicker = (CheckBox) findViewById(R.id.cbRecurrencePicker);
-        cbShowExtendedBg = (CheckBox) findViewById(R.id.cbShowExtendedBg);
-        cbShowSingleMonthPerPosition
-                = (CheckBox) findViewById(R.id.cbShowSingleMonthPerPosition);
         rbDatePicker = (RadioButton) findViewById(R.id.rbDatePicker);
         rbTimePicker = (RadioButton) findViewById(R.id.rbTimePicker);
         rbRecurrencePicker = (RadioButton) findViewById(R.id.rbRecurrencePicker);
@@ -132,10 +136,18 @@ public class Sampler extends AppCompatActivity {
         tvActivatedPickers = (TextView) findViewById(R.id.tvActivatedPickers);
         svMainContainer = (ScrollView) findViewById(R.id.svMainContainer);
 
+        cbAllowDateRangeSelection = (CheckBox) findViewById(R.id.cbAllowDateRangeSelection);
+
+        llDateHolder = (LinearLayout) findViewById(R.id.llDateHolder);
+        llDateRangeHolder = (LinearLayout) findViewById(R.id.llDateRangeHolder);
+
         // Initialize views to display the chosen Date, Time & Recurrence options
         tvYear = ((TextView) findViewById(R.id.tvYear));
         tvMonth = ((TextView) findViewById(R.id.tvMonth));
         tvDay = ((TextView) findViewById(R.id.tvDay));
+
+        tvStartDate = ((TextView) findViewById(R.id.tvStartDate));
+        tvEndDate = ((TextView) findViewById(R.id.tvEndDate));
 
         tvHour = ((TextView) findViewById(R.id.tvHour));
         tvMinute = ((TextView) findViewById(R.id.tvMinute));
@@ -203,21 +215,10 @@ public class Sampler extends AppCompatActivity {
             }
         });
 
-        // Extends header bg to full-height in landscape orientation
-        cbShowExtendedBg.setOnClickListener(new View.OnClickListener() {
+        cbAllowDateRangeSelection.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                updateThemeOptions();
-            }
-        });
 
-        // Shows a single month per position of
-        // DayPickerView - even if that month's days do
-        // not completely fill the available space (eg: February)
-        cbShowSingleMonthPerPosition.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                updateThemeOptions();
             }
         });
 
@@ -230,8 +231,7 @@ public class Sampler extends AppCompatActivity {
             cbDatePicker.setChecked(true);
             cbTimePicker.setChecked(true);
             cbRecurrencePicker.setChecked(true);
-            cbShowExtendedBg.setChecked(false);
-            cbShowSingleMonthPerPosition.setChecked(false);
+            cbAllowDateRangeSelection.setChecked(false);
 
             rbDatePicker.setChecked(true);
         } else { // Restore
@@ -239,10 +239,8 @@ public class Sampler extends AppCompatActivity {
             cbTimePicker.setChecked(savedInstanceState.getBoolean(SS_TIME_PICKER_CHECKED));
             cbRecurrencePicker
                     .setChecked(savedInstanceState.getBoolean(SS_RECURRENCE_PICKER_CHECKED));
-            cbShowExtendedBg
-                    .setChecked(savedInstanceState.getBoolean(SS_SHOW_EXTENDED_BG_CHECKED));
-            cbShowSingleMonthPerPosition
-                    .setChecked(savedInstanceState.getBoolean(SS_SHOW_SINGLE_MONTH_CHECKED));
+            cbAllowDateRangeSelection
+                    .setChecked(savedInstanceState.getBoolean(SS_ALLOW_DATE_RANGE_SELECTION));
 
             rbDatePicker.setVisibility(cbDatePicker.isChecked() ?
                     View.VISIBLE : View.GONE);
@@ -251,13 +249,23 @@ public class Sampler extends AppCompatActivity {
             rbRecurrencePicker.setVisibility(cbRecurrencePicker.isChecked() ?
                     View.VISIBLE : View.GONE);
 
-            updateThemeOptions();
             onActivatedPickersChanged();
 
             if (savedInstanceState.getBoolean(SS_INFO_VIEW_VISIBILITY)) {
-                mYear = savedInstanceState.getInt(SS_YEAR);
-                mMonth = savedInstanceState.getInt(SS_MONTH);
-                mDay = savedInstanceState.getInt(SS_DAY);
+                int startYear = savedInstanceState.getInt(SS_START_YEAR);
+
+                if (startYear != INVALID_VAL) {
+                    Calendar startCal = Calendar.getInstance();
+                    startCal.set(startYear, savedInstanceState.getInt(SS_START_MONTH),
+                            savedInstanceState.getInt(SS_START_DAY));
+
+                    Calendar endCal = Calendar.getInstance();
+                    endCal.set(savedInstanceState.getInt(SS_END_YEAR),
+                            savedInstanceState.getInt(SS_END_MONTH),
+                            savedInstanceState.getInt(SS_END_DAY));
+                    mSelectedDate = new SelectedDate(startCal, endCal);
+                }
+
                 mHour = savedInstanceState.getInt(SS_HOUR);
                 mMinute = savedInstanceState.getInt(SS_MINUTE);
                 mRecurrenceOption = savedInstanceState.getString(SS_RECURRENCE_OPTION);
@@ -287,32 +295,6 @@ public class Sampler extends AppCompatActivity {
         }
     }
 
-    // Most of the styling has been kept in styles.xml and
-    // made accessible though attributes defined in attrs.xml.
-    // For this reason, the sample app has to rely on
-    // 'getTheme().applyStyle(....)' when 'cbShowExtendedBg'
-    // & 'cbShowSingleMonthPerPosition' are checked/unchecked.
-    // In practical usage, this will not be required since the options
-    // that are set inside this method will already be defined
-    // in xml. You can skip reading into this method and
-    // the styles it makes use of.
-    private void updateThemeOptions() {
-        int styleToApply;
-
-        if (cbShowExtendedBg.isChecked()
-                && cbShowSingleMonthPerPosition.isChecked()) {
-            styleToApply = R.style.ShowExtendedBgAndSingleMonthPerPosition;
-        } else if (cbShowExtendedBg.isChecked()) {
-            styleToApply = R.style.ShowExtendedBg;
-        } else if (cbShowSingleMonthPerPosition.isChecked()) {
-            styleToApply = R.style.ShowSingleMonthPerPosition;
-        } else {
-            styleToApply = R.style.SublimePickerDefault;
-        }
-
-        getTheme().applyStyle(styleToApply, true);
-    }
-
     // Validates & returns SublimePicker options
     Pair<Boolean, SublimeOptions> getOptions() {
         SublimeOptions options = new SublimeOptions();
@@ -339,6 +321,22 @@ public class Sampler extends AppCompatActivity {
         }
 
         options.setDisplayOptions(displayOptions);
+
+        // Enable/disable the date range selection feature
+        options.setCanPickDateRange(cbAllowDateRangeSelection.isChecked());
+
+        // Example for setting date range:
+        // Note that you can pass a date range as the initial date params
+        // even if you have date-range selection disabled. In this case,
+        // the user WILL be able to change date-range using the header
+        // TextViews, but not using long-press.
+
+        /*Calendar startCal = Calendar.getInstance();
+        startCal.set(2016, 2, 4);
+        Calendar endCal = Calendar.getInstance();
+        endCal.set(2016, 2, 17);
+
+        options.setDateParams(startCal, endCal);*/
 
         // If 'displayOptions' is zero, the chosen options are not valid
         return new Pair<>(displayOptions != 0 ? Boolean.TRUE : Boolean.FALSE, options);
@@ -384,9 +382,27 @@ public class Sampler extends AppCompatActivity {
 
     // Show date, time & recurrence options that have been selected
     private void updateInfoView() {
-        tvYear.setText(applyBoldStyle("YEAR: ").append(String.valueOf(mYear)));
-        tvMonth.setText(applyBoldStyle("MONTH: ").append(String.valueOf(mMonth)));
-        tvDay.setText(applyBoldStyle("DAY: ").append(String.valueOf(mDay)));
+        if (mSelectedDate != null) {
+            if (mSelectedDate.getType() == SelectedDate.Type.SINGLE) {
+                llDateRangeHolder.setVisibility(View.GONE);
+                llDateHolder.setVisibility(View.VISIBLE);
+
+                tvYear.setText(applyBoldStyle("YEAR: ")
+                        .append(String.valueOf(mSelectedDate.getStartDate().get(Calendar.YEAR))));
+                tvMonth.setText(applyBoldStyle("MONTH: ")
+                        .append(String.valueOf(mSelectedDate.getStartDate().get(Calendar.MONTH))));
+                tvDay.setText(applyBoldStyle("DAY: ")
+                        .append(String.valueOf(mSelectedDate.getStartDate().get(Calendar.DAY_OF_MONTH))));
+            } else if (mSelectedDate.getType() == SelectedDate.Type.RANGE) {
+                llDateHolder.setVisibility(View.GONE);
+                llDateRangeHolder.setVisibility(View.VISIBLE);
+
+                tvStartDate.setText(applyBoldStyle("START: ")
+                        .append(DateFormat.getDateInstance().format(mSelectedDate.getStartDate().getTime())));
+                tvEndDate.setText(applyBoldStyle("END: ")
+                        .append(DateFormat.getDateInstance().format(mSelectedDate.getEndDate().getTime())));
+            }
+        }
 
         tvHour.setText(applyBoldStyle("HOUR: ").append(String.valueOf(mHour)));
         tvMinute.setText(applyBoldStyle("MINUTE: ").append(String.valueOf(mMinute)));
@@ -411,11 +427,13 @@ public class Sampler extends AppCompatActivity {
     final String SS_DATE_PICKER_CHECKED = "saved.state.date.picker.checked";
     final String SS_TIME_PICKER_CHECKED = "saved.state.time.picker.checked";
     final String SS_RECURRENCE_PICKER_CHECKED = "saved.state.recurrence.picker.checked";
-    final String SS_SHOW_EXTENDED_BG_CHECKED = "saved.state.show.extended.bg.checked";
-    final String SS_SHOW_SINGLE_MONTH_CHECKED = "saved.state.show.single.month.checked";
-    final String SS_YEAR = "saved.state.year";
-    final String SS_MONTH = "saved.state.month";
-    final String SS_DAY = "saved.state.day";
+    final String SS_ALLOW_DATE_RANGE_SELECTION = "saved.state.allow.date.range.selection";
+    final String SS_START_YEAR = "saved.state.start.year";
+    final String SS_START_MONTH = "saved.state.start.month";
+    final String SS_START_DAY = "saved.state.start.day";
+    final String SS_END_YEAR = "saved.state.end.year";
+    final String SS_END_MONTH = "saved.state.end.month";
+    final String SS_END_DAY = "saved.state.end.day";
     final String SS_HOUR = "saved.state.hour";
     final String SS_MINUTE = "saved.state.minute";
     final String SS_RECURRENCE_OPTION = "saved.state.recurrence.option";
@@ -429,17 +447,24 @@ public class Sampler extends AppCompatActivity {
         // State of RadioButtons can be evaluated
         outState.putBoolean(SS_DATE_PICKER_CHECKED, cbDatePicker.isChecked());
         outState.putBoolean(SS_TIME_PICKER_CHECKED, cbTimePicker.isChecked());
-        outState.putBoolean(SS_RECURRENCE_PICKER_CHECKED,
-                cbRecurrencePicker.isChecked());
-        outState.putBoolean(SS_SHOW_EXTENDED_BG_CHECKED,
-                cbShowExtendedBg.isChecked());
-        outState.putBoolean(SS_SHOW_SINGLE_MONTH_CHECKED,
-                cbShowSingleMonthPerPosition.isChecked());
+        outState.putBoolean(SS_RECURRENCE_PICKER_CHECKED, cbRecurrencePicker.isChecked());
+        outState.putBoolean(SS_ALLOW_DATE_RANGE_SELECTION, cbAllowDateRangeSelection.isChecked());
+
+        int startYear = mSelectedDate != null ? mSelectedDate.getStartDate().get(Calendar.YEAR) : INVALID_VAL;
+        int startMonth = mSelectedDate != null ? mSelectedDate.getStartDate().get(Calendar.MONTH) : INVALID_VAL;
+        int startDayOfMonth = mSelectedDate != null ? mSelectedDate.getStartDate().get(Calendar.DAY_OF_MONTH) : INVALID_VAL;
+
+        int endYear = mSelectedDate != null ? mSelectedDate.getEndDate().get(Calendar.YEAR) : INVALID_VAL;
+        int endMonth = mSelectedDate != null ? mSelectedDate.getEndDate().get(Calendar.MONTH) : INVALID_VAL;
+        int endDayOfMonth = mSelectedDate != null ? mSelectedDate.getEndDate().get(Calendar.DAY_OF_MONTH) : INVALID_VAL;
 
         // Save data
-        outState.putInt(SS_YEAR, mYear);
-        outState.putInt(SS_MONTH, mMonth);
-        outState.putInt(SS_DAY, mDay);
+        outState.putInt(SS_START_YEAR, startYear);
+        outState.putInt(SS_START_MONTH, startMonth);
+        outState.putInt(SS_START_DAY, startDayOfMonth);
+        outState.putInt(SS_END_YEAR, endYear);
+        outState.putInt(SS_END_MONTH, endMonth);
+        outState.putInt(SS_END_DAY, endDayOfMonth);
         outState.putInt(SS_HOUR, mHour);
         outState.putInt(SS_MINUTE, mMinute);
         outState.putString(SS_RECURRENCE_OPTION, mRecurrenceOption);

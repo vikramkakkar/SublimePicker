@@ -14,6 +14,14 @@
      limitations under the License.
 -->
 <resources>
-    <color name="floating_action_button_bg">#D94818</color>
-    <color name="floating_action_button_pressed_bg">#212121</color>
+
+     <color name="c_accent">#325C80</color>
+
+     <color name="c_primary">#2B4F6F</color>
+
+     <color name="c_primary_dark">#24435D</color>
+
+     <color name="floating_action_button_bg">@color/c_accent</color>
+     <color name="floating_action_button_pressed_bg">#212121</color>
+
 </resources>

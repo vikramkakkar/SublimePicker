@@ -1,6 +1,6 @@
-<?xml version="1.0" encoding="utf-8"?><!--
-     Copyright (C) 2014 The Android Open Source Project
-     Copyright (C) 2015 Vikram Kakkar
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+     Copyright (C) 2015 The Android Open Source Project
 
      Licensed under the Apache License, Version 2.0 (the "License");
      you may not use this file except in compliance with the License.
@@ -14,8 +14,27 @@
      See the License for the specific language governing permissions and
      limitations under the License.
 -->
-<com.appeaser.sublimepickerlibrary.datepicker.AccessibleDateAnimator xmlns:android="http://schemas.android.com/apk/res/android"
+
+<com.appeaser.sublimepickerlibrary.datepicker.PickerViewAnimator
+    xmlns:android="http://schemas.android.com/apk/res/android"
     android:id="@+id/animator"
-    android:layout_width="@dimen/datepicker_component_width"
-    android:layout_height="@dimen/datepicker_view_animator_height"
-    android:gravity="center" />
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:gravity="center"
+    android:inAnimation="@anim/sp_date_picker_fade_in"
+    android:outAnimation="@anim/sp_date_picker_fade_out"
+    android:measureAllChildren="true">
+
+    <com.appeaser.sublimepickerlibrary.datepicker.DayPickerView
+        android:id="@+id/date_picker_day_picker"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:tag="@string/sublime_date_picker_tag"/>
+
+    <com.appeaser.sublimepickerlibrary.datepicker.YearPickerView
+        android:id="@+id/date_picker_year_picker"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scrollIndicators="bottom" />
+
+</com.appeaser.sublimepickerlibrary.datepicker.PickerViewAnimator>

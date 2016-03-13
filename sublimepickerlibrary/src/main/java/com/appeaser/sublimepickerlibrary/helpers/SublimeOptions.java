@@ -18,7 +18,9 @@ package com.appeaser.sublimepickerlibrary.helpers;
 
 import android.os.Parcel;
 import android.os.Parcelable;
+import android.support.annotation.NonNull;
 
+import com.appeaser.sublimepickerlibrary.datepicker.SelectedDate;
 import com.appeaser.sublimepickerlibrary.utilities.SUtils;
 
 import java.util.Calendar;
@@ -31,22 +33,26 @@ public class SublimeOptions implements Parcelable {
     public enum Picker {DATE_PICKER, TIME_PICKER, REPEAT_OPTION_PICKER, INVALID}
 
     // make DatePicker available
-    public static int ACTIVATE_DATE_PICKER = 0x01;
+    public final static int ACTIVATE_DATE_PICKER = 0x01;
 
     // make TimePicker available
-    public static int ACTIVATE_TIME_PICKER = 0x02;
+    public final static int ACTIVATE_TIME_PICKER = 0x02;
 
     // make RecurrencePicker available
-    public static int ACTIVATE_RECURRENCE_PICKER = 0x04;
+    public final static int ACTIVATE_RECURRENCE_PICKER = 0x04;
 
     private int mDisplayOptions =
             ACTIVATE_DATE_PICKER | ACTIVATE_TIME_PICKER | ACTIVATE_RECURRENCE_PICKER;
 
     // Date & Time params
-    private int mYear = -1, mMonthOfYear = -1, mDayofMonth = -1, mHourOfDay = -1, mMinute = -1;
+    private int mStartYear = -1, mStartMonth = -1, mStartDayOfMonth = -1,
+                mEndYear = -1, mEndMonth = -1, mEndDayOfMonth = -1,
+                mHourOfDay = -1, mMinute = -1;
+    //private int mYear = -1, mMonthOfYear = -1, mDayOfMonth = -1, mHourOfDay = -1, mMinute = -1;
     private long mMinDate = Long.MIN_VALUE, mMaxDate = Long.MIN_VALUE;
     private boolean mAnimateLayoutChanges, mIs24HourView;
     private String mRecurrenceRule = "";
+    private boolean mCanPickDateRange;
 
     // Defaults
     private Picker mPickerToShow = Picker.DATE_PICKER;
@@ -55,11 +61,12 @@ public class SublimeOptions implements Parcelable {
         // Nothing
     }
 
-    public SublimeOptions(Parcel in) {
+    private SublimeOptions(Parcel in) {
         readFromParcel(in);
     }
 
     // Use 'LayoutTransition'
+    @SuppressWarnings("unused")
     public SublimeOptions setAnimateLayoutChanges(boolean animateLayoutChanges) {
         mAnimateLayoutChanges = animateLayoutChanges;
         return this;
@@ -109,15 +116,58 @@ public class SublimeOptions implements Parcelable {
     }
 
     // Provide initial date parameters
-    public SublimeOptions setDateParams(int year, int monthOfYear, int dayOfMonth) {
-        mYear = year;
-        mMonthOfYear = monthOfYear;
-        mDayofMonth = dayOfMonth;
+    @SuppressWarnings("unused")
+    public SublimeOptions setDateParams(int year, int month, int dayOfMonth) {
+        return setDateParams(year, month, dayOfMonth, year, month, dayOfMonth);
+    }
+
+    // Provide initial date parameters
+    @SuppressWarnings("unused")
+    public SublimeOptions setDateParams(int startYear, int startMonth, int startDayOfMonth,
+                                        int endYear, int endMonth, int endDayOfMonth) {
+        mStartYear = startYear;
+        mStartMonth = startMonth;
+        mStartDayOfMonth = startDayOfMonth;
+
+        mEndYear = endYear;
+        mEndMonth = endMonth;
+        mEndDayOfMonth = endDayOfMonth;
+
         return this;
+    }
+
+    // Provide initial date parameters
+    @SuppressWarnings("unused")
+    public SublimeOptions setDateParams(@NonNull Calendar calendar) {
+        return setDateParams(calendar.get(Calendar.YEAR), calendar.get(Calendar.MONTH),
+                calendar.get(Calendar.DAY_OF_MONTH),
+                calendar.get(Calendar.YEAR), calendar.get(Calendar.MONTH),
+                calendar.get(Calendar.DAY_OF_MONTH));
+    }
+
+    // Provide initial date parameters
+    @SuppressWarnings("unused")
+    public SublimeOptions setDateParams(@NonNull Calendar startCal, @NonNull Calendar endCal) {
+        return setDateParams(startCal.get(Calendar.YEAR), startCal.get(Calendar.MONTH),
+                startCal.get(Calendar.DAY_OF_MONTH),
+                endCal.get(Calendar.YEAR), endCal.get(Calendar.MONTH),
+                endCal.get(Calendar.DAY_OF_MONTH));
+    }
+
+    // Provide initial date parameters
+    @SuppressWarnings("unused")
+    public SublimeOptions setDateParams(@NonNull SelectedDate selectedDate) {
+        return setDateParams(selectedDate.getStartDate().get(Calendar.YEAR),
+                selectedDate.getStartDate().get(Calendar.MONTH),
+                selectedDate.getStartDate().get(Calendar.DAY_OF_MONTH),
+                selectedDate.getEndDate().get(Calendar.YEAR),
+                selectedDate.getEndDate().get(Calendar.MONTH),
+                selectedDate.getEndDate().get(Calendar.DAY_OF_MONTH));
     }
 
     // Set date range
     // Pass '-1L' for 'minDate'/'maxDate' for default
+    @SuppressWarnings("unused")
     public SublimeOptions setDateRange(long minDate, long maxDate) {
         mMinDate = minDate;
         mMaxDate = maxDate;
@@ -125,6 +175,7 @@ public class SublimeOptions implements Parcelable {
     }
 
     // Provide initial time parameters
+    @SuppressWarnings("unused")
     public SublimeOptions setTimeParams(int hourOfDay, int minute, boolean is24HourView) {
         mHourOfDay = hourOfDay;
         mMinute = minute;
@@ -133,11 +184,13 @@ public class SublimeOptions implements Parcelable {
     }
 
     // Provide initial Recurrence-rule
+    @SuppressWarnings("unused")
     public SublimeOptions setRecurrenceParams(String recurrenceRule) {
         mRecurrenceRule = recurrenceRule;
         return this;
     }
 
+    @SuppressWarnings("unused")
     public String getRecurrenceRule() {
         return mRecurrenceRule == null ?
                 "" : mRecurrenceRule;
@@ -155,15 +208,37 @@ public class SublimeOptions implements Parcelable {
         return (mDisplayOptions & ACTIVATE_RECURRENCE_PICKER) == ACTIVATE_RECURRENCE_PICKER;
     }
 
-    public int[] getDateParams() {
-        if (mYear == -1 || mMonthOfYear == -1 || mDayofMonth == -1) {
+    /*public int[] getDateParams() {
+        if (mYear == -1 || mMonthOfYear == -1 || mDayOfMonth == -1) {
             Calendar cal = SUtils.getCalendarForLocale(null, Locale.getDefault());
             mYear = cal.get(Calendar.YEAR);
             mMonthOfYear = cal.get(Calendar.MONTH);
-            mDayofMonth = cal.get(Calendar.DAY_OF_MONTH);
+            mDayOfMonth = cal.get(Calendar.DAY_OF_MONTH);
         }
 
-        return new int[]{mYear, mMonthOfYear, mDayofMonth};
+        return new int[]{mYear, mMonthOfYear, mDayOfMonth};
+    }*/
+
+    public SelectedDate getDateParams() {
+        Calendar startCal = SUtils.getCalendarForLocale(null, Locale.getDefault());
+        if (mStartYear == -1 || mStartMonth == -1 || mStartDayOfMonth == -1) {
+            mStartYear = startCal.get(Calendar.YEAR);
+            mStartMonth = startCal.get(Calendar.MONTH);
+            mStartDayOfMonth = startCal.get(Calendar.DAY_OF_MONTH);
+        } else {
+            startCal.set(mStartYear, mStartMonth, mStartDayOfMonth);
+        }
+
+        Calendar endCal = SUtils.getCalendarForLocale(null, Locale.getDefault());
+        if (mEndYear == -1 || mEndMonth == -1 || mEndDayOfMonth == -1) {
+            mEndYear = endCal.get(Calendar.YEAR);
+            mEndMonth = endCal.get(Calendar.MONTH);
+            mEndDayOfMonth = endCal.get(Calendar.DAY_OF_MONTH);
+        } else {
+            endCal.set(mEndYear, mEndMonth, mEndDayOfMonth);
+        }
+
+        return new SelectedDate(startCal, endCal);
     }
 
     public long[] getDateRange() {
@@ -201,22 +276,35 @@ public class SublimeOptions implements Parcelable {
         // TODO: Validation? mMinDate < mMaxDate
     }
 
+    public SublimeOptions setCanPickDateRange(boolean canPickDateRange) {
+        mCanPickDateRange = canPickDateRange;
+        return this;
+    }
+
+    public boolean canPickDateRange() {
+        return mCanPickDateRange;
+    }
+
     @Override
     public int describeContents() {
         return 0;
     }
 
-    public void readFromParcel(Parcel in) {
+    private void readFromParcel(Parcel in) {
         mAnimateLayoutChanges = in.readByte() != 0;
         mPickerToShow = Picker.valueOf(in.readString());
         mDisplayOptions = in.readInt();
-        mYear = in.readInt();
-        mMonthOfYear = in.readInt();
-        mDayofMonth = in.readInt();
+        mStartYear = in.readInt();
+        mStartMonth = in.readInt();
+        mStartDayOfMonth = in.readInt();
+        mEndYear = in.readInt();
+        mEndMonth = in.readInt();
+        mEndDayOfMonth = in.readInt();
         mHourOfDay = in.readInt();
         mMinute = in.readInt();
         mIs24HourView = in.readByte() != 0;
         mRecurrenceRule = in.readString();
+        mCanPickDateRange = in.readByte() != 0;
     }
 
     @Override
@@ -224,13 +312,17 @@ public class SublimeOptions implements Parcelable {
         dest.writeByte((byte) (mAnimateLayoutChanges ? 1 : 0));
         dest.writeString(mPickerToShow.name());
         dest.writeInt(mDisplayOptions);
-        dest.writeInt(mYear);
-        dest.writeInt(mMonthOfYear);
-        dest.writeInt(mDayofMonth);
+        dest.writeInt(mStartYear);
+        dest.writeInt(mStartMonth);
+        dest.writeInt(mStartDayOfMonth);
+        dest.writeInt(mEndYear);
+        dest.writeInt(mEndMonth);
+        dest.writeInt(mEndDayOfMonth);
         dest.writeInt(mHourOfDay);
         dest.writeInt(mMinute);
         dest.writeByte((byte) (mIs24HourView ? 1 : 0));
         dest.writeString(mRecurrenceRule);
+        dest.writeByte((byte) (mCanPickDateRange ? 1 : 0));
     }
 
     public static final Parcelable.Creator<SublimeOptions> CREATOR = new Parcelable.Creator<SublimeOptions>() {

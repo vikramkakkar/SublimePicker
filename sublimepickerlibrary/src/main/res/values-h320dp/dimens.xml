@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <dimen name="sp_timepicker_text_inset_inner">58dp</dimen>
+    <dimen name="sp_timepicker_radial_picker_dimen">224dp</dimen>
+
+</resources>

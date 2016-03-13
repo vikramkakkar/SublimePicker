@@ -18,6 +18,12 @@
         <item name="android:stateListAnimator">@anim/disabled_anim_material</item>
     </style>
 
+    <!-- Used when extending the partition through Button bar -->
+    <style name="SInvertedButtonBarButtonStyle" parent="SButtonBarButtonStyleBase">
+        <item name="android:textColor">?android:attr/textColorPrimary</item>
+        <item name="android:stateListAnimator">@anim/disabled_anim_material</item>
+    </style>
+
     <style name="TextAppearance.EditEvent_SpinnerBase" parent="android:Widget.Material.Light.Spinner" />
 
 </resources>
