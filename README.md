@@ -15,7 +15,7 @@ Following screenshots have been taken from the sample application: [<img alt="Ge
 Launching into **DatePicker**:
 
 <p align="center">
-<img src="https://github.com/vikramkakkar/SublimePicker/blob/master/img/date_picker_v23.png?raw=true" width="298" height="600" />
+<img src="https://github.com/vikramkakkar/SublimePicker/blob/master/img/date_picker_v23.png?raw=true" width="497" height="1000" />
 </p>
 
 Button at bottom-left corner can be used to switch to **TimePicker**: 
