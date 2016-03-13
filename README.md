@@ -1,6 +1,8 @@
 # SublimePicker
 
-A customizable view that provisions picking of a date, time & recurrence option, all from a single user-interface. You can also view 'SublimePicker' as a collection of material-styled (API 22, & _not_ 21) DatePicker, TimePicker & RecurrencePicker, backported to API 16.
+A customizable view that provisions picking of a date, time & recurrence option, all from a single user-interface. You can also view 'SublimePicker' as a collection of material-styled (API 23) DatePicker, TimePicker & RecurrencePicker, backported to API 14.
+
+With the release of version 2, SublimePicker now allows date-range selection.
 
 All three components have been converted to views, which enables us to add/embed them anywhere - add them to a 'Dialog', a 'PopupWindow', or use them as any regular android widget. 
 
