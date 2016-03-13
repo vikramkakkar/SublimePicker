@@ -29,7 +29,7 @@ Date range selection:
 Landscape:
 
 <p align="center">
-<img src="https://github.com/vikramkakkar/SublimePicker/blob/master/img/date_picker_date_range_land_v2.png?raw=true" width="1000" height="497" />
+<img src="https://github.com/vikramkakkar/SublimePicker/blob/master/img/date_picker_date_range_land_v2.png?raw=true" width="800" height="397" />
 </p>
 
 Date range selection spanning multiple months:
@@ -47,7 +47,7 @@ Button at bottom-left corner can be used to switch to **TimePicker**:
 Landscape:
 
 <p align="center">
-<img src="https://github.com/vikramkakkar/SublimePicker/blob/master/img/time_picker_land_v2.png?raw=true" width="1000" height="497" />
+<img src="https://github.com/vikramkakkar/SublimePicker/blob/master/img/time_picker_land_v2.png?raw=true" width="800" height="397" />
 </p>
 
 The overflow button at top-right opens the **RecurrencePicker**:
