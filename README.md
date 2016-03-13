@@ -15,43 +15,75 @@ Following screenshots have been taken from the sample application: [<img alt="Ge
 Launching into **DatePicker**:
 
 <p align="center">
-<img src="https://github.com/vikramkakkar/SublimePicker/blob/master/img/date_picker_v23.png?raw=true" width="497" height="1000" />
+<img src="https://github.com/vikramkakkar/SublimePicker/blob/master/img/date_picker_v2.png?raw=true" width="497" height="1000" />
+</p>
+
+Version 2 allows date-range selection using `SublimeOptions#setCanPickDateRange(boolean)`. Picking date range is _one fluent gesture_ which begins with a long-press on the intended start-date, followed by a drag onto the intended end-date. The range can span as many days, months or years, as needed. During a drag, approaching the left/right edge of date picker scrolls the previous/next month into view.  
+
+Date range selection:
+
+<p align="center">
+<img src="https://github.com/vikramkakkar/SublimePicker/blob/master/img/date_picker_date_range_v2.png?raw=true" width="497" height="1000" />
+</p>
+
+Landscape:
+
+<p align="center">
+<img src="https://github.com/vikramkakkar/SublimePicker/blob/master/img/date_picker_date_range_land_v2.png?raw=true" width="497" height="1000" />
+</p>
+
+Date range selection spanning multiple months:
+
+<p align="center">
+<img src="https://github.com/vikramkakkar/SublimePicker/blob/master/img/date_picker_date_range_spanned_v2.png?raw=true" width="497" height="1000" />
 </p>
 
 Button at bottom-left corner can be used to switch to **TimePicker**: 
 
 <p align="center">
-<img src="https://github.com/vikramkakkar/SublimePicker/blob/master/img/time_picker_v23.png?raw=true" width="497" height="1000" />
+<img src="https://github.com/vikramkakkar/SublimePicker/blob/master/img/time_picker_v2.png?raw=true" width="497" height="1000" />
+</p>
+
+Landscape:
+
+<p align="center">
+<img src="https://github.com/vikramkakkar/SublimePicker/blob/master/img/time_picker_land_v2.png?raw=true" width="497" height="1000" />
 </p>
 
 The overflow button at top-right opens the **RecurrencePicker**:
 
 <p align="center">
-<img src="https://github.com/vikramkakkar/SublimePicker/blob/master/img/recurrence_picker.png?raw=true" width="307" height="512" />
+<img src="https://github.com/vikramkakkar/SublimePicker/blob/master/img/recurrence_picker_v2.png?raw=true" width="497" height="1000" />
 </p>
 
 Choosing **Custom...** from this menu brings you to **RecurrenceOptionCreator**:
 
 <p align="center">
-<img src="https://github.com/vikramkakkar/SublimePicker/blob/master/img/recurrence_option_creator.png?raw=true" width="307" height="512" />
+<img src="https://github.com/vikramkakkar/SublimePicker/blob/master/img/recurrence_option_creator_v2.png?raw=true" width="497" height="1000" />
 </p>
 
 Picking **Until a date** from the bottom spinner & clicking on the date shows a stripped down version of DatePicker:
 
 <p align="center">
-<img src="https://github.com/vikramkakkar/SublimePicker/blob/master/img/recurrence_option_creator_end_date.png?raw=true" width="307" height="512" />
+<img src="https://github.com/vikramkakkar/SublimePicker/blob/master/img/recurrence_option_creator_end_date_v2.png?raw=true" width="497" height="1000" />
 </p>
 
 **Sample Application**:
 
 <p align="center">
-<img src="https://github.com/vikramkakkar/SublimePicker/blob/master/img/sampler.png?raw=true" width="307" height="512" />
+<img src="https://github.com/vikramkakkar/SublimePicker/blob/master/img/sampler_v2.png?raw=true" width="497" height="1000" />
 </p>
 
-Results of the selection in **sample application**:
+Results of the selection in **sample application** (single date):
 
 <p align="center">
-<img src="https://github.com/vikramkakkar/SublimePicker/blob/master/img/sampler_results.png?raw=true" width="307" height="512" />
+<img src="https://github.com/vikramkakkar/SublimePicker/blob/master/img/sampler_results_single_date_v2.png?raw=true" width="497" height="1000" />
+</p>
+
+Results of the selection in **sample application** (date range):
+
+<p align="center">
+<img src="https://github.com/vikramkakkar/SublimePicker/blob/master/img/sampler_results_date_range_v2.png?raw=true" width="497" height="1000" />
 </p>
 
 **How-to**s will be added in a day or two...
