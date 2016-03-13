@@ -21,7 +21,7 @@ Launching into **DatePicker**:
 Button at bottom-left corner can be used to switch to **TimePicker**: 
 
 <p align="center">
-<img src="https://github.com/vikramkakkar/SublimePicker/blob/master/img/time_picker.png?raw=true" width="307" height="512" />
+<img src="https://github.com/vikramkakkar/SublimePicker/blob/master/img/time_picker_v23.png?raw=true" width="497" height="1000" />
 </p>
 
 The overflow button at top-right opens the **RecurrencePicker**:
