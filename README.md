@@ -10,6 +10,11 @@ Almost all styling possibilities have been exposed through attrs. If something h
 
 SublimePicker provides a single point of entry to all three pickers. What I mean is that once SublimePicker is available for interaction, the user can select a date, a time & a recurrence option without leaving the picker.
 
+Gradle dependency
+-----------------
+
+`compile 'com.appeaser.sublimepickerlibrary:sublimepickerlibrary:2.0.0'`
+
 Walkthrough
 -----------
 Following screenshots have been taken from the sample application: [<img alt="Get it on Google Play" height="45px" src="https://play.google.com/intl/en_us/badges/images/apps/en-play-badge-border.png" />][1]
