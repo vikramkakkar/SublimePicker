@@ -8,6 +8,6 @@ public class Config {
     public static final boolean DEBUG = false;
 
     @SuppressWarnings("unused")
-    public static final int DEBUG_VERSION = 1;
+    public static final int DEBUG_VERSION = 2;
 
 }

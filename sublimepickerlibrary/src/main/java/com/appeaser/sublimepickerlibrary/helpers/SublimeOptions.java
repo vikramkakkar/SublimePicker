@@ -21,6 +21,7 @@ import android.os.Parcelable;
 import android.support.annotation.NonNull;
 
 import com.appeaser.sublimepickerlibrary.datepicker.SelectedDate;
+import com.appeaser.sublimepickerlibrary.recurrencepicker.SublimeRecurrencePicker;
 import com.appeaser.sublimepickerlibrary.utilities.SUtils;
 
 import java.util.Calendar;
@@ -51,7 +52,12 @@ public class SublimeOptions implements Parcelable {
     //private int mYear = -1, mMonthOfYear = -1, mDayOfMonth = -1, mHourOfDay = -1, mMinute = -1;
     private long mMinDate = Long.MIN_VALUE, mMaxDate = Long.MIN_VALUE;
     private boolean mAnimateLayoutChanges, mIs24HourView;
+
+    private SublimeRecurrencePicker.RecurrenceOption mRecurrenceOption
+            = SublimeRecurrencePicker.RecurrenceOption.DOES_NOT_REPEAT;
     private String mRecurrenceRule = "";
+
+    // Allow date range selection
     private boolean mCanPickDateRange;
 
     // Defaults
@@ -185,7 +191,8 @@ public class SublimeOptions implements Parcelable {
 
     // Provide initial Recurrence-rule
     @SuppressWarnings("unused")
-    public SublimeOptions setRecurrenceParams(String recurrenceRule) {
+    public SublimeOptions setRecurrenceParams(SublimeRecurrencePicker.RecurrenceOption recurrenceOption, String recurrenceRule) {
+        mRecurrenceOption = recurrenceOption;
         mRecurrenceRule = recurrenceRule;
         return this;
     }
@@ -194,6 +201,12 @@ public class SublimeOptions implements Parcelable {
     public String getRecurrenceRule() {
         return mRecurrenceRule == null ?
                 "" : mRecurrenceRule;
+    }
+
+    @SuppressWarnings("unused")
+    public SublimeRecurrencePicker.RecurrenceOption getRecurrenceOption() {
+        return mRecurrenceOption == null ?
+                SublimeRecurrencePicker.RecurrenceOption.DOES_NOT_REPEAT : mRecurrenceOption;
     }
 
     public boolean isDatePickerActive() {

@@ -604,6 +604,9 @@ public class SublimePicker extends FrameLayout
             mButtonLayout = null;
         }
 
+        mCurrentRecurrenceOption = mOptions.getRecurrenceOption();
+        mRecurrenceRule = mOptions.getRecurrenceRule();
+
         if (mRecurrencePickerEnabled) {
             Calendar cal = mDatePickerEnabled ?
                     mDatePicker.getSelectedDate().getStartDate()

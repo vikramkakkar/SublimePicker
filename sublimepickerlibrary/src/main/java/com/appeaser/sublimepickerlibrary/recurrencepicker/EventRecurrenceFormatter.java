@@ -54,7 +54,6 @@ public class EventRecurrenceFormatter {
             endString = sb.toString();
         }
 
-        // TODO Implement "Until" portion of string, as well as custom settings
         int interval = recurrence.interval <= 1 ? 1 : recurrence.interval;
         switch (recurrence.freq) {
             case EventRecurrence.DAILY:
@@ -77,7 +76,7 @@ public class EventRecurrenceFormatter {
 
                     if (recurrence.bydayCount > 0) {
                         int count = recurrence.bydayCount - 1;
-                        for (int i = 0; i < count; i++) {
+                        for (int i = 0 ; i < count ; i++) {
                             days.append(dayToString(recurrence.byday[i], dayOfWeekLength));
                             days.append(", ");
                         }
@@ -101,23 +100,33 @@ public class EventRecurrenceFormatter {
                 }
             }
             case EventRecurrence.MONTHLY: {
+                String monthlyStart = interval == 1 ?
+                        r.getString(R.string.monthly)
+                        : r.getQuantityString(R.plurals.recurrence_interval_monthly,
+                        interval, interval);
                 if (recurrence.bydayCount == 1) {
                     int weekday = recurrence.startDate.weekDay;
                     // Cache this stuff so we won't have to redo work again later.
                     cacheMonthRepeatStrings(r, weekday);
                     int dayNumber = (recurrence.startDate.monthDay - 1) / 7;
                     StringBuilder sb = new StringBuilder();
-                    sb.append(r.getString(R.string.monthly));
+                    sb.append(monthlyStart);
                     sb.append(" (");
                     sb.append(mMonthRepeatByDayOfWeekStrs[weekday][dayNumber]);
                     sb.append(")");
                     sb.append(endString);
                     return sb.toString();
                 }
-                return r.getString(R.string.monthly) + endString;
+
+                return monthlyStart + endString;
             }
             case EventRecurrence.YEARLY:
-                return r.getString(R.string.yearly_plain) + endString;
+                String yearlyStart = interval == 1 ?
+                        r.getString(R.string.yearly_plain)
+                        : r.getQuantityString(R.plurals.recurrence_interval_yearly,
+                                                interval, interval);
+
+                return yearlyStart + endString;
         }
 
         return null;
@@ -145,7 +154,6 @@ public class EventRecurrenceFormatter {
 
     /**
      * Converts day of week to a String.
-     *
      * @param day a EventRecurrence constant
      * @return day of week as a string
      */
@@ -155,28 +163,19 @@ public class EventRecurrenceFormatter {
 
     /**
      * Converts EventRecurrence's day of week to DateUtil's day of week.
-     *
      * @param day of week as an EventRecurrence value
      * @return day of week as a DateUtil value.
      */
     private static int dayToUtilDay(int day) {
         switch (day) {
-            case EventRecurrence.SU:
-                return Calendar.SUNDAY;
-            case EventRecurrence.MO:
-                return Calendar.MONDAY;
-            case EventRecurrence.TU:
-                return Calendar.TUESDAY;
-            case EventRecurrence.WE:
-                return Calendar.WEDNESDAY;
-            case EventRecurrence.TH:
-                return Calendar.THURSDAY;
-            case EventRecurrence.FR:
-                return Calendar.FRIDAY;
-            case EventRecurrence.SA:
-                return Calendar.SATURDAY;
-            default:
-                throw new IllegalArgumentException("bad day argument: " + day);
+            case EventRecurrence.SU: return Calendar.SUNDAY;
+            case EventRecurrence.MO: return Calendar.MONDAY;
+            case EventRecurrence.TU: return Calendar.TUESDAY;
+            case EventRecurrence.WE: return Calendar.WEDNESDAY;
+            case EventRecurrence.TH: return Calendar.THURSDAY;
+            case EventRecurrence.FR: return Calendar.FRIDAY;
+            case EventRecurrence.SA: return Calendar.SATURDAY;
+            default: throw new IllegalArgumentException("bad day argument: " + day);
         }
     }
 }
