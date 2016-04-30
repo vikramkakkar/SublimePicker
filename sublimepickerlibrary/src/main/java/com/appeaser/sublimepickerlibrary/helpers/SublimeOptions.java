@@ -19,6 +19,7 @@ package com.appeaser.sublimepickerlibrary.helpers;
 import android.os.Parcel;
 import android.os.Parcelable;
 import android.support.annotation.NonNull;
+import android.text.TextUtils;
 
 import com.appeaser.sublimepickerlibrary.datepicker.SelectedDate;
 import com.appeaser.sublimepickerlibrary.recurrencepicker.SublimeRecurrencePicker;
@@ -192,6 +193,20 @@ public class SublimeOptions implements Parcelable {
     // Provide initial Recurrence-rule
     @SuppressWarnings("unused")
     public SublimeOptions setRecurrenceParams(SublimeRecurrencePicker.RecurrenceOption recurrenceOption, String recurrenceRule) {
+
+        // If passed recurrence option is null, take it as the does_not_repeat option.
+        // If passed recurrence option is custom, but the passed recurrence rule is null/empty,
+        // take it as the does_not_repeat option.
+        // If passed recurrence option is not custom, nullify the recurrence rule.
+        if (recurrenceOption == null
+                || (recurrenceOption == SublimeRecurrencePicker.RecurrenceOption.CUSTOM
+                && TextUtils.isEmpty(recurrenceRule))) {
+            recurrenceOption = SublimeRecurrencePicker.RecurrenceOption.DOES_NOT_REPEAT;
+            recurrenceRule = null;
+        } else if (recurrenceOption != SublimeRecurrencePicker.RecurrenceOption.CUSTOM) {
+            recurrenceRule = null;
+        }
+
         mRecurrenceOption = recurrenceOption;
         mRecurrenceRule = recurrenceRule;
         return this;

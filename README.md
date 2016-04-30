@@ -13,7 +13,7 @@ SublimePicker provides a single point of entry to all three pickers. What I mean
 Gradle dependency
 -----------------
 
-`compile 'com.appeaser.sublimepickerlibrary:sublimepickerlibrary:2.1.0'`
+`compile 'com.appeaser.sublimepickerlibrary:sublimepickerlibrary:2.1.1'`
 
 Walkthrough
 -----------

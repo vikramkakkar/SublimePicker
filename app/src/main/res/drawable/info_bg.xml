@@ -18,14 +18,14 @@
     <item>
         <shape android:shape="rectangle">
             <corners android:radius="2dp" />
-            <solid android:color="#CCD94818" />
+            <solid android:color="#BB8123" />
         </shape>
     </item>
 
-    <item android:left="3dp">
+    <item android:left="6dp">
         <shape android:shape="rectangle">
             <corners android:radius="2dp" />
-            <solid android:color="#666666" />
+            <solid android:color="#367DBB" />
         </shape>
     </item>
 
