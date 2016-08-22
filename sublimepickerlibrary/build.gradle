@@ -29,7 +29,7 @@ ext {
     siteUrl = 'https://github.com/vikramkakkar/SublimePicker'
     gitUrl = 'https://github.com/vikramkakkar/SublimePicker.git'
 
-    libraryVersion = '2.1.1'
+    libraryVersion = '2.1.2'
 
     developerId = 'vikramkakkar'
     developerName = 'Vikram Kakkar'
