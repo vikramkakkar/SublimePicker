@@ -567,6 +567,7 @@ public class SublimePicker extends FrameLayout
                 mDatePicker.setMaxDate(dateRange[1]);
             }
 
+            mDatePicker.setFirstDayOfWeek(mOptions.getFirstDayOfWeek());
             mDatePicker.setValidationCallback(this);
 
             ivRecurrenceOptionsDP.setVisibility(mRecurrencePickerEnabled ?
