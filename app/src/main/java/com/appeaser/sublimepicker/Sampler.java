@@ -325,6 +325,9 @@ public class Sampler extends AppCompatActivity {
         // Enable/disable the date range selection feature
         options.setCanPickDateRange(cbAllowDateRangeSelection.isChecked());
 
+        //Optionally set custom labels on the Recurrence Picker...
+        options.setRecurrenceTextLabels("Only Once", null, null, null, null, "Pick Your Own...");
+
         // Example for setting date range:
         // Note that you can pass a date range as the initial date params
         // even if you have date-range selection disabled. In this case,

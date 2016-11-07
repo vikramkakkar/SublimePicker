@@ -19,6 +19,7 @@ package com.appeaser.sublimepickerlibrary.helpers;
 import android.os.Parcel;
 import android.os.Parcelable;
 import android.support.annotation.NonNull;
+import android.support.annotation.Nullable;
 import android.text.TextUtils;
 
 import com.appeaser.sublimepickerlibrary.datepicker.SelectedDate;
@@ -57,6 +58,14 @@ public class SublimeOptions implements Parcelable {
     private SublimeRecurrencePicker.RecurrenceOption mRecurrenceOption
             = SublimeRecurrencePicker.RecurrenceOption.DOES_NOT_REPEAT;
     private String mRecurrenceRule = "";
+
+    //Allow user to define custom recurrence text labels
+    private String doesntRepeatRecurrenceLabel = SublimeRecurrencePicker.RecurrenceOption.DOES_NOT_REPEAT.toString();
+    private String dailyRecurrenceLabel = SublimeRecurrencePicker.RecurrenceOption.DAILY.toString();
+    private String weeklyRecurrenceLabel = SublimeRecurrencePicker.RecurrenceOption.WEEKLY.toString();
+    private String monthlyRecurrenceLabel = SublimeRecurrencePicker.RecurrenceOption.MONTHLY.toString();
+    private String yearlyRecurrenceLabel = SublimeRecurrencePicker.RecurrenceOption.YEARLY.toString();
+    private String customRecurrenceLabel = SublimeRecurrencePicker.RecurrenceOption.CUSTOM.toString();
 
     // Allow date range selection
     private boolean mCanPickDateRange;
@@ -236,6 +245,31 @@ public class SublimeOptions implements Parcelable {
         return (mDisplayOptions & ACTIVATE_RECURRENCE_PICKER) == ACTIVATE_RECURRENCE_PICKER;
     }
 
+    public void setRecurrenceTextLabels(@Nullable String doesntRepeatRecurrenceLabel, @Nullable String dailyRecurrenceLabel,
+                                        @Nullable String weeklyRecurrenceLabel, @Nullable String monthlyRecurrenceLabel,
+                                        @Nullable String yearlyRecurrenceLabel, @Nullable String customRecurrenceLabel) {
+
+        if (!TextUtils.isEmpty(doesntRepeatRecurrenceLabel)) {
+            this.doesntRepeatRecurrenceLabel = doesntRepeatRecurrenceLabel;
+        }
+        if (!TextUtils.isEmpty(dailyRecurrenceLabel)) {
+            this.dailyRecurrenceLabel = dailyRecurrenceLabel;
+        }
+        if (!TextUtils.isEmpty(weeklyRecurrenceLabel)) {
+            this.weeklyRecurrenceLabel = weeklyRecurrenceLabel;
+        }
+        if (!TextUtils.isEmpty(monthlyRecurrenceLabel)) {
+            this.monthlyRecurrenceLabel = monthlyRecurrenceLabel;
+        }
+        if (!TextUtils.isEmpty(yearlyRecurrenceLabel)) {
+            this.yearlyRecurrenceLabel = yearlyRecurrenceLabel;
+        }
+        if (!TextUtils.isEmpty(customRecurrenceLabel)) {
+            this.customRecurrenceLabel = customRecurrenceLabel;
+        }
+
+    }
+
     /*public int[] getDateParams() {
         if (mYear == -1 || mMonthOfYear == -1 || mDayOfMonth == -1) {
             Calendar cal = SUtils.getCalendarForLocale(null, Locale.getDefault());
@@ -332,6 +366,12 @@ public class SublimeOptions implements Parcelable {
         mMinute = in.readInt();
         mIs24HourView = in.readByte() != 0;
         mRecurrenceRule = in.readString();
+        doesntRepeatRecurrenceLabel = in.readString();
+        dailyRecurrenceLabel = in.readString();
+        weeklyRecurrenceLabel = in.readString();
+        monthlyRecurrenceLabel = in.readString();
+        yearlyRecurrenceLabel = in.readString();
+        customRecurrenceLabel = in.readString();
         mCanPickDateRange = in.readByte() != 0;
     }
 
@@ -350,6 +390,12 @@ public class SublimeOptions implements Parcelable {
         dest.writeInt(mMinute);
         dest.writeByte((byte) (mIs24HourView ? 1 : 0));
         dest.writeString(mRecurrenceRule);
+        dest.writeString(doesntRepeatRecurrenceLabel);
+        dest.writeString(dailyRecurrenceLabel);
+        dest.writeString(weeklyRecurrenceLabel);
+        dest.writeString(monthlyRecurrenceLabel);
+        dest.writeString(yearlyRecurrenceLabel);
+        dest.writeString(customRecurrenceLabel);
         dest.writeByte((byte) (mCanPickDateRange ? 1 : 0));
     }
 
