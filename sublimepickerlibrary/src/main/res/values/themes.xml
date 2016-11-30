@@ -15,7 +15,7 @@
 <resources>
 
     <!-- Dark theme -->
-    <style name="SublimePickerStyleDark" parent="Theme.AppCompat">
+    <style name="SublimePickerStyleDark" parent="Theme.AppCompat.Dialog">
         <item name="spDatePickerStyle">@style/SublimeDatePickerStyle</item>
         <item name="spTimePickerStyle">@style/SublimeTimePickerStyle</item>
         <item name="spRecurrencePickerStyle">@style/SublimeRecurrencePickerStyle</item>
@@ -45,7 +45,7 @@
     </style>
 
     <!-- Light theme -->
-    <style name="SublimePickerStyleLight" parent="Theme.AppCompat.Light">
+    <style name="SublimePickerStyleLight" parent="Theme.AppCompat.Light.Dialog">
         <item name="spDatePickerStyle">@style/SublimeDatePickerStyle</item>
         <item name="spTimePickerStyle">@style/SublimeTimePickerStyle</item>
         <item name="spRecurrencePickerStyle">@style/SublimeRecurrencePickerStyle</item>
