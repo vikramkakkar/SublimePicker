@@ -194,7 +194,6 @@ public class SublimeRecurrencePicker extends FrameLayout
         }
 
         // Options/Views
-        //TODO set the text labels on these views based on options input.
         mRepeatOptionTextViews = new ArrayList<>();
         mRepeatOptionTextViews.add(
                 (TextView) findViewById(R.id.tvChosenCustomOption));
