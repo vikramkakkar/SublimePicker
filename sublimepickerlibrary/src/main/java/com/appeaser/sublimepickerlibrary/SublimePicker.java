@@ -613,7 +613,7 @@ public class SublimePicker extends FrameLayout
                     : SUtils.getCalendarForLocale(null, Locale.getDefault());
 
             mSublimeRecurrencePicker.initializeData(mRepeatOptionSetListener,
-                    mCurrentRecurrenceOption, mRecurrenceRule,
+                    mCurrentRecurrenceOption, mRecurrenceRule, mOptions,
                     cal.getTimeInMillis());
         } else {
             removeView(mSublimeRecurrencePicker);
