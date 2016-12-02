@@ -29,10 +29,10 @@ import android.graphics.drawable.StateListDrawable;
 import android.os.Build;
 import android.os.Parcel;
 import android.os.Parcelable;
+import android.support.v4.content.ContextCompat;
 import android.text.TextUtils;
 import android.text.format.Time;
 import android.util.AttributeSet;
-import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.widget.FrameLayout;
@@ -41,6 +41,7 @@ import android.widget.ScrollView;
 import android.widget.TextView;
 
 import com.appeaser.sublimepickerlibrary.R;
+import com.appeaser.sublimepickerlibrary.helpers.SublimeOptions;
 import com.appeaser.sublimepickerlibrary.utilities.SUtils;
 
 import java.util.ArrayList;
@@ -48,6 +49,8 @@ import java.util.TimeZone;
 
 public class SublimeRecurrencePicker extends FrameLayout
         implements View.OnClickListener {
+
+    protected SublimeOptions mOptions;
 
     // Pre-defined recurrence options that are shown in a menu
     // format. Choosing 'CUSTOM' takes the user
@@ -116,16 +119,16 @@ public class SublimeRecurrencePicker extends FrameLayout
 
     public SublimeRecurrencePicker(Context context, AttributeSet attrs, int defStyleAttr) {
         super(SUtils.createThemeWrapper(context, R.attr.sublimePickerStyle,
-                R.style.SublimePickerStyleLight, R.attr.spRecurrencePickerStyle,
-                R.style.SublimeRecurrencePickerStyle), attrs, defStyleAttr);
+                                        R.style.SublimePickerStyleLight, R.attr.spRecurrencePickerStyle,
+                                        R.style.SublimeRecurrencePickerStyle), attrs, defStyleAttr);
         initializeLayout();
     }
 
     @TargetApi(Build.VERSION_CODES.LOLLIPOP)
     public SublimeRecurrencePicker(Context context, AttributeSet attrs, int defStyleAttr, int defStyleRes) {
         super(SUtils.createThemeWrapper(context, R.attr.sublimePickerStyle,
-                R.style.SublimePickerStyleLight, R.attr.spRecurrencePickerStyle,
-                R.style.SublimeRecurrencePickerStyle), attrs, defStyleAttr, defStyleRes);
+                                        R.style.SublimePickerStyleLight, R.attr.spRecurrencePickerStyle,
+                                        R.style.SublimeRecurrencePickerStyle), attrs, defStyleAttr, defStyleRes);
         initializeLayout();
     }
 
@@ -162,7 +165,7 @@ public class SublimeRecurrencePicker extends FrameLayout
                 SUtils.setViewBackground(this, pickerBgColor, SUtils.CORNERS_ALL);
 
             SUtils.setViewBackground(tvRecurrenceHeading, headingBgColor,
-                    SUtils.CORNER_TOP_LEFT | SUtils.CORNER_TOP_RIGHT);
+                                     SUtils.CORNER_TOP_LEFT | SUtils.CORNER_TOP_RIGHT);
 
             // State colors
             mSelectedStateTextColor = a.getColor(
@@ -179,8 +182,7 @@ public class SublimeRecurrencePicker extends FrameLayout
             mCheckmarkDrawable
                     = a.getDrawable(R.styleable.SublimeRecurrencePicker_spSelectedOptionDrawable);
             if (mCheckmarkDrawable == null) {
-                mCheckmarkDrawable = context.getResources()
-                        .getDrawable(R.drawable.checkmark_medium_ff);
+                mCheckmarkDrawable = ContextCompat.getDrawable(context, R.drawable.checkmark_medium_ff);
             }
 
             // Android Studio recommends this check :-/
@@ -192,6 +194,7 @@ public class SublimeRecurrencePicker extends FrameLayout
         }
 
         // Options/Views
+        //TODO set the text labels on these views based on options input.
         mRepeatOptionTextViews = new ArrayList<>();
         mRepeatOptionTextViews.add(
                 (TextView) findViewById(R.id.tvChosenCustomOption));
@@ -211,14 +214,15 @@ public class SublimeRecurrencePicker extends FrameLayout
         // Set bg StateListDrawables
         for (View v : mRepeatOptionTextViews) {
             SUtils.setViewBackground(v,
-                    createOptionBg(mPressedStateColor));
+                                     createOptionBg(mPressedStateColor));
         }
     }
 
     // Called by SublimePicker to initialize state & provide callback
     public void initializeData(OnRepeatOptionSetListener callback,
                                RecurrenceOption initialOption, String recurrenceRule,
-                               long currentlyChosenTime) {
+                               SublimeOptions options, long currentlyChosenTime) {
+        mOptions = options;
         mCallback = callback;
         mRecurrenceRule = recurrenceRule;
 
@@ -227,13 +231,31 @@ public class SublimeRecurrencePicker extends FrameLayout
 
         // Initialize state for RecurrenceOptionCreator
         mRecurrenceOptionCreator.initializeData(mCurrentlyChosenTime, null,
-                mRecurrenceRule, mOnRecurrenceSetListener);
+                                                mRecurrenceRule, mOnRecurrenceSetListener);
+        updateView();
     }
 
     // Controls the visibility of recurrence options menu
     // & recurrence option creator
     public void updateView() {
         if (mCurrentView == CurrentView.RECURRENCE_OPTIONS_MENU) {
+            TextView doesNotRepeatOption = (TextView) findViewById(R.id.tvDoesNotRepeat);
+            TextView dailyOption = (TextView) findViewById(R.id.tvDaily);
+            TextView weeklyOption = (TextView) findViewById(R.id.tvWeekly);
+            TextView monthlyOption = (TextView) findViewById(R.id.tvMonthly);
+            TextView yearlyOption = (TextView) findViewById(R.id.tvYearly);
+            TextView customOption = (TextView) findViewById(R.id.tvCustom);
+
+            if(mOptions != null){
+                //Update the text views with the passed in options.
+                doesNotRepeatOption.setText(mOptions.getDoesntRepeatRecurrenceLabel());
+                dailyOption.setText(mOptions.getDailyRecurrenceLabel());
+                weeklyOption.setText(mOptions.getWeeklyRecurrenceLabel());
+                monthlyOption.setText(mOptions.getMonthlyRecurrenceLabel());
+                yearlyOption.setText(mOptions.getYearlyRecurrenceLabel());
+                customOption.setText(mOptions.getCustomRecurrenceLabel());
+            }
+
             mRecurrenceOptionCreator.setVisibility(View.GONE);
             llRecurrenceOptionsMenu.setVisibility(View.VISIBLE);
 
@@ -311,7 +333,7 @@ public class SublimeRecurrencePicker extends FrameLayout
             if (tv.getId() == viewIdToSelect) {
                 // Set checkmark drawable & drawable-padding
                 tv.setCompoundDrawablesWithIntrinsicBounds(null, null,
-                        mCheckmarkDrawable, null);
+                                                           mCheckmarkDrawable, null);
                 tv.setCompoundDrawablePadding(mSelectedOptionDrawablePadding);
                 tv.setTextColor(mSelectedStateTextColor);
 
@@ -405,7 +427,7 @@ public class SublimeRecurrencePicker extends FrameLayout
         StateListDrawable sld = new StateListDrawable();
 
         sld.addState(new int[]{android.R.attr.state_pressed},
-                new ColorDrawable(pressedBgColor));
+                     new ColorDrawable(pressedBgColor));
         sld.addState(new int[]{}, new ColorDrawable(Color.TRANSPARENT));
 
         return sld;
@@ -420,7 +442,7 @@ public class SublimeRecurrencePicker extends FrameLayout
     @Override
     protected Parcelable onSaveInstanceState() {
         return new SavedState(super.onSaveInstanceState(), mCurrentView,
-                mCurrentRecurrenceOption, mRecurrenceRule);
+                              mCurrentRecurrenceOption, mRecurrenceRule);
     }
 
     @Override
@@ -440,9 +462,9 @@ public class SublimeRecurrencePicker extends FrameLayout
      */
     private static class SavedState extends View.BaseSavedState {
 
-        private final CurrentView sCurrentView;
+        private final CurrentView      sCurrentView;
         private final RecurrenceOption sCurrentRecurrenceOption;
-        private final String sRecurrenceRule;
+        private final String           sRecurrenceRule;
 
         /**
          * Constructor called from {@link SublimeRecurrencePicker#onSaveInstanceState()}
@@ -503,6 +525,7 @@ public class SublimeRecurrencePicker extends FrameLayout
     }
 
     public interface OnRepeatOptionSetListener {
+
         /**
          * User has either selected one of the pre-defined
          * recurrence options or used RecurrenceOptionCreator

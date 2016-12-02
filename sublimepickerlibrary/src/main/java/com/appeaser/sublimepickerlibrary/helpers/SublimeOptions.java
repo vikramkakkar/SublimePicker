@@ -245,6 +245,30 @@ public class SublimeOptions implements Parcelable {
         return (mDisplayOptions & ACTIVATE_RECURRENCE_PICKER) == ACTIVATE_RECURRENCE_PICKER;
     }
 
+    public String getDoesntRepeatRecurrenceLabel() {
+        return doesntRepeatRecurrenceLabel;
+    }
+
+    public String getDailyRecurrenceLabel() {
+        return dailyRecurrenceLabel;
+    }
+
+    public String getWeeklyRecurrenceLabel() {
+        return weeklyRecurrenceLabel;
+    }
+
+    public String getMonthlyRecurrenceLabel() {
+        return monthlyRecurrenceLabel;
+    }
+
+    public String getYearlyRecurrenceLabel() {
+        return yearlyRecurrenceLabel;
+    }
+
+    public String getCustomRecurrenceLabel() {
+        return customRecurrenceLabel;
+    }
+
     public void setRecurrenceTextLabels(@Nullable String doesntRepeatRecurrenceLabel, @Nullable String dailyRecurrenceLabel,
                                         @Nullable String weeklyRecurrenceLabel, @Nullable String monthlyRecurrenceLabel,
                                         @Nullable String yearlyRecurrenceLabel, @Nullable String customRecurrenceLabel) {
