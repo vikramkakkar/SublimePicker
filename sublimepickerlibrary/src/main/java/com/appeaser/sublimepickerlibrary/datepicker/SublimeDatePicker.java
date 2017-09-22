@@ -514,21 +514,21 @@ public class SublimeDatePicker extends FrameLayout {
     /**
      * Initialize the state. If the provided values designate an inconsistent
      * date the values are normalized before updating the spinners.
-     *
-     * @param selectedDate  The initial date or date range.
+     *  @param selectedDate  The initial date or date range.
      * @param canPickRange  Enable/disable date range selection
+     * @param setToggleRangeWithoutLongPress Enable/disable date range selection without long press
      * @param callback      How user is notified date is changed by
-     *                      user, can be null.
      */
     //public void init(int year, int monthOfYear, int dayOfMonth, boolean canPickRange,
     public void init(SelectedDate selectedDate, boolean canPickRange,
-                     SublimeDatePicker.OnDateChangedListener callback) {
+                     boolean setToggleRangeWithoutLongPress, OnDateChangedListener callback) {
         //mCurrentDate.set(Calendar.YEAR, year);
         //mCurrentDate.set(Calendar.MONTH, monthOfYear);
         //mCurrentDate.set(Calendar.DAY_OF_MONTH, dayOfMonth);
         mCurrentDate = new SelectedDate(selectedDate);
 
         mDayPickerView.setCanPickRange(canPickRange);
+        mDayPickerView.setToggleRangeWithoutLongPress(setToggleRangeWithoutLongPress);
         mDateChangedListener = callback;
 
         onDateChanged(false, false, true);

@@ -229,6 +229,10 @@ class DayPickerView extends ViewGroup {
         mViewPager.setCanPickRange(canPickRange);
     }
 
+    public void setToggleRangeWithoutLongPress(boolean setToggleRangeWithoutLongPress) {
+        mViewPager.setToggleRangeWithoutLongPress(setToggleRangeWithoutLongPress);
+    }
+
     private void updateButtonVisibility(int position) {
         final boolean hasPrev = position > 0;
         final boolean hasNext = position < (mAdapter.getCount() - 1);
