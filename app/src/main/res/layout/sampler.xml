@@ -133,6 +133,16 @@
                 android:text="Allow date range selection?"
                 android:textSize="@dimen/sampler_text_size" />
 
+            <CheckBox
+                android:id="@+id/cbToggleRangeSelectionWithoutLongPress"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp"
+                android:layout_marginBottom="20dp"
+                android:text="Allow date range selection without long press?"
+                android:textSize="@dimen/sampler_text_size" />
+
             <RelativeLayout
                 android:id="@+id/rlDateTimeRecurrenceInfo"
                 android:layout_width="match_parent"

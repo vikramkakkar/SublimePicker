@@ -52,7 +52,7 @@ public class Sampler extends AppCompatActivity {
     ImageView ivLaunchPicker;
 
     // SublimePicker options
-    CheckBox cbDatePicker, cbTimePicker, cbRecurrencePicker, cbAllowDateRangeSelection;
+    CheckBox cbDatePicker, cbTimePicker, cbRecurrencePicker, cbAllowDateRangeSelection, cbToggleRangeSelectionWithoutLongPress;
     RadioButton rbDatePicker, rbTimePicker, rbRecurrencePicker;
 
     // Labels
@@ -137,6 +137,7 @@ public class Sampler extends AppCompatActivity {
         svMainContainer = (ScrollView) findViewById(R.id.svMainContainer);
 
         cbAllowDateRangeSelection = (CheckBox) findViewById(R.id.cbAllowDateRangeSelection);
+        cbToggleRangeSelectionWithoutLongPress = (CheckBox) findViewById(R.id.cbToggleRangeSelectionWithoutLongPress);
 
         llDateHolder = (LinearLayout) findViewById(R.id.llDateHolder);
         llDateRangeHolder = (LinearLayout) findViewById(R.id.llDateRangeHolder);
@@ -232,6 +233,7 @@ public class Sampler extends AppCompatActivity {
             cbTimePicker.setChecked(true);
             cbRecurrencePicker.setChecked(true);
             cbAllowDateRangeSelection.setChecked(false);
+            cbToggleRangeSelectionWithoutLongPress.setChecked(false);
 
             rbDatePicker.setChecked(true);
         } else { // Restore
@@ -241,6 +243,7 @@ public class Sampler extends AppCompatActivity {
                     .setChecked(savedInstanceState.getBoolean(SS_RECURRENCE_PICKER_CHECKED));
             cbAllowDateRangeSelection
                     .setChecked(savedInstanceState.getBoolean(SS_ALLOW_DATE_RANGE_SELECTION));
+            cbToggleRangeSelectionWithoutLongPress.setChecked(savedInstanceState.getBoolean(SS_TOGGLE_DATE_RANGE_SELECTION_WITHOUT_LONG_PRESS));
 
             rbDatePicker.setVisibility(cbDatePicker.isChecked() ?
                     View.VISIBLE : View.GONE);
@@ -324,6 +327,7 @@ public class Sampler extends AppCompatActivity {
 
         // Enable/disable the date range selection feature
         options.setCanPickDateRange(cbAllowDateRangeSelection.isChecked());
+        options.setToggleRangeWithoutLongPress(cbToggleRangeSelectionWithoutLongPress.isChecked());
 
         // Example for setting date range:
         // Note that you can pass a date range as the initial date params
@@ -428,6 +432,7 @@ public class Sampler extends AppCompatActivity {
     final String SS_TIME_PICKER_CHECKED = "saved.state.time.picker.checked";
     final String SS_RECURRENCE_PICKER_CHECKED = "saved.state.recurrence.picker.checked";
     final String SS_ALLOW_DATE_RANGE_SELECTION = "saved.state.allow.date.range.selection";
+    final String SS_TOGGLE_DATE_RANGE_SELECTION_WITHOUT_LONG_PRESS = "saved.state.allow.date.range.selection.without.longpress";
     final String SS_START_YEAR = "saved.state.start.year";
     final String SS_START_MONTH = "saved.state.start.month";
     final String SS_START_DAY = "saved.state.start.day";
@@ -449,6 +454,7 @@ public class Sampler extends AppCompatActivity {
         outState.putBoolean(SS_TIME_PICKER_CHECKED, cbTimePicker.isChecked());
         outState.putBoolean(SS_RECURRENCE_PICKER_CHECKED, cbRecurrencePicker.isChecked());
         outState.putBoolean(SS_ALLOW_DATE_RANGE_SELECTION, cbAllowDateRangeSelection.isChecked());
+        outState.putBoolean(SS_TOGGLE_DATE_RANGE_SELECTION_WITHOUT_LONG_PRESS, cbToggleRangeSelectionWithoutLongPress.isChecked());
 
         int startYear = mSelectedDate != null ? mSelectedDate.getStartDate().get(Calendar.YEAR) : INVALID_VAL;
         int startMonth = mSelectedDate != null ? mSelectedDate.getStartDate().get(Calendar.MONTH) : INVALID_VAL;
