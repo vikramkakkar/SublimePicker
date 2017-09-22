@@ -46,6 +46,24 @@ import java.util.Calendar;
 
 public class Sampler extends AppCompatActivity {
 
+    // Keys for saving state
+    private static final String SS_DATE_PICKER_CHECKED = "saved.state.date.picker.checked";
+    private static final String SS_TIME_PICKER_CHECKED = "saved.state.time.picker.checked";
+    private static final String SS_RECURRENCE_PICKER_CHECKED = "saved.state.recurrence.picker.checked";
+    private static final String SS_ALLOW_DATE_RANGE_SELECTION = "saved.state.allow.date.range.selection";
+    private static final String SS_TOGGLE_DATE_RANGE_SELECTION_WITHOUT_LONG_PRESS = "saved.state.allow.date.range.selection.without.longpress";
+    private static final String SS_START_YEAR = "saved.state.start.year";
+    private static final String SS_START_MONTH = "saved.state.start.month";
+    private static final String SS_START_DAY = "saved.state.start.day";
+    private static final String SS_END_YEAR = "saved.state.end.year";
+    private static final String SS_END_MONTH = "saved.state.end.month";
+    private static final String SS_END_DAY = "saved.state.end.day";
+    private static final String SS_HOUR = "saved.state.hour";
+    private static final String SS_MINUTE = "saved.state.minute";
+    private static final String SS_RECURRENCE_OPTION = "saved.state.recurrence.option";
+    private static final String SS_RECURRENCE_RULE = "saved.state.recurrence.rule";
+    private static final String SS_INFO_VIEW_VISIBILITY = "saved.state.info.view.visibility";
+    private static final String SS_SCROLL_Y = "saved.state.scroll.y";
     private final int INVALID_VAL = -1;
 
     // Launches SublimePicker
@@ -426,25 +444,6 @@ public class Sampler extends AppCompatActivity {
                 Spanned.SPAN_EXCLUSIVE_EXCLUSIVE);
         return ss;
     }
-
-    // Keys for saving state
-    final String SS_DATE_PICKER_CHECKED = "saved.state.date.picker.checked";
-    final String SS_TIME_PICKER_CHECKED = "saved.state.time.picker.checked";
-    final String SS_RECURRENCE_PICKER_CHECKED = "saved.state.recurrence.picker.checked";
-    final String SS_ALLOW_DATE_RANGE_SELECTION = "saved.state.allow.date.range.selection";
-    final String SS_TOGGLE_DATE_RANGE_SELECTION_WITHOUT_LONG_PRESS = "saved.state.allow.date.range.selection.without.longpress";
-    final String SS_START_YEAR = "saved.state.start.year";
-    final String SS_START_MONTH = "saved.state.start.month";
-    final String SS_START_DAY = "saved.state.start.day";
-    final String SS_END_YEAR = "saved.state.end.year";
-    final String SS_END_MONTH = "saved.state.end.month";
-    final String SS_END_DAY = "saved.state.end.day";
-    final String SS_HOUR = "saved.state.hour";
-    final String SS_MINUTE = "saved.state.minute";
-    final String SS_RECURRENCE_OPTION = "saved.state.recurrence.option";
-    final String SS_RECURRENCE_RULE = "saved.state.recurrence.rule";
-    final String SS_INFO_VIEW_VISIBILITY = "saved.state.info.view.visibility";
-    final String SS_SCROLL_Y = "saved.state.scroll.y";
 
     @Override
     protected void onSaveInstanceState(Bundle outState) {
