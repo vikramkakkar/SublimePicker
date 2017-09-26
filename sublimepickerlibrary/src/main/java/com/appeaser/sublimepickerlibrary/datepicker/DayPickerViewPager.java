@@ -19,6 +19,8 @@ package com.appeaser.sublimepickerlibrary.datepicker;
 import android.content.Context;
 import android.graphics.drawable.Drawable;
 import android.os.Parcelable;
+import android.support.annotation.NonNull;
+import android.support.annotation.Nullable;
 import android.support.v4.view.PagerAdapter;
 import android.support.v4.view.ViewPager;
 import android.util.AttributeSet;
@@ -58,6 +60,7 @@ class DayPickerViewPager extends ViewPager {
     private boolean toggleRange = false;
     private boolean mCanToggleRangeWithoutLongPress = false;
     private CheckForLongPress mCheckForLongPress;
+    @Nullable
     private SelectedDate mTempSelectedDate;
 
     // Scrolling support
@@ -307,8 +310,8 @@ class DayPickerViewPager extends ViewPager {
                     mTempSelectedDate = mDayPickerPagerAdapter.resolveEndDateForRange((int) ev.getX(),
                             (int) ev.getY(), getCurrentItem(), false);
 
-                    if (mCanToggleRangeWithoutLongPress) {
-                        toggleLongSelectAction();
+                    if (mCanToggleRangeWithoutLongPress && mTempSelectedDate != null) {
+                        mTempSelectedDate = toggleLongSelectAction(mTempSelectedDate);
                     }
 
                     mDayPickerPagerAdapter.onDateRangeSelectionEnded(mTempSelectedDate);
@@ -367,11 +370,13 @@ class DayPickerViewPager extends ViewPager {
         return isRangeSelectionActive() || super.onTouchEvent(ev);
     }
 
-    private void toggleLongSelectAction() {
+    @NonNull
+    private SelectedDate toggleLongSelectAction(@NonNull final SelectedDate selectedDate) {
         if (toggleRange) {
-            mTempSelectedDate.setFirstDate(mTempSelectedDate.getSecondDate());
+            selectedDate.setFirstDate(selectedDate.getSecondDate());
         }
         toggleRange = !toggleRange;
+        return selectedDate;
     }
 
     private boolean isRangeSelectionActive() {
