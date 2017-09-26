@@ -372,7 +372,7 @@ class DayPickerViewPager extends ViewPager {
 
     @NonNull
     private SelectedDate toggleLongSelectAction(@NonNull final SelectedDate selectedDate) {
-        if (toggleRange) {
+        if (!toggleRange) {
             selectedDate.setFirstDate(selectedDate.getSecondDate());
         }
         toggleRange = !toggleRange;
