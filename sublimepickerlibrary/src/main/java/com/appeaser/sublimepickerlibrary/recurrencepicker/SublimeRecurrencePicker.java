@@ -353,12 +353,13 @@ public class SublimeRecurrencePicker extends FrameLayout
         } else if (v.getId() == R.id.tvCustom) {
             // Show RecurrenceOptionCreator
             mCurrentView = CurrentView.RECURRENCE_CREATOR;
-            updateView();
-            return;
         } else {
             // Default
             mCurrentRecurrenceOption = RecurrenceOption.DOES_NOT_REPEAT;
         }
+
+        updateView();
+        if(v.getId() == R.id.tvCustom) return;
 
         if (mCallback != null) {
             // A preset value has been picked.
