@@ -36,11 +36,9 @@ import android.widget.RelativeLayout;
 import android.widget.ScrollView;
 import android.widget.TextView;
 import android.widget.Toast;
-
 import com.appeaser.sublimepickerlibrary.datepicker.SelectedDate;
 import com.appeaser.sublimepickerlibrary.helpers.SublimeOptions;
-import com.appeaser.sublimepickerlibrary.recurrencepicker.SublimeRecurrencePicker;
-
+import com.appeaser.sublimepickerlibrary.recurrencepicker.SublimeRecurrencePicker.RecurrenceOption;
 import java.text.DateFormat;
 import java.util.Calendar;
 
@@ -81,7 +79,7 @@ public class Sampler extends AppCompatActivity {
         @Override
         public void onDateTimeRecurrenceSet(SelectedDate selectedDate,
                                             int hourOfDay, int minute,
-                                            SublimeRecurrencePicker.RecurrenceOption recurrenceOption,
+                                            RecurrenceOption recurrenceOption,
                                             String recurrenceRule) {
 
             mSelectedDate = selectedDate;
@@ -321,6 +319,11 @@ public class Sampler extends AppCompatActivity {
         }
 
         options.setDisplayOptions(displayOptions);
+
+        if (mRecurrenceOption != null) {
+            options.setRecurrenceParams(RecurrenceOption.valueOf(mRecurrenceOption),
+                mRecurrenceRule);
+        }
 
         // Enable/disable the date range selection feature
         options.setCanPickDateRange(cbAllowDateRangeSelection.isChecked());
