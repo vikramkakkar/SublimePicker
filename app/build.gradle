@@ -1,13 +1,13 @@
 apply plugin: 'com.android.application'
 
 android {
-    compileSdkVersion 23
-    buildToolsVersion "23.0.2"
+    compileSdkVersion 27
+    buildToolsVersion "28.0.2"
 
     defaultConfig {
         applicationId "com.appeaser.sublimepicker"
         minSdkVersion 14
-        targetSdkVersion 23
+        targetSdkVersion 27
         versionCode 5
         versionName "1.4"
     }
@@ -20,6 +20,7 @@ android {
 }
 
 dependencies {
-    compile fileTree(include: ['*.jar'], dir: 'libs')
-    compile project(':sublimepickerlibrary')
+    implementation fileTree(include: ['*.jar'], dir: 'libs')
+    implementation project(':sublimepickerlibrary')
+    implementation 'com.android.support:appcompat-v7:27.1.1'
 }
