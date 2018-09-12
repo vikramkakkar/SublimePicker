@@ -60,6 +60,8 @@ public class SublimeOptions implements Parcelable {
 
     // Allow date range selection
     private boolean mCanPickDateRange;
+    // Allow date range selection without long presses
+    private boolean mToggleRangeWithoutLongPress;
 
     // Defaults
     private Picker mPickerToShow = Picker.DATE_PICKER;
@@ -313,6 +315,19 @@ public class SublimeOptions implements Parcelable {
         return mCanPickDateRange;
     }
 
+    public SublimeOptions setToggleRangeWithoutLongPress(boolean toggleRangeWithoutLongPress) {
+        this.mToggleRangeWithoutLongPress = toggleRangeWithoutLongPress;
+        if (toggleRangeWithoutLongPress) {
+            return setCanPickDateRange(true);
+        } else {
+            return this;
+        }
+    }
+
+    public boolean canToggleRangeWithoutLongPress() {
+        return mToggleRangeWithoutLongPress;
+    }
+
     @Override
     public int describeContents() {
         return 0;
@@ -333,6 +348,7 @@ public class SublimeOptions implements Parcelable {
         mIs24HourView = in.readByte() != 0;
         mRecurrenceRule = in.readString();
         mCanPickDateRange = in.readByte() != 0;
+        mToggleRangeWithoutLongPress = in.readByte() != 0;
     }
 
     @Override
@@ -351,6 +367,7 @@ public class SublimeOptions implements Parcelable {
         dest.writeByte((byte) (mIs24HourView ? 1 : 0));
         dest.writeString(mRecurrenceRule);
         dest.writeByte((byte) (mCanPickDateRange ? 1 : 0));
+        dest.writeByte((byte) (mToggleRangeWithoutLongPress ? 1 : 0));
     }
 
     public static final Parcelable.Creator<SublimeOptions> CREATOR = new Parcelable.Creator<SublimeOptions>() {

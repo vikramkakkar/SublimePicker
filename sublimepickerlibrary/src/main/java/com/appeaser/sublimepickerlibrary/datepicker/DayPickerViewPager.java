@@ -19,6 +19,8 @@ package com.appeaser.sublimepickerlibrary.datepicker;
 import android.content.Context;
 import android.graphics.drawable.Drawable;
 import android.os.Parcelable;
+import android.support.annotation.NonNull;
+import android.support.annotation.Nullable;
 import android.support.v4.view.PagerAdapter;
 import android.support.v4.view.ViewPager;
 import android.util.AttributeSet;
@@ -55,8 +57,10 @@ class DayPickerViewPager extends ViewPager {
 
     private float mInitialDownX, mInitialDownY;
     private boolean mIsLongPressed = false;
-
+    private boolean toggleRange = false;
+    private boolean mCanToggleRangeWithoutLongPress = false;
     private CheckForLongPress mCheckForLongPress;
+    @Nullable
     private SelectedDate mTempSelectedDate;
 
     // Scrolling support
@@ -204,6 +208,10 @@ class DayPickerViewPager extends ViewPager {
         mCanPickRange = canPickRange;
     }
 
+    public void setToggleRangeWithoutLongPress(boolean setToggleRangeWithoutLongPress) {
+        this.mCanToggleRangeWithoutLongPress = setToggleRangeWithoutLongPress;
+    }
+
     @Override
     public boolean onInterceptTouchEvent(MotionEvent ev) {
         if (!mCanPickRange) {
@@ -252,7 +260,7 @@ class DayPickerViewPager extends ViewPager {
             }
         }
 
-        return mIsLongPressed || super.onInterceptTouchEvent(ev);
+        return isRangeSelectionActive() || super.onInterceptTouchEvent(ev);
     }
 
     private boolean isStillALongPress(int x, int y) {
@@ -291,7 +299,7 @@ class DayPickerViewPager extends ViewPager {
             removeCallbacks(mCheckForLongPress);
         }
 
-        if (mIsLongPressed && ev.getAction() == MotionEvent.ACTION_UP
+        if (isRangeSelectionActive() && ev.getAction() == MotionEvent.ACTION_UP
                 || ev.getAction() == MotionEvent.ACTION_CANCEL) {
             if (Config.DEBUG) {
                 Log.i(TAG, "OTE: LONGPRESS && (UP || CANCEL)");
@@ -301,6 +309,11 @@ class DayPickerViewPager extends ViewPager {
                 if (mDayPickerPagerAdapter != null) {
                     mTempSelectedDate = mDayPickerPagerAdapter.resolveEndDateForRange((int) ev.getX(),
                             (int) ev.getY(), getCurrentItem(), false);
+
+                    if (mCanToggleRangeWithoutLongPress && mTempSelectedDate != null) {
+                        mTempSelectedDate = toggleLongSelectAction(mTempSelectedDate);
+                    }
+
                     mDayPickerPagerAdapter.onDateRangeSelectionEnded(mTempSelectedDate);
                 }
             }
@@ -314,13 +327,13 @@ class DayPickerViewPager extends ViewPager {
                 removeCallbacks(mScrollerRunnable);
             }
             //return true;
-        } else if (mIsLongPressed && ev.getAction() == MotionEvent.ACTION_DOWN) {
+        } else if (isRangeSelectionActive() && ev.getAction() == MotionEvent.ACTION_DOWN) {
             if (Config.DEBUG) {
                 Log.i(TAG, "OTE: LONGPRESS && DOWN");
             }
 
             mScrollingDirection = NOT_SCROLLING;
-        } else if (mIsLongPressed && ev.getAction() == MotionEvent.ACTION_MOVE) {
+        } else if (isRangeSelectionActive() && ev.getAction() == MotionEvent.ACTION_MOVE) {
             if (Config.DEBUG) {
                 Log.i(TAG, "OTE: LONGPRESS && MOVE");
             }
@@ -354,7 +367,20 @@ class DayPickerViewPager extends ViewPager {
             }
         }
 
-        return mIsLongPressed || super.onTouchEvent(ev);
+        return isRangeSelectionActive() || super.onTouchEvent(ev);
+    }
+
+    @NonNull
+    private SelectedDate toggleLongSelectAction(@NonNull final SelectedDate selectedDate) {
+        if (!toggleRange) {
+            selectedDate.setFirstDate(selectedDate.getSecondDate());
+        }
+        toggleRange = !toggleRange;
+        return selectedDate;
+    }
+
+    private boolean isRangeSelectionActive() {
+        return mIsLongPressed || mCanToggleRangeWithoutLongPress;
     }
 
     private int resolveDirectionForScroll(float x) {
