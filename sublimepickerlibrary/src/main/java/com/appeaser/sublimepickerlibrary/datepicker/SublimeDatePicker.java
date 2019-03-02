@@ -405,23 +405,25 @@ public class SublimeDatePicker extends FrameLayout {
     private final OnClickListener mOnHeaderClickListener = new OnClickListener() {
         @Override
         public void onClick(View v) {
-            SUtils.vibrateForDatePicker(SublimeDatePicker.this);
+            if (!isAlternateDatePicker) {
+                SUtils.vibrateForDatePicker(SublimeDatePicker.this);
 
-            if (v.getId() == R.id.date_picker_header_year) {
-                setCurrentView(VIEW_YEAR);
-            } else if (v.getId() == R.id.date_picker_header_date) {
-                setCurrentView(VIEW_MONTH_DAY);
-            } else if (v.getId() == R.id.tv_header_date_start) {
-                mCurrentlyActivatedRangeItem = RANGE_ACTIVATED_START;
-                tvHeaderDateStart.setActivated(true);
-                tvHeaderDateEnd.setActivated(false);
-            } else if (v.getId() == R.id.tv_header_date_end) {
-                mCurrentlyActivatedRangeItem = RANGE_ACTIVATED_END;
-                tvHeaderDateStart.setActivated(false);
-                tvHeaderDateEnd.setActivated(true);
-            } else if (v.getId() == R.id.iv_header_date_reset) {
-                mCurrentDate = new SelectedDate(mCurrentDate.getStartDate());
-                onDateChanged(true, false, true);
+                if (v.getId() == R.id.date_picker_header_year) {
+                    setCurrentView(VIEW_YEAR);
+                } else if (v.getId() == R.id.date_picker_header_date) {
+                    setCurrentView(VIEW_MONTH_DAY);
+                } else if (v.getId() == R.id.tv_header_date_start) {
+                    mCurrentlyActivatedRangeItem = RANGE_ACTIVATED_START;
+                    tvHeaderDateStart.setActivated(true);
+                    tvHeaderDateEnd.setActivated(false);
+                } else if (v.getId() == R.id.tv_header_date_end) {
+                    mCurrentlyActivatedRangeItem = RANGE_ACTIVATED_END;
+                    tvHeaderDateStart.setActivated(false);
+                    tvHeaderDateEnd.setActivated(true);
+                } else if (v.getId() == R.id.iv_header_date_reset) {
+                    mCurrentDate = new SelectedDate(mCurrentDate.getStartDate());
+                    onDateChanged(true, false, true);
+                }
             }
         }
     };
@@ -632,8 +634,13 @@ public class SublimeDatePicker extends FrameLayout {
         ivHeaderDateReset.setVisibility(View.VISIBLE);
         llHeaderDateRangeCont.setVisibility(View.VISIBLE);
 
-        tvHeaderDateStart.setActivated(mCurrentlyActivatedRangeItem == RANGE_ACTIVATED_START);
-        tvHeaderDateEnd.setActivated(mCurrentlyActivatedRangeItem == RANGE_ACTIVATED_END);
+        if (isAlternateDatePicker) {
+            tvHeaderDateStart.setActivated(true);
+            tvHeaderDateEnd.setActivated(true);
+        } else {
+            tvHeaderDateStart.setActivated(mCurrentlyActivatedRangeItem == RANGE_ACTIVATED_START);
+            tvHeaderDateEnd.setActivated(mCurrentlyActivatedRangeItem == RANGE_ACTIVATED_END);
+        }
     }
 
     public SelectedDate getSelectedDate() {

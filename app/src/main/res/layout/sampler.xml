@@ -140,6 +140,7 @@
                 android:id="@+id/cbAlternateSelection"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:visibility="invisible"
                 android:text="Alternate range selection"
                 android:textSize="@dimen/sampler_text_size" />
         </LinearLayout>
