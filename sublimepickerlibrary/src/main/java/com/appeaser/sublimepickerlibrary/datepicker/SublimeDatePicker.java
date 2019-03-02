@@ -73,6 +73,7 @@ public class SublimeDatePicker extends FrameLayout {
     private static final int DEFAULT_END_YEAR = 2100;
 
     private boolean isAlternateDatePicker = false;
+    private boolean canPickRange = false;
 
     private Context mContext;
 
@@ -503,10 +504,10 @@ public class SublimeDatePicker extends FrameLayout {
             case VIEW_MONTH_DAY:
                 mDayPickerView.setDate(mCurrentDate);
 
-                if (mCurrentDate.getType() == SelectedDate.Type.SINGLE) {
-                    switchToSingleDateView();
-                } else {
+                if (canPickRange) {
                     switchToDateRangeView();
+                } else {
+                    switchToSingleDateView();
                 }
 
                 if (mCurrentView != viewIndex) {
@@ -540,6 +541,8 @@ public class SublimeDatePicker extends FrameLayout {
      * @param callback      How user is notified date is changed by
      *                      user, can be null.
      */
+
+
     //public void init(int year, int monthOfYear, int dayOfMonth, boolean canPickRange,
     public void init(SelectedDate selectedDate, boolean canPickRange, boolean isMultipleDayPicker,
                      SublimeDatePicker.OnDateChangedListener callback) {
@@ -547,6 +550,7 @@ public class SublimeDatePicker extends FrameLayout {
         //mCurrentDate.set(Calendar.MONTH, monthOfYear);
         //mCurrentDate.set(Calendar.DAY_OF_MONTH, dayOfMonth);
         mCurrentDate = new SelectedDate(selectedDate);
+        this.canPickRange = canPickRange;
         this.isAlternateDatePicker = isMultipleDayPicker;
         mDayPickerView.setCanPickRange(canPickRange);
         mDateChangedListener = callback;
@@ -601,10 +605,10 @@ public class SublimeDatePicker extends FrameLayout {
                     + mCurrentDate.getSecondDate().getTimeInMillis());
         }
 
-        if (mCurrentDate.getType() == SelectedDate.Type.SINGLE) {
-            switchToSingleDateView();
-        } else if (mCurrentDate.getType() == SelectedDate.Type.RANGE) {
+        if (canPickRange ) {
             switchToDateRangeView();
+        } else {
+            switchToSingleDateView();
         }
     }
 
