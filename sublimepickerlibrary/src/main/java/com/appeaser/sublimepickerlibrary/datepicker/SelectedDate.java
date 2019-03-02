@@ -64,6 +64,10 @@ public class SelectedDate {
         return compareDates(mFirstDate, mSecondDate) == 0 ? Type.SINGLE : Type.RANGE;
     }
 
+    boolean isSingleDaySelected() {
+        return mFirstDate == mSecondDate;
+    }
+
     // a & b should never be null, so don't perform a null check here.
     // Let the source of error identify itself.
     public static int compareDates(Calendar a, Calendar b) {

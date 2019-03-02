@@ -61,6 +61,9 @@ public class SublimeOptions implements Parcelable {
     // Allow date range selection
     private boolean mCanPickDateRange;
 
+    //allow alternate selection mode
+    private boolean isAlternateSelection;
+
     // Defaults
     private Picker mPickerToShow = Picker.DATE_PICKER;
 
@@ -311,6 +314,15 @@ public class SublimeOptions implements Parcelable {
 
     public boolean canPickDateRange() {
         return mCanPickDateRange;
+    }
+
+    public SublimeOptions setAlternateSelectionMode(boolean isAlternateSelection) {
+        this.isAlternateSelection = isAlternateSelection;
+        return this;
+    }
+
+    public boolean isAlternateSelectionMode() {
+        return isAlternateSelection;
     }
 
     @Override

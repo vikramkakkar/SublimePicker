@@ -555,7 +555,7 @@ public class SublimePicker extends FrameLayout
             //        dateParams[2] /* day of month */,
             //        mOptions.canPickDateRange(),
             //        this);
-            mDatePicker.init(mOptions.getDateParams(), mOptions.canPickDateRange(), this);
+            mDatePicker.init(mOptions.getDateParams(), mOptions.canPickDateRange(), mOptions.isAlternateSelectionMode(),this);
 
             long[] dateRange = mOptions.getDateRange();
 
@@ -636,7 +636,7 @@ public class SublimePicker extends FrameLayout
                 //selectedDate.getStartDate().get(Calendar.MONTH),
                 //selectedDate.getStartDate().get(Calendar.DAY_OF_MONTH),
                 //mOptions.canPickDateRange(), this);
-        mDatePicker.init(selectedDate, mOptions.canPickDateRange(), this);
+        mDatePicker.init(selectedDate, mOptions.canPickDateRange(), mOptions.isAlternateSelectionMode(),this);
     }
 
     @Override

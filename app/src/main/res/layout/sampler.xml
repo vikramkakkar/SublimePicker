@@ -121,17 +121,29 @@
                 android:paddingLeft="20dp"
                 android:textStyle="bold"
                 android:textSize="@dimen/sampler_text_size" />
+        <LinearLayout
+            android:paddingLeft="20dp"
+            android:paddingTop="10dp"
+            android:paddingRight="20dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
 
             <CheckBox
                 android:id="@+id/cbAllowDateRangeSelection"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginLeft="20dp"
-                android:layout_marginTop="10dp"
-                android:layout_marginRight="20dp"
-                android:layout_marginBottom="20dp"
                 android:text="Allow date range selection?"
                 android:textSize="@dimen/sampler_text_size" />
+
+            <CheckBox
+                android:id="@+id/cbAlternateSelection"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Alternate range selection"
+                android:textSize="@dimen/sampler_text_size" />
+        </LinearLayout>
+
 
             <RelativeLayout
                 android:id="@+id/rlDateTimeRecurrenceInfo"
