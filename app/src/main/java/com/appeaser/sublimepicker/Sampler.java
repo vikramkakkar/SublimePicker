@@ -29,6 +29,7 @@ import android.text.style.StyleSpan;
 import android.util.Pair;
 import android.view.View;
 import android.widget.CheckBox;
+import android.widget.CompoundButton;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.RadioButton;
@@ -52,7 +53,7 @@ public class Sampler extends AppCompatActivity {
     ImageView ivLaunchPicker;
 
     // SublimePicker options
-    CheckBox cbDatePicker, cbTimePicker, cbRecurrencePicker, cbAllowDateRangeSelection;
+    CheckBox cbDatePicker, cbTimePicker, cbRecurrencePicker, cbAllowDateRangeSelection, cbAlternateSelection;
     RadioButton rbDatePicker, rbTimePicker, rbRecurrencePicker;
 
     // Labels
@@ -137,6 +138,7 @@ public class Sampler extends AppCompatActivity {
         svMainContainer = (ScrollView) findViewById(R.id.svMainContainer);
 
         cbAllowDateRangeSelection = (CheckBox) findViewById(R.id.cbAllowDateRangeSelection);
+        cbAlternateSelection = (CheckBox) findViewById(R.id.cbAlternateSelection);
 
         llDateHolder = (LinearLayout) findViewById(R.id.llDateHolder);
         llDateRangeHolder = (LinearLayout) findViewById(R.id.llDateRangeHolder);
@@ -222,6 +224,18 @@ public class Sampler extends AppCompatActivity {
             }
         });
 
+        cbAllowDateRangeSelection.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
+            @Override
+            public void onCheckedChanged(CompoundButton compoundButton, boolean isSelected) {
+                if (isSelected) {
+                    cbAlternateSelection.setVisibility(View.VISIBLE);
+                } else {
+                    cbAlternateSelection.setChecked(false);
+                    cbAlternateSelection.setVisibility(View.GONE);
+                }
+            }
+        });
+
         // restore state
         dealWithSavedInstanceState(savedInstanceState);
     }
@@ -232,6 +246,7 @@ public class Sampler extends AppCompatActivity {
             cbTimePicker.setChecked(true);
             cbRecurrencePicker.setChecked(true);
             cbAllowDateRangeSelection.setChecked(false);
+            cbAlternateSelection.setChecked(false);
 
             rbDatePicker.setChecked(true);
         } else { // Restore
@@ -241,6 +256,8 @@ public class Sampler extends AppCompatActivity {
                     .setChecked(savedInstanceState.getBoolean(SS_RECURRENCE_PICKER_CHECKED));
             cbAllowDateRangeSelection
                     .setChecked(savedInstanceState.getBoolean(SS_ALLOW_DATE_RANGE_SELECTION));
+            cbAlternateSelection
+                    .setChecked(savedInstanceState.getBoolean(SS_ALLOW_ALTERNATE_DATE_SELECTION));
 
             rbDatePicker.setVisibility(cbDatePicker.isChecked() ?
                     View.VISIBLE : View.GONE);
@@ -324,6 +341,9 @@ public class Sampler extends AppCompatActivity {
 
         // Enable/disable the date range selection feature
         options.setCanPickDateRange(cbAllowDateRangeSelection.isChecked());
+
+        //enable alternate date selection
+        options.setAlternateSelectionMode(cbAlternateSelection.isChecked());
 
         // Example for setting date range:
         // Note that you can pass a date range as the initial date params
@@ -428,6 +448,7 @@ public class Sampler extends AppCompatActivity {
     final String SS_TIME_PICKER_CHECKED = "saved.state.time.picker.checked";
     final String SS_RECURRENCE_PICKER_CHECKED = "saved.state.recurrence.picker.checked";
     final String SS_ALLOW_DATE_RANGE_SELECTION = "saved.state.allow.date.range.selection";
+    final String SS_ALLOW_ALTERNATE_DATE_SELECTION = "saved.state.allow.alternate.date.selection";
     final String SS_START_YEAR = "saved.state.start.year";
     final String SS_START_MONTH = "saved.state.start.month";
     final String SS_START_DAY = "saved.state.start.day";
@@ -449,6 +470,7 @@ public class Sampler extends AppCompatActivity {
         outState.putBoolean(SS_TIME_PICKER_CHECKED, cbTimePicker.isChecked());
         outState.putBoolean(SS_RECURRENCE_PICKER_CHECKED, cbRecurrencePicker.isChecked());
         outState.putBoolean(SS_ALLOW_DATE_RANGE_SELECTION, cbAllowDateRangeSelection.isChecked());
+        outState.putBoolean(SS_ALLOW_ALTERNATE_DATE_SELECTION, cbAlternateSelection.isChecked());
 
         int startYear = mSelectedDate != null ? mSelectedDate.getStartDate().get(Calendar.YEAR) : INVALID_VAL;
         int startMonth = mSelectedDate != null ? mSelectedDate.getStartDate().get(Calendar.MONTH) : INVALID_VAL;

@@ -72,6 +72,9 @@ public class SublimeDatePicker extends FrameLayout {
     private static final int DEFAULT_START_YEAR = 1900;
     private static final int DEFAULT_END_YEAR = 2100;
 
+    private boolean isAlternateDatePicker = false;
+    private boolean canPickRange = false;
+
     private Context mContext;
 
     private SimpleDateFormat mYearFormat;
@@ -298,25 +301,43 @@ public class SublimeDatePicker extends FrameLayout {
 
             boolean goToPosition = true;
 
+            // We're in Range selection mode
             if (llHeaderDateRangeCont.getVisibility() == View.VISIBLE) {
-                // We're in Range selection mode
-                if (tvHeaderDateStart.isActivated()) {
-                    if (SelectedDate.compareDates(day, mCurrentDate.getEndDate()) > 0) {
+                if (isAlternateDatePicker) {
+                    if (mCurrentDate == null) {
                         mCurrentDate = new SelectedDate(day);
                     } else {
-                        goToPosition = false;
-                        mCurrentDate = new SelectedDate(day, mCurrentDate.getEndDate());
+                        if (mCurrentDate.isSingleDaySelected()) { //we need to select a date range
+                            if (SelectedDate.compareDates(day, mCurrentDate.getStartDate()) < 0) {
+                                mCurrentDate = new SelectedDate(day, mCurrentDate.getEndDate());
+                            } else {
+                                if (SelectedDate.compareDates(day, mCurrentDate.getEndDate()) > 0) {
+                                    mCurrentDate = new SelectedDate(mCurrentDate.getStartDate(), day);
+                                }
+                            }
+                        } else {
+                            mCurrentDate = new SelectedDate(day);
+                        }
                     }
-                } else if (tvHeaderDateEnd.isActivated()) {
-                    if (SelectedDate.compareDates(day, mCurrentDate.getStartDate()) < 0) {
-                        mCurrentDate = new SelectedDate(day);
-                    } else {
-                        goToPosition = false;
-                        mCurrentDate = new SelectedDate(mCurrentDate.getStartDate(), day);
-                    }
-                } else { // Should never happen
-                    if (Config.DEBUG) {
-                        Log.i(TAG, "onDaySelected: Neither tvDateStart, nor tvDateEnd is activated");
+                } else {
+                    if (tvHeaderDateStart.isActivated()) {
+                        if (SelectedDate.compareDates(day, mCurrentDate.getEndDate()) > 0) {
+                            mCurrentDate = new SelectedDate(day);
+                        } else {
+                            goToPosition = false;
+                            mCurrentDate = new SelectedDate(day, mCurrentDate.getEndDate());
+                        }
+                    } else if (tvHeaderDateEnd.isActivated()) {
+                        if (SelectedDate.compareDates(day, mCurrentDate.getStartDate()) < 0) {
+                            mCurrentDate = new SelectedDate(day);
+                        } else {
+                            goToPosition = false;
+                            mCurrentDate = new SelectedDate(mCurrentDate.getStartDate(), day);
+                        }
+                    } else { // Should never happen
+                        if (Config.DEBUG) {
+                            Log.i(TAG, "onDaySelected: Neither tvDateStart, nor tvDateEnd is activated");
+                        }
                     }
                 }
             } else {
@@ -384,23 +405,25 @@ public class SublimeDatePicker extends FrameLayout {
     private final OnClickListener mOnHeaderClickListener = new OnClickListener() {
         @Override
         public void onClick(View v) {
-            SUtils.vibrateForDatePicker(SublimeDatePicker.this);
+            if (!isAlternateDatePicker) {
+                SUtils.vibrateForDatePicker(SublimeDatePicker.this);
 
-            if (v.getId() == R.id.date_picker_header_year) {
-                setCurrentView(VIEW_YEAR);
-            } else if (v.getId() == R.id.date_picker_header_date) {
-                setCurrentView(VIEW_MONTH_DAY);
-            } else if (v.getId() == R.id.tv_header_date_start) {
-                mCurrentlyActivatedRangeItem = RANGE_ACTIVATED_START;
-                tvHeaderDateStart.setActivated(true);
-                tvHeaderDateEnd.setActivated(false);
-            } else if (v.getId() == R.id.tv_header_date_end) {
-                mCurrentlyActivatedRangeItem = RANGE_ACTIVATED_END;
-                tvHeaderDateStart.setActivated(false);
-                tvHeaderDateEnd.setActivated(true);
-            } else if (v.getId() == R.id.iv_header_date_reset) {
-                mCurrentDate = new SelectedDate(mCurrentDate.getStartDate());
-                onDateChanged(true, false, true);
+                if (v.getId() == R.id.date_picker_header_year) {
+                    setCurrentView(VIEW_YEAR);
+                } else if (v.getId() == R.id.date_picker_header_date) {
+                    setCurrentView(VIEW_MONTH_DAY);
+                } else if (v.getId() == R.id.tv_header_date_start) {
+                    mCurrentlyActivatedRangeItem = RANGE_ACTIVATED_START;
+                    tvHeaderDateStart.setActivated(true);
+                    tvHeaderDateEnd.setActivated(false);
+                } else if (v.getId() == R.id.tv_header_date_end) {
+                    mCurrentlyActivatedRangeItem = RANGE_ACTIVATED_END;
+                    tvHeaderDateStart.setActivated(false);
+                    tvHeaderDateEnd.setActivated(true);
+                } else if (v.getId() == R.id.iv_header_date_reset) {
+                    mCurrentDate = new SelectedDate(mCurrentDate.getStartDate());
+                    onDateChanged(true, false, true);
+                }
             }
         }
     };
@@ -483,10 +506,10 @@ public class SublimeDatePicker extends FrameLayout {
             case VIEW_MONTH_DAY:
                 mDayPickerView.setDate(mCurrentDate);
 
-                if (mCurrentDate.getType() == SelectedDate.Type.SINGLE) {
-                    switchToSingleDateView();
-                } else if (mCurrentDate.getType() == SelectedDate.Type.RANGE) {
+                if (canPickRange) {
                     switchToDateRangeView();
+                } else {
+                    switchToSingleDateView();
                 }
 
                 if (mCurrentView != viewIndex) {
@@ -520,17 +543,19 @@ public class SublimeDatePicker extends FrameLayout {
      * @param callback      How user is notified date is changed by
      *                      user, can be null.
      */
+
+
     //public void init(int year, int monthOfYear, int dayOfMonth, boolean canPickRange,
-    public void init(SelectedDate selectedDate, boolean canPickRange,
+    public void init(SelectedDate selectedDate, boolean canPickRange, boolean isMultipleDayPicker,
                      SublimeDatePicker.OnDateChangedListener callback) {
         //mCurrentDate.set(Calendar.YEAR, year);
         //mCurrentDate.set(Calendar.MONTH, monthOfYear);
         //mCurrentDate.set(Calendar.DAY_OF_MONTH, dayOfMonth);
         mCurrentDate = new SelectedDate(selectedDate);
-
+        this.canPickRange = canPickRange;
+        this.isAlternateDatePicker = isMultipleDayPicker;
         mDayPickerView.setCanPickRange(canPickRange);
         mDateChangedListener = callback;
-
         onDateChanged(false, false, true);
     }
 
@@ -582,10 +607,10 @@ public class SublimeDatePicker extends FrameLayout {
                     + mCurrentDate.getSecondDate().getTimeInMillis());
         }
 
-        if (mCurrentDate.getType() == SelectedDate.Type.SINGLE) {
-            switchToSingleDateView();
-        } else if (mCurrentDate.getType() == SelectedDate.Type.RANGE) {
+        if (canPickRange ) {
             switchToDateRangeView();
+        } else {
+            switchToSingleDateView();
         }
     }
 
@@ -609,8 +634,13 @@ public class SublimeDatePicker extends FrameLayout {
         ivHeaderDateReset.setVisibility(View.VISIBLE);
         llHeaderDateRangeCont.setVisibility(View.VISIBLE);
 
-        tvHeaderDateStart.setActivated(mCurrentlyActivatedRangeItem == RANGE_ACTIVATED_START);
-        tvHeaderDateEnd.setActivated(mCurrentlyActivatedRangeItem == RANGE_ACTIVATED_END);
+        if (isAlternateDatePicker) {
+            tvHeaderDateStart.setActivated(true);
+            tvHeaderDateEnd.setActivated(true);
+        } else {
+            tvHeaderDateStart.setActivated(mCurrentlyActivatedRangeItem == RANGE_ACTIVATED_START);
+            tvHeaderDateEnd.setActivated(mCurrentlyActivatedRangeItem == RANGE_ACTIVATED_END);
+        }
     }
 
     public SelectedDate getSelectedDate() {
