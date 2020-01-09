@@ -701,7 +701,7 @@ public class RadialTimePickerView extends View {
 
             // Exclude the selector region, then draw minutes with no
             // activated states.
-            canvas.save(Canvas.CLIP_SAVE_FLAG);
+            canvas.save();
             canvas.clipPath(mSelectorPath, Region.Op.DIFFERENCE);
             drawTextElements(canvas, mTextSize[MINUTES], mTypeface, mTextColor[MINUTES],
                     mMinutesText, mOuterTextX[MINUTES], mOuterTextY[MINUTES], mPaint[MINUTES],
@@ -710,7 +710,7 @@ public class RadialTimePickerView extends View {
 
             // Intersect the selector region, then draw minutes with only
             // activated states.
-            canvas.save(Canvas.CLIP_SAVE_FLAG);
+            canvas.save();
             canvas.clipPath(mSelectorPath, Region.Op.INTERSECT);
             drawTextElements(canvas, mTextSize[MINUTES], mTypeface, mTextColor[MINUTES],
                     mMinutesText, mOuterTextX[MINUTES], mOuterTextY[MINUTES], mPaint[MINUTES],
