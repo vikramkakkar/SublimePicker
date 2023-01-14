@@ -13,7 +13,19 @@ SublimePicker provides a single point of entry to all three pickers. What I mean
 Gradle dependency
 -----------------
 
-`compile 'com.appeaser.sublimepickerlibrary:sublimepickerlibrary:2.1.2'`
+Available through [Jitpack](https://jitpack.io/) with the following Gradle implementation:
+
+`implementation 'com.appeaser.sublimepickerlibrary:sublimepickerlibrary:2.1.2'`
+
+If Jitpack's repository isn't yet in your project, add the following to your root Gradle file:
+```
+	allprojects {
+		repositories {
+			...
+			maven { url 'https://jitpack.io' }
+		}
+	}
+```
 
 Walkthrough
 -----------
